@@ -149,3 +149,47 @@ D:\Running Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.pdb
 D:\Running Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmLedger.resources
 D:\Running Project\NationalPeace\NPSBS\bin\Debug\BCrypt.Net.pdb
 D:\Running Project\NationalPeace\NPSBS\bin\Debug\BCrypt.Net.xml
+D:\Project\NationalPeace\NPSBS\bin\Debug\Setting.xml
+D:\Project\NationalPeace\NPSBS\bin\Debug\NPSBSEnrypter.exe
+D:\Project\NationalPeace\NPSBS\bin\Debug\App.config
+D:\Project\NationalPeace\NPSBS\bin\Debug\NPSBS.exe.config
+D:\Project\NationalPeace\NPSBS\bin\Debug\NPSBS.exe
+D:\Project\NationalPeace\NPSBS\bin\Debug\NPSBS.pdb
+D:\Project\NationalPeace\NPSBS\bin\Debug\CircularProgressBar.dll
+D:\Project\NationalPeace\NPSBS\bin\Debug\EPPlus.dll
+D:\Project\NationalPeace\NPSBS\bin\Debug\itextsharp.dll
+D:\Project\NationalPeace\NPSBS\bin\Debug\itextsharp.pdfa.dll
+D:\Project\NationalPeace\NPSBS\bin\Debug\itextsharp.xtra.dll
+D:\Project\NationalPeace\NPSBS\bin\Debug\Newtonsoft.Json.dll
+D:\Project\NationalPeace\NPSBS\bin\Debug\NPSBS.Core.dll
+D:\Project\NationalPeace\NPSBS\bin\Debug\WinFormAnimation.dll
+D:\Project\NationalPeace\NPSBS\bin\Debug\BCrypt.Net.dll
+D:\Project\NationalPeace\NPSBS\bin\Debug\NPSBS.Core.pdb
+D:\Project\NationalPeace\NPSBS\bin\Debug\CircularProgressBar.xml
+D:\Project\NationalPeace\NPSBS\bin\Debug\EPPlus.xml
+D:\Project\NationalPeace\NPSBS\bin\Debug\itextsharp.xml
+D:\Project\NationalPeace\NPSBS\bin\Debug\Newtonsoft.Json.xml
+D:\Project\NationalPeace\NPSBS\bin\Debug\WinFormAnimation.xml
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.csprojAssemblyReference.cache
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmAbout.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmAttendance.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmClass.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmExam.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmExtraActivities.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmGradingSystem.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmLedger.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmMain.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmMarkEntry.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmResult.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmSplash.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmStudent.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmSubject.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmTransferStudent.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.Properties.Resources.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.csproj.GenerateResource.cache
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.csproj.CoreCompileInputs.cache
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.csproj.CopyComplete
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.exe
+D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.pdb
+D:\Project\NationalPeace\NPSBS\bin\Debug\Registration.dll
+D:\Project\NationalPeace\NPSBS\bin\Debug\Registration.pdb

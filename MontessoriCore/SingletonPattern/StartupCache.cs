@@ -32,9 +32,9 @@ namespace Montessori.Core
             GradingSystem = GetGrading();
             SettingJson = GetUrlData();
             ResultFont = new ResultFont();
-            MacAddress = GetMac();
-            MyFirstMac = GetMyFirstMacAddress();
-            IsComputerAuthorized = IsAuthenticateComputer(MacAddress, MyFirstMac);
+            //MacAddress = GetMac();
+            //MyFirstMac = GetMyFirstMacAddress();
+            //IsComputerAuthorized = IsAuthenticateComputer(MacAddress, MyFirstMac);
         }
 
         public static StartupCache Instance
@@ -171,6 +171,7 @@ namespace Montessori.Core
             return new WebTextReader().ReadData();
         }
 
+				[Obsolete]
         private static List<string> GetMac()
         {
             List<string> ma = new List<string>();
@@ -191,6 +192,7 @@ namespace Montessori.Core
             return ma;
         }
 
+				[Obsolete]
         private static string GetMyFirstMacAddress()
         {
             var macAddr = (
@@ -200,15 +202,6 @@ namespace Montessori.Core
                            ).First();
 
             string firstMac = macAddr;
-            //foreach (var mac in macAddr)
-            //{
-            //    if(mac != "")
-            //    {
-            //        firstMac = mac;
-            //        break;
-            //    }
-            //}
-
             firstMac = Encrypt.Hash(firstMac);
             EventLog.WriteEntry("Result Processing", "Your Registered Mac Address is : " + Environment.NewLine +  firstMac);
             return firstMac;
@@ -216,6 +209,7 @@ namespace Montessori.Core
 
         }
       
+				[Obsolete]
         public static bool IsAuthenticateComputer(List<string> macs, string thisMac)
         {
             bool authenticate = true;
@@ -225,4 +219,22 @@ namespace Montessori.Core
             return authenticate;
         }
     }
+
+	public class RegInfo
+	{
+		public static string AppName
+		{
+			get
+			{
+				return "NPSBS";
+			}
+		}
+		public static string AppKey
+		{
+			get
+			{
+				return "key";
+			}
+		}
+	}
 }

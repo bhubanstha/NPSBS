@@ -52,3 +52,19 @@ D:\Running Project\NationalPeace\NPSBS.Core\bin\Debug\Newtonsoft.Json.xml
 D:\Running Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.dll
 D:\Running Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.pdb
 D:\Running Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.csprojResolveAssemblyReference.cache
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\Setting.xml
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\NPSBS.Core.dll
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\NPSBS.Core.pdb
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\itextsharp.dll
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\itextsharp.pdfa.dll
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\itextsharp.xtra.dll
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\Newtonsoft.Json.dll
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\itextsharp.xml
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\Newtonsoft.Json.xml
+D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.csproj.CoreCompileInputs.cache
+D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.csproj.CopyComplete
+D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.dll
+D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.pdb
+D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.csprojAssemblyReference.cache
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\Registration.dll
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\Registration.pdb

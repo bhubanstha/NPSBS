@@ -16,3 +16,21 @@ D:\Running Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.exe.manif
 D:\Running Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.application
 D:\Running Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.exe
 D:\Running Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.pdb
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\Setting.xml
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\NPSBSEnrypter.exe.config
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\NPSBSEnrypter.exe.manifest
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\NPSBSEnrypter.application
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\NPSBSEnrypter.exe
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\NPSBSEnrypter.pdb
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\NPSBS.Core.dll
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\itextsharp.dll
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\EPPlus.dll
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\NPSBS.Core.pdb
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\itextsharp.xml
+D:\Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.csproj.CoreCompileInputs.cache
+D:\Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.exe.manifest
+D:\Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.application
+D:\Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.csproj.CopyComplete
+D:\Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.exe
+D:\Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.pdb
+D:\Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.csprojAssemblyReference.cache
