@@ -1,0 +1,13 @@
+D:\Running Project\NationalPeace\MontessoriCore\bin\Debug\MontessoriCore.dll
+D:\Running Project\NationalPeace\MontessoriCore\bin\Debug\MontessoriCore.pdb
+D:\Running Project\NationalPeace\MontessoriCore\bin\Debug\BCrypt.Net.dll
+D:\Running Project\NationalPeace\MontessoriCore\bin\Debug\EPPlus.dll
+D:\Running Project\NationalPeace\MontessoriCore\bin\Debug\itextsharp.dll
+D:\Running Project\NationalPeace\MontessoriCore\bin\Debug\itextsharp.pdfa.dll
+D:\Running Project\NationalPeace\MontessoriCore\bin\Debug\itextsharp.xtra.dll
+D:\Running Project\NationalPeace\MontessoriCore\bin\Debug\BCrypt.Net.pdb
+D:\Running Project\NationalPeace\MontessoriCore\bin\Debug\BCrypt.Net.xml
+D:\Running Project\NationalPeace\MontessoriCore\bin\Debug\EPPlus.xml
+D:\Running Project\NationalPeace\MontessoriCore\bin\Debug\itextsharp.xml
+D:\Running Project\NationalPeace\MontessoriCore\obj\Debug\MontessoriCore.dll
+D:\Running Project\NationalPeace\MontessoriCore\obj\Debug\MontessoriCore.pdb
