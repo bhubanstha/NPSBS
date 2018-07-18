@@ -14,7 +14,6 @@ namespace Montessori
     {
         Exam exam = new Exam();
         int totalStudents = 0;
-        TableLayoutPanel table = null;
         int rows = 0;
 
         public frmRemarks()
@@ -33,54 +32,59 @@ namespace Montessori
                 totalStudents = tbl.Rows.Count;
                 if (totalStudents > 0)
                 {
-                    CreateTable();
-                    for (int i = 0; i < tbl.Rows.Count; i++)
-                    {
-                        table.RowCount = table.RowCount + 1;
-                        Label lb = new Label();
-                        lb.Text = (i + 1).ToString();
-                        lb.Width = 150;
-                        lb.Name = "SN" + i;
-                        lb.AutoSize = true;
-                        table.Controls.Add(lb, 0, table.RowCount - 1);
+                    dgvRemarks.DataSource = tbl;
+                    dgvRemarks.Columns[0].Visible = false;
+                    dgvRemarks.Columns[1].Visible = false;
+                    dgvRemarks.Columns[2].Width = 50;
+                    dgvRemarks.Columns[3].Width = 300;
+                    //CreateTable();
+                    //for (int i = 0; i < tbl.Rows.Count; i++)
+                    //{
+                    //    table.RowCount = table.RowCount + 1;
+                    //    Label lb = new Label();
+                    //    lb.Text = (i + 1).ToString();
+                    //    lb.Width = 150;
+                    //    lb.Name = "SN" + i;
+                    //    lb.AutoSize = true;
+                    //    table.Controls.Add(lb, 0, table.RowCount - 1);
 
-                        string name = tbl.Rows[i]["StudentFullName"].ToString();
-                        Label lb1 = new Label();
-                        lb1.Text = name;
-                        lb1.Width = 150;
-                        lb1.Name = "StudentName" + i;
-                        lb1.AutoSize = true;
-                        table.Controls.Add(lb1, 1, table.RowCount - 1);
+                    //    string name = tbl.Rows[i]["StudentFullName"].ToString();
+                    //    Label lb1 = new Label();
+                    //    lb1.Text = name;
+                    //    lb1.Width = 150;
+                    //    lb1.Name = "StudentName" + i;
+                    //    lb1.AutoSize = true;
+                    //    table.Controls.Add(lb1, 1, table.RowCount - 1);
 
-                        TextBox tb = new TextBox();
-                        tb.Text = (i + 1).ToString();
-                        //tb.Width = 150;
-                        tb.Text = tbl.Rows[i]["Remarks"].ToString();
-                        tb.Name = "Remarks" + i;
-                        tb.Dock = DockStyle.Fill;
-                        table.Controls.Add(tb, 2, table.RowCount - 1);
-                    }
-                    table.Controls.Add(new Label { Text = "" }, 0, table.RowCount);
-                    table.Controls.Add(new Label { Text = "" }, 1, table.RowCount);
-                    table.Controls.Add(new Label { Text = "" }, 2, table.RowCount);
-                    pnlStudentContainer.Controls.Add(table);
-                    TextBox tbFirst = table.Controls.Find("Remarks0", true).FirstOrDefault() as TextBox;                   
-                    this.Cursor = Cursors.Default;
-                    pnlStudentContainer.Visible = true;
-                    tbFirst.Focus();
+                    //    TextBox tb = new TextBox();
+                    //    tb.Text = (i + 1).ToString();
+                    //    //tb.Width = 150;
+                    //    tb.Text = tbl.Rows[i]["Remarks"].ToString();
+                    //    tb.Name = "Remarks" + i;
+                    //    tb.Dock = DockStyle.Fill;
+                    //    table.Controls.Add(tb, 2, table.RowCount - 1);
+                    //}
+                    //table.Controls.Add(new Label { Text = "" }, 0, table.RowCount);
+                    //table.Controls.Add(new Label { Text = "" }, 1, table.RowCount);
+                    //table.Controls.Add(new Label { Text = "" }, 2, table.RowCount);
+                    //pnlStudentContainer.Controls.Add(table);
+                    //TextBox tbFirst = table.Controls.Find("Remarks0", true).FirstOrDefault() as TextBox;                   
+                    //this.Cursor = Cursors.Default;
+                    //pnlStudentContainer.Visible = true;
+                    //tbFirst.Focus();
                 }
                 else
                 {
-                    Response.GenericError("There are no student for remarks entry.");
-                    try
-                    {
-                        pnlStudentContainer.Controls.Remove(table);
-                    }
-                    catch (Exception ex)
-                    {
-                        
-                        throw;
-                    }
+                    //Response.GenericError("There are no student for remarks entry.");
+                    //try
+                    //{
+                    //    pnlStudentContainer.Controls.Remove(table);
+                    //}
+                    //catch (Exception ex)
+                    //{
+
+                    //    throw;
+                    //}
                 }
             }
         }
@@ -90,23 +94,22 @@ namespace Montessori
             string examinationId = ddlExam.SelectedValue.ToString();
             string year = txtYear.Text;
             string classId = ddlClass.SelectedValue.ToString();
-            for (int i = 0; i < totalStudents; i++)
+            foreach (DataGridViewRow row in dgvRemarks.Rows)
             {
-                Label lb = table.Controls.Find("StudentName" + i.ToString(), true).FirstOrDefault() as Label;
-                string studentId = lb.Text.Split('-')[1].Trim();
 
-                TextBox tb = table.Controls.Find("Remarks" + i, true).FirstOrDefault() as TextBox;
-                string remarks = tb.Text;
-
+                string studentId = row.Cells[1].Value.ToString();
+                string remarks =  row.Cells[4].Value.ToString();
+                int remarksId = row.Cells[0].Value==DBNull.Value? 0 : Convert.ToInt32( row.Cells[0].Value.ToString());
                 Remarks rm = new Remarks()
                 {
                     StudentId = Convert.ToInt32(studentId),
                     ExaminationId = examinationId,
                     ClassId = classId,
                     ExamHeldYear = year,
-                    Remark = remarks
+                    Remark = remarks,
+                    RemarksId = remarksId
                 };
-                rows += Remarks.SaveOrUpdate(rm);                
+                rows += Remarks.SaveOrUpdate(rm);
             }
             if (rows > 0)
             {
@@ -179,38 +182,6 @@ namespace Montessori
             {
                 GetExams(txtYear.Text);
             }
-        }
-
-        private void CreateTable()
-        {
-            try
-            {
-                pnlStudentContainer.Controls.Remove(table);
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            pnlStudentContainer.Visible = false;
-            table = new TableLayoutPanel();
-            table.ColumnCount = 3;
-            table.RowCount = 1;
-            table.RowStyles.Clear();
-            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5F));
-            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 75F));
-            table.Controls.Add(new Label() { Text = "S.N", AutoSize = true, Width = 100 }, 0, 0);
-            table.Controls.Add(new Label() { Text = "Student Name", AutoSize = true, Width = 100 }, 1, 0);
-            table.Controls.Add(new Label() { Text = "Remarks", AutoSize = true, Width = 100 }, 1, 0);
-            table.Width = this.Width - 10;
-            //table.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-            table.CellBorderStyle = TableLayoutPanelCellBorderStyle.OutsetDouble;
-            table.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            table.AutoScroll = true;
-            //table.Location = new Point(gbStudentContainer.Top - 5, 500);
-            table.Dock = DockStyle.Fill;
-            pnlStudentContainer.Controls.Add(table);
         }
     }
 }

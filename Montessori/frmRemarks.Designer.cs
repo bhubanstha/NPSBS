@@ -39,18 +39,21 @@
             this.txtYear = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pnlStudentContainer = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSubmitMarks = new System.Windows.Forms.Button();
             this.epClass = new System.Windows.Forms.ErrorProvider(this.components);
             this.epYear = new System.Windows.Forms.ErrorProvider(this.components);
             this.epExam = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSubmitMarks = new System.Windows.Forms.Button();
-            this.pnlStudentContainer = new System.Windows.Forms.Panel();
+            this.dgvRemarks = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.pnlStudentContainer.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epExam)).BeginInit();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRemarks)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -153,17 +156,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Remarks";
             // 
-            // epClass
+            // pnlStudentContainer
             // 
-            this.epClass.ContainerControl = this;
-            // 
-            // epYear
-            // 
-            this.epYear.ContainerControl = this;
-            // 
-            // epExam
-            // 
-            this.epExam.ContainerControl = this;
+            this.pnlStudentContainer.Controls.Add(this.dgvRemarks);
+            this.pnlStudentContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlStudentContainer.Location = new System.Drawing.Point(3, 22);
+            this.pnlStudentContainer.Name = "pnlStudentContainer";
+            this.pnlStudentContainer.Size = new System.Drawing.Size(813, 160);
+            this.pnlStudentContainer.TabIndex = 5;
             // 
             // panel2
             // 
@@ -185,13 +185,30 @@
             this.btnSubmitMarks.UseVisualStyleBackColor = true;
             this.btnSubmitMarks.Click += new System.EventHandler(this.btnSubmitReMarks_Click);
             // 
-            // pnlStudentContainer
+            // epClass
             // 
-            this.pnlStudentContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlStudentContainer.Location = new System.Drawing.Point(3, 22);
-            this.pnlStudentContainer.Name = "pnlStudentContainer";
-            this.pnlStudentContainer.Size = new System.Drawing.Size(813, 160);
-            this.pnlStudentContainer.TabIndex = 5;
+            this.epClass.ContainerControl = this;
+            // 
+            // epYear
+            // 
+            this.epYear.ContainerControl = this;
+            // 
+            // epExam
+            // 
+            this.epExam.ContainerControl = this;
+            // 
+            // dgvRemarks
+            // 
+            this.dgvRemarks.AllowUserToAddRows = false;
+            this.dgvRemarks.AllowUserToDeleteRows = false;
+            this.dgvRemarks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRemarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRemarks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRemarks.Location = new System.Drawing.Point(0, 0);
+            this.dgvRemarks.Name = "dgvRemarks";
+            this.dgvRemarks.RowTemplate.Height = 30;
+            this.dgvRemarks.Size = new System.Drawing.Size(813, 160);
+            this.dgvRemarks.TabIndex = 0;
             // 
             // frmRemarks
             // 
@@ -209,10 +226,12 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.pnlStudentContainer.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.epClass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epExam)).EndInit();
-            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRemarks)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -234,5 +253,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSubmitMarks;
         private System.Windows.Forms.Panel pnlStudentContainer;
+        private System.Windows.Forms.DataGridView dgvRemarks;
     }
 }
