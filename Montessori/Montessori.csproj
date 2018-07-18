@@ -58,7 +58,7 @@
     </Reference>
     <Reference Include="Registration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Registration.dll</HintPath>
+      <HintPath>..\..\Software_Registration\Registration\bin\Debug\Registration.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

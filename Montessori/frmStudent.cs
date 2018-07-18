@@ -1,20 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.IO;
 using System.Windows.Forms;
 using Montessori.Core;
-using System.Diagnostics;
 using OfficeOpenXml;
-using System.IO;
 
 
 namespace Montessori
 {
-    public partial class frmStudent : Form
+	public partial class frmStudent : Form
     {
         Student s = new Student();
         int rows;

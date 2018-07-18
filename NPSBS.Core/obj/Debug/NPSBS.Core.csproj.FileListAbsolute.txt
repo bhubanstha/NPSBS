@@ -66,8 +66,6 @@ D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.csproj.CopyComplete
 D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.dll
 D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.pdb
 D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.csprojAssemblyReference.cache
-D:\Project\NationalPeace\NPSBS.Core\bin\Debug\Registration.dll
-D:\Project\NationalPeace\NPSBS.Core\bin\Debug\Registration.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\Setting.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\NPSBS.Core.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\NPSBS.Core.pdb
