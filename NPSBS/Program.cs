@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using NPSBS.Core;
@@ -24,13 +22,13 @@ namespace NPSBS
 				Application.EnableVisualStyles();
 				Application.SetCompatibleTextRenderingDefault(false);
 				Register register = Register.Instance;
-                register.SetSoftwareName(RegInfo.AppName);
-                register.SetKey(RegInfo.AppKey);
-                frmSplash splash = new frmSplash();
+				register.SetSoftwareName(RegInfo.AppName);
+				register.SetKey(RegInfo.AppKey);
+				frmSplash splash = new frmSplash();
 				if (register.IsSoftwareRegistered())
 				{
-					StartupCache sc = StartupCache.Instance;
 					Application.Run(splash);
+					StartupCache sc = StartupCache.Instance;
 					mutext.ReleaseMutex();
 				}
 				else

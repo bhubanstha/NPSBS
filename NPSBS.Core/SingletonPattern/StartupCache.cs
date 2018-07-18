@@ -18,19 +18,9 @@ namespace NPSBS.Core
 		public static DataTable Exam { get; private set; }
 		public static List<GradingSystem> GradingSystem { get; private set; }
 		public static ResultFont ResultFont { get; private set; }
-		public static List<string> MacAddress { get; set; }
-		private static string MyFirstMac { get; set; }
-		public static bool IsComputerAuthorized { get; private set; }
 		StartupCache()
 		{
-			Class = GetClasses();
-			Exam = GetExam();
-			GradingSystem = GetGrading();
-			SettingJson = GetUrlData();
 			ResultFont = new ResultFont();
-			//MacAddress = GetMac();
-			//MyFirstMac = GetMyFirstMacAddress();
-			//IsComputerAuthorized =  IsAuthenticateComputer(MacAddress, MyFirstMac);
 		}
 
 		public static StartupCache Instance
@@ -42,6 +32,10 @@ namespace NPSBS.Core
 					if (instance == null)
 					{
 						instance = new StartupCache();
+						Class = GetClasses();
+						Exam = GetExam();
+						GradingSystem = GetGrading();
+						SettingJson = GetUrlData();
 					}
 					return instance;
 				}
