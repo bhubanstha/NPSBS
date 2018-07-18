@@ -68,3 +68,17 @@ D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.pdb
 D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.csprojAssemblyReference.cache
 D:\Project\NationalPeace\NPSBS.Core\bin\Debug\Registration.dll
 D:\Project\NationalPeace\NPSBS.Core\bin\Debug\Registration.pdb
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\Setting.xml
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\NPSBS.Core.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\NPSBS.Core.pdb
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\itextsharp.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\itextsharp.pdfa.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\itextsharp.xtra.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\itextsharp.xml
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\obj\Debug\NPSBS.Core.csproj.CoreCompileInputs.cache
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\obj\Debug\NPSBS.Core.csproj.CopyComplete
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\obj\Debug\NPSBS.Core.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\obj\Debug\NPSBS.Core.pdb
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\obj\Debug\NPSBS.Core.csprojAssemblyReference.cache

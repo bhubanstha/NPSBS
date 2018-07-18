@@ -76,8 +76,9 @@
     <Reference Include="NPSBSEnrypter">
       <HintPath>..\NPSBSEnrypter\bin\Debug\NPSBSEnrypter.exe</HintPath>
     </Reference>
-    <Reference Include="Registration">
-      <HintPath>..\..\Software_Registration\bin\Debug\Registration.dll</HintPath>
+    <Reference Include="Registration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Registration.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

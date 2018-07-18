@@ -24,9 +24,9 @@ namespace NPSBS
 				Application.EnableVisualStyles();
 				Application.SetCompatibleTextRenderingDefault(false);
 				Register register = Register.Instance;
-				Register.SoftwareName = RegInfo.AppName;
-				Register.activationKey = RegInfo.AppKey;
-				frmSplash splash = new frmSplash();
+                register.SetSoftwareName(RegInfo.AppName);
+                register.SetKey(RegInfo.AppKey);
+                frmSplash splash = new frmSplash();
 				if (register.IsSoftwareRegistered())
 				{
 					StartupCache sc = StartupCache.Instance;

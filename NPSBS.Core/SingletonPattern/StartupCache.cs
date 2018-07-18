@@ -5,7 +5,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Xml;
-using Registration;
 
 
 namespace NPSBS.Core

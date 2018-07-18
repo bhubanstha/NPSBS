@@ -27,14 +27,6 @@ namespace Montessori.Core
 
         StartupCache()
         {
-            Class = GetClasses();
-            Exam = GetExam();
-            GradingSystem = GetGrading();
-            SettingJson = GetUrlData();
-            ResultFont = new ResultFont();
-            //MacAddress = GetMac();
-            //MyFirstMac = GetMyFirstMacAddress();
-            //IsComputerAuthorized = IsAuthenticateComputer(MacAddress, MyFirstMac);
         }
 
         public static StartupCache Instance
@@ -46,6 +38,11 @@ namespace Montessori.Core
                     if (instance == null)
                     {
                         instance = new StartupCache();
+                        Class = GetClasses();
+                        Exam = GetExam();
+                        GradingSystem = GetGrading();
+                        SettingJson = GetUrlData();
+                        ResultFont = new ResultFont();
                     }
                     return instance;
                 }

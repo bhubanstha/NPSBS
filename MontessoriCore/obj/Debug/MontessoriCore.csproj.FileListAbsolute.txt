@@ -24,3 +24,16 @@ D:\Project\NationalPeace\MontessoriCore\obj\Debug\MontessoriCore.csproj.CopyComp
 D:\Project\NationalPeace\MontessoriCore\obj\Debug\MontessoriCore.dll
 D:\Project\NationalPeace\MontessoriCore\obj\Debug\MontessoriCore.pdb
 D:\Project\NationalPeace\MontessoriCore\obj\Debug\MontessoriCore.csprojAssemblyReference.cache
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\MontessoriCore.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\MontessoriCore.pdb
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\EPPlus.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\itextsharp.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\itextsharp.pdfa.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\itextsharp.xtra.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\EPPlus.xml
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\itextsharp.xml
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.csproj.CoreCompileInputs.cache
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.csproj.CopyComplete
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.pdb
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.csprojAssemblyReference.cache
