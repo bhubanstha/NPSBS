@@ -27,8 +27,8 @@ namespace NPSBS
 				frmSplash splash = new frmSplash();
 				if (register.IsSoftwareRegistered())
 				{
-					Application.Run(splash);
-					StartupCache sc = StartupCache.Instance;
+                    StartupCache sc = StartupCache.Instance;
+                    Application.Run(splash);					
 					mutext.ReleaseMutex();
 				}
 				else
