@@ -31,11 +31,12 @@ namespace NPSBS.Core
 				{
 					if (instance == null)
 					{
-						instance = new StartupCache();
-						Class = GetClasses();
-						Exam = GetExam();
-						GradingSystem = GetGrading();
-						SettingJson = GetUrlData();
+                        Class = GetClasses();
+                        Exam = GetExam();
+                        GradingSystem = GetGrading();
+                        SettingJson = GetUrlData();
+                        instance = new StartupCache();
+						
 					}
 					return instance;
 				}
