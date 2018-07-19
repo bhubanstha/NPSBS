@@ -10,8 +10,6 @@ namespace NPSBS
 	public partial class frmMarkEntry : Form
 	{
 		Exam exam = new Exam();
-		int totalStudents = 0;
-		TableLayoutPanel table = null;
 		int rows = 0;
 		public frmMarkEntry()
 		{
@@ -24,44 +22,6 @@ namespace NPSBS
 		{
 			GetClass();
 		}
-
-		private void CreateTable()
-		{
-			try
-			{
-				pnlStudentContainer.Controls.Remove(table);
-			}
-			catch (Exception)
-			{
-
-				throw;
-			}
-
-			table = new TableLayoutPanel();
-			table.ColumnCount = 4;
-			table.RowCount = 1;
-			table.RowStyles.Clear();
-			table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-			table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
-			table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-			table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-			table.RowStyles.Add(new RowStyle(SizeType.Absolute, 25f));
-			table.Controls.Add(new Label() { Text = "Roll Number", AutoSize = true, Width = 100 }, 0, 0);
-			table.Controls.Add(new Label() { Text = "Name", AutoSize = true, Width = 150 }, 1, 0);
-			table.Controls.Add(new Label() { Text = "Theory Mark", AutoSize = true, Width = 150 }, 2, 0);
-			table.Controls.Add(new Label() { Text = "Practical Mark", Width = 150, AutoSize = true }, 3, 0);
-			table.Width = this.Width - 10;
-			//table.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-			table.CellBorderStyle = TableLayoutPanelCellBorderStyle.OutsetDouble;
-			table.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			table.AutoScroll = true;
-			//table.Location = new Point(gbStudentContainer.Top - 5, 500);
-			table.Dock = DockStyle.Fill;
-			pnlStudentContainer.Controls.Add(table);
-		}
-
-
-
 
 		private void AutoComplete()
 		{
@@ -149,8 +109,8 @@ namespace NPSBS
 				dgvMarkEntry.Columns[0].Visible = false;
 				dgvMarkEntry.Columns[1].Visible = false;
 				dgvMarkEntry.Columns[2].Visible = false;
-				dgvMarkEntry.Columns[3].Width = 130;
-				dgvMarkEntry.Columns[4].Width = 130;
+				dgvMarkEntry.Columns[3].MinimumWidth = 130;
+				dgvMarkEntry.Columns[4].MinimumWidth = 300;
 				dgvMarkEntry.Columns[3].ReadOnly = true;
 				dgvMarkEntry.Columns[4].ReadOnly = true;
 				dgvMarkEntry.EditMode = DataGridViewEditMode.EditOnEnter;
@@ -222,47 +182,37 @@ namespace NPSBS
 
 		private void btnSubmitMarks_Click(object sender, EventArgs e)
 		{
-			string examinationId = ddlExam.SelectedValue.ToString();
-			string classId = ddlClass.SelectedValue.ToString();
-			string subjectId = ddlSubject.SelectedValue.ToString();
-			string examYear = txtYear.Text.Trim();
+			Int32 examinationId = 0, classId = 0, subjectId = 0, examYear = 0;
+			
+			Int32.TryParse(ddlExam.SelectedValue.ToString(), out examinationId);
+			Int32.TryParse(ddlClass.SelectedValue.ToString(), out classId);
+			Int32.TryParse(ddlSubject.SelectedValue.ToString(), out subjectId);
+			Int32.TryParse(txtYear.Text.Trim(), out examYear);
 
 			foreach (DataGridViewRow row in dgvMarkEntry.Rows)
 			{
+				decimal theory = string.IsNullOrEmpty(row.Cells[5].Value.ToString()) ? 0 : Convert.ToDecimal(row.Cells[5].Value.ToString());
+				decimal practical = string.IsNullOrEmpty(row.Cells[6].Value.ToString()) ? 0 : Convert.ToDecimal(row.Cells[6].Value.ToString());
+				int studentId = Convert.ToInt32(row.Cells[0].Value.ToString());
+				string rollNumber = row.Cells[3].Value.ToString();
 
-			}
-
-			for (int i = 0; i < totalStudents; i++)
-			{
-				string prac = "Practical" + i;
-				string the = "Theory" + i;
-				string roll = "RollNumber" + i;
-				TextBox tb = table.Controls.Find(prac, true).FirstOrDefault() as TextBox;
-				string txt = tb.Text == "" ? "0" : tb.Text;
-
-				TextBox tb1 = table.Controls.Find(the, true).FirstOrDefault() as TextBox;
-				string txt1 = tb1.Text == "" ? "0" : tb1.Text;
-
-				Label lbl = table.Controls.Find(roll, true).FirstOrDefault() as Label;
-				string rollNumber = lbl.Text;
-
-				if (IsMarksOk(Convert.ToDecimal(txt1), Convert.ToDecimal(txt), subjectId, rollNumber))
+				if (IsMarksOk(theory,practical,subjectId, rollNumber))
 				{
-					rows = exam.SubmitMark(classId, examinationId, subjectId, rollNumber, Convert.ToDecimal(txt1), Convert.ToDecimal(txt), examYear);
+					rows = exam.SubmitMark(classId, examinationId, subjectId, studentId, theory, practical, examYear);
 				}
-
 			}
+
 			if (rows > 0)
 			{
 				Response.SaveMessage(rows);
 			}
 		}
 
-		private bool IsMarksOk(decimal theory, decimal practical, string subjectId, string rollNumber)
+		private bool IsMarksOk(decimal theory, decimal practical, int subjectId, string rollNumber)
 		{
 			bool status = true;
-			bool isTheoryOk = exam.CheckTheory(theory, subjectId);
-			bool isPracticalOk = exam.CheckPractical(practical, subjectId);
+			bool isTheoryOk = exam.CheckTheory(theory, subjectId.ToString());
+			bool isPracticalOk = exam.CheckPractical(practical, subjectId.ToString());
 			status = isTheoryOk ? true : false;
 			if (status)
 			{
@@ -285,5 +235,38 @@ namespace NPSBS
 			NumberOnly.Yes(txtYear, sender, e);
 		}
 
+		private void dgvMarkEntry_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+		{
+			if(e.ColumnIndex==5) //validate theory
+			{
+				decimal fullMark = Convert.ToDecimal(dgvMarkEntry.Rows[e.RowIndex].Cells[1].Value.ToString());
+				decimal obtained = 0;
+				decimal.TryParse(e.FormattedValue.ToString(), out obtained);
+				if(obtained>fullMark)
+				{
+					dgvMarkEntry.Rows[e.RowIndex].ErrorText = "Obtained theory marks is greater than full mark (" + fullMark.ToString() + ")";
+					e.Cancel = true;
+				}
+				else
+				{
+					dgvMarkEntry.Rows[e.RowIndex].ErrorText = "";
+				}
+			}
+			else if(e.ColumnIndex==6) //validate pratical
+			{
+				decimal fullMark = Convert.ToDecimal(dgvMarkEntry.Rows[e.RowIndex].Cells[2].Value.ToString());
+				decimal obtained = 0;
+				decimal.TryParse(e.FormattedValue.ToString(), out obtained);
+				if (obtained > fullMark)
+				{
+					dgvMarkEntry.Rows[e.RowIndex].ErrorText = "Obtained practical marks is greater than full mark (" + fullMark.ToString() + ")";
+					e.Cancel = true;
+				}
+				else
+				{
+					dgvMarkEntry.Rows[e.RowIndex].ErrorText = "";
+				}
+			}
+		}
 	}
 }

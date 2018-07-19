@@ -45,17 +45,17 @@
 			this.epClass = new System.Windows.Forms.ErrorProvider(this.components);
 			this.gbStudentContainer = new System.Windows.Forms.GroupBox();
 			this.pnlStudentContainer = new System.Windows.Forms.Panel();
+			this.dgvMarkEntry = new System.Windows.Forms.DataGridView();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.btnSubmitMarks = new System.Windows.Forms.Button();
-			this.dgvMarkEntry = new System.Windows.Forms.DataGridView();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.epYear)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.epExam)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.epClass)).BeginInit();
 			this.gbStudentContainer.SuspendLayout();
 			this.pnlStudentContainer.SuspendLayout();
-			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvMarkEntry)).BeginInit();
+			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupBox1
@@ -203,6 +203,21 @@
 			this.pnlStudentContainer.Size = new System.Drawing.Size(806, 389);
 			this.pnlStudentContainer.TabIndex = 3;
 			// 
+			// dgvMarkEntry
+			// 
+			this.dgvMarkEntry.AllowUserToAddRows = false;
+			this.dgvMarkEntry.AllowUserToDeleteRows = false;
+			this.dgvMarkEntry.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvMarkEntry.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+			this.dgvMarkEntry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvMarkEntry.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dgvMarkEntry.Location = new System.Drawing.Point(0, 0);
+			this.dgvMarkEntry.Name = "dgvMarkEntry";
+			this.dgvMarkEntry.RowTemplate.Height = 30;
+			this.dgvMarkEntry.Size = new System.Drawing.Size(806, 389);
+			this.dgvMarkEntry.TabIndex = 0;
+			this.dgvMarkEntry.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvMarkEntry_CellValidating);
+			// 
 			// panel2
 			// 
 			this.panel2.Controls.Add(this.btnSubmitMarks);
@@ -222,19 +237,6 @@
 			this.btnSubmitMarks.Text = "Submit Marks";
 			this.btnSubmitMarks.UseVisualStyleBackColor = true;
 			this.btnSubmitMarks.Click += new System.EventHandler(this.btnSubmitMarks_Click);
-			// 
-			// dgvMarkEntry
-			// 
-			this.dgvMarkEntry.AllowUserToAddRows = false;
-			this.dgvMarkEntry.AllowUserToDeleteRows = false;
-			this.dgvMarkEntry.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dgvMarkEntry.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-			this.dgvMarkEntry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvMarkEntry.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dgvMarkEntry.Location = new System.Drawing.Point(0, 0);
-			this.dgvMarkEntry.Name = "dgvMarkEntry";
-			this.dgvMarkEntry.Size = new System.Drawing.Size(806, 389);
-			this.dgvMarkEntry.TabIndex = 0;
 			// 
 			// frmMarkEntry
 			// 
@@ -263,8 +265,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.epClass)).EndInit();
 			this.gbStudentContainer.ResumeLayout(false);
 			this.pnlStudentContainer.ResumeLayout(false);
-			this.panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvMarkEntry)).EndInit();
+			this.panel2.ResumeLayout(false);
 			this.ResumeLayout(false);
 
         }
