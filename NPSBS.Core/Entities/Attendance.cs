@@ -46,7 +46,7 @@ namespace NPSBS.Core
                 _examinationid = value;
             }
         }
-        public string ExamYear { get; set; }
+        public int ExamYear { get; set; }
         public int SchoolDays 
         {
             get { return _schoolDays; }
@@ -80,7 +80,7 @@ namespace NPSBS.Core
             int i = 0;
             var cmd = DataAccess.CreateCommand();
             cmd.CommandText = "usp_SaveAttendance";
-            cmd.Parameters.AddWithValue("@RollNumber", attendance.RollNumber);
+            cmd.Parameters.AddWithValue("@StudentId", attendance.StudentId);
             cmd.Parameters.AddWithValue("@ClassId", attendance.ClassId);
             cmd.Parameters.AddWithValue("@ExaminationId", attendance.ExaminationId);
             cmd.Parameters.AddWithValue("@ExamHeldYear", attendance.ExamYear);

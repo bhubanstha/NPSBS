@@ -1,252 +1,184 @@
-﻿using NPSBS.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using NPSBS.Core;
 
 namespace NPSBS
 {
-    public partial class frmAttendance : Form
-    {
-        Exam exam = new Exam();
-        TableLayoutPanel table = null;
-        int totalStudent = 0;
-        public frmAttendance()
-        {
-            InitializeComponent();
-            AutoComplete();
-            GetClass();
-        }
+	public partial class frmAttendance : Form
+	{
+		Exam exam = new Exam();
+		public frmAttendance()
+		{
+			InitializeComponent();
+			AutoComplete();
+			GetClass();
+		}
 
-        private void btnLoadStudent_Click(object sender, EventArgs e)
-        {
-            LoadStudent(txtYear.Text, ddlExam.SelectedValue.ToString(), ddlClass.SelectedValue.ToString());
-        }
+		private void btnLoadStudent_Click(object sender, EventArgs e)
+		{
+			LoadStudent(txtYear.Text, ddlExam.SelectedValue.ToString(), ddlClass.SelectedValue.ToString());
+		}
 
-        private void btnSubmitAttendance_Click(object sender, EventArgs e)
-        {
-            SubmitAttendance(txtYear.Text, ddlExam.SelectedValue.ToString(), ddlClass.SelectedValue.ToString());
-        }
+		private void btnSubmitAttendance_Click(object sender, EventArgs e)
+		{
+			int year = 0, examId = 0, classId = 0;
+			Int32.TryParse(txtYear.Text, out year);
+			Int32.TryParse(ddlExam.SelectedValue.ToString(), out examId);
+			Int32.TryParse(ddlClass.SelectedValue.ToString(), out classId);
+			SubmitAttendance(year, examId, classId);
+		}
 
-        private void txtYear_Leave(object sender, EventArgs e)
-        {
-            if(ExamValidation())
-            {
-                GetExamination(txtYear.Text);
-            }
-        }
+		private void txtYear_Leave(object sender, EventArgs e)
+		{
+			if (ExamValidation())
+			{
+				GetExamination(txtYear.Text);
+			}
+		}
 
-        private void AutoComplete()
-        {
-            List<string> years = new Student().AcademicYears();
-            ControlHelper.Autocomplete(years, txtYear);
-        }
+		private void AutoComplete()
+		{
+			List<string> years = new Student().AcademicYears();
+			ControlHelper.Autocomplete(years, txtYear);
+		}
 
-        private void GetExamination(string year)
-        {
-            ddlExam.DataSource = null;
-            ddlExam.Items.Clear();
-            var tbl = exam.GetExamsByYear(year);
-            ddlExam.DataSource = tbl;
-            ddlExam.DisplayMember = "Exam";
-            ddlExam.ValueMember = "ExaminationId";
-            ddlExam.SelectedIndex = 0;
-        }
+		private void GetExamination(string year)
+		{
+			ddlExam.DataSource = null;
+			ddlExam.Items.Clear();
+			var tbl = exam.GetExamsByYear(year);
+			ddlExam.DataSource = tbl;
+			ddlExam.DisplayMember = "Exam";
+			ddlExam.ValueMember = "ExaminationId";
+			ddlExam.SelectedIndex = 0;
+		}
 
-        private void GetClass()
-        {
-            var tbl = new Classes().Select();
-            ddlClass.DataSource = tbl;
-            ddlClass.DisplayMember = "Class Name";
-            ddlClass.ValueMember = "ClassId";
-            ddlClass.SelectedIndex = 0;
-        }
+		private void GetClass()
+		{
+			var tbl = new Classes().Select();
+			ddlClass.DataSource = tbl;
+			ddlClass.DisplayMember = "Class Name";
+			ddlClass.ValueMember = "ClassId";
+			ddlClass.SelectedIndex = 0;
+		}
 
-        private bool ExamValidation()
-        {
-            bool status = true;
-            epYear.Clear();
-            if (txtYear.Text.Length == 0)
-            {
-                epYear.SetError(txtYear, "Exam held year is required.");
-                status = false;
-            }
-            else if(txtYear.Text.Length !=4)
-            {
-                epYear.SetError(txtYear, "Exam held year should be 4 digit number.");
-                status = false;
-            }
-            return status;
-        }
+		private bool ExamValidation()
+		{
+			bool status = true;
+			epYear.Clear();
+			if (txtYear.Text.Length == 0)
+			{
+				epYear.SetError(txtYear, "Exam held year is required.");
+				status = false;
+			}
+			else if (txtYear.Text.Length != 4)
+			{
+				epYear.SetError(txtYear, "Exam held year should be 4 digit number.");
+				status = false;
+			}
+			return status;
+		}
 
-        private void CreateTable()
-        {
-            try
-            {
-                pnlStudentContainer.Controls.Remove(table);
-            }
-            catch (Exception)
-            {
+		private bool LoadValidation()
+		{
+			bool status = true;
+			epClass.Clear();
+			epExam.Clear();
+			epYear.Clear();
+			status = ExamValidation();
+			if (ddlExam.SelectedValue.ToString() == "0")
+			{
+				epExam.SetError(ddlExam, "Exam name is required.");
+				status = false;
+			}
+			if (ddlClass.SelectedValue.ToString() == "0")
+			{
+				epClass.SetError(ddlClass, "Class name is required.");
+				status = false;
+			}
+			return status;
+		}
 
-                throw;
-            }
+		private void LoadStudent(string examYear, string examinationId, string classId)
+		{
+			if (LoadValidation())
+			{
+				DataTable tbl = new Student().GetStudentByAcademicYearClass(classId, examYear, examinationId);
+				dgvAttendance.DataSource = tbl;
+				dgvAttendance.Columns[0].Visible = false; //student id column
+				dgvAttendance.Columns[3].Visible = false; // school days column
+				dgvAttendance.Columns[1].Width = 200;
+				dgvAttendance.Columns[2].Width = 350;
+				dgvAttendance.Columns[1].ReadOnly = true;
+				dgvAttendance.Columns[2].ReadOnly = true;
+				if (tbl.Rows.Count > 0)
+				{
+					txtSchoolDays.Text = tbl.Rows[0][3].ToString();
+				}
+				dgvAttendance.EditMode = DataGridViewEditMode.EditOnEnter;
+			}
+		}
 
-            table = new TableLayoutPanel();
-            table.ColumnCount = 4;
-            table.RowCount = 1;
-            table.RowStyles.Clear();
-            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
-            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            table.RowStyles.Add(new RowStyle(SizeType.Absolute, 25f));
-            table.Controls.Add(new Label() { Text = "S.N", AutoSize = true, Width = 100 }, 0, 0);
-            table.Controls.Add(new Label() { Text = "Roll Number", AutoSize = true, Width = 150 }, 1, 0);
-            table.Controls.Add(new Label() { Text = "Student Name", AutoSize = true, Width = 150 }, 2, 0);
-            table.Controls.Add(new Label() { Text = "Present Days", Width = 150, AutoSize = true }, 3, 0);
-            table.Width = this.Width - 10;
-            table.CellBorderStyle = TableLayoutPanelCellBorderStyle.OutsetDouble;
-            table.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            table.AutoScroll = true;
-            table.Dock = DockStyle.Fill;           
-        }
-        private bool LoadValidation()
-        {
-            bool status = true;
-            epClass.Clear();
-            epExam.Clear();
-            epYear.Clear();
-            status = ExamValidation();
-            if (ddlExam.SelectedValue.ToString() == "0")
-            {
-                epExam.SetError(ddlExam, "Exam name is required.");
-                status = false;
-            }
-            if(ddlClass.SelectedValue.ToString() == "0")
-            {
-                epClass.SetError(ddlClass, "Class name is required.");
-                status = false;
-            }
-            return status;
-        }
-
-        private void LoadStudent(string examYear, string examinationId, string classId)
-        {
-            if(LoadValidation())
-            {
-                var tbl = new Student().GetStudentByAcademicYearClass(classId, examYear, examinationId);
-                totalStudent = tbl.Rows.Count;
-                if(totalStudent>0)
-                {
-                    CreateTable();
-                    txtSchoolDays.Text = tbl.Rows[0]["SchoolDays"].ToString();
-                    for (int i = 0; i < tbl.Rows.Count; i++)
-                    {
-                        
-                        table.RowCount = table.RowCount + 1;
-                        TextBox tb = new TextBox();
-                        tb.Name = "PresentDays" + i;
-                        tb.Width = 150;
-                        tb.MaxLength = 3;
-                        tb.Text = tbl.Rows[i]["PresentDays"].ToString() == "" ? "0" : tbl.Rows[i]["PresentDays"].ToString();
-                        tb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                                | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-                        tb.GotFocus += tb_GotFocus;
-                        tb.KeyPress += tb_KeyPress;
-
-                        Label lb0 = new Label();
-                        lb0.Text = (i + 1).ToString();
-                        lb0.Width = 150;
-                        lb0.Name = "SN" + i;
-                        lb0.AutoSize = true;
-
-                        Label lb = new Label();
-                        lb.Text = tbl.Rows[i]["RollNumber"].ToString();
-                        lb.Width = 150;
-                        lb.Name = "RollNumber" + i;
-                        lb.AutoSize = true;
-
-                        Label lb1 = new Label();
-                        lb1.Text = tbl.Rows[i]["StudentFullName"].ToString(); ;
-                        lb1.Width = 250;
-                        lb1.AutoSize = true;
-
-                        table.Controls.Add(lb0, 0, table.RowCount - 1);
-                        table.Controls.Add(lb, 1, table.RowCount - 1);
-                        table.Controls.Add(lb1, 2, table.RowCount - 1);
-                        table.Controls.Add(tb, 3, table.RowCount - 1);
-                    }
-                    table.Controls.Add(new Label { Text = "" }, 0, table.RowCount);
-                    table.Controls.Add(new Label { Text = "" }, 1, table.RowCount);
-                    table.Controls.Add(new Label { Text = "" }, 2, table.RowCount);
-                    table.Controls.Add(new Label { Text = "" }, 3, table.RowCount);                    
-                    pnlStudentContainer.Controls.Add(table);
-                    TextBox tbFirst = table.Controls.Find("PresentDays0", true).FirstOrDefault() as TextBox;
-                    tbFirst.Focus();
-                }
-            }
-        }
-
-        private void SubmitAttendance(string examYear, string examinationId, string classId)
-        {
-            int rows = 0;
-            string msg = "";
-            bool isError = false;
-            for (int i = 0; i < totalStudent; i++)
-            {
-                string attendance = "PresentDays" + i;
-                string roll = "RollNumber" + i;
-                TextBox tb = table.Controls.Find(attendance, true).FirstOrDefault() as TextBox;
-                string presentDays = tb.Text == "" ? "0" : tb.Text;
-
-                Label rollNo = table.Controls.Find(roll, true).FirstOrDefault() as Label;
-                string rollNumber = rollNo.Text == "" ? "0" : rollNo.Text;
-
-                Attendance att = new Attendance
-                {
-                    ExamYear = examYear,
-                    ExaminationId = Convert.ToInt32(examinationId),
-                    ClassId = Convert.ToInt32(classId),
-                    RollNumber = rollNumber,
-                    SchoolDays = Convert.ToInt32(txtSchoolDays.Text),
-                    PresentDays = Convert.ToInt32(presentDays)
-                };
-                try
-                {
-                    rows = att.SaveAttendance(att);
-                }
-                catch (Exception ex)
-                {
-                    isError = true;
-                    msg = ex.Message.ToString();
-                }
-               
-            }
-            if (isError)
-            {
-                Response.GenericError(msg);
-            }
-            else
-            {
-                Response.SaveMessage(rows);
-            }
-            
-        }
+		private void SubmitAttendance(int examYear, int examinationId, int classId)
+		{
+			int rows = 0;
+			foreach (DataGridViewRow row in dgvAttendance.Rows)
+			{
+				try
+				{
+					Attendance att = new Attendance
+					{
+						ExamYear = examYear,
+						ExaminationId = examinationId,
+						ClassId = classId,
+						StudentId = Convert.ToInt32(row.Cells[0].Value.ToString()),
+						SchoolDays = Convert.ToInt32(txtSchoolDays.Text),
+						PresentDays = string.IsNullOrEmpty(row.Cells[4].Value.ToString()) ? 0 : Convert.ToInt32(row.Cells[4].Value.ToString())
+					};
+					rows += att.SaveAttendance(att);
+				}
+				catch (Exception ex)
+				{
+					Response.GenericError(ex.Message.ToString());
+				}
+			}
+			if (rows > 0)
+			{
+				Response.SaveMessage(rows);
+			}
+		}
 
 
-        void tb_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            NumberOnly.Yes(sender as TextBox, sender, e);
-        }
+		void tb_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			NumberOnly.Yes(sender as TextBox, sender, e);
+		}
 
-        void tb_GotFocus(object sender, EventArgs e)
-        {
-            this.AcceptButton = btnSubmitAttendance;
-        }
+		void tb_GotFocus(object sender, EventArgs e)
+		{
+			this.AcceptButton = btnSubmitAttendance;
+		}
 
-    }
+		private void dgvAttendance_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+		{
+			if (e.ColumnIndex == 4)
+			{
+				int presentDays = 0;
+				Int32.TryParse(e.FormattedValue.ToString(), out presentDays);
+				int schoolDays = 0;
+				Int32.TryParse(txtSchoolDays.Text, out schoolDays);
+				if (presentDays > schoolDays)
+				{
+					dgvAttendance.Rows[e.RowIndex].ErrorText = "Student present days can't be more than school days.";
+					e.Cancel = true;
+				}else{
+					dgvAttendance.Rows[e.RowIndex].ErrorText = "";
+				}
+			}
+
+		}
+	}
 }

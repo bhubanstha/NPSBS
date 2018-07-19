@@ -191,7 +191,6 @@ D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.csproj.CoreCompileInputs.cach
 D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.csproj.CopyComplete
 D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.exe
 D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.pdb
-D:\Project\NationalPeace\NPSBS\bin\Debug\Registration.dll
 D:\Project\NationalPeace\NPSBS\bin\Debug\Registration.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\obj\x86\Debug\NPSBS.csprojAssemblyReference.cache
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\obj\x86\Debug\NPSBS.frmAbout.resources
