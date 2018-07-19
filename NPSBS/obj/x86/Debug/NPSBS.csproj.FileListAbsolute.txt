@@ -163,7 +163,6 @@ D:\Project\NationalPeace\NPSBS\bin\Debug\itextsharp.xtra.dll
 D:\Project\NationalPeace\NPSBS\bin\Debug\Newtonsoft.Json.dll
 D:\Project\NationalPeace\NPSBS\bin\Debug\NPSBS.Core.dll
 D:\Project\NationalPeace\NPSBS\bin\Debug\WinFormAnimation.dll
-D:\Project\NationalPeace\NPSBS\bin\Debug\BCrypt.Net.dll
 D:\Project\NationalPeace\NPSBS\bin\Debug\NPSBS.Core.pdb
 D:\Project\NationalPeace\NPSBS\bin\Debug\CircularProgressBar.xml
 D:\Project\NationalPeace\NPSBS\bin\Debug\EPPlus.xml
@@ -235,3 +234,4 @@ C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\WinFormAnimation.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\obj\x86\Debug\NPSBS.csproj.CopyComplete
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Registration.dll
+D:\Project\NationalPeace\NPSBS\bin\Debug\Registration.dll

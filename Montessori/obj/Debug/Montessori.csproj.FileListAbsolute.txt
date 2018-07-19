@@ -107,7 +107,6 @@ D:\Project\NationalPeace\Montessori\bin\Debug\itextsharp.xtra.dll
 D:\Project\NationalPeace\Montessori\bin\Debug\MontessoriCore.dll
 D:\Project\NationalPeace\Montessori\bin\Debug\Newtonsoft.Json.dll
 D:\Project\NationalPeace\Montessori\bin\Debug\WinFormAnimation.dll
-D:\Project\NationalPeace\Montessori\bin\Debug\BCrypt.Net.dll
 D:\Project\NationalPeace\Montessori\bin\Debug\MontessoriCore.pdb
 D:\Project\NationalPeace\Montessori\bin\Debug\CircularProgressBar.xml
 D:\Project\NationalPeace\Montessori\bin\Debug\EPPlus.xml

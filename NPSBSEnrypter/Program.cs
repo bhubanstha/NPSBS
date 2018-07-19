@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BCrypt;
-using NPSBS.Core;
-using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using NPSBS.Core;
 
 namespace NPSBSEnrypter
 {
-    class Program
+	class Program
     {
         const int STD_INPUT_HANDLE = -10;
         const int ENABLE_QUICK_EDIT_MODE = 0x40 | 0x80;

@@ -69,9 +69,6 @@
     <Reference Include="itextsharp.xtra">
       <HintPath>..\packages\itextsharp.xtra.5.5.9\lib\itextsharp.xtra.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton Toolkit">
-      <HintPath>..\..\..\..\..\..\Krypton\Krypton Toolkit.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net35\Newtonsoft.Json.dll</HintPath>
@@ -79,9 +76,8 @@
     <Reference Include="NPSBSEnrypter">
       <HintPath>..\NPSBSEnrypter\bin\Debug\NPSBSEnrypter.exe</HintPath>
     </Reference>
-    <Reference Include="Registration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Registration.dll</HintPath>
+    <Reference Include="Registration">
+      <HintPath>..\..\Software_Registration\Registration\bin\Release\Registration.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

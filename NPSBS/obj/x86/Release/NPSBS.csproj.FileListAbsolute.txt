@@ -11,3 +11,46 @@ D:\Running Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmTransferStudent.
 D:\Running Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.Properties.Resources.resources
 D:\Running Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.csproj.GenerateResource.Cache
 D:\Running Project\NationalPeace\NPSBS\bin\Release\NPSBS.exe.config
+D:\Project\NationalPeace\NPSBS\bin\Release\Setting.xml
+D:\Project\NationalPeace\NPSBS\bin\Release\NPSBSEnrypter.exe
+D:\Project\NationalPeace\NPSBS\bin\Release\App.config
+D:\Project\NationalPeace\NPSBS\bin\Release\NPSBS.exe.config
+D:\Project\NationalPeace\NPSBS\bin\Release\NPSBS.exe
+D:\Project\NationalPeace\NPSBS\bin\Release\NPSBS.pdb
+D:\Project\NationalPeace\NPSBS\bin\Release\CircularProgressBar.dll
+D:\Project\NationalPeace\NPSBS\bin\Release\EPPlus.dll
+D:\Project\NationalPeace\NPSBS\bin\Release\itextsharp.dll
+D:\Project\NationalPeace\NPSBS\bin\Release\itextsharp.pdfa.dll
+D:\Project\NationalPeace\NPSBS\bin\Release\itextsharp.xtra.dll
+D:\Project\NationalPeace\NPSBS\bin\Release\Newtonsoft.Json.dll
+D:\Project\NationalPeace\NPSBS\bin\Release\NPSBS.Core.dll
+D:\Project\NationalPeace\NPSBS\bin\Release\Registration.dll
+D:\Project\NationalPeace\NPSBS\bin\Release\WinFormAnimation.dll
+D:\Project\NationalPeace\NPSBS\bin\Release\NPSBS.Core.pdb
+D:\Project\NationalPeace\NPSBS\bin\Release\CircularProgressBar.xml
+D:\Project\NationalPeace\NPSBS\bin\Release\EPPlus.xml
+D:\Project\NationalPeace\NPSBS\bin\Release\itextsharp.xml
+D:\Project\NationalPeace\NPSBS\bin\Release\Newtonsoft.Json.xml
+D:\Project\NationalPeace\NPSBS\bin\Release\Registration.pdb
+D:\Project\NationalPeace\NPSBS\bin\Release\WinFormAnimation.xml
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.csprojAssemblyReference.cache
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmAbout.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmAttendance.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmClass.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmExam.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmExtraActivities.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmGradingSystem.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmLedger.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmMain.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmMarkEntry.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmResult.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmSplash.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmStudent.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmSubject.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.frmTransferStudent.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.Properties.Resources.resources
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.csproj.GenerateResource.cache
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.csproj.CoreCompileInputs.cache
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.csproj.CopyComplete
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.exe
+D:\Project\NationalPeace\NPSBS\obj\x86\Release\NPSBS.pdb

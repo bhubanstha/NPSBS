@@ -80,3 +80,5 @@ C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\obj\Debug\NPSBS.Core.csproj.CopyC
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\obj\Debug\NPSBS.Core.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\obj\Debug\NPSBS.Core.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\obj\Debug\NPSBS.Core.csprojAssemblyReference.cache
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\EPPlus.dll
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\EPPlus.xml
