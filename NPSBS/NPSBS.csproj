@@ -69,6 +69,26 @@
     <Reference Include="itextsharp.xtra">
       <HintPath>..\packages\itextsharp.xtra.5.5.9\lib\itextsharp.xtra.dll</HintPath>
     </Reference>
+    <Reference Include="Krypton Docking">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Navigator">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Ribbon">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Toolkit, Version=4.0.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Workspace">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="MDIWindowManager">
+      <HintPath>..\..\..\..\..\..\Krypton\MDIWindowManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net35\Newtonsoft.Json.dll</HintPath>
@@ -108,6 +128,12 @@
     </Compile>
     <Compile Include="frmAttendance.Designer.cs">
       <DependentUpon>frmAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
     </Compile>
     <Compile Include="frmClass.cs">
       <SubType>Form</SubType>
@@ -151,11 +177,23 @@
     <Compile Include="frmMarkEntry.Designer.cs">
       <DependentUpon>frmMarkEntry.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMdiMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMdiMain.Designer.cs">
+      <DependentUpon>frmMdiMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmResult.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmResult.Designer.cs">
       <DependentUpon>frmResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchoolSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSchoolSetup.Designer.cs">
+      <DependentUpon>frmSchoolSetup.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSplash.cs">
       <SubType>Form</SubType>
@@ -187,6 +225,7 @@
     <Content Include="NPSBSEnrypter.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\save.png" />
     <None Include="Resources\Me.jpg" />
     <None Include="Resources\NPSBS.png" />
     <None Include="Resources\close.png" />
@@ -195,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAttendance.resx">
       <DependentUpon>frmAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClass.resx">
       <DependentUpon>frmClass.cs</DependentUpon>
@@ -217,8 +259,14 @@
     <EmbeddedResource Include="frmMarkEntry.resx">
       <DependentUpon>frmMarkEntry.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMdiMain.resx">
+      <DependentUpon>frmMdiMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmResult.resx">
       <DependentUpon>frmResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchoolSetup.resx">
+      <DependentUpon>frmSchoolSetup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>

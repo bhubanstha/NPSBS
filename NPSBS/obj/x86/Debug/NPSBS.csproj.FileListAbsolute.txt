@@ -225,7 +225,6 @@ C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\itextsharp.xtra.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\NPSBS.Core.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\WinFormAnimation.dll
-C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\BCrypt.Net.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\NPSBS.Core.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\CircularProgressBar.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\EPPlus.xml
@@ -233,5 +232,13 @@ C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\itextsharp.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\WinFormAnimation.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\obj\x86\Debug\NPSBS.csproj.CopyComplete
-C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Registration.dll
 D:\Project\NationalPeace\NPSBS\bin\Debug\Registration.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Krypton Docking.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Krypton Navigator.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Krypton Ribbon.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Krypton Toolkit.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Krypton Workspace.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\obj\x86\Debug\NPSBS.frmBase.resources
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\obj\x86\Debug\NPSBS.frmSchoolSetup.resources
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\MDIWindowManager.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\obj\x86\Debug\NPSBS.frmMdiMain.resources

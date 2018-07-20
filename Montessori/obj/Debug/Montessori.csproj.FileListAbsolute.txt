@@ -192,7 +192,6 @@ C:\Users\Angular\Desktop\Proj\NPSBS\Montessori\bin\Debug\itextsharp.xtra.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\Montessori\bin\Debug\MontessoriCore.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\Montessori\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\Montessori\bin\Debug\WinFormAnimation.dll
-C:\Users\Angular\Desktop\Proj\NPSBS\Montessori\bin\Debug\BCrypt.Net.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\Montessori\bin\Debug\MontessoriCore.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\Montessori\bin\Debug\CircularProgressBar.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\Montessori\bin\Debug\EPPlus.xml
@@ -200,4 +199,3 @@ C:\Users\Angular\Desktop\Proj\NPSBS\Montessori\bin\Debug\itextsharp.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\Montessori\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\Montessori\bin\Debug\WinFormAnimation.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\Montessori\obj\Debug\Montessori.csproj.CopyComplete
-C:\Users\Angular\Desktop\Proj\NPSBS\Montessori\bin\Debug\Registration.dll

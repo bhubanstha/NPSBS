@@ -22,5 +22,17 @@ namespace NPSBS.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2010 Blue")]
+        public string ThemeName {
+            get {
+                return ((string)(this["ThemeName"]));
+            }
+            set {
+                this["ThemeName"] = value;
+            }
+        }
     }
 }
