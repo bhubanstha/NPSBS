@@ -2,26 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using NPSBS.Core;
-using iTextSharp;
-using itextsharp;
-using itextsharp.pdfa;
-using itextsharp.pdfa.iTextSharp;
-using itextsharp.pdfa.iTextSharp.text;
 using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.xtra;
-using System.IO;
-using System.Diagnostics;
-using System.Net;
-using System.Net.NetworkInformation;
+using NPSBS.Core;
 
 namespace NPSBS
 {
-    public partial class frmResult : Form
+	public partial class frmResult : frmBase
     {
         Exam exam = new Exam();
         SaveFileDialog sf = null;
@@ -74,7 +61,7 @@ namespace NPSBS
         void bWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             string fileName = (string)e.Result;
-            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Cursor = Cursors.Default;
             if(fileName != null) AppRunner.Run(fileName);
 
         }

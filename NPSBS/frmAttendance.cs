@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Windows.Forms;
 using NPSBS.Core;
 
 namespace NPSBS
 {
-	public partial class frmAttendance : Form
+	public partial class frmAttendance : frmBase
 	{
 		Exam exam = new Exam();
 		public frmAttendance()
@@ -152,10 +151,6 @@ namespace NPSBS
 		}
 
 
-		void tb_KeyPress(object sender, KeyPressEventArgs e)
-		{
-			NumberOnly.Yes(sender as TextBox, sender, e);
-		}
 
 		void tb_GotFocus(object sender, EventArgs e)
 		{

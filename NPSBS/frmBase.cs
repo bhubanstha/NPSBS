@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using ComponentFactory.Krypton.Toolkit;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace NPSBS
 {
-    public partial class frmBase : KryptonForm
-    {
-        public frmBase()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class frmBase : KryptonForm
+	{
+		public frmBase()
+		{
+			InitializeComponent();
+			this.ControlBox = false;
+		}
+
+	}
 }

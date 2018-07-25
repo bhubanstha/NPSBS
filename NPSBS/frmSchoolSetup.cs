@@ -22,7 +22,7 @@ namespace NPSBS
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
             ofd.RestoreDirectory = true;
-            ofd.Filter = "Jpeg Image(*.jpg)|*.jpg|Png File(*.png)|*.png";
+            ofd.Filter = "Image File|*.jpg;*.jpeg;*.png";
             if(ofd.ShowDialog() == DialogResult.OK)
             {
                 imageFile = ofd.FileName;

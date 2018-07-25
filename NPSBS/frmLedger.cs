@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using NPSBS.Core;
 
 namespace NPSBS
 {
-	public partial class frmLedger : Form
+	public partial class frmLedger : frmBase
 	{
 		Exam exam = new Exam();
 		string year, examName, className, fileName;

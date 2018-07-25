@@ -6,7 +6,7 @@ using NPSBS.Core;
 
 namespace NPSBS
 {
-	public partial class frmExtraActivities : Form
+	public partial class frmExtraActivities : frmBase
 	{
 		Exam exam = new Exam();
 		int rows = 0;
@@ -95,7 +95,6 @@ namespace NPSBS
 					MessageBox.Show("There are no student in Nursery class for this year.", "No Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 				this.Cursor = Cursors.Default;
-				pnlStudentContainer.Visible = true;
 			}
 		}
 

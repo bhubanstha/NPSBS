@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using NPSBS.Core;
 
 namespace NPSBS
 {
-    public partial class frmTransferStudent : Form
+	public partial class frmTransferStudent : frmBase
     {
         Student s = new Student();
         int rows = 0;

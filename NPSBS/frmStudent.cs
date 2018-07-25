@@ -14,7 +14,7 @@ using System.IO;
 
 namespace NPSBS
 {
-    public partial class frmStudent : Form
+    public partial class frmStudent : frmBase
     {
         Student s = new Student();
         int rows;
@@ -245,12 +245,18 @@ namespace NPSBS
 
         private void txtStudentNameSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.StringOnly(txtStudentNameSearch, sender, e);
+         //   NumberOnly.StringOnly(txtStudentNameSearch, sender, e);
         }
 
         private void txtAcademicYearSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.Yes(txtAcademicYearSearch, sender, e);
+            //NumberOnly.Yes(txtAcademicYearSearch, sender, e);
         }
-    }
+
+		private void lblExcelSample_LinkClicked1(object sender, EventArgs e)
+		{
+			var fileName = AppDomain.CurrentDomain.BaseDirectory + "\\Student.xlsx";
+			AppRunner.Run(fileName);
+		}
+	}
 }

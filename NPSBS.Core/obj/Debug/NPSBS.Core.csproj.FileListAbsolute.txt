@@ -84,3 +84,4 @@ D:\Project\NationalPeace\NPSBS.Core\bin\Debug\EPPlus.dll
 D:\Project\NationalPeace\NPSBS.Core\bin\Debug\EPPlus.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\EPPlus.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\EPPlus.xml
+D:\Project\NationalPeace\NPSBS.Core\bin\Debug\Krypton Toolkit.dll

@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Windows.Forms;
 using NPSBS.Core;
 
 namespace NPSBS
 {
-	public partial class frmMarkEntry : Form
+	public partial class frmMarkEntry : frmBase
 	{
 		Exam exam = new Exam();
 		int rows = 0;
