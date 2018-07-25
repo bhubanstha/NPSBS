@@ -330,6 +330,10 @@
       <Project>{D7C84CA3-8B28-4F44-8285-A14089DB1540}</Project>
       <Name>NPSBS.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{a3fc6088-a07c-4d20-8748-91f1503d6d8b}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\splashBack.jpg" />

@@ -55,3 +55,4 @@ C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.pdb
 D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\EPPlus.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\EPPlus.xml
 D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\Krypton Toolkit.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\Krypton Toolkit.dll

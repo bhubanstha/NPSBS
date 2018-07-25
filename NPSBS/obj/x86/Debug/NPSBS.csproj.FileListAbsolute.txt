@@ -251,3 +251,5 @@ D:\Project\NationalPeace\NPSBS\bin\Debug\MDIWindowManager.dll
 D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmBase.resources
 D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmMdiMain.resources
 D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmSchoolSetup.resources
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Utility.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Utility.pdb

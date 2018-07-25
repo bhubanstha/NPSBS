@@ -24,7 +24,7 @@ namespace NPSBS
 				Register register = Register.Instance;
 				register.SetSoftwareName(RegInfo.AppName);
 				register.SetKey(RegInfo.AppKey);
-				var splash = new frmMdiMain();
+				var splash = new frmAbout();
 				if (register.IsSoftwareRegistered())
 				{
 					StartupCache sc = StartupCache.Instance;
