@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Drawing;
+using NPSBS.Core;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace NPSBS
 {
     public partial class frmSchoolSetup : frmBase
     {
         private string imageFile = string.Empty;
-        public frmSchoolSetup()
+        private string appPath = AppDomain.CurrentDomain.BaseDirectory;
+        private frmMdiMain mdiForm;
+
+        public frmSchoolSetup(frmMdiMain frmMdiMain)
         {
             InitializeComponent();
+            mdiForm = frmMdiMain;
         }
 
         private void frmSchoolSetup_Load(object sender, EventArgs e)
@@ -39,7 +45,18 @@ namespace NPSBS
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            picLogo.Image.Save(appPath + "schoolLogo.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            CreateNewBackground();
+        }
 
+
+        private void CreateNewBackground()
+        {
+            string bg = appPath + "mainbg.jpg";
+            string logo = appPath + "schoolLogo.jpg";
+            string newBg = appPath + "bgMain.jpg";
+            StartupCache.CreateBackgroundImage(bg, logo, newBg);
+            mdiForm.SetBackground();
         }
     }
 }

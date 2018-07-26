@@ -86,3 +86,5 @@ C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\EPPlus.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\EPPlus.xml
 D:\Project\NationalPeace\NPSBS.Core\bin\Debug\Krypton Toolkit.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\Krypton Toolkit.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\Utility.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\Utility.pdb

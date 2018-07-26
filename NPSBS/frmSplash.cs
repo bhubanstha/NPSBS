@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Windows.Forms;
 using NPSBS.Core;
+using Utility;
 
 namespace NPSBS
 {
@@ -9,7 +10,7 @@ namespace NPSBS
 	{
 
 		BackgroundWorker bWorker = new BackgroundWorker();
-		public frmSplash()
+        public frmSplash()
 		{
 			InitializeComponent();
 			lblComponents.Text = "Checking Server Connection...";
@@ -25,11 +26,12 @@ namespace NPSBS
 			{
 				BackgroundWorker b = new BackgroundWorker();
 				b.RunWorkerAsync();
-
-				lblComponents.Text = "Connection Ok";
+                
+                lblComponents.Text = "Connection Ok";
 				Thread.Sleep(2000);
 				//lblComponents.Text = "Global Function"; 
-				frmMain fm = new frmMain();
+				frmMdiMain fm = new frmMdiMain();
+                
 				fm.Show();
 				this.Hide();
 			}
@@ -43,15 +45,18 @@ namespace NPSBS
 				Thread.Sleep(2000);
 				this.Close();
 			}
-
 		}
 
 		void bWorker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			var lbl = (Label)e.Argument;
-
-			e.Result = ConnectionChecker.CheckConnection();
-
-		}
+            bool result = ConnectionChecker.CheckConnection();
+            if (result)
+            {
+                StartupCache sc = StartupCache.Instance;
+                StartupCache.About = OnlineContent.GetAbout();
+            }
+            e.Result = result;
+        }
 	}
 }

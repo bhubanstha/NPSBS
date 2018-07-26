@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using Utility;
+using System;
+using NPSBS.Core;
 namespace NPSBS
 {
     public partial class frmAbout : Form
@@ -19,9 +21,11 @@ namespace NPSBS
             LinkLabel.Link link = new LinkLabel.Link();
             link.LinkData = "http://www.bhubanshrestha.blogspot.com/";
             linkLabel1.Links.Add(link);
-            lblCopyRight.Text =  OnlineContent.GetAbout().SchoolSoftwareAbout;
+            
         }
 
+       
+       
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -62,6 +66,11 @@ namespace NPSBS
         private void frmAbout_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.DrawRectangle(new Pen(Color.Black, 3), this.DisplayRectangle);
+        }
+
+        private void frmAbout_Shown(object sender, EventArgs e)
+        {
+            lblCopyRight.Text = StartupCache.About.SchoolSoftwareAbout;
         }
     }
 }

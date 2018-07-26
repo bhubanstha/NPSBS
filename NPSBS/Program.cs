@@ -24,11 +24,11 @@ namespace NPSBS
 				Register register = Register.Instance;
 				register.SetSoftwareName(RegInfo.AppName);
 				register.SetKey(RegInfo.AppKey);
-				var splash = new frmAbout();
+                
+                var splash = new frmSplash();
 				if (register.IsSoftwareRegistered())
-				{
-					StartupCache sc = StartupCache.Instance;
-					Application.Run(splash);
+				{                   
+                    Application.Run(splash);
 					mutext.ReleaseMutex();
 				}
 				else

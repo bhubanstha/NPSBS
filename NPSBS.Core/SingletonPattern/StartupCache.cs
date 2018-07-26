@@ -5,19 +5,23 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Xml;
-
+using Utility;
+using System.IO;
+using System.Drawing;
 
 namespace NPSBS.Core
 {
-	public class StartupCache
-	{
-		private static StartupCache instance = null;
-		private static readonly object padlock = new object();
-		public static string SettingJson = string.Empty;
-		public static DataTable Class { get; private set; }
-		public static DataTable Exam { get; private set; }
-		public static List<GradingSystem> GradingSystem { get; private set; }
-		public static ResultFont ResultFont { get; private set; }
+    public class StartupCache
+    {
+        private static StartupCache instance = null;
+        private static readonly object padlock = new object();
+        public static string SettingJson = string.Empty;
+        public static DataTable Class { get; private set; }
+        public static DataTable Exam { get; private set; }
+        public static List<GradingSystem> GradingSystem { get; private set; }
+        public static ResultFont ResultFont { get; private set; }
+        public static About About { get;  set; }
+
 		StartupCache()
 		{
 			ResultFont = new ResultFont();
@@ -222,6 +226,19 @@ namespace NPSBS.Core
 			authenticate = macs.Contains(thisMac) ? true : false;
 			return authenticate;
 		}
+
+
+        public static void CreateBackgroundImage(string mainBgFile, string logoFile, string savePath)
+        {
+            Image bgImage = ImageUtility.GetImage(mainBgFile);
+            Image logoImage = ImageUtility.GetImage(logoFile);
+            Image newBg = ImageUtility.SetWaterMark(bgImage, logoImage, 0.5f, true, StartupCache.About.DeveloperContactNo);
+            if(File.Exists(savePath))
+            {
+                File.Delete(savePath);
+            }
+            newBg.Save(savePath);
+        }
 	}
 
 	public class RegInfo
@@ -241,4 +258,5 @@ namespace NPSBS.Core
 			}
 		}
 	}
+
 }

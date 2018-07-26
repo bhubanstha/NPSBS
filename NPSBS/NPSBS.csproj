@@ -222,6 +222,10 @@
     <Compile Include="NativeMethods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="mainbg.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DbUpdate\dbupdate.sql" />
     <Content Include="NPSBSEnrypter.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

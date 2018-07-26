@@ -56,3 +56,7 @@ D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\EPPlus.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\EPPlus.xml
 D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\Krypton Toolkit.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\Krypton Toolkit.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\Utility.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\Utility.pdb
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\Newtonsoft.Json.xml

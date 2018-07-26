@@ -8,5 +8,6 @@ namespace Utility
     public class About
     {
         public string SchoolSoftwareAbout { get; set; }
+        public string DeveloperContactNo { get; set; }
     }
 }

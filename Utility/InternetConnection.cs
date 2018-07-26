@@ -44,7 +44,7 @@ namespace Utility
                 using (var client = new WebClient())
                 {
                     client.Headers.Add("secret-key", "$2a$10$S17h1HQFAD.AEQpef2TRC.G9SPsHzR1yCYPD1ZBE6AAMi8N9SK/Ta");
-                    Uri uri = new Uri("https://api.jsonbin.io/b/5b516f9d4d5ea95c8ba76abc/4");
+                    Uri uri = new Uri("https://api.jsonbin.io/b/5b516f9d4d5ea95c8ba76abc/latest");
                     Stream data =  client.OpenRead(uri);
                     using (StreamReader reader = new StreamReader(data))
                     {
