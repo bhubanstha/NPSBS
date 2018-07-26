@@ -254,3 +254,6 @@ D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.frmSchoolSetup.resources
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Utility.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Utility.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\mainbg.jpg
+D:\Project\NationalPeace\NPSBS\bin\Debug\mainbg.jpg
+D:\Project\NationalPeace\NPSBS\bin\Debug\Utility.dll
+D:\Project\NationalPeace\NPSBS\bin\Debug\Utility.pdb

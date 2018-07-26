@@ -84,7 +84,7 @@
 			// kryptonGroupBox1
 			// 
 			this.kryptonGroupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.kryptonGroupBox1.Location = new System.Drawing.Point(0, 48);
+			this.kryptonGroupBox1.Location = new System.Drawing.Point(27, 48);
 			this.kryptonGroupBox1.Name = "kryptonGroupBox1";
 			// 
 			// kryptonGroupBox1.Panel
@@ -282,7 +282,7 @@
 			this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
 			this.kryptonPanel1.Name = "kryptonPanel1";
-			this.kryptonPanel1.Size = new System.Drawing.Size(647, 388);
+			this.kryptonPanel1.Size = new System.Drawing.Size(700, 392);
 			this.kryptonPanel1.TabIndex = 3;
 			// 
 			// frmSchoolSetup
@@ -290,9 +290,10 @@
 			this.AcceptButton = this.btnSave;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(647, 388);
+			this.ClientSize = new System.Drawing.Size(700, 392);
 			this.Controls.Add(this.kryptonPanel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Location = new System.Drawing.Point(0, 0);
 			this.MaximizeBox = false;
 			this.Name = "frmSchoolSetup";
 			this.Text = "School Setup";

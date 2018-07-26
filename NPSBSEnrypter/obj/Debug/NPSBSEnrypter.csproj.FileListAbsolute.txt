@@ -60,3 +60,7 @@ C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\Utility.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\Utility.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\Newtonsoft.Json.xml
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\Utility.dll
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\Newtonsoft.Json.dll
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\Utility.pdb
+D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\Newtonsoft.Json.xml

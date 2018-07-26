@@ -226,19 +226,6 @@ namespace NPSBS.Core
 			authenticate = macs.Contains(thisMac) ? true : false;
 			return authenticate;
 		}
-
-
-        public static void CreateBackgroundImage(string mainBgFile, string logoFile, string savePath)
-        {
-            Image bgImage = ImageUtility.GetImage(mainBgFile);
-            Image logoImage = ImageUtility.GetImage(logoFile);
-            Image newBg = ImageUtility.SetWaterMark(bgImage, logoImage, 0.5f, true, StartupCache.About.DeveloperContactNo);
-            if(File.Exists(savePath))
-            {
-                File.Delete(savePath);
-            }
-            newBg.Save(savePath);
-        }
 	}
 
 	public class RegInfo
