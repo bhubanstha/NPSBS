@@ -160,7 +160,36 @@ namespace Utility
 			}
 			return newImage;
 		}
-	}
+
+        public static Bitmap RemoveTransparency(Image img)
+        {
+            Bitmap bmp2 = new Bitmap(img.Width, img.Height);
+            Rectangle rect = new Rectangle(Point.Empty, img.Size);
+            using (Graphics g = Graphics.FromImage(bmp2))
+            {
+                g.Clear(Color.White);
+                g.DrawImageUnscaledAndClipped(img, rect);
+            }
+            return bmp2;
+        }
+
+        public static byte[] ImageToByteArray(Image image)
+        {
+            using (var ms = new MemoryStream())
+            {
+                image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
+        }
+
+        public static Image ByteToImage(byte[] byteArray)
+        {
+            using (var ms = new MemoryStream(byteArray))
+            {
+                return Image.FromStream(ms, true);
+            }
+        }
+    }
 
 	public static class ImageExtension
 	{

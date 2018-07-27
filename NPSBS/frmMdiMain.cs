@@ -332,9 +332,9 @@ namespace NPSBS
 				{
 
 					Image image = Properties.Resources._1906811;
-					if (File.Exists(path + "bgMain.jpg"))
+					if (File.Exists(Constant.NPSBSBackground))
 					{
-						image = new Bitmap(ImageUtility.GetImage(path + "bgMain.jpg"));
+						image = new Bitmap(ImageUtility.GetImage(Constant.NPSBSBackground));
 					}
 					ctrl.BackgroundImage = image;
 					ctrl.BackgroundImageLayout = ImageLayout.Zoom;

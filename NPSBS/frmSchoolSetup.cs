@@ -4,6 +4,7 @@ using NPSBS.Core;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.IO;
+using System.Drawing.Imaging;
 
 using Utility;
 
@@ -19,12 +20,27 @@ namespace NPSBS
 		{
 			InitializeComponent();
 			mdiForm = frmMdiMain;
-			this.ControlBox = true;
-		}
+            lblSchoolId.Visible = false;
+        }
 
 		private void frmSchoolSetup_Load(object sender, EventArgs e)
 		{
-
+            School school = new School();
+            txtSchoolName.Text = school.SchoolName;
+            txtShortName.Text = school.ShortName;
+            txtAddress.Text = school.Address;
+            txtPhoneNo.Text = school.PhoneNo;
+            txtEmail.Text = school.Email;
+            txtWebsite.Text = school.WebSite;
+            if(school.Logo.Length>0)
+            {
+                Image image = ImageUtility.GetImage(Constant.NPSBSLogo);// ImageUtility.ByteToImage(school.Logo);
+                if (image != null)
+                {
+                    picLogo.Image = image;
+                }
+            }
+            lblSchoolId.Text = school.Id.ToString();            
 		}
 
 		private void btnLoadLogo_Click(object sender, EventArgs e)
@@ -49,24 +65,40 @@ namespace NPSBS
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
-			picLogo.Image.Save(appPath + "schoolLogo.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
-			CreateNewBackground();
+            School s = new School()
+            {
+             SchoolName = txtSchoolName.Text.Trim(),
+             ShortName = txtShortName.Text.Trim(),
+             Address = txtAddress.Text.Trim(),
+             PhoneNo = txtPhoneNo.Text.Trim(),
+             Email = txtEmail.Text.Trim(),
+             WebSite = txtWebsite.Text.Trim(),
+             Id = Convert.ToInt32(lblSchoolId.Text)
+            };
+            if(picLogo.Image != null)
+            {
+                s.Logo = ImageUtility.ImageToByteArray(picLogo.Image);                
+                CreateNewBackground();
+                picLogo.Image.Save(Constant.NPSBSLogo, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+            int id = s.SaveOrUdate();
+            lblSchoolId.Text = id.ToString();
 		}
 
 
 		private void CreateNewBackground()
 		{
-			string bg = appPath + "mainbg.jpg";
-			string logo = appPath + "schoolLogo.jpg";
-			string savePath = appPath + "bgMain.jpg";
-			Image bgImage = Image.FromFile(bg);			
+			Image bgImage = Image.FromFile(Constant.MainBackground);			
 			Image newBg = ImageUtility.SetWaterMark(bgImage, picLogo.Image, 0.5f, StartupCache.About.DeveloperContactNo);
-			if (File.Exists(savePath))
+			if (File.Exists(Constant.NPSBSBackground))
 			{
-				File.Delete(savePath);
+				File.Delete(Constant.NPSBSBackground);
 			}
-			newBg.Save(savePath);
+            picLogo.Image = ImageUtility.RemoveTransparency(picLogo.Image);
+			newBg.Save(Constant.NPSBSBackground);
 			mdiForm.SetBackground();
 		}
+
+        
 	}
 }

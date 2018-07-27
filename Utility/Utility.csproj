@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.cs" />
+    <Compile Include="Constant.cs" />
     <Compile Include="ImageUtility.cs" />
     <Compile Include="InternetConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
