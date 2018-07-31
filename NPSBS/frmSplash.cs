@@ -64,7 +64,7 @@ namespace NPSBS
 		{
 			if (InternetConnection.InInternetConnected())
 			{
-				StartupCache.About = OnlineContent.GetAbout();
+				StartupCache.About = OnlineContent.GetAbout(StartupCache.School.ShortName, StartupCache.School.SchoolName, StartupCache.School.Address);
 			}
 		}
 

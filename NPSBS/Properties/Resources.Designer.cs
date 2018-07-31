@@ -63,29 +63,9 @@ namespace NPSBS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1906811 {
+        internal static System.Drawing.Bitmap _1906811_origina {
             get {
-                object obj = ResourceManager.GetObject("1906811", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap about {
-            get {
-                object obj = ResourceManager.GetObject("about", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap about1 {
-            get {
-                object obj = ResourceManager.GetObject("about1", resourceCulture);
+                object obj = ResourceManager.GetObject("_1906811_origina", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,26 +76,6 @@ namespace NPSBS.Properties {
         internal static System.Drawing.Bitmap attendance {
             get {
                 object obj = ResourceManager.GetObject("attendance", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap attendance1 {
-            get {
-                object obj = ResourceManager.GetObject("attendance1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap backup {
-            get {
-                object obj = ResourceManager.GetObject("backup", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +113,16 @@ namespace NPSBS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap database {
+            get {
+                object obj = ResourceManager.GetObject("database", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exam {
             get {
                 object obj = ResourceManager.GetObject("exam", resourceCulture);
@@ -173,9 +143,9 @@ namespace NPSBS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap inf16 {
+        internal static System.Drawing.Bitmap info {
             get {
-                object obj = ResourceManager.GetObject("inf16", resourceCulture);
+                object obj = ResourceManager.GetObject("info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -195,7 +165,7 @@ namespace NPSBS.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap man_chart {
             get {
-                object obj = ResourceManager.GetObject("man-chart", resourceCulture);
+                object obj = ResourceManager.GetObject("man_chart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,29 +193,9 @@ namespace NPSBS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap NPSBS {
-            get {
-                object obj = ResourceManager.GetObject("NPSBS", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap registration {
             get {
                 object obj = ResourceManager.GetObject("registration", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap registration1 {
-            get {
-                object obj = ResourceManager.GetObject("registration1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,19 +213,9 @@ namespace NPSBS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap save {
+        internal static System.Drawing.Bitmap school {
             get {
-                object obj = ResourceManager.GetObject("save", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap setup {
-            get {
-                object obj = ResourceManager.GetObject("setup", resourceCulture);
+                object obj = ResourceManager.GetObject("school", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -79,8 +79,8 @@
 			// 
 			// kryptonGroupBox2
 			// 
+			this.kryptonGroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
 			this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldPanel;
-			this.kryptonGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.kryptonGroupBox2.Location = new System.Drawing.Point(0, 195);
 			this.kryptonGroupBox2.Name = "kryptonGroupBox2";
 			// 
@@ -138,8 +138,8 @@
 			// 
 			// kryptonGroupBox1
 			// 
+			this.kryptonGroupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-			this.kryptonGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.kryptonGroupBox1.Location = new System.Drawing.Point(0, 45);
 			this.kryptonGroupBox1.Name = "kryptonGroupBox1";
 			// 
@@ -197,6 +197,7 @@
 			// 
 			// dpResultPrintDate
 			// 
+			this.dpResultPrintDate.CalendarShowWeekNumbers = true;
 			this.dpResultPrintDate.Location = new System.Drawing.Point(388, 44);
 			this.dpResultPrintDate.Name = "dpResultPrintDate";
 			this.dpResultPrintDate.Size = new System.Drawing.Size(331, 31);

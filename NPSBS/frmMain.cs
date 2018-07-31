@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using NPSBS.Core;
 using Registration;
+using Utility;
 
 namespace NPSBS
 {
@@ -96,7 +97,7 @@ namespace NPSBS
 				if (ctrl is MdiClient)
 				{
 					//ctrl.BackgroundImageLayout = ImageLayout.Stretch;
-					ctrl.BackgroundImage = Properties.Resources._1906811;
+					ctrl.BackgroundImage = ImageUtility.GetImage(Constant.MainBackground);
 					ctrl.BackgroundImageLayout = ImageLayout.Stretch;
 					break;
 				}

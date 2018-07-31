@@ -229,27 +229,28 @@
     <Content Include="NPSBSEnrypter.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\close16.png" />
-    <None Include="Resources\inf16.png" />
-    <None Include="Resources\about1.png" />
-    <None Include="Resources\about.png" />
-    <None Include="Resources\registration1.png" />
-    <None Include="Resources\registration.png" />
-    <None Include="Resources\backup.png" />
-    <None Include="Resources\ledger.png" />
-    <None Include="Resources\result.png" />
-    <None Include="Resources\attendance1.png" />
-    <None Include="Resources\attendance.png" />
+    <Content Include="ResultProcessing64.ico" />
     <None Include="Resources\extraactivity.png" />
-    <None Include="Resources\markentry.png" />
+    <None Include="Resources\1906811_origina.jpg" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Resources\transfer.png" />
     <None Include="Resources\student.png" />
+    <None Include="Resources\school.png" />
+    <None Include="Resources\result.png" />
+    <None Include="Resources\registration.png" />
+    <None Include="Resources\markentry.png" />
+    <None Include="Resources\ledger.png" />
+    <None Include="Resources\info.png" />
     <None Include="Resources\exam.png" />
+    <None Include="Resources\database.png" />
     <None Include="Resources\book.png" />
-    <None Include="Resources\setup.png" />
-    <None Include="Resources\save.png" />
+    <None Include="Resources\man-chart.png" />
+    <None Include="Resources\close16.png" />
+    <None Include="Resources\attendance.png" />
     <None Include="Resources\Me.jpg" />
-    <None Include="Resources\NPSBS.png" />
     <None Include="Resources\close.png" />
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
@@ -302,16 +303,6 @@
     <EmbeddedResource Include="frmTransferStudent.resx">
       <DependentUpon>frmTransferStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Content Include="App.config">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -323,6 +314,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -341,9 +337,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\splashBack.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MainBg.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ExamUserControl\" />

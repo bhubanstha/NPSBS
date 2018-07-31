@@ -16,5 +16,8 @@ namespace Utility
         public static string NPSBSBackground { get { return path + "NPSBSBackground.jpg"; } }
         public static string MontessoriBackground { get { return path + "MontessoriBackground.jpg"; } }
 
+
+				public static string AppVersion { get{ return "2.0.0"; } }
+
     }
 }

@@ -226,9 +226,10 @@ namespace NPSBS
 		{
 			bool isFormOpen = Application.OpenForms.Cast<Form>()
 					.Any(form => (!form.Name.Equals("frmSplash", StringComparison.OrdinalIgnoreCase)
-					&& !form.Name.Equals("frmMdiMain", StringComparison.OrdinalIgnoreCase))
-					);
-
+					&& !form.Name.Equals("frmMdiMain", StringComparison.OrdinalIgnoreCase)
+					&& !form.Name.Equals("frmAbout", StringComparison.OrdinalIgnoreCase)
+					&& !form.Name.Equals("frmRegistration", StringComparison.OrdinalIgnoreCase)
+					));
 			return isFormOpen;
 		}
 
@@ -331,7 +332,7 @@ namespace NPSBS
 				if (ctrl is MdiClient)
 				{
 
-					Image image = Properties.Resources._1906811;
+					Image image = ImageUtility.GetImage(Constant.MainBackground);
 					if (File.Exists(Constant.NPSBSBackground))
 					{
 						image = new Bitmap(ImageUtility.GetImage(Constant.NPSBSBackground));

@@ -59,7 +59,7 @@ namespace Utility
 
 		public static Image GetImage(string path)
 		{
-			using (FileStream s =new FileStream(path, FileMode.Open))
+			using (FileStream s = new FileStream(path, FileMode.Open))
 			{
 				return Image.FromStream(s);
 			}
@@ -132,12 +132,12 @@ namespace Utility
 				int y = Screen.PrimaryScreen.WorkingArea.Height;
 				using (mainImageFile = ResizeImage(mainImageFile, x, y))
 				{
-					using (Image _watermark = ChangeOpacity(watermarkImage,opacity))
+					using (Image _watermark = ChangeOpacity(watermarkImage, opacity))
 					{
 						using (Graphics imageGraphics = Graphics.FromImage(mainImageFile))
 						{
-							 x = (mainImageFile.Width / 2 - watermarkImage.Width / 2);
-							 y = (mainImageFile.Height / 2 - watermarkImage.Height / 2-150);
+							x = (mainImageFile.Width / 2 - watermarkImage.Width / 2);
+							y = (mainImageFile.Height / 2 - watermarkImage.Height / 2 - 150);
 							imageGraphics.DrawImage(_watermark, x, y);
 							Font font = new Font("Arial", 30, FontStyle.Bold, GraphicsUnit.Pixel);
 							Color color = Color.Yellow;
@@ -161,35 +161,59 @@ namespace Utility
 			return newImage;
 		}
 
-        public static Bitmap RemoveTransparency(Image img)
-        {
-            Bitmap bmp2 = new Bitmap(img.Width, img.Height);
-            Rectangle rect = new Rectangle(Point.Empty, img.Size);
-            using (Graphics g = Graphics.FromImage(bmp2))
-            {
-                g.Clear(Color.White);
-                g.DrawImageUnscaledAndClipped(img, rect);
-            }
-            return bmp2;
-        }
+		public static Bitmap RemoveTransparency(Image img)
+		{
+			try
+			{
+				Bitmap bmp2 = new Bitmap(img.Width, img.Height);
+				Rectangle rect = new Rectangle(Point.Empty, img.Size);
+				using (Graphics g = Graphics.FromImage(bmp2))
+				{
+					g.Clear(Color.White);
+					g.DrawImageUnscaledAndClipped(img, rect);
+				}
+				return bmp2;
+			}
+			catch 
+			{
+				return new Bitmap(img);
+			}			
+		}
 
-        public static byte[] ImageToByteArray(Image image)
-        {
-            using (var ms = new MemoryStream())
-            {
-                image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                return ms.ToArray();
-            }
-        }
+		public static byte[] ImageToByteArray(Image image)
+		{
+			try
+			{
+				using (var ms = new MemoryStream())
+				{
+					image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+					return ms.ToArray();
+				}
+			}
+			catch (Exception ex)
+			{
+				string msg = ex.Message.ToString();
+				return null;
+			}
 
-        public static Image ByteToImage(byte[] byteArray)
-        {
-            using (var ms = new MemoryStream(byteArray))
-            {
-                return Image.FromStream(ms, true);
-            }
-        }
-    }
+		}
+
+		public static Image ByteToImage(byte[] byteArray)
+		{
+			try
+			{
+				using (var ms = new MemoryStream(byteArray))
+				{
+					return Image.FromStream(ms, true);
+				}
+			}
+			catch
+			{
+				return null;
+			}
+			
+		}
+	}
 
 	public static class ImageExtension
 	{

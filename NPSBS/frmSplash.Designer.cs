@@ -35,6 +35,7 @@
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -130,6 +131,18 @@
 			this.label4.Text = "Developed By: Bhuban Shrestha";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
+			// label2
+			// 
+			this.label2.BackColor = System.Drawing.Color.Transparent;
+			this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.Color.Yellow;
+			this.label2.Location = new System.Drawing.Point(131, 133);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(348, 84);
+			this.label2.TabIndex = 7;
+			this.label2.Text = "Result Processing System\r\nVersion: 2.0.0";
+			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
 			// frmSplash
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,6 +152,7 @@
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(611, 350);
 			this.ControlBox = false;
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.pictureBox1);
@@ -166,6 +180,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-
-    }
+		private System.Windows.Forms.Label label2;
+	}
 }

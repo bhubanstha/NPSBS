@@ -13,7 +13,6 @@ D:\Running Project\NationalPeace\MontessoriCore\obj\Debug\MontessoriCore.dll
 D:\Running Project\NationalPeace\MontessoriCore\obj\Debug\MontessoriCore.pdb
 D:\Project\NationalPeace\MontessoriCore\bin\Debug\MontessoriCore.dll
 D:\Project\NationalPeace\MontessoriCore\bin\Debug\MontessoriCore.pdb
-D:\Project\NationalPeace\MontessoriCore\bin\Debug\EPPlus.dll
 D:\Project\NationalPeace\MontessoriCore\bin\Debug\itextsharp.dll
 D:\Project\NationalPeace\MontessoriCore\bin\Debug\itextsharp.pdfa.dll
 D:\Project\NationalPeace\MontessoriCore\bin\Debug\itextsharp.xtra.dll
@@ -37,3 +36,4 @@ C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.cspr
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.csprojAssemblyReference.cache
+D:\Project\NationalPeace\MontessoriCore\bin\Debug\EPPlus.dll

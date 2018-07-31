@@ -11,16 +11,17 @@ using System.Drawing;
 
 namespace NPSBS.Core
 {
-    public class StartupCache
-    {
-        private static StartupCache instance = null;
-        private static readonly object padlock = new object();
-        public static string SettingJson = string.Empty;
-        public static DataTable Class { get; private set; }
-        public static DataTable Exam { get; private set; }
-        public static List<GradingSystem> GradingSystem { get; private set; }
-        public static ResultFont ResultFont { get; private set; }
-        public static About About { get;  set; }
+	public class StartupCache
+	{
+		private static StartupCache instance = null;
+		private static readonly object padlock = new object();
+		public static string SettingJson = string.Empty;
+		public static DataTable Class { get; private set; }
+		public static DataTable Exam { get; private set; }
+		public static List<GradingSystem> GradingSystem { get; private set; }
+		public static ResultFont ResultFont { get; private set; }
+		public static About About { get; set; }
+		public static School School { get; set; }
 
 		StartupCache()
 		{
@@ -35,12 +36,13 @@ namespace NPSBS.Core
 				{
 					if (instance == null)
 					{
-                        Class = GetClasses();
-                        Exam = GetExam();
-                        GradingSystem = GetGrading();
-                        SettingJson = GetUrlData();
-                        instance = new StartupCache();
-						
+						Class = GetClasses();
+						Exam = GetExam();
+						GradingSystem = GetGrading();
+						SettingJson = GetUrlData();
+						School = new School();
+						instance = new StartupCache();
+
 					}
 					return instance;
 				}
