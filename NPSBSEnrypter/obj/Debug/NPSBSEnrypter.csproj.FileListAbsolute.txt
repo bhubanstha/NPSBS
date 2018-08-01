@@ -64,3 +64,6 @@ D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\Utility.dll
 D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\Newtonsoft.Json.dll
 D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\Utility.pdb
 D:\Project\NationalPeace\NPSBSEnrypter\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\NLog.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\NLog.xml
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\NLog.config

@@ -37,3 +37,5 @@ C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.csprojAssemblyReference.cache
 D:\Project\NationalPeace\MontessoriCore\bin\Debug\EPPlus.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\NLog.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\NLog.xml

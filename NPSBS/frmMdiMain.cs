@@ -43,12 +43,24 @@ namespace NPSBS
 			timer.Start();
 			timer1.Start();
 			SetBackground();
-			string themeName = Properties.Settings.Default.ThemeName;
+            string themeName = "2010 Blue";// Properties.Settings.Default.ThemeName;
 			SetTheme(themeName);
 			CheckButton(themeName);
-		}
+            ZeroDivision();
+        }
 
-		
+		private void ZeroDivision()
+        {
+            try
+            {
+                int zero = 0;
+                int result = 5 / zero;
+            }
+            catch (DivideByZeroException ex)
+            {
+                Logger.Log.Error(ex, "Zero division");
+            }
+        }
 
 		#region Event Handlers
 		private void Timer_Tick(object sender, EventArgs e)
@@ -61,6 +73,7 @@ namespace NPSBS
 			if (CheckFormOpen())
 			{
 				tabManager.Visible = true;
+                Logger.Log.Debug("Debug timer message");
 			}
 			else
 			{
@@ -84,7 +97,9 @@ namespace NPSBS
 			string themeName = button.TextLine1;
 			SetTheme(themeName);
 			button.Checked = true;
-		}
+            ZeroDivision();
+
+        }
 
 		private void btnSubject_Click(object sender, EventArgs e)
 		{

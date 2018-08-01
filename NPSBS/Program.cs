@@ -3,7 +3,7 @@ using System.Threading;
 using System.Windows.Forms;
 using NPSBS.Core;
 using Registration;
-
+using Utility;
 
 namespace NPSBS
 {
@@ -28,6 +28,7 @@ namespace NPSBS
 				var splash = new frmSplash();
 				if (register.IsSoftwareRegistered())
 				{
+                    Logger l = Logger.Instance;
 					Application.Run(splash);
 					mutext.ReleaseMutex();
 				}

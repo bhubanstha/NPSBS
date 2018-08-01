@@ -12,7 +12,7 @@ namespace NPSBS
 		public frmMain()
 		{
 			InitializeComponent();
-			SetBackground();
+			SetBackground();            
 		}
 
 

@@ -257,3 +257,6 @@ D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.csproj.CoreCompileInputs.cach
 D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.csproj.CopyComplete
 D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.exe
 D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.pdb
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\NLog.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\NLog.xml
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\NLog.config

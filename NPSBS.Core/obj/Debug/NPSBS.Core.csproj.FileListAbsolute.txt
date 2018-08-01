@@ -90,3 +90,6 @@ D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.csproj.CoreCompileInput
 D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.csproj.CopyComplete
 D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.dll
 D:\Project\NationalPeace\NPSBS.Core\obj\Debug\NPSBS.Core.pdb
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\NLog.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\NLog.xml
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS.Core\bin\Debug\NLog.config
