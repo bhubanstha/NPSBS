@@ -43,7 +43,7 @@ namespace NPSBS
 			timer.Start();
 			timer1.Start();
 			SetBackground();
-            string themeName = "2010 Blue";// Properties.Settings.Default.ThemeName;
+            string themeName = Properties.Settings.Default.ThemeName;
 			SetTheme(themeName);
 			CheckButton(themeName);
             ZeroDivision();

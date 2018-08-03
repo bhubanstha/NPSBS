@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using Montessori.Core;
 namespace Montessori
 {
-	public partial class frmExam : Form
+    public partial class frmExam : frmBase
     {
         Exam exam = new Exam();
         private int rows = 0;
@@ -183,8 +183,5 @@ namespace Montessori
         {
             NumberOnly.Yes(txtYearSearch, sender, e);
         }
-
-        
-        
     }
 }

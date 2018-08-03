@@ -115,14 +115,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NPSBS.Core.dll" size="84992">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NPSBS.Core.dll" size="84480">
       <assemblyIdentity name="NPSBS.Core" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>NfR9DaT5aicS3t39OZ/QE4aZ8ag=</dsig:DigestValue>
+        <dsig:DigestValue>vfj086RVcly9qb5ORNOPCkj1sAs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -134,19 +134,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>2Tp8GUT+aBCy9SpRSRjsGERMDJs=</dsig:DigestValue>
+        <dsig:DigestValue>z2+SJp7/0KV9W0AarMOVAD7hNCg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Utility.dll" size="13824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Utility.dll" size="15872">
       <assemblyIdentity name="Utility" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>yp3IOqRHVnqt+qMvUmY9qgLL40s=</dsig:DigestValue>
+        <dsig:DigestValue>WOEalS0nLw0vmWqyeqSYXE0Wl9A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -157,15 +157,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>h4aWnfSXrbIr4XxKx2xA3fGRmFA=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="NPSBSEnrypter.exe.config" size="184">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>V4WyfI7Afij77ZC4Fb71+C3XBqM=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

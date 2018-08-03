@@ -171,8 +171,6 @@ C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\obj\x86\Debug\NPSBS.exe
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\obj\x86\Debug\NPSBS.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\Setting.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\NPSBSEnrypter.exe
-C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\App.config
-C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\NPSBS.exe.config
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\NPSBS.exe
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\NPSBS.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\CircularProgressBar.dll
@@ -260,3 +258,4 @@ D:\Project\NationalPeace\NPSBS\obj\x86\Debug\NPSBS.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\NLog.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\NLog.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\NLog.config
+C:\Users\Angular\Desktop\Proj\NPSBS\NPSBS\bin\Debug\NPSBS.exe.config

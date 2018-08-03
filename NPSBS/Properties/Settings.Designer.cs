@@ -25,7 +25,7 @@ namespace NPSBS.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2010 Blue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2007 Blue")]
         public string ThemeName {
             get {
                 return ((string)(this["ThemeName"]));

@@ -1,10 +1,11 @@
 ﻿using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace Montessori
 {
-	public partial class Form1 : Form
+	public partial class frmBase : KryptonForm
     {
-        public Form1()
+        public frmBase()
         {
             InitializeComponent();
         }

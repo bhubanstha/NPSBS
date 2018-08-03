@@ -6,7 +6,7 @@ using Montessori.Core;
 
 namespace Montessori
 {
-	public partial class frmExtraActivities : Form
+	public partial class frmExtraActivities : frmBase
 	{
 		Exam exam = new Exam();
 		int totalStudents = 0;
@@ -95,7 +95,6 @@ namespace Montessori
 				dgvExtraActivities.Columns[0].Width = 300;
 				dgvExtraActivities.EditMode = DataGridViewEditMode.EditOnEnter;
 				this.Cursor = Cursors.Default;
-				pnlStudentContainer.Visible = true;
 			}
 		}
 

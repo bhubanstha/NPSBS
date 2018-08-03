@@ -1,14 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data;
-using System.Data.SqlClient;
-
+using Utility;
 namespace Montessori.Core
 {
     public class ConnectionChecker
     {
+        public ConnectionChecker()
+        {
+            Connection con = Connection.Instance;
+        }
+
+        static ConnectionChecker()
+        {
+            Connection con = Connection.Instance;
+        }
 
         public static bool CheckConnection()
         {
@@ -33,7 +37,8 @@ namespace Montessori.Core
 
         public static string GetConnectionstring()
         {
-            return DataAccess.ConnectionString();
+
+            return Connection.GetMontessoriConnection();
         }
 
 

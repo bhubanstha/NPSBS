@@ -120,31 +120,6 @@
   <metadata name="epClass.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>334, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAIM9AACDPQAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAADAhRABYP2AAAAOEADwjaXg8J2j8NCNoADAbbAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4I2gAOCNoADwnaLA8J2mYOCNplDwnaFQ8J2gASC9kAAAAAAAAA
-        AAAAAAAAAAAAAA0H2gAOCNoADwnaABAJ2gAPCNoAEArZDA8I2mQRCtkQDwnaKA8J2lgAAP8ADgfaAA4H
-        2gAPCNoADgjbAA8J2QANB9oqDgjaMRAJ2i8RCtouEAnaLw4I2m4OCNppDQfaLg8J2TAPCNp6DgjaVA0H
-        2isOB9ksDwnaKw8J2iwQCdkeDgjaZw4I2mURCtlnEQrZeA8J2WIPCNqCEgvZUBUO2GwXD9hyFAzZZg4I
-        2pAPCNpWEAnagg8J2m8OCNp4DgjaUw8J2hIPCNleEQrZaxEK2YQPCdlpEQrZGSAX1yUhF9ZBIBfVSCMZ
-        1CEQCtkxEAnaYBEL2ncRC9luDwjaYBEK2QoOCNoADwnZMA8J2V8PCdlbEAnaQxYP2QgVDdhJFQ3ZSxQN
-        2UsVDtggAADjABAJ2loQCtpJDwnaZw8J2iYPCdoAFQ7YAAAA3gAOCNpqDwjagyog0wEQCtotDQfb3AwG
-        2/ENB9viEwzYf0AvygESC9kQDwjakg8I2lUKBdsAOSrNABAJ2QAPCdkIDwnadBAJ2ocSC9kREgvZLBAJ
-        2qIPCdp3EArajhQN2IsmHNUDEgvZGQ8J2o0PCdpeKRrPABQM2AAMBtsADwnaTBMN2mMVD9pFEAnaYBAJ
-        2jMOCNrGDwjakxAK2psYENiWHBPWCBAK2WoSC9lrEQragQ8J2jMOCNoADwnaKQ0G2WhEPuBsU03iaw0H
-        2WMSC9lYEwzZnBQM2bQYENivIxrYghIM2UURCtlfEgvaghIM2WYQCdppEAnZFQ4I2mwOCNpzGBHbaBoU
-        220PCdpsDgjaoREK2XITDNluFQ3ZbxIL2XgPCdqdEQrZYxAK2WcRCtpeDwjafw4I2lUOCNkMDQfaEA0H
-        2hEOB9kSDgjaEA4I2kQQCdl0FQ/aYRMN22EQCtp1DwnaORAJ2RMOCNoVDwnaFg0H2hQOCNkNDwnZAA0H
-        2gARCtoAEgrZAA8J2gAXD9QBEAnaZBQN2nYTDdpuDwnaVgsF3AARCtkADgjaABAJ2gANB9oADwjZAAAA
-        AAAAAAAAAAAAAAAAAAARC9cADwnaAA8J2hUQCdp6EAnadBAJ2Q4QCdkAFA3YAAAAAACtvLcAs8G7AK+6
-        twAAAAAAAAAAAAAAAAAAAAAAAAAAAAsG2wAOCNoADwnaOg8J2jEOCNoADgfaAAAAAAAAAAAArby3ALC9
-        twCvurcDEBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAEBAAAA==
-</value>
-  </data>
   <metadata name="epYear.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>427, 17</value>
   </metadata>

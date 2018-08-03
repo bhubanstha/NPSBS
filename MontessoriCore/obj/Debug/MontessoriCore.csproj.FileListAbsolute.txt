@@ -23,19 +23,30 @@ D:\Project\NationalPeace\MontessoriCore\obj\Debug\MontessoriCore.csproj.CopyComp
 D:\Project\NationalPeace\MontessoriCore\obj\Debug\MontessoriCore.dll
 D:\Project\NationalPeace\MontessoriCore\obj\Debug\MontessoriCore.pdb
 D:\Project\NationalPeace\MontessoriCore\obj\Debug\MontessoriCore.csprojAssemblyReference.cache
+D:\Project\NationalPeace\MontessoriCore\bin\Debug\EPPlus.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\Setting.xml
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\NLog.config
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\MontessoriCore.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\MontessoriCore.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\EPPlus.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\itextsharp.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\itextsharp.pdfa.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\itextsharp.xtra.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\Krypton Docking.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\Krypton Navigator.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\Krypton Ribbon.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\Krypton Toolkit.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\Krypton Workspace.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\NLog.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\Utility.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\Utility.pdb
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\EPPlus.xml
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\itextsharp.xml
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\NLog.xml
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.csprojAssemblyReference.cache
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.csproj.CoreCompileInputs.cache
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.csproj.CopyComplete
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.dll
 C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.pdb
-C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\obj\Debug\MontessoriCore.csprojAssemblyReference.cache
-D:\Project\NationalPeace\MontessoriCore\bin\Debug\EPPlus.dll
-C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\NLog.dll
-C:\Users\Angular\Desktop\Proj\NPSBS\MontessoriCore\bin\Debug\NLog.xml

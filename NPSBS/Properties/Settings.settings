@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="ThemeName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">2010 Blue</Value>
+      <Value Profile="(Default)">2007 Blue</Value>
     </Setting>
   </Settings>
 </SettingsFile>

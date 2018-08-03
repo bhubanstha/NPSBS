@@ -1,22 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
-using System.Windows.Forms;
-using System.Globalization;
+using Utility;
 
 namespace Montessori.Core
 {
     public class DataAccess
     {
 
+        public DataAccess()
+        {
+            Connection con = Connection.Instance;
+        }
+
+        static DataAccess()
+        {
+            Connection con = Connection.Instance;
+        }
 
         public static SqlCommand CreateCommand()
         {
-            var con = new SqlConnection { ConnectionString = ConnectionString() };
+            var con = new SqlConnection { ConnectionString = Connection.GetMontessoriConnection() };
             var cmd = con.CreateCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             return cmd;
@@ -114,27 +118,7 @@ namespace Montessori.Core
             return data;
         }
 
-        public static string ConnectionString()
-        {
-            var connectionString = "";
-            try
-            {
-                string source = ConfigurationManager.AppSettings["DataSource"];
-                string user = ConfigurationManager.AppSettings["UserName"];
-                string db = ConfigurationManager.AppSettings["Database_KidsZone"];
-                string pwd = ConfigurationManager.AppSettings["Password"];
-                connectionString = "data source = " + source + "; database=" + db + "; user id=" + user + "; password=" + pwd;
-                //connectionString = ConfigurationManager.ConnectionStrings["KidsZone"].ConnectionString;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString(CultureInfo.InvariantCulture), "Connection Error",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            return connectionString;
-        }
-
+      
         ~DataAccess()
         {
             GC.Collect();

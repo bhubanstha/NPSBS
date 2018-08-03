@@ -8,7 +8,7 @@ using Montessori.Core;
 
 namespace Montessori
 {
-	public partial class frmResult : Form
+	public partial class frmResult : frmBase
 	{
 		Exam exam = new Exam();
 		SaveFileDialog sf = null;

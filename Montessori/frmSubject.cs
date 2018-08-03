@@ -4,7 +4,7 @@ using Montessori.Core;
 
 namespace Montessori
 {
-	public partial class frmSubject : Form
+	public partial class frmSubject : frmBase
     {
         Subject s = new Subject();
         int rows = 0;

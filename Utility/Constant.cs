@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Utility
 {
@@ -17,7 +14,7 @@ namespace Utility
         public static string MontessoriBackground { get { return path + "MontessoriBackground.jpg"; } }
 
 
-				public static string AppVersion { get{ return "2.0.0"; } }
+        public static string AppVersion { get { return "2.0.0"; } }
 
     }
 }

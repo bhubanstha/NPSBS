@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace Montessori.Core
 {
     public class ControlHelper
     {
-        public static void Autocomplete(List<string> source, TextBox textBox)
+        public static void Autocomplete(List<string> source, KryptonTextBox textBox)
         {
             AutoCompleteStringCollection customSource = new AutoCompleteStringCollection();
             foreach (string item in source)

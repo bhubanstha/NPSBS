@@ -5,7 +5,7 @@ using Montessori.Core;
 
 namespace Montessori
 {
-	public partial class frmTransferStudent : Form
+	public partial class frmTransferStudent : frmBase
     {
         Student s = new Student();
         int rows = 0;

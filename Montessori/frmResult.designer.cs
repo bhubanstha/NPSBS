@@ -29,111 +29,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmResult));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnGenerateResult = new System.Windows.Forms.Button();
-            this.ddlClass = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ddlExamination = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtAcademicYear = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.epAcademicYear = new System.Windows.Forms.ErrorProvider(this.components);
             this.epExamination = new System.Windows.Forms.ErrorProvider(this.components);
             this.epClass = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel1.SuspendLayout();
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtAcademicYear = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.ddlExamination = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.btnGenerateResult = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.ddlClass = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.epAcademicYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epExamination)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epClass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
+            this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ddlExamination)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ddlClass)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnGenerateResult);
-            this.panel1.Controls.Add(this.ddlClass);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.ddlExamination);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtAcademicYear);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(828, 103);
-            this.panel1.TabIndex = 0;
-            // 
-            // btnGenerateResult
-            // 
-            this.btnGenerateResult.Location = new System.Drawing.Point(489, 56);
-            this.btnGenerateResult.Name = "btnGenerateResult";
-            this.btnGenerateResult.Size = new System.Drawing.Size(111, 29);
-            this.btnGenerateResult.TabIndex = 6;
-            this.btnGenerateResult.Text = "Publish";
-            this.btnGenerateResult.UseVisualStyleBackColor = true;
-            this.btnGenerateResult.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // ddlClass
-            // 
-            this.ddlClass.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.ddlClass.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.ddlClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlClass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ddlClass.FormattingEnabled = true;
-            this.ddlClass.Location = new System.Drawing.Point(155, 56);
-            this.ddlClass.Name = "ddlClass";
-            this.ddlClass.Size = new System.Drawing.Size(182, 28);
-            this.ddlClass.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(91, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Class :";
-            // 
-            // ddlExamination
-            // 
-            this.ddlExamination.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.ddlExamination.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.ddlExamination.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlExamination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddlExamination.FormattingEnabled = true;
-            this.ddlExamination.Location = new System.Drawing.Point(489, 21);
-            this.ddlExamination.Name = "ddlExamination";
-            this.ddlExamination.Size = new System.Drawing.Size(301, 28);
-            this.ddlExamination.TabIndex = 3;
-            this.ddlExamination.SelectedIndexChanged += new System.EventHandler(this.ddlExamination_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(379, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Examination :";
-            // 
-            // txtAcademicYear
-            // 
-            this.txtAcademicYear.Location = new System.Drawing.Point(155, 18);
-            this.txtAcademicYear.MaxLength = 4;
-            this.txtAcademicYear.Name = "txtAcademicYear";
-            this.txtAcademicYear.Size = new System.Drawing.Size(182, 26);
-            this.txtAcademicYear.TabIndex = 1;
-            this.txtAcademicYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcademicYear_KeyPress);
-            this.txtAcademicYear.Leave += new System.EventHandler(this.txtAcademicYear_Leave);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Academic Year :";
             // 
             // epAcademicYear
             // 
@@ -147,47 +68,166 @@
             // 
             this.epClass.ContainerControl = this;
             // 
+            // kryptonPanel1
+            // 
+            this.kryptonPanel1.Controls.Add(this.kryptonGroupBox1);
+            this.kryptonPanel1.Controls.Add(this.kryptonPanel2);
+            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel1.Name = "kryptonPanel1";
+            this.kryptonPanel1.Size = new System.Drawing.Size(828, 159);
+            this.kryptonPanel1.TabIndex = 1;
+            // 
+            // kryptonPanel2
+            // 
+            this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
+            this.kryptonPanel2.Name = "kryptonPanel2";
+            this.kryptonPanel2.Size = new System.Drawing.Size(828, 50);
+            this.kryptonPanel2.TabIndex = 0;
+            // 
+            // kryptonGroupBox1
+            // 
+            this.kryptonGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(0, 50);
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            // 
+            // kryptonGroupBox1.Panel
+            // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel3);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.ddlClass);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel2);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnGenerateResult);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.ddlExamination);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtAcademicYear);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(828, 109);
+            this.kryptonGroupBox1.TabIndex = 1;
+            this.kryptonGroupBox1.Values.Heading = "Exam Detail";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(24, 13);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(91, 20);
+            this.kryptonLabel1.TabIndex = 0;
+            this.kryptonLabel1.Values.Text = "Academic Year";
+            // 
+            // txtAcademicYear
+            // 
+            this.txtAcademicYear.Location = new System.Drawing.Point(113, 7);
+            this.txtAcademicYear.Name = "txtAcademicYear";
+            this.txtAcademicYear.Size = new System.Drawing.Size(222, 30);
+            this.txtAcademicYear.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtAcademicYear.StateCommon.Border.Rounding = 15;
+            this.txtAcademicYear.TabIndex = 1;
+            this.txtAcademicYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcademicYear_KeyPress);
+            this.txtAcademicYear.Leave += new System.EventHandler(this.txtAcademicYear_Leave);
+            // 
+            // ddlExamination
+            // 
+            this.ddlExamination.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlExamination.DropDownWidth = 291;
+            this.ddlExamination.Location = new System.Drawing.Point(487, 6);
+            this.ddlExamination.Name = "ddlExamination";
+            this.ddlExamination.Size = new System.Drawing.Size(301, 31);
+            this.ddlExamination.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.ddlExamination.StateCommon.ComboBox.Border.Rounding = 15;
+            this.ddlExamination.TabIndex = 2;
+            this.ddlExamination.SelectedIndexChanged += new System.EventHandler(this.ddlExamination_SelectedIndexChanged);
+            // 
+            // btnGenerateResult
+            // 
+            this.btnGenerateResult.Location = new System.Drawing.Point(487, 45);
+            this.btnGenerateResult.Name = "btnGenerateResult";
+            this.btnGenerateResult.Size = new System.Drawing.Size(90, 25);
+            this.btnGenerateResult.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnGenerateResult.StateCommon.Border.Rounding = 8;
+            this.btnGenerateResult.TabIndex = 3;
+            this.btnGenerateResult.Values.Text = "Publish";
+            this.btnGenerateResult.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(390, 13);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(77, 20);
+            this.kryptonLabel2.TabIndex = 4;
+            this.kryptonLabel2.Values.Text = "Examination";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(24, 50);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(38, 20);
+            this.kryptonLabel3.TabIndex = 6;
+            this.kryptonLabel3.Values.Text = "Class";
+            // 
+            // ddlClass
+            // 
+            this.ddlClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlClass.DropDownWidth = 291;
+            this.ddlClass.Location = new System.Drawing.Point(113, 43);
+            this.ddlClass.Name = "ddlClass";
+            this.ddlClass.Size = new System.Drawing.Size(222, 31);
+            this.ddlClass.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.ddlClass.StateCommon.ComboBox.Border.Rounding = 15;
+            this.ddlClass.TabIndex = 5;
+            // 
             // frmResult
             // 
-            this.AcceptButton = this.btnGenerateResult;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(828, 104);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(828, 159);
+            this.Controls.Add(this.kryptonPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frmResult";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Result";
             this.Load += new System.EventHandler(this.frmResult_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epAcademicYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epExamination)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epClass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
+            this.kryptonPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            this.kryptonGroupBox1.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ddlExamination)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ddlClass)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnGenerateResult;
-        private System.Windows.Forms.ComboBox ddlClass;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox ddlExamination;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtAcademicYear;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource ResultBindingSource;
         private System.Windows.Forms.ErrorProvider epAcademicYear;
         private System.Windows.Forms.ErrorProvider epExamination;
         private System.Windows.Forms.ErrorProvider epClass;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox ddlClass;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnGenerateResult;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox ddlExamination;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtAcademicYear;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }

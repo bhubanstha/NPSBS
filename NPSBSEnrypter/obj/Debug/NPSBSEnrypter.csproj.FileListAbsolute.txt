@@ -35,7 +35,6 @@ D:\Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.exe
 D:\Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.pdb
 D:\Project\NationalPeace\NPSBSEnrypter\obj\Debug\NPSBSEnrypter.csprojAssemblyReference.cache
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\Setting.xml
-C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\NPSBSEnrypter.exe.config
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\NPSBSEnrypter.exe.manifest
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\NPSBSEnrypter.application
 C:\Users\Angular\Desktop\Proj\NPSBS\NPSBSEnrypter\bin\Debug\NPSBSEnrypter.exe

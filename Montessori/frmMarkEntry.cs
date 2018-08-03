@@ -6,7 +6,7 @@ using Montessori.Core;
 
 namespace Montessori
 {
-	public partial class frmMarkEntry : Form
+	public partial class frmMarkEntry : frmBase
 	{
 		Exam exam = new Exam();
 		int rows = 0;
@@ -60,9 +60,9 @@ namespace Montessori
 			epYear.Clear();
 			epExam.Clear();
 			epClass.Clear();
-			if (txtYear.Text.Length != 4)
+			if (lblYear.Text.Length != 4)
 			{
-				epYear.SetError(txtYear, "Please provide 4 digit academic year.");
+				epYear.SetError(lblYear, "Please provide 4 digit academic year.");
 				status = false;
 			}
 			return status;
@@ -94,7 +94,7 @@ namespace Montessori
 		{
 			if (CheckAcademicYear())
 			{
-				GetExams(txtYear.Text);
+				GetExams(lblYear.Text);
 			}
 		}
 
@@ -102,7 +102,7 @@ namespace Montessori
 		{
 			if (Validate())
 			{
-				DataTable tbl = new Student().GetStudentByAcademicYearClass(ddlClass.SelectedValue.ToString(), txtYear.Text, ddlSubject.SelectedValue.ToString(), ddlExam.SelectedValue.ToString());
+				DataTable tbl = new Student().GetStudentByAcademicYearClass(ddlClass.SelectedValue.ToString(), lblYear.Text, ddlSubject.SelectedValue.ToString(), ddlExam.SelectedValue.ToString());
 				dgvMarkEntry.DataSource = tbl;
 				dgvMarkEntry.Columns[0].Visible = false;
 				dgvMarkEntry.Columns[1].ReadOnly = true;
@@ -139,7 +139,7 @@ namespace Montessori
 			string examinationId = ddlExam.SelectedValue.ToString();
 			string classId = ddlClass.SelectedValue.ToString();
 			string subjectId = ddlSubject.SelectedValue.ToString();
-			string examYear = txtYear.Text.Trim();
+			string examYear = lblYear.Text.Trim();
 			foreach (DataGridViewRow row in dgvMarkEntry.Rows)
 			{
 				string rollNumber = row.Cells[1].Value.ToString();
@@ -187,7 +187,7 @@ namespace Montessori
 			{
 				this.AcceptButton = btnLoadStudent;
 			}
-			catch (Exception)
+			catch
 			{
 
 			}

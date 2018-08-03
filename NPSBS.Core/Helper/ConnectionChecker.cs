@@ -1,14 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data;
-using System.Data.SqlClient;
+﻿using Utility;
 
 namespace NPSBS.Core
 {
     public class ConnectionChecker
     {
+        public ConnectionChecker()
+        {
+            Connection con = Connection.Instance;
+        }
+
+        static ConnectionChecker()
+        {
+            Connection con = Connection.Instance;
+        }
 
         public static bool CheckConnection()
         {
@@ -18,10 +22,9 @@ namespace NPSBS.Core
             {
                 cmd.Connection.Open();
             }
-            catch (Exception ex)
+            catch
             {
                 connection = false;
-                //throw ex;
             }
             finally
             {
@@ -33,7 +36,7 @@ namespace NPSBS.Core
 
         public static string GetConnectionstring()
         {
-            return DataAccess.ConnectionString();
+            return Connection.GetNPSBSConnection();
         }
 
 

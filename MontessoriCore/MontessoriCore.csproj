@@ -48,6 +48,21 @@
     <Reference Include="itextsharp.xtra">
       <HintPath>..\packages\itextsharp.xtra.5.5.9\lib\itextsharp.xtra.dll</HintPath>
     </Reference>
+    <Reference Include="Krypton Docking">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Navigator">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Ribbon">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Toolkit">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Workspace">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Workspace.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.5.7\lib\net40-client\NLog.dll</HintPath>
@@ -97,6 +112,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{a3fc6088-a07c-4d20-8748-91f1503d6d8b}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

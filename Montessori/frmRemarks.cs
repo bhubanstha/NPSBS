@@ -5,7 +5,7 @@ using Montessori.Core;
 
 namespace Montessori
 {
-	public partial class frmRemarks : Form
+	public partial class frmRemarks : frmBase
 	{
 		Exam exam = new Exam();
 		int totalStudents = 0;
@@ -120,9 +120,9 @@ namespace Montessori
 		private void GetClass()
 		{
 			var tbl = new Classes().Select();
-			ddlClass.DataSource = tbl;
-			ddlClass.DisplayMember = "Class Name";
-			ddlClass.ValueMember = "ClassId";
+            ddlClass.DataSource = tbl;
+            ddlClass.DisplayMember = "Class Name";
+            ddlClass.ValueMember = "ClassId";
 		}
 
 		private void txtYear_TextChanged(object sender, EventArgs e)

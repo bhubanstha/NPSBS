@@ -53,6 +53,24 @@
     <Reference Include="itextsharp.xtra">
       <HintPath>..\NPSBS\bin\Debug\itextsharp.xtra.dll</HintPath>
     </Reference>
+    <Reference Include="Krypton Docking">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Navigator">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Ribbon">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Toolkit">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Krypton Workspace">
+      <HintPath>..\..\..\..\..\..\Krypton\Krypton Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="MDIWindowManager">
+      <HintPath>..\..\..\..\..\..\Krypton\MDIWindowManager.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\NPSBS\bin\Debug\Newtonsoft.Json.dll</HintPath>
@@ -82,11 +100,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAbout.cs">
       <SubType>Form</SubType>
@@ -160,6 +178,9 @@
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmExam.resx">
       <DependentUpon>frmExam.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,7 +222,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="App.config" />
     <None Include="Fonts\ARBLI__.TTF">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -305,14 +325,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="logo.ico" />
-    <Content Include="Setting.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MontessoriCore\MontessoriCore.csproj">
       <Project>{b93b6f51-d1db-41da-862b-638dae8c7b7b}</Project>
       <Name>MontessoriCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{a3fc6088-a07c-4d20-8748-91f1503d6d8b}</Project>
+      <Name>Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
