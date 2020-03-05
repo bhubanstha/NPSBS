@@ -13,7 +13,7 @@ using Utility;
 
 namespace NPSBS
 {
-	public partial class frmMdiMain : frmBase
+	public partial class frmMdiMain : KryptonForm
 	{
 		private Timer timer, timer1;
 		private frmSubject frmSubject = null;
@@ -26,7 +26,7 @@ namespace NPSBS
 		private frmAttendance frmAttendance = null;
 		private frmResult frmResult = null;
 		private frmLedger frmLedger = null;
-
+		
 		private string path = AppDomain.CurrentDomain.BaseDirectory;
 
 		public frmMdiMain()
@@ -46,7 +46,6 @@ namespace NPSBS
             string themeName = Properties.Settings.Default.ThemeName;
 			SetTheme(themeName);
 			CheckButton(themeName);
-            ZeroDivision();
         }
 
 		private void ZeroDivision()
@@ -97,7 +96,6 @@ namespace NPSBS
 			string themeName = button.TextLine1;
 			SetTheme(themeName);
 			button.Checked = true;
-            ZeroDivision();
 
         }
 
@@ -250,8 +248,6 @@ namespace NPSBS
 
 		private void SetTheme(string themeName)
 		{
-			btn13Blue.Checked = false;
-			btn13White.Checked = false;
 			btn10Black.Checked = false;
 			btn10Blue.Checked = false;
 			btn10Silver.Checked = false;
@@ -263,31 +259,31 @@ namespace NPSBS
 			switch (themeName)
 			{
 				case "2010 Blue":
-					themeManager.GlobalPaletteMode = PaletteModeManager.Office2010Blue;
+					kryptonManager1.GlobalPaletteMode = PaletteModeManager.Office2010Blue;
 					break;
 				case "2010 Silver":
-					themeManager.GlobalPaletteMode = PaletteModeManager.Office2010Silver;
+					kryptonManager1.GlobalPaletteMode = PaletteModeManager.Office2010Silver;
 					break;
 				case "2010 Black":
-					themeManager.GlobalPaletteMode = PaletteModeManager.Office2010Black;
+					kryptonManager1.GlobalPaletteMode = PaletteModeManager.Office2010Black;
 					break;
 				case "2007 Blue":
-					themeManager.GlobalPaletteMode = PaletteModeManager.Office2007Blue;
+					kryptonManager1.GlobalPaletteMode = PaletteModeManager.Office2007Blue;
 					break;
 				case "2007 Silver":
-					themeManager.GlobalPaletteMode = PaletteModeManager.Office2007Silver;
+					kryptonManager1.GlobalPaletteMode = PaletteModeManager.Office2007Silver;
 					break;
 				case "2007 Black":
-					themeManager.GlobalPaletteMode = PaletteModeManager.Office2007Black;
+					kryptonManager1.GlobalPaletteMode = PaletteModeManager.Office2007Black;
 					break;
 				case "Sparkle":
-					themeManager.GlobalPaletteMode = PaletteModeManager.SparkleOrange;
+					kryptonManager1.GlobalPaletteMode = PaletteModeManager.SparkleOrange;
 					break;
 				case "Windows 2003":
-					themeManager.GlobalPaletteMode = PaletteModeManager.ProfessionalOffice2003;
+					kryptonManager1.GlobalPaletteMode = PaletteModeManager.ProfessionalOffice2003;
 					break;
 				default:
-					themeManager.GlobalPaletteMode = PaletteModeManager.Office2010Blue;
+					kryptonManager1.GlobalPaletteMode = PaletteModeManager.Office2010Blue;
 					break;
 			}
 			Properties.Settings.Default.ThemeName = themeName;
@@ -298,12 +294,6 @@ namespace NPSBS
 		{
 			switch (themeName)
 			{
-				case "2013 Default":
-					btn13Blue.Checked = true;
-					break;
-				case "2013 White":
-					btn13White.Checked = true;
-					break;
 				case "2010 Blue":
 					btn10Blue.Checked = true;
 					break;
