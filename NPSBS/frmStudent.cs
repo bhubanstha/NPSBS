@@ -18,6 +18,7 @@ namespace NPSBS
     {
         Student s = new Student();
         int rows;
+        private bool _searchApplied = false;
         public frmStudent()
         {
             InitializeComponent();
@@ -90,6 +91,7 @@ namespace NPSBS
                 string academicYear = txtAcademicYearSearch.Text.Trim();
                 var tbl = s.Search(name, classId, academicYear);
                 gvStudents.DataSource = tbl;
+                _searchApplied = true;
             }
         }
 
@@ -214,8 +216,19 @@ namespace NPSBS
                 if (option == DialogResult.Yes)
                 {
                     rows = s.Delete(Convert.ToInt32(studnetId));
-                    Response.DeleteMessage(rows);
-                    GetStudent();
+                    if (rows > 0)
+                    {
+                        Response.DeleteMessage(rows);
+                        if (_searchApplied)
+                        {
+                            btnSearch_Click(sender, e);
+                        }
+                        else
+                        {
+                            GetStudent();
+                        }
+                    }
+                    
                 }
             }
         }
