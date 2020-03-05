@@ -122,11 +122,11 @@
             // 
             this.kryptonButton1.Location = new System.Drawing.Point(429, 50);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(90, 28);
+            this.kryptonButton1.Size = new System.Drawing.Size(269, 35);
             this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateCommon.Border.Rounding = 8;
+            this.kryptonButton1.StateCommon.Border.Rounding = 15;
             this.kryptonButton1.TabIndex = 6;
             this.kryptonButton1.Values.Text = "Publish";
             this.kryptonButton1.Click += new System.EventHandler(this.button1_Click);
@@ -146,6 +146,7 @@
             // 
             // kryptonLabel3
             // 
+            this.kryptonLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel3.Location = new System.Drawing.Point(13, 58);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(38, 20);
@@ -168,6 +169,7 @@
             // 
             // kryptonLabel2
             // 
+            this.kryptonLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel2.Location = new System.Drawing.Point(332, 21);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(77, 20);
@@ -189,6 +191,7 @@
             // 
             // kryptonLabel1
             // 
+            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel1.Location = new System.Drawing.Point(13, 16);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(91, 20);

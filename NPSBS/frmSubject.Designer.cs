@@ -79,14 +79,13 @@
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(800, 522);
+            this.kryptonPanel1.Size = new System.Drawing.Size(957, 522);
             this.kryptonPanel1.TabIndex = 0;
             // 
             // kryptonGroupBox2
             // 
-            this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldPanel;
             this.kryptonGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonGroupBox2.Location = new System.Drawing.Point(0, 195);
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(0, 152);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             // 
             // kryptonGroupBox2.Panel
@@ -94,7 +93,7 @@
             this.kryptonGroupBox2.Panel.Controls.Add(this.gvSubjects);
             this.kryptonGroupBox2.Panel.Controls.Add(this.ddlClassSearch);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel5);
-            this.kryptonGroupBox2.Size = new System.Drawing.Size(800, 327);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(957, 370);
             this.kryptonGroupBox2.TabIndex = 5;
             this.kryptonGroupBox2.Values.Heading = "Subject Information";
             // 
@@ -103,10 +102,10 @@
             this.gvSubjects.AllowUserToAddRows = false;
             this.gvSubjects.AllowUserToDeleteRows = false;
             this.gvSubjects.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gvSubjects.Location = new System.Drawing.Point(0, 49);
+            this.gvSubjects.Location = new System.Drawing.Point(0, 47);
             this.gvSubjects.Name = "gvSubjects";
             this.gvSubjects.ReadOnly = true;
-            this.gvSubjects.Size = new System.Drawing.Size(796, 256);
+            this.gvSubjects.Size = new System.Drawing.Size(953, 299);
             this.gvSubjects.TabIndex = 13;
             this.gvSubjects.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSubjects_CellContentClick);
             // 
@@ -126,6 +125,7 @@
             // 
             // kryptonLabel5
             // 
+            this.kryptonLabel5.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel5.Location = new System.Drawing.Point(10, 14);
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.Size = new System.Drawing.Size(38, 20);
@@ -134,7 +134,6 @@
             // 
             // kryptonGroupBox1
             // 
-            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldPanel;
             this.kryptonGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(0, 45);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
@@ -151,7 +150,7 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtSubject);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel2);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(800, 150);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(957, 107);
             this.kryptonGroupBox1.TabIndex = 4;
             this.kryptonGroupBox1.Values.Heading = "Subject Entry";
             // 
@@ -170,7 +169,7 @@
             // 
             // lblSubjectID
             // 
-            this.lblSubjectID.Location = new System.Drawing.Point(213, 88);
+            this.lblSubjectID.Location = new System.Drawing.Point(812, 13);
             this.lblSubjectID.Name = "lblSubjectID";
             this.lblSubjectID.Size = new System.Drawing.Size(17, 20);
             this.lblSubjectID.TabIndex = 9;
@@ -179,13 +178,13 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(107, 83);
+            this.btnSave.Location = new System.Drawing.Point(782, 42);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(90, 28);
+            this.btnSave.Size = new System.Drawing.Size(161, 35);
             this.btnSave.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSave.StateCommon.Border.Rounding = 8;
+            this.btnSave.StateCommon.Border.Rounding = 15;
             this.btnSave.TabIndex = 8;
             this.btnSave.Values.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -205,6 +204,7 @@
             // 
             // kryptonLabel4
             // 
+            this.kryptonLabel4.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel4.Location = new System.Drawing.Point(409, 52);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(92, 20);
@@ -226,6 +226,7 @@
             // 
             // kryptonLabel3
             // 
+            this.kryptonLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel3.Location = new System.Drawing.Point(10, 52);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(84, 20);
@@ -246,6 +247,7 @@
             // 
             // kryptonLabel2
             // 
+            this.kryptonLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel2.Location = new System.Drawing.Point(409, 13);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(51, 20);
@@ -254,6 +256,7 @@
             // 
             // kryptonLabel1
             // 
+            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel1.Location = new System.Drawing.Point(10, 13);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(38, 20);
@@ -265,7 +268,7 @@
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(800, 45);
+            this.kryptonPanel2.Size = new System.Drawing.Size(957, 45);
             this.kryptonPanel2.TabIndex = 3;
             // 
             // epClass
@@ -288,8 +291,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 522);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(957, 522);
             this.Controls.Add(this.kryptonPanel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -17,17 +17,12 @@ namespace NPSBS.Core
         static ColumnText ct = null;
         static Phrase phrase = null;
 
-        private static string School = "NATIONAL PEACE SECONDARY BOARDING SCHOOL";
-        private static string Address = "Gongabu, Kathmandu, Nepal (ESTD. -1996)";
-        private static string Phone = "Phone NO. :- 4-35-32-12";
-        private static string ExamName = "Annual Exam, 2072";
-        private static string GradeSheet = "GRADE-SHEET";
-        private static School _school;
+        private static School _school = StartupCache.School;
         private static List<GradingSystem> grades = new GradingSystem().GradingInfo();
 
 
-        public static void RightHeader(Document doc, FileStream fs, PdfWriter writer, PdfContentByte contentByte, string printDate, string examName, School school)
-        {            _school = school;
+        public static void RightHeader(Document doc, FileStream fs, PdfWriter writer, PdfContentByte contentByte, string printDate, string examName)
+        {
             contentByte.Rectangle(doc.PageSize.Width / 2 + 7, doc.PageSize.Height - 10, doc.PageSize.Width / 2 - 20, (-doc.PageSize.Height) + 20);
             contentByte.Stroke();//right outer rectangle
 
@@ -41,17 +36,17 @@ namespace NPSBS.Core
 
             float start = doc.PageSize.Width / 2 + 120;
             ct = new ColumnText(contentByte);
-            phrase = new Phrase(school.SchoolName, rf.SchoolName);
+            phrase = new Phrase(_school.SchoolName, rf.SchoolName);
             ct.SetSimpleColumn(phrase, 506, 580, 820, 300, 15, Element.ALIGN_CENTER);
             ct.Go();
 
             ct = new ColumnText(contentByte);
-            phrase = new Phrase(school.Address + " (ESTD.-" + school.EstiblishedYear + ")", rf.SchoolAddress);
+            phrase = new Phrase(_school.Address + " (ESTD.-" + _school.EstiblishedYear + ")", rf.SchoolAddress);
             ct.SetSimpleColumn(phrase, 505, 565, 815, 300, 15, Element.ALIGN_CENTER);
             ct.Go();
 
             ct = new ColumnText(contentByte);
-            phrase = new Phrase("Phone No.: " + school.PhoneNo , rf.SchoolPhone);
+            phrase = new Phrase("Phone No.: " + _school.PhoneNo , rf.SchoolPhone);
             ct.SetSimpleColumn(phrase, 507, 550, 810, 300, 15, Element.ALIGN_CENTER);
             ct.Go();
 
@@ -130,17 +125,17 @@ namespace NPSBS.Core
 
 
             ct = new ColumnText(contentByte);
-            phrase = new Phrase("NATIONAL PEACE SECONDARY BOARDING SCHOOL", rf.SchoolName);
+            phrase = new Phrase(_school.SchoolName, rf.SchoolName);
             ct.SetSimpleColumn(phrase, 50, 580, 450, 300, 15, Element.ALIGN_CENTER);
             ct.Go();
 
             ct = new ColumnText(contentByte);
-            phrase = new Phrase("Gongabu, Kathmandu, Nepal (ESTD.- 1996)", rf.SchoolAddress);
+            phrase = new Phrase(_school.Address + " (" + _school.EstiblishedYear + ")", rf.SchoolAddress);
             ct.SetSimpleColumn(phrase, 50, 565, 450, 300, 15, Element.ALIGN_CENTER);
             ct.Go();
 
             ct = new ColumnText(contentByte);
-            phrase = new Phrase("Phone No. :- 4-35-32-12", rf.SchoolPhone);
+            phrase = new Phrase("Phone No.: " + _school.PhoneNo, rf.SchoolPhone);
             ct.SetSimpleColumn(phrase, 50, 550, 450, 300, 15, Element.ALIGN_CENTER);
             ct.Go();
 

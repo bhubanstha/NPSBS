@@ -59,7 +59,7 @@ namespace NPSBS
 				try
 				{
 					UpToSeven s = new UpToSeven(classId, examId, className, examName, year);
-					s.GetLeadger(fileName);
+					s.GetLeadger(fileName, StartupCache.School);
 				}
 				catch (Exception ex)
 				{
@@ -71,7 +71,7 @@ namespace NPSBS
 				try
 				{
 					ClassEightLedger cel = new ClassEightLedger(classId, examId, className, examName, year);
-					cel.GetLeadger(fileName);
+					cel.GetLeadger(fileName, StartupCache.School);
 				}
 				catch (Exception ex)
 				{

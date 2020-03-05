@@ -32,7 +32,7 @@ namespace NPSBS.Core
             }
 
 
-            Document doc = new Document(PageSize.A4.Rotate(), 7F, 7F, 7F, 7F); ;
+            Document doc = new Document(PageSize.A4.Rotate(), 7F, 7F, 7F, 7F);
 
 
             writer = PdfWriter.GetInstance(doc, fs);
@@ -165,7 +165,7 @@ namespace NPSBS.Core
                 }
                 else
                 {
-                    Header.RightHeader(doc, fs, _writer, _contentByte, printDate, examName, _school);
+                    Header.RightHeader(doc, fs, _writer, _contentByte, printDate, examName);
                     ct = new ColumnText(contentByte);
                     phrase = new Phrase(ds.Tables[i].Rows[0]["StudentFullName"].ToString(), rf.StudentName);
                     ct.SetSimpleColumn(phrase, 543, 481, 850, 300, 15, Element.ALIGN_LEFT);

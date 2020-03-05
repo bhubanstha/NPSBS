@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSchoolSetup));
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtSchoolName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtSlogan = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtEstablishedYear = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblSchoolId = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtShortName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -47,10 +52,6 @@
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtAddress = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtEstablishedYear = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtSlogan = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
             this.kryptonGroupBox1.Panel.SuspendLayout();
@@ -63,7 +64,8 @@
             // kryptonLabel1
             // 
             this.kryptonLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.kryptonLabel1.Location = new System.Drawing.Point(20, 36);
+            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
+            this.kryptonLabel1.Location = new System.Drawing.Point(15, 36);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(83, 20);
             this.kryptonLabel1.TabIndex = 0;
@@ -81,6 +83,10 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSchoolName.StateActive.Border.Rounding = 15;
             this.txtSchoolName.StateActive.Border.Width = 2;
+            this.txtSchoolName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtSchoolName.StateCommon.Border.Rounding = 15;
             this.txtSchoolName.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -117,9 +123,75 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtAddress);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtSchoolName);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(799, 361);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(799, 374);
             this.kryptonGroupBox1.TabIndex = 2;
             this.kryptonGroupBox1.Values.Heading = "School General Information";
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.kryptonLabel8.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
+            this.kryptonLabel8.Location = new System.Drawing.Point(15, 265);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(48, 20);
+            this.kryptonLabel8.TabIndex = 21;
+            this.kryptonLabel8.Values.Text = "Slogan";
+            // 
+            // txtSlogan
+            // 
+            this.txtSlogan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtSlogan.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
+            this.txtSlogan.Location = new System.Drawing.Point(113, 261);
+            this.txtSlogan.Name = "txtSlogan";
+            this.txtSlogan.Size = new System.Drawing.Size(379, 35);
+            this.txtSlogan.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtSlogan.StateActive.Border.Rounding = 15;
+            this.txtSlogan.StateActive.Border.Width = 2;
+            this.txtSlogan.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtSlogan.StateCommon.Border.Rounding = 15;
+            this.txtSlogan.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtSlogan.StateNormal.Border.Rounding = 25;
+            this.txtSlogan.StateNormal.Border.Width = 5;
+            this.txtSlogan.TabIndex = 7;
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.kryptonLabel7.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
+            this.kryptonLabel7.Location = new System.Drawing.Point(15, 150);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(99, 20);
+            this.kryptonLabel7.TabIndex = 19;
+            this.kryptonLabel7.Values.Text = "Established Year";
+            // 
+            // txtEstablishedYear
+            // 
+            this.txtEstablishedYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtEstablishedYear.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
+            this.txtEstablishedYear.Location = new System.Drawing.Point(113, 144);
+            this.txtEstablishedYear.Name = "txtEstablishedYear";
+            this.txtEstablishedYear.Size = new System.Drawing.Size(379, 35);
+            this.txtEstablishedYear.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtEstablishedYear.StateActive.Border.Rounding = 15;
+            this.txtEstablishedYear.StateActive.Border.Width = 2;
+            this.txtEstablishedYear.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtEstablishedYear.StateCommon.Border.Rounding = 15;
+            this.txtEstablishedYear.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtEstablishedYear.StateNormal.Border.Rounding = 25;
+            this.txtEstablishedYear.StateNormal.Border.Width = 5;
+            this.txtEstablishedYear.TabIndex = 4;
             // 
             // lblSchoolId
             // 
@@ -151,6 +223,10 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtShortName.StateActive.Border.Rounding = 15;
             this.txtShortName.StateActive.Border.Width = 2;
+            this.txtShortName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtShortName.StateCommon.Border.Rounding = 15;
             this.txtShortName.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -163,28 +239,28 @@
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSave.Location = new System.Drawing.Point(113, 301);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(131, 28);
+            this.btnSave.Size = new System.Drawing.Size(379, 35);
             this.btnSave.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.TopLeft;
             this.btnSave.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSave.StateCommon.Border.Rounding = 8;
+            this.btnSave.StateCommon.Border.Rounding = 15;
             this.btnSave.StateCommon.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
             this.btnSave.StateCommon.Content.LongText.MultiLineH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
-            this.btnSave.TabIndex = 6;
+            this.btnSave.TabIndex = 8;
             this.btnSave.Values.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnRemoveLogo
             // 
             this.btnRemoveLogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnRemoveLogo.Location = new System.Drawing.Point(519, 229);
+            this.btnRemoveLogo.Location = new System.Drawing.Point(514, 256);
             this.btnRemoveLogo.Name = "btnRemoveLogo";
-            this.btnRemoveLogo.Size = new System.Drawing.Size(104, 28);
+            this.btnRemoveLogo.Size = new System.Drawing.Size(140, 35);
             this.btnRemoveLogo.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnRemoveLogo.StateCommon.Border.Rounding = 8;
+            this.btnRemoveLogo.StateCommon.Border.Rounding = 15;
             this.btnRemoveLogo.TabIndex = 13;
             this.btnRemoveLogo.TabStop = false;
             this.btnRemoveLogo.Values.Text = "Remove Logo";
@@ -193,13 +269,13 @@
             // btnLoadLogo
             // 
             this.btnLoadLogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLoadLogo.Location = new System.Drawing.Point(519, 195);
+            this.btnLoadLogo.Location = new System.Drawing.Point(514, 215);
             this.btnLoadLogo.Name = "btnLoadLogo";
-            this.btnLoadLogo.Size = new System.Drawing.Size(104, 28);
+            this.btnLoadLogo.Size = new System.Drawing.Size(140, 35);
             this.btnLoadLogo.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnLoadLogo.StateCommon.Border.Rounding = 8;
+            this.btnLoadLogo.StateCommon.Border.Rounding = 15;
             this.btnLoadLogo.TabIndex = 12;
             this.btnLoadLogo.TabStop = false;
             this.btnLoadLogo.Values.Text = "Load Logo";
@@ -211,7 +287,7 @@
             this.picLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picLogo.Location = new System.Drawing.Point(514, 69);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(113, 123);
+            this.picLogo.Size = new System.Drawing.Size(140, 140);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 10;
             this.picLogo.TabStop = false;
@@ -219,7 +295,8 @@
             // kryptonLabel5
             // 
             this.kryptonLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.kryptonLabel5.Location = new System.Drawing.Point(20, 224);
+            this.kryptonLabel5.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
+            this.kryptonLabel5.Location = new System.Drawing.Point(15, 224);
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.Size = new System.Drawing.Size(55, 20);
             this.kryptonLabel5.TabIndex = 8;
@@ -237,17 +314,22 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtWebsite.StateActive.Border.Rounding = 15;
             this.txtWebsite.StateActive.Border.Width = 2;
+            this.txtWebsite.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtWebsite.StateCommon.Border.Rounding = 15;
             this.txtWebsite.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtWebsite.StateNormal.Border.Rounding = 25;
             this.txtWebsite.StateNormal.Border.Width = 5;
-            this.txtWebsite.TabIndex = 5;
+            this.txtWebsite.TabIndex = 6;
             // 
             // kryptonLabel4
             // 
             this.kryptonLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.kryptonLabel4.Location = new System.Drawing.Point(20, 182);
+            this.kryptonLabel4.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
+            this.kryptonLabel4.Location = new System.Drawing.Point(15, 182);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(40, 20);
             this.kryptonLabel4.TabIndex = 6;
@@ -265,17 +347,22 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtEmail.StateActive.Border.Rounding = 15;
             this.txtEmail.StateActive.Border.Width = 2;
+            this.txtEmail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtEmail.StateCommon.Border.Rounding = 15;
             this.txtEmail.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtEmail.StateNormal.Border.Rounding = 25;
             this.txtEmail.StateNormal.Border.Width = 5;
-            this.txtEmail.TabIndex = 4;
+            this.txtEmail.TabIndex = 5;
             // 
             // kryptonLabel3
             // 
             this.kryptonLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.kryptonLabel3.Location = new System.Drawing.Point(20, 113);
+            this.kryptonLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
+            this.kryptonLabel3.Location = new System.Drawing.Point(15, 113);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(68, 20);
             this.kryptonLabel3.TabIndex = 4;
@@ -293,6 +380,10 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPhoneNo.StateActive.Border.Rounding = 15;
             this.txtPhoneNo.StateActive.Border.Width = 2;
+            this.txtPhoneNo.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtPhoneNo.StateCommon.Border.Rounding = 15;
             this.txtPhoneNo.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -303,7 +394,8 @@
             // kryptonLabel2
             // 
             this.kryptonLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.kryptonLabel2.Location = new System.Drawing.Point(20, 74);
+            this.kryptonLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
+            this.kryptonLabel2.Location = new System.Drawing.Point(15, 74);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(54, 20);
             this.kryptonLabel2.TabIndex = 2;
@@ -321,6 +413,10 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtAddress.StateActive.Border.Rounding = 15;
             this.txtAddress.StateActive.Border.Width = 2;
+            this.txtAddress.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtAddress.StateCommon.Border.Rounding = 15;
             this.txtAddress.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -334,73 +430,18 @@
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(834, 409);
+            this.kryptonPanel1.Size = new System.Drawing.Size(834, 425);
             this.kryptonPanel1.TabIndex = 3;
-            // 
-            // kryptonLabel7
-            // 
-            this.kryptonLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.kryptonLabel7.Location = new System.Drawing.Point(20, 150);
-            this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(99, 20);
-            this.kryptonLabel7.TabIndex = 19;
-            this.kryptonLabel7.Values.Text = "Established Year";
-            // 
-            // txtEstablishedYear
-            // 
-            this.txtEstablishedYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtEstablishedYear.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.txtEstablishedYear.Location = new System.Drawing.Point(113, 144);
-            this.txtEstablishedYear.Name = "txtEstablishedYear";
-            this.txtEstablishedYear.Size = new System.Drawing.Size(379, 35);
-            this.txtEstablishedYear.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtEstablishedYear.StateActive.Border.Rounding = 15;
-            this.txtEstablishedYear.StateActive.Border.Width = 2;
-            this.txtEstablishedYear.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtEstablishedYear.StateNormal.Border.Rounding = 25;
-            this.txtEstablishedYear.StateNormal.Border.Width = 5;
-            this.txtEstablishedYear.TabIndex = 18;
-            // 
-            // kryptonLabel8
-            // 
-            this.kryptonLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.kryptonLabel8.Location = new System.Drawing.Point(20, 265);
-            this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(48, 20);
-            this.kryptonLabel8.TabIndex = 21;
-            this.kryptonLabel8.Values.Text = "Slogan";
-            // 
-            // txtSlogan
-            // 
-            this.txtSlogan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtSlogan.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.txtSlogan.Location = new System.Drawing.Point(113, 261);
-            this.txtSlogan.Name = "txtSlogan";
-            this.txtSlogan.Size = new System.Drawing.Size(379, 35);
-            this.txtSlogan.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtSlogan.StateActive.Border.Rounding = 15;
-            this.txtSlogan.StateActive.Border.Width = 2;
-            this.txtSlogan.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtSlogan.StateNormal.Border.Rounding = 25;
-            this.txtSlogan.StateNormal.Border.Width = 5;
-            this.txtSlogan.TabIndex = 20;
             // 
             // frmSchoolSetup
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 409);
+            this.ClientSize = new System.Drawing.Size(834, 425);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmSchoolSetup";
             this.Text = "School Setup";

@@ -34,7 +34,7 @@ namespace NPSBS.Core
             }
 
 
-            Document doc = new Document(PageSize.A4, 15F, 15F, 45F, 7F); ;
+            Document doc = new Document(PageSize.A4, 15F, 15F, 45F, 7F);
 
 
             writer = PdfWriter.GetInstance(doc, fs);

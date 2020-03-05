@@ -113,6 +113,7 @@
             // 
             // kryptonLabel3
             // 
+            this.kryptonLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel3.Location = new System.Drawing.Point(11, 62);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(38, 20);
@@ -121,13 +122,13 @@
             // 
             // btnGetLedger
             // 
-            this.btnGetLedger.Location = new System.Drawing.Point(421, 62);
+            this.btnGetLedger.Location = new System.Drawing.Point(421, 57);
             this.btnGetLedger.Name = "btnGetLedger";
-            this.btnGetLedger.Size = new System.Drawing.Size(163, 28);
+            this.btnGetLedger.Size = new System.Drawing.Size(299, 35);
             this.btnGetLedger.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnGetLedger.StateCommon.Border.Rounding = 8;
+            this.btnGetLedger.StateCommon.Border.Rounding = 15;
             this.btnGetLedger.TabIndex = 4;
             this.btnGetLedger.Values.Text = "Get Ledger";
             this.btnGetLedger.Click += new System.EventHandler(this.btnLedger_Click);
@@ -147,6 +148,7 @@
             // 
             // kryptonLabel2
             // 
+            this.kryptonLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel2.Location = new System.Drawing.Point(338, 23);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(77, 20);
@@ -168,6 +170,7 @@
             // 
             // kryptonLabel1
             // 
+            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel1.Location = new System.Drawing.Point(10, 23);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(91, 20);

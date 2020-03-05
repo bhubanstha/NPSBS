@@ -6,6 +6,7 @@ using System.Data;
 using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using Utility;
 
 namespace NPSBS.Core
 {
@@ -18,7 +19,7 @@ namespace NPSBS.Core
         private PdfWriter writer = null;
         private Document doc = null;
         private ResultFont font = null;
-
+        private School _school;
         string examName = "";
         string year = "";
         string className = "";
@@ -37,10 +38,11 @@ namespace NPSBS.Core
             _result = DataAccess.ExecuteReaderCommand(cmd);
         }
 
-        public void GetLeadger(string location)
+        public void GetLeadger(string location, School school)
         {
             try
             {
+                _school = school;
                 _stream = new FileStream(location, FileMode.Create, FileAccess.Write, FileShare.None);
             }
             catch (Exception ex)
@@ -50,7 +52,7 @@ namespace NPSBS.Core
             }
 
 
-            doc = new Document(PageSize.A4.Rotate(), 7F, 7F, 7F, 7F); ;
+            doc = new Document(PageSize.A4.Rotate(), 7F, 7F, 7F, 7F);
 
 
             writer = PdfWriter.GetInstance(doc, _stream);
@@ -61,7 +63,7 @@ namespace NPSBS.Core
             doc.AddSubject("Exam Result");
             doc.AddCreator("iTextSharp");
             doc.AddAuthor("Bhuban Shrestha");
-            iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(AppDomain.CurrentDomain.BaseDirectory + "\\logo.png");
+            iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(Constant.NPSBSLogo);
             jpg.SetAbsolutePosition(190, 515);
             jpg.ScalePercent(32);
             doc.Add(jpg);
@@ -78,12 +80,12 @@ namespace NPSBS.Core
             header.LockedWidth = true;
             PdfPCell cell;
 
-            cell = new PdfPCell(new Phrase("National Peace Secondary Boarding School", font.SchoolName));
+            cell = new PdfPCell(new Phrase(_school.SchoolName, font.SchoolName));
             cell.HorizontalAlignment = Element.ALIGN_CENTER;
             cell.Border = Rectangle.NO_BORDER;
             header.AddCell(cell);
 
-            cell = new PdfPCell(new Phrase("Gongabu, Kathmandu, Nepal", font.SchoolAddress));
+            cell = new PdfPCell(new Phrase(_school.Address, font.SchoolAddress));
             cell.HorizontalAlignment = Element.ALIGN_CENTER;
             cell.Border = Rectangle.NO_BORDER;
             header.AddCell(cell);

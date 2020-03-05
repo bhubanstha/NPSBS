@@ -101,6 +101,10 @@ namespace NPSBS
 			{
 				worker.RunWorkerAsync();
 			}
+			if(id>0)
+			{
+				Response.Success("School information updated.");
+			}
 		}
 
 
