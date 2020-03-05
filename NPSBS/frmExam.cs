@@ -178,12 +178,12 @@ namespace NPSBS
 
 		private void txtYear_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			NumberOnly.Yes(txtYear, sender, e);
+			ValidateInput.Yes(txtYear, sender, e);
 		}
 
 		private void txtYearSearch_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			NumberOnly.Yes(txtYearSearch, sender, e);
+			ValidateInput.Yes(txtYearSearch, sender, e);
 		}
 	}
 }

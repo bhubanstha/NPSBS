@@ -115,16 +115,17 @@
             // 
             this.kryptonPanel4.Controls.Add(this.btnSubmitMarks);
             this.kryptonPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanel4.Location = new System.Drawing.Point(0, 311);
+            this.kryptonPanel4.Location = new System.Drawing.Point(0, 315);
             this.kryptonPanel4.Name = "kryptonPanel4";
-            this.kryptonPanel4.Size = new System.Drawing.Size(664, 40);
+            this.kryptonPanel4.Size = new System.Drawing.Size(672, 40);
             this.kryptonPanel4.TabIndex = 2;
             // 
             // btnSubmitMarks
             // 
+            this.btnSubmitMarks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubmitMarks.Location = new System.Drawing.Point(502, 6);
             this.btnSubmitMarks.Name = "btnSubmitMarks";
-            this.btnSubmitMarks.Size = new System.Drawing.Size(159, 25);
+            this.btnSubmitMarks.Size = new System.Drawing.Size(159, 28);
             this.btnSubmitMarks.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -139,7 +140,7 @@
             this.kryptonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel3.Location = new System.Drawing.Point(0, 43);
             this.kryptonPanel3.Name = "kryptonPanel3";
-            this.kryptonPanel3.Size = new System.Drawing.Size(664, 308);
+            this.kryptonPanel3.Size = new System.Drawing.Size(672, 312);
             this.kryptonPanel3.TabIndex = 1;
             // 
             // dgvExtraActivity
@@ -147,7 +148,7 @@
             this.dgvExtraActivity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvExtraActivity.Location = new System.Drawing.Point(0, 0);
             this.dgvExtraActivity.Name = "dgvExtraActivity";
-            this.dgvExtraActivity.Size = new System.Drawing.Size(664, 308);
+            this.dgvExtraActivity.Size = new System.Drawing.Size(672, 312);
             this.dgvExtraActivity.TabIndex = 0;
             this.dgvExtraActivity.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvExtraActivity_CellValidating);
             // 
@@ -158,14 +159,14 @@
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(664, 43);
+            this.kryptonPanel2.Size = new System.Drawing.Size(672, 43);
             this.kryptonPanel2.TabIndex = 0;
             // 
             // txtSchoolDays
             // 
             this.txtSchoolDays.Location = new System.Drawing.Point(83, 5);
             this.txtSchoolDays.Name = "txtSchoolDays";
-            this.txtSchoolDays.Size = new System.Drawing.Size(159, 30);
+            this.txtSchoolDays.Size = new System.Drawing.Size(159, 33);
             this.txtSchoolDays.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -210,7 +211,7 @@
             // 
             this.btnLoadStudent.Location = new System.Drawing.Point(83, 44);
             this.btnLoadStudent.Name = "btnLoadStudent";
-            this.btnLoadStudent.Size = new System.Drawing.Size(159, 25);
+            this.btnLoadStudent.Size = new System.Drawing.Size(159, 28);
             this.btnLoadStudent.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -236,7 +237,7 @@
             // 
             this.txtYear.Location = new System.Drawing.Point(83, 5);
             this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(159, 30);
+            this.txtYear.Size = new System.Drawing.Size(159, 33);
             this.txtYear.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -271,7 +272,6 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmExtraActivities";
             this.Text = "Extra Activities";

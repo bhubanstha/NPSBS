@@ -123,7 +123,11 @@
             // 
             this.btnGetLedger.Location = new System.Drawing.Point(421, 62);
             this.btnGetLedger.Name = "btnGetLedger";
-            this.btnGetLedger.Size = new System.Drawing.Size(163, 25);
+            this.btnGetLedger.Size = new System.Drawing.Size(163, 28);
+            this.btnGetLedger.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnGetLedger.StateCommon.Border.Rounding = 8;
             this.btnGetLedger.TabIndex = 4;
             this.btnGetLedger.Values.Text = "Get Ledger";
             this.btnGetLedger.Click += new System.EventHandler(this.btnLedger_Click);
@@ -153,7 +157,7 @@
             // 
             this.txtAcademicYear.Location = new System.Drawing.Point(107, 18);
             this.txtAcademicYear.Name = "txtAcademicYear";
-            this.txtAcademicYear.Size = new System.Drawing.Size(182, 30);
+            this.txtAcademicYear.Size = new System.Drawing.Size(182, 33);
             this.txtAcademicYear.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -187,7 +191,6 @@
             this.Controls.Add(this.kryptonPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmLedger";
             this.Text = "Marks Ledger";

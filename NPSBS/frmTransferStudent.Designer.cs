@@ -109,7 +109,7 @@
             this.gvTranferStudent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvTranferStudent.Location = new System.Drawing.Point(0, 0);
             this.gvTranferStudent.Name = "gvTranferStudent";
-            this.gvTranferStudent.Size = new System.Drawing.Size(937, 223);
+            this.gvTranferStudent.Size = new System.Drawing.Size(945, 227);
             this.gvTranferStudent.TabIndex = 0;
             // 
             // kryptonGroupBox2
@@ -140,13 +140,13 @@
             // 
             // btnTransfer
             // 
-            this.btnTransfer.Location = new System.Drawing.Point(678, 16);
+            this.btnTransfer.Location = new System.Drawing.Point(678, 12);
             this.btnTransfer.Name = "btnTransfer";
-            this.btnTransfer.Size = new System.Drawing.Size(90, 25);
+            this.btnTransfer.Size = new System.Drawing.Size(115, 28);
             this.btnTransfer.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnTransfer.StateCommon.Border.Rounding = 15;
+            this.btnTransfer.StateCommon.Border.Rounding = 8;
             this.btnTransfer.TabIndex = 3;
             this.btnTransfer.Values.Text = "Transfer";
             this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
@@ -155,7 +155,7 @@
             // 
             this.txtNewAcademicYear.Location = new System.Drawing.Point(450, 10);
             this.txtNewAcademicYear.Name = "txtNewAcademicYear";
-            this.txtNewAcademicYear.Size = new System.Drawing.Size(212, 30);
+            this.txtNewAcademicYear.Size = new System.Drawing.Size(212, 33);
             this.txtNewAcademicYear.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -212,13 +212,13 @@
             // 
             // btnGetStudent
             // 
-            this.btnGetStudent.Location = new System.Drawing.Point(678, 16);
+            this.btnGetStudent.Location = new System.Drawing.Point(678, 12);
             this.btnGetStudent.Name = "btnGetStudent";
-            this.btnGetStudent.Size = new System.Drawing.Size(90, 25);
+            this.btnGetStudent.Size = new System.Drawing.Size(115, 28);
             this.btnGetStudent.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnGetStudent.StateCommon.Border.Rounding = 15;
+            this.btnGetStudent.StateCommon.Border.Rounding = 8;
             this.btnGetStudent.TabIndex = 3;
             this.btnGetStudent.Values.Text = "Get Student";
             this.btnGetStudent.Click += new System.EventHandler(this.btnGetStudent_Click);
@@ -227,7 +227,7 @@
             // 
             this.txtOldAcademicYear.Location = new System.Drawing.Point(450, 10);
             this.txtOldAcademicYear.Name = "txtOldAcademicYear";
-            this.txtOldAcademicYear.Size = new System.Drawing.Size(212, 30);
+            this.txtOldAcademicYear.Size = new System.Drawing.Size(212, 33);
             this.txtOldAcademicYear.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -273,7 +273,6 @@
             this.Controls.Add(this.kryptonPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmTransferStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

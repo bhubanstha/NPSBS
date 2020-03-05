@@ -6,11 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 using NPSBS.Core;
 
 namespace NPSBS
 {
-    public partial class frmClass : Form
+    public partial class frmClass : KryptonForm
     {
         private int  rowsAffected;
         Classes cl = null;

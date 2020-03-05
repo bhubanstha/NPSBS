@@ -140,9 +140,9 @@
             // gvStudents
             // 
             this.gvStudents.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gvStudents.Location = new System.Drawing.Point(0, 69);
+            this.gvStudents.Location = new System.Drawing.Point(0, 73);
             this.gvStudents.Name = "gvStudents";
-            this.gvStudents.Size = new System.Drawing.Size(913, 253);
+            this.gvStudents.Size = new System.Drawing.Size(921, 253);
             this.gvStudents.TabIndex = 19;
             this.gvStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvStudents_CellClick);
             // 
@@ -150,20 +150,20 @@
             // 
             this.btnSearch.Location = new System.Drawing.Point(104, 42);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(116, 25);
+            this.btnSearch.Size = new System.Drawing.Size(116, 28);
             this.btnSearch.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnSearch.StateCommon.Border.Rounding = 8;
             this.btnSearch.TabIndex = 18;
-            this.btnSearch.Values.Text = "Save";
+            this.btnSearch.Values.Text = "Search";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtAcademicYearSearch
             // 
-            this.txtAcademicYearSearch.Location = new System.Drawing.Point(788, 5);
+            this.txtAcademicYearSearch.Location = new System.Drawing.Point(788, 1);
             this.txtAcademicYearSearch.Name = "txtAcademicYearSearch";
-            this.txtAcademicYearSearch.Size = new System.Drawing.Size(123, 30);
+            this.txtAcademicYearSearch.Size = new System.Drawing.Size(123, 33);
             this.txtAcademicYearSearch.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -173,7 +173,7 @@
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(694, 12);
+            this.kryptonLabel9.Location = new System.Drawing.Point(694, 10);
             this.kryptonLabel9.Name = "kryptonLabel9";
             this.kryptonLabel9.Size = new System.Drawing.Size(91, 20);
             this.kryptonLabel9.TabIndex = 16;
@@ -196,7 +196,7 @@
             // 
             this.txtStudentNameSearch.Location = new System.Drawing.Point(102, 3);
             this.txtStudentNameSearch.Name = "txtStudentNameSearch";
-            this.txtStudentNameSearch.Size = new System.Drawing.Size(282, 30);
+            this.txtStudentNameSearch.Size = new System.Drawing.Size(282, 33);
             this.txtStudentNameSearch.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -258,7 +258,7 @@
             // 
             this.kryptonButton1.Location = new System.Drawing.Point(145, 14);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(116, 25);
+            this.kryptonButton1.Size = new System.Drawing.Size(116, 28);
             this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -305,7 +305,7 @@
             // 
             this.btnAction.Location = new System.Drawing.Point(104, 83);
             this.btnAction.Name = "btnAction";
-            this.btnAction.Size = new System.Drawing.Size(116, 25);
+            this.btnAction.Size = new System.Drawing.Size(116, 28);
             this.btnAction.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -364,7 +364,7 @@
             // 
             this.txtRollNumber.Location = new System.Drawing.Point(104, 44);
             this.txtRollNumber.Name = "txtRollNumber";
-            this.txtRollNumber.Size = new System.Drawing.Size(282, 30);
+            this.txtRollNumber.Size = new System.Drawing.Size(282, 33);
             this.txtRollNumber.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -384,7 +384,7 @@
             // 
             this.txtAcademicYear.Location = new System.Drawing.Point(791, 3);
             this.txtAcademicYear.Name = "txtAcademicYear";
-            this.txtAcademicYear.Size = new System.Drawing.Size(127, 30);
+            this.txtAcademicYear.Size = new System.Drawing.Size(127, 33);
             this.txtAcademicYear.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -412,7 +412,7 @@
             // 
             this.txtStudentName.Location = new System.Drawing.Point(104, 5);
             this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(282, 30);
+            this.txtStudentName.Size = new System.Drawing.Size(282, 33);
             this.txtStudentName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -446,7 +446,6 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

@@ -230,17 +230,17 @@ namespace NPSBS
        
         private void txtStudentName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.StringOnly(txtStudentName, sender, e);
+            ValidateInput.StringOnly(txtStudentName, sender, e);
         }
 
         private void txtAcademicYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.Yes(txtAcademicYear, sender, e);
+            ValidateInput.Yes(txtAcademicYear, sender, e);
         }
 
         private void txtRollNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.Yes(txtRollNumber, sender, e);
+            ValidateInput.Yes(txtRollNumber, sender, e);
         }
 
         private void txtStudentNameSearch_KeyPress(object sender, KeyPressEventArgs e)

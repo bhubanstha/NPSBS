@@ -154,7 +154,7 @@ namespace NPSBS
 
 		private void txtAcademicYear_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			NumberOnly.Yes(txtAcademicYear, sender, e);
+			ValidateInput.Yes(txtAcademicYear, sender, e);
 		}
 
 	}

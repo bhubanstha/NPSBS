@@ -130,12 +130,12 @@ namespace NPSBS
 
         private void txtOldAcademicYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.Yes(txtOldAcademicYear, sender, e);
+            ValidateInput.Yes(txtOldAcademicYear, sender, e);
         }
 
         private void txtNewAcademicYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.Yes(txtNewAcademicYear, sender, e);
+            ValidateInput.Yes(txtNewAcademicYear, sender, e);
         }
     }
 }

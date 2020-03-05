@@ -108,6 +108,7 @@
             this.gvSubjects.ReadOnly = true;
             this.gvSubjects.Size = new System.Drawing.Size(796, 256);
             this.gvSubjects.TabIndex = 13;
+            this.gvSubjects.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSubjects_CellContentClick);
             // 
             // ddlClassSearch
             // 
@@ -180,7 +181,7 @@
             // 
             this.btnSave.Location = new System.Drawing.Point(107, 83);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(90, 25);
+            this.btnSave.Size = new System.Drawing.Size(90, 28);
             this.btnSave.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));

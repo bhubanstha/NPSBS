@@ -199,17 +199,17 @@ namespace NPSBS
 
 		private void txtTheoryMarks_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			NumberOnly.DecimalType(txtTheoryMarks, sender, e);
+			ValidateInput.DecimalType(txtTheoryMarks, sender, e);
 		}
 
 		private void txtPracticalMarks_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			NumberOnly.DecimalType(txtPracticalMarks, sender, e);
+			ValidateInput.DecimalType(txtPracticalMarks, sender, e);
 		}
 
 		private void txtSubject_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			NumberOnly.StringOnly(txtSubject, sender, e);
+			ValidateInput.StringOnly(txtSubject, sender, e, true);
 		}
 
 	}

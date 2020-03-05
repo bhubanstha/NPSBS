@@ -53,7 +53,7 @@ namespace NPSBS
 			ddlExam.DataSource = tbl;
 			ddlExam.DisplayMember = "Exam";
 			ddlExam.ValueMember = "ExaminationId";
-			ddlExam.SelectedIndex = 0;
+			ddlExam.SelectedIndex = tbl.Rows.Count>0? 0:-1;
 		}
 
 		private void GetClass()

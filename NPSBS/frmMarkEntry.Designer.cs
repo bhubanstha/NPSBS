@@ -136,7 +136,7 @@
             this.btnSubmitMarks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubmitMarks.Location = new System.Drawing.Point(654, 5);
             this.btnSubmitMarks.Name = "btnSubmitMarks";
-            this.btnSubmitMarks.Size = new System.Drawing.Size(133, 25);
+            this.btnSubmitMarks.Size = new System.Drawing.Size(133, 28);
             this.btnSubmitMarks.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -189,7 +189,7 @@
             // 
             this.btnLoadStudent.Location = new System.Drawing.Point(84, 85);
             this.btnLoadStudent.Name = "btnLoadStudent";
-            this.btnLoadStudent.Size = new System.Drawing.Size(199, 25);
+            this.btnLoadStudent.Size = new System.Drawing.Size(199, 28);
             this.btnLoadStudent.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -266,7 +266,7 @@
             // 
             this.txtYear.Location = new System.Drawing.Point(83, 9);
             this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(200, 30);
+            this.txtYear.Size = new System.Drawing.Size(200, 33);
             this.txtYear.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -304,7 +304,6 @@
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMarkEntry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

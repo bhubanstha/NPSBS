@@ -91,7 +91,7 @@
     <Compile Include="Helper\ControlHelper.cs" />
     <Compile Include="Helper\ExcelExtension.cs" />
     <Compile Include="Helper\GridViewEditDelete.cs" />
-    <Compile Include="Helper\NumberOnly.cs" />
+    <Compile Include="Helper\ValidateInput.cs" />
     <Compile Include="Helper\Response.cs" />
     <Compile Include="Helper\WebTextReader.cs" />
     <Compile Include="Interface\ICrud.cs" />

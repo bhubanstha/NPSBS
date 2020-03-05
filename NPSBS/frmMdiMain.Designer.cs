@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMdiMain));
             this.tabManager = new MDIWindowManager.WindowManagerPanel();
             this.ribbonMenu = new ComponentFactory.Krypton.Ribbon.KryptonRibbon();
             this.kryptonRibbonTab1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbonTab();
@@ -120,6 +121,7 @@
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
+            this.ribbonMenu.SelectedContext = null;
             this.ribbonMenu.SelectedTab = this.kryptonRibbonTab1;
             this.ribbonMenu.Size = new System.Drawing.Size(1153, 115);
             this.ribbonMenu.TabIndex = 1;
@@ -430,6 +432,7 @@
             this.Controls.Add(this.statusStrip2);
             this.Controls.Add(this.ribbonMenu);
             this.Controls.Add(this.tabManager);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmMdiMain";
             this.Text = "School Software";
