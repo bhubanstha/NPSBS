@@ -8,8 +8,8 @@ namespace NPSBS
 	{
 		public frmBase()
 		{
-			InitializeComponent();
-			this.ControlBox = false;
+			//InitializeComponent();
+			//this.ControlBox = false;
 		}
 
 	}

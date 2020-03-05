@@ -34,6 +34,7 @@ namespace NPSBS
 			InitializeComponent();
 			this.ControlBox = true;
 			tabManager.Visible = false;
+			tabManager.AutoDetectMdiChildWindows = false;
 			timer = new Timer();
 			timer.Interval = 1000;
 			timer.Tick += Timer_Tick;
@@ -72,7 +73,6 @@ namespace NPSBS
 			if (CheckFormOpen())
 			{
 				tabManager.Visible = true;
-                Logger.Log.Debug("Debug timer message");
 			}
 			else
 			{
@@ -85,9 +85,12 @@ namespace NPSBS
 			if (frmSchool == null || frmSchool.IsDisposed || frmSchool.Disposing)
 			{
 				frmSchool = new frmSchoolSetup(this);
+				//frmSchool.MdiParent = this;
+				//frmSchool.Show();
 			}
-			frmSchool.MdiParent = this;
-			frmSchool.Show();
+			tabManager.AddWindow(frmSchool);
+			tabManager.SetActiveWindow(frmSchool);
+			frmSchool.Invalidate();
 		}
 
 		private void btnApplyTheme_Click(object sender, EventArgs e)
@@ -104,9 +107,14 @@ namespace NPSBS
 			if (frmSubject == null || frmSubject.Disposing || frmSubject.IsDisposed)
 			{
 				frmSubject = new frmSubject();
+				//frmSubject.MdiParent = this;
+				//frmSubject.Show();
 			}
-			frmSubject.MdiParent = this;
-			frmSubject.Show();
+			tabManager.AddWindow(frmSubject);
+			tabManager.SetActiveWindow(frmSubject);
+			frmSubject.Invalidate();
+			
+		
 		}
 
 		private void kryptonRibbonGroupButton3_Click(object sender, EventArgs e)
@@ -114,9 +122,12 @@ namespace NPSBS
 			if (frmExam == null || frmExam.Disposing || frmExam.IsDisposed)
 			{
 				frmExam = new frmExam();
+				frmExam.MdiParent = this;
+				frmExam.Show();
 			}
-			frmExam.MdiParent = this;
-			frmExam.Show();
+			tabManager.AddWindow(frmExam);
+			tabManager.SetActiveWindow(frmExam);
+			frmExam.Invalidate();
 		}
 
 		private void kryptonRibbonGroupButton1_Click(object sender, EventArgs e)
@@ -124,9 +135,11 @@ namespace NPSBS
 			if (frmStudent == null || frmStudent.Disposing || frmStudent.IsDisposed)
 			{
 				frmStudent = new frmStudent();
+				frmStudent.MdiParent = this;
+				frmStudent.Show();
 			}
-			frmStudent.MdiParent = this;
-			frmStudent.Show();
+			
+			tabManager.SetActiveWindow(frmStudent);
 		}
 
 		private void rbnTransferStudent_Click(object sender, EventArgs e)
@@ -137,6 +150,7 @@ namespace NPSBS
 			}
 			frmTransfer.MdiParent = this;
 			frmTransfer.Show();
+			tabManager.SetActiveWindow(frmTransfer);
 		}
 
 		private void rbnMarkEntry_Click(object sender, EventArgs e)
@@ -147,6 +161,7 @@ namespace NPSBS
 			}
 			frmMarkEntry.MdiParent = this;
 			frmMarkEntry.Show();
+			tabManager.SetActiveWindow(frmMarkEntry);
 		}
 
 		private void rbnExtraActivity_Click(object sender, EventArgs e)
@@ -157,6 +172,7 @@ namespace NPSBS
 			}
 			frmExtraActivities.MdiParent = this;
 			frmExtraActivities.Show();
+			tabManager.SetActiveWindow(frmExtraActivities);
 		}
 
 		private void rbnAttendance_Click(object sender, EventArgs e)
@@ -167,6 +183,7 @@ namespace NPSBS
 			}
 			frmAttendance.MdiParent = this;
 			frmAttendance.Show();
+			tabManager.SetActiveWindow(frmAttendance);
 		}
 
 		private void rbnResult_Click(object sender, EventArgs e)
@@ -177,6 +194,7 @@ namespace NPSBS
 			}
 			frmResult.MdiParent = this;
 			frmResult.Show();
+			tabManager.SetActiveWindow(frmResult);
 		}
 
 		private void rbnLedger_Click(object sender, EventArgs e)
@@ -187,6 +205,7 @@ namespace NPSBS
 			}
 			frmLedger.MdiParent = this;
 			frmLedger.Show();
+			tabManager.SetActiveWindow(frmLedger);
 		}
 
 		private void rbnBackup_Click(object sender, EventArgs e)
@@ -322,6 +341,16 @@ namespace NPSBS
 					btn10Blue.Checked = true;
 					break;
 			}
+		}
+
+		private void tabManager_ControlAdded(object sender, ControlEventArgs e)
+		{
+			int i = 1;
+		}
+
+		private void tabManager_WindowActivated(object sender, MDIWindowManager.WrappedWindowEventArgs e)
+		{
+			e.WrappedWindow.Window.Invalidate();
 		}
 
 		public void SetBackground()

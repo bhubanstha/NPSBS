@@ -7,21 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using NPSBS.Core;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace NPSBS
 {
-	public partial class frmSubject : frmBase
+	public partial class frmSubject : KryptonForm
 	{
 		Subject s = new Subject();
 		int rows = 0;
 		public frmSubject()
 		{
 			InitializeComponent();
+			this.Load += FrmSubject_Load;
+			
+		}
 
+		private void FrmSubject_Load(object sender, EventArgs e)
+		{
 			GetSubject();
 			GetClass();
 		}
-
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{

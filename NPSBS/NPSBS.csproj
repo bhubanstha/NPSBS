@@ -95,6 +95,9 @@
     <Reference Include="itextsharp.xtra">
       <HintPath>..\packages\itextsharp.xtra.5.5.9\lib\itextsharp.xtra.dll</HintPath>
     </Reference>
+    <Reference Include="Jacksiro.MdiTab">
+      <HintPath>..\packages\MdiTab\Jacksiro.MdiTab.dll</HintPath>
+    </Reference>
     <Reference Include="MDIWindowManager, Version=2.1.2521.32075, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MDIWindowManager.2.1.0\lib\MDIWindowManager.dll</HintPath>
     </Reference>
@@ -236,6 +239,12 @@
     <Compile Include="frmTransferStudent.Designer.cs">
       <DependentUpon>frmTransferStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIParent1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.cs">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </Compile>
     <Compile Include="NativeMethods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -318,6 +327,9 @@
     </None>
     <None Include="Resources\extraactivity.png" />
     <None Include="Resources\1906811_origina.jpg" />
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
