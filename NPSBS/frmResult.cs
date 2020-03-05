@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 using iTextSharp.text;
 using NPSBS.Core;
 
 namespace NPSBS
 {
-	public partial class frmResult : frmBase
+	public partial class frmResult : KryptonForm
     {
         Exam exam = new Exam();
         SaveFileDialog sf = null;

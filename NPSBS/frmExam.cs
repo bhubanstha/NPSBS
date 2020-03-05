@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 using NPSBS.Core;
 
 namespace NPSBS
 {
-	public partial class frmExam : frmBase
+	public partial class frmExam : KryptonForm
 	{
 		Exam exam = new Exam();
 		private int rows = 0;

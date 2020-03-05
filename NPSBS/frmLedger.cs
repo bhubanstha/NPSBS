@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 using NPSBS.Core;
 
 namespace NPSBS
 {
-	public partial class frmLedger : frmBase
+	public partial class frmLedger : KryptonForm
 	{
 		Exam exam = new Exam();
 		string year, examName, className, fileName;

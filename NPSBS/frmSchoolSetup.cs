@@ -7,10 +7,11 @@ using System.IO;
 using System.Drawing.Imaging;
 using Utility;
 using System.ComponentModel;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace NPSBS
 {
-	public partial class frmSchoolSetup : frmBase
+	public partial class frmSchoolSetup : KryptonForm
 	{
 		private string imageFile = string.Empty;
 		private string appPath = AppDomain.CurrentDomain.BaseDirectory;

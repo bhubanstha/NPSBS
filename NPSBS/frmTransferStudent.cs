@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 using NPSBS.Core;
 
 namespace NPSBS
 {
-	public partial class frmTransferStudent : frmBase
+	public partial class frmTransferStudent : KryptonForm
     {
         Student s = new Student();
         int rows = 0;

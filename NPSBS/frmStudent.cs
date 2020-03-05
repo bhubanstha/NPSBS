@@ -10,11 +10,11 @@ using NPSBS.Core;
 using System.Diagnostics;
 using OfficeOpenXml;
 using System.IO;
-
+using ComponentFactory.Krypton.Toolkit;
 
 namespace NPSBS
 {
-    public partial class frmStudent : frmBase
+    public partial class frmStudent : KryptonForm
     {
         Student s = new Student();
         int rows;
