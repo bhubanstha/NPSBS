@@ -36,6 +36,24 @@
     <Reference Include="BCrypt.Net">
       <HintPath>C:\Users\Bhuban Shrestha\Downloads\Compressed\bcryptnet.build109\BCrypt.Net.dll</HintPath>
     </Reference>
+    <Reference Include="ComponentFactory.Krypton.Design">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
     <Reference Include="EPPlus">
       <HintPath>..\NPSBS\bin\Debug\EPPlus.dll</HintPath>
     </Reference>
@@ -47,21 +65,6 @@
     </Reference>
     <Reference Include="itextsharp.xtra">
       <HintPath>..\packages\itextsharp.xtra.5.5.9\lib\itextsharp.xtra.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Docking">
-      <HintPath>..\..\..\..\..\..\Krypton\Krypton Docking.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Navigator">
-      <HintPath>..\..\..\..\..\..\Krypton\Krypton Navigator.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Ribbon">
-      <HintPath>..\..\..\..\..\..\Krypton\Krypton Ribbon.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Toolkit">
-      <HintPath>..\..\..\..\..\..\Krypton\Krypton Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Workspace">
-      <HintPath>..\..\..\..\..\..\Krypton\Krypton Workspace.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">

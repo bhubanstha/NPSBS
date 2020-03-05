@@ -41,6 +41,24 @@
     <Reference Include="CircularProgressBar">
       <HintPath>..\packages\CircularProgressBar.2.2.0.0\lib\net35-Client\CircularProgressBar.dll</HintPath>
     </Reference>
+    <Reference Include="ComponentFactory.Krypton.Design">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
     <Reference Include="EPPlus">
       <HintPath>..\NPSBS\bin\Debug\EPPlus.dll</HintPath>
     </Reference>
@@ -52,24 +70,6 @@
     </Reference>
     <Reference Include="itextsharp.xtra">
       <HintPath>..\NPSBS\bin\Debug\itextsharp.xtra.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Docking">
-      <HintPath>..\..\..\..\..\..\Krypton\Krypton Docking.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Navigator">
-      <HintPath>..\..\..\..\..\..\Krypton\Krypton Navigator.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Ribbon">
-      <HintPath>..\..\..\..\..\..\Krypton\Krypton Ribbon.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Toolkit">
-      <HintPath>..\..\..\..\..\..\Krypton\Krypton Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="Krypton Workspace">
-      <HintPath>..\..\..\..\..\..\Krypton\Krypton Workspace.dll</HintPath>
-    </Reference>
-    <Reference Include="MDIWindowManager">
-      <HintPath>..\..\..\..\..\..\Krypton\MDIWindowManager.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">

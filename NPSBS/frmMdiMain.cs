@@ -262,12 +262,6 @@ namespace NPSBS
 			btnWin2003.Checked = false;
 			switch (themeName)
 			{
-				case "2013 Default":
-					themeManager.GlobalPaletteMode = PaletteModeManager.Office2013;
-					break;
-				case "2013 White":
-					themeManager.GlobalPaletteMode = PaletteModeManager.Office2013White;
-					break;
 				case "2010 Blue":
 					themeManager.GlobalPaletteMode = PaletteModeManager.Office2010Blue;
 					break;
