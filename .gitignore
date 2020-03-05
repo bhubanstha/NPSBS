@@ -109,6 +109,31 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+NPSBS/obj
+NPSBS/obj/
+
+NPSBS/bin
+NPSBS/bin/
+
+NPSBSEnrypter/obj/
+NPSBSEnrypter/obj
+NPSBSEnrypter/bin/
+NPSBSEnrypter/bin
+
+Montessori/obj/
+Montessori/obj
+Montessori/bin/
+Montessori/bin
+
+MontessoriCore/obj
+MontessoriCore/obj/
+MontessoriCore/bin
+MontessoriCore/bin/
+
+NPSBS.Core/obj
+NPSBS.Core/obj/
+NPSBS.Core/bin
+NPSBS.Core/bin/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
