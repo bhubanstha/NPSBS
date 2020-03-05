@@ -135,11 +135,12 @@ namespace NPSBS
 			if (frmStudent == null || frmStudent.Disposing || frmStudent.IsDisposed)
 			{
 				frmStudent = new frmStudent();
-				frmStudent.MdiParent = this;
-				frmStudent.Show();
+				//frmStudent.MdiParent = this;
+				//frmStudent.Show();
 			}
-			
+			tabManager.AddWindow(frmStudent);
 			tabManager.SetActiveWindow(frmStudent);
+			frmStudent.Invalidate();
 		}
 
 		private void rbnTransferStudent_Click(object sender, EventArgs e)
@@ -148,9 +149,11 @@ namespace NPSBS
 			{
 				frmTransfer = new frmTransferStudent();
 			}
-			frmTransfer.MdiParent = this;
-			frmTransfer.Show();
+			//frmTransfer.MdiParent = this;
+			//frmTransfer.Show();
+			tabManager.AddWindow(frmTransfer);
 			tabManager.SetActiveWindow(frmTransfer);
+			frmTransfer.Invalidate();
 		}
 
 		private void rbnMarkEntry_Click(object sender, EventArgs e)
@@ -159,9 +162,11 @@ namespace NPSBS
 			{
 				frmMarkEntry = new frmMarkEntry();
 			}
-			frmMarkEntry.MdiParent = this;
-			frmMarkEntry.Show();
+			//frmMarkEntry.MdiParent = this;
+			//frmMarkEntry.Show();
+			tabManager.AddWindow(frmMarkEntry);
 			tabManager.SetActiveWindow(frmMarkEntry);
+			frmMarkEntry.Invalidate();
 		}
 
 		private void rbnExtraActivity_Click(object sender, EventArgs e)
@@ -170,9 +175,11 @@ namespace NPSBS
 			{
 				frmExtraActivities = new frmExtraActivities();
 			}
-			frmExtraActivities.MdiParent = this;
-			frmExtraActivities.Show();
+			//frmExtraActivities.MdiParent = this;
+			//frmExtraActivities.Show();
+			tabManager.AddWindow(frmExtraActivities);
 			tabManager.SetActiveWindow(frmExtraActivities);
+			frmExtraActivities.Invalidate();
 		}
 
 		private void rbnAttendance_Click(object sender, EventArgs e)
@@ -181,9 +188,11 @@ namespace NPSBS
 			{
 				frmAttendance = new frmAttendance();
 			}
-			frmAttendance.MdiParent = this;
-			frmAttendance.Show();
+			//frmAttendance.MdiParent = this;
+			//frmAttendance.Show();
+			tabManager.AddWindow(frmAttendance);
 			tabManager.SetActiveWindow(frmAttendance);
+			frmAttendance.Invalidate();
 		}
 
 		private void rbnResult_Click(object sender, EventArgs e)
@@ -192,9 +201,11 @@ namespace NPSBS
 			{
 				frmResult = new frmResult();
 			}
-			frmResult.MdiParent = this;
-			frmResult.Show();
+			//frmResult.MdiParent = this;
+			//frmResult.Show();
+			tabManager.AddWindow(frmResult);
 			tabManager.SetActiveWindow(frmResult);
+			frmResult.Invalidate();
 		}
 
 		private void rbnLedger_Click(object sender, EventArgs e)
@@ -203,9 +214,11 @@ namespace NPSBS
 			{
 				frmLedger = new frmLedger();
 			}
-			frmLedger.MdiParent = this;
-			frmLedger.Show();
+			//frmLedger.MdiParent = this;
+			//frmLedger.Show();
+			tabManager.AddWindow(frmLedger);
 			tabManager.SetActiveWindow(frmLedger);
+			frmLedger.Invalidate();
 		}
 
 		private void rbnBackup_Click(object sender, EventArgs e)

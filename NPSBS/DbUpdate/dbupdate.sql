@@ -10,13 +10,14 @@ create table School
 	Phone nvarchar(40),
 	Email nvarchar(100),
 	Website nvarchar(100),
-	Logo varbinary(max)
+	Logo varbinary(max),
+	EstiblishedYear int,
+	Slogan nvarchar(1000)
 )
 
 end
 
 GO
-
 
 create proc SaveUpdateSchool
 @Id int,
@@ -26,19 +27,21 @@ create proc SaveUpdateSchool
 @PhoneNo nvarchar(40),
 @Email nvarchar(100),
 @WebSite nvarchar(100),
-@Logo varbinary(max)
+@Logo varbinary(max),
+@EstiblishedYear int,
+@Slogan nvarchar(1000)
 as
 begin
 	if @Id>0
 	begin
-		update School set SchoolName = @SchoolName, ShortName = @ShortName, Address = @Address, Phone = @PhoneNo, Email = @Email, Website = @WebSite, Logo = @Logo
+		update School set SchoolName = @SchoolName, ShortName = @ShortName, Address = @Address, Phone = @PhoneNo, Email = @Email, Website = @WebSite, Logo = @Logo, EstiblishedYear =@EstiblishedYear, Slogan = @Slogan
 		where ID = @Id
 		select @Id
 	end
 	else
 	begin
-		insert into School (SchoolName, ShortName, Address, Phone, Email, Website, Logo) values
-		(@SchoolName, @ShortName, @Address, @PhoneNo, @Email, @WebSite, @Logo)
+		insert into School (SchoolName, ShortName, Address, Phone, Email, Website, Logo, EstiblishedYear,Slogan) values
+		(@SchoolName, @ShortName, @Address, @PhoneNo, @Email, @WebSite, @Logo,@EstiblishedYear,@Slogan)
 		select @@IDENTITY
 	end
 

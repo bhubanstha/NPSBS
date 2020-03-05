@@ -224,7 +224,7 @@ namespace NPSBS.Core
                 }
                 else
                 {
-                    Header.RightHeader(doc, fs, _writer, _contentByte, printDate, examName);
+                    Header.RightHeader(doc, fs, _writer, _contentByte, printDate, examName, StartupCache.School);
                     ct = new ColumnText(contentByte);
                     phrase = new Phrase(ds.Tables[i].Rows[0]["StudentFullName"].ToString(), rf.NameofStudent);
                     ct.SetSimpleColumn(phrase, 545, 481, 850, 300, 15, Element.ALIGN_LEFT);

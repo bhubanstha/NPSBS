@@ -74,12 +74,12 @@ namespace NPSBS
             {
                 if (classId == 1)
                 {
-                    doc = Nursery.Publish(sf.FileName, ds,ExaminationId, classId);
+                    doc = Nursery.Publish(sf.FileName, ds,ExaminationId, classId, StartupCache.School);
                     //Response.GenericError("Nursery class result processing on going.");
                 }
                 else if (classId >= 11)
                 {
-                    doc = ClassNineTen.Publish(sf.FileName, ds, classId);
+                    doc = ClassNineTen.Publish(sf.FileName, ds, classId, StartupCache.School);
                 }
                 else
                 {

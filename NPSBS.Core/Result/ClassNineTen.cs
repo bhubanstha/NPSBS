@@ -17,12 +17,13 @@ namespace NPSBS.Core
         private static GradingSystem gs = new GradingSystem();
         static ColumnText ct = null;
         static Phrase phrase = null;
+        private static School _school;
 
-
-        public static Document Publish(string location, System.Data.DataSet result, int classId)
+        public static Document Publish(string location, System.Data.DataSet result, int classId, School school)
         {
             try
             {
+                _school = school;
                 fs = new FileStream(location, FileMode.Create, FileAccess.Write, FileShare.None);
             }
             catch (Exception ex)
@@ -186,7 +187,7 @@ namespace NPSBS.Core
                 }
                 else
                 {
-                    Header.RightHeader(doc, fs, _writer, _contentByte, printDate, examName);
+                    Header.RightHeader(doc, fs, _writer, _contentByte, printDate, examName, _school);
                     ct = new ColumnText(contentByte);
                     phrase = new Phrase(ds.Tables[i].Rows[0]["StudentFullName"].ToString(), rf.StudentName);
                     ct.SetSimpleColumn(phrase, 543, 481, 850, 300, 15, Element.ALIGN_LEFT);

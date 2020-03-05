@@ -12,6 +12,8 @@ namespace NPSBS.Core
         public string PhoneNo { get; set; }
         public string Email { get; set; }
         public string WebSite { get; set; }
+        public string  EstiblishedYear { get; set; }
+        public string Slogan { get; set; }
         public byte[] Logo { get; set; }
 
 
@@ -30,6 +32,8 @@ namespace NPSBS.Core
                 this.Email = tbl.Rows[0][5].ToString();
                 this.WebSite = tbl.Rows[0][6].ToString();
                 this.Logo = (byte[])tbl.Rows[0][7];
+                this.EstiblishedYear = tbl.Rows[0][8].ToString();
+                this.Slogan = tbl.Rows[0][9].ToString();
             }
         }
 
@@ -45,6 +49,8 @@ namespace NPSBS.Core
             cmd.Parameters.AddWithValue("@Email", this.Email);
             cmd.Parameters.AddWithValue("@WebSite", this.WebSite);
             cmd.Parameters.AddWithValue("@Logo", this.Logo);
+            cmd.Parameters.AddWithValue("@EstiblishedYear", this.EstiblishedYear);
+            cmd.Parameters.AddWithValue("@Slogan", this.Slogan);
             return Convert.ToInt32(DataAccess.ExecuteScalarCommand(cmd));
         }
 

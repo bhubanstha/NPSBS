@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using Utility;
 
 namespace NPSBS.Core
 {
@@ -17,11 +18,13 @@ namespace NPSBS.Core
         private static GradingSystem gs = new GradingSystem();
         static ColumnText ct = null;
         static Phrase phrase = null;
-        static iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(AppDomain.CurrentDomain.BaseDirectory + "\\logo.png");
-        public static Document Publish(string location, System.Data.DataSet result, int examinationId, int classId)
+        private static School _school;
+        static iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(Constant.NPSBSLogo);
+        public static Document Publish(string location, System.Data.DataSet result, int examinationId, int classId, School school)
         {
             try
             {
+                _school = school;
                 fs = new FileStream(location, FileMode.Create, FileAccess.Write, FileShare.None);
             }
             catch (Exception ex)
@@ -235,7 +238,7 @@ namespace NPSBS.Core
             table.DefaultCell.BorderColor = BaseColor.WHITE;
 
             PdfPCell cell;
-            cell = new PdfPCell(new Phrase("National Peace Secondary Boarding School", rf.NurserySchool));
+            cell = new PdfPCell(new Phrase(_school.SchoolName, rf.NurserySchool));
             cell.Border = Rectangle.NO_BORDER;
             cell.HorizontalAlignment = Element.ALIGN_CENTER;
             cell.VerticalAlignment = Element.ALIGN_MIDDLE;
@@ -249,28 +252,28 @@ namespace NPSBS.Core
             //cell.VerticalAlignment = Element.ALIGN_MIDDLE;
             //table.AddCell(cell);
 
-            cell = new PdfPCell(new Phrase("Gongabu-5, Kathmandu, Nepal", rf.SchoolAddress));
+            cell = new PdfPCell(new Phrase(_school.Address, rf.SchoolAddress));
             cell.Colspan = 3;
             cell.Border = Rectangle.NO_BORDER;
             cell.HorizontalAlignment = Element.ALIGN_CENTER;
             cell.VerticalAlignment = Element.ALIGN_MIDDLE;
             table.AddCell(cell);
 
-            cell = new PdfPCell(new Phrase("ESTD 1996", rf.SchoolAddress));
+            cell = new PdfPCell(new Phrase("ESTD " + _school.EstiblishedYear, rf.SchoolAddress));
             cell.Colspan = 3;
             cell.Border = Rectangle.NO_BORDER;
             cell.HorizontalAlignment = Element.ALIGN_CENTER;
             cell.VerticalAlignment = Element.ALIGN_MIDDLE;
             table.AddCell(cell);
 
-            cell = new PdfPCell(new Phrase("Phone: 4-353212", rf.SchoolPhone));
+            cell = new PdfPCell(new Phrase("Phone: " + _school.PhoneNo, rf.SchoolPhone));
             cell.Colspan = 3;
             cell.Border = Rectangle.NO_BORDER;
             cell.HorizontalAlignment = Element.ALIGN_CENTER;
             cell.VerticalAlignment = Element.ALIGN_MIDDLE;
             table.AddCell(cell);
 
-            cell = new PdfPCell(new Phrase("An English Medium Co-Educational Boarding/Day School", rf.Arial));
+            cell = new PdfPCell(new Phrase(_school.Slogan, rf.Arial));
             cell.Colspan = 3;
             cell.Border = Rectangle.NO_BORDER;
             cell.HorizontalAlignment = Element.ALIGN_CENTER;

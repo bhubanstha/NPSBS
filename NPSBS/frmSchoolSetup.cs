@@ -85,7 +85,9 @@ namespace NPSBS
 				PhoneNo = txtPhoneNo.Text.Trim(),
 				Email = txtEmail.Text.Trim(),
 				WebSite = txtWebsite.Text.Trim(),
-				Id = Convert.ToInt32(lblSchoolId.Text)
+				Id = Convert.ToInt32(lblSchoolId.Text),
+				EstiblishedYear = txtEstablishedYear.Text,
+				Slogan = txtSlogan.Text
 			};
 			if (picLogo.Image != null && isNewLogoSelected)
 			{
