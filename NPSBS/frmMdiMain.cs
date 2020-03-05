@@ -280,6 +280,8 @@ namespace NPSBS
 
 		private void SetTheme(string themeName)
 		{
+			kryptonManager1.ResetGlobalPalette();
+			kryptonManager1.GlobalAllowFormChrome = true;
 			btn10Black.Checked = false;
 			btn10Blue.Checked = false;
 			btn10Silver.Checked = false;

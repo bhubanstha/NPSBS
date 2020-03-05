@@ -71,7 +71,6 @@
             this.rbnAbout = new ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton();
             this.btnAppMenuInfo = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.btnAppMenuClose = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.kryptonCommand1 = new ComponentFactory.Krypton.Toolkit.KryptonCommand();
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
             this.lblTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
@@ -121,7 +120,6 @@
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
-            this.ribbonMenu.SelectedContext = null;
             this.ribbonMenu.SelectedTab = this.kryptonRibbonTab1;
             this.ribbonMenu.Size = new System.Drawing.Size(1153, 115);
             this.ribbonMenu.TabIndex = 1;
@@ -404,10 +402,6 @@
             // 
             this.btnAppMenuClose.Text = "Menu Item";
             // 
-            // kryptonCommand1
-            // 
-            this.kryptonCommand1.Text = "kryptonCommand1";
-            // 
             // statusStrip2
             // 
             this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -487,7 +481,6 @@
 		private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple5;
 		private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton rbnRegister;
 		private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton rbnAbout;
-		private ComponentFactory.Krypton.Toolkit.KryptonCommand kryptonCommand1;
 		private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroupButton rbnBackup;
 		private ComponentFactory.Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup4;
 		private System.Windows.Forms.StatusStrip statusStrip2;
