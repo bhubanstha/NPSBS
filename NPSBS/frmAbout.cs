@@ -13,9 +13,6 @@ namespace NPSBS
 		public frmAbout()
 		{
 			InitializeComponent();
-			//LinkLabel.Link link = new LinkLabel.Link();
-			//link.LinkData = "http://www.bhubanshrestha.blogspot.com/";
-			//linkLabel1.Links.Add(link);
 			lblVersion.Text = "Version: " + Constant.AppVersion;
 			Image image = ImageUtility.GetImage(Constant.SchoolLogo);
 			picLogo.BackgroundImage = image;
@@ -56,9 +53,5 @@ namespace NPSBS
 			lblCopyRight.Text = StartupCache.About.SchoolSoftwareAbout;
 		}
 
-		private void visitLink_Click(object sender, EventArgs e)
-		{
-			Process.Start("http://www.bhubanshrestha.blogspot.com/");
-		}
 	}
 }
