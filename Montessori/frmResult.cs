@@ -37,26 +37,33 @@ namespace Montessori
 		{
 			if (Validate())
 			{
-				classId = Convert.ToInt32(ddlClass.SelectedValue.ToString());
-				ExaminationId = Convert.ToInt32(ddlExamination.SelectedValue.ToString());
-				year = Convert.ToInt32(txtAcademicYear.Text);
-				ds = exam.GetClassResult(ExaminationId, classId, year);
-				if (ds.Tables.Count < 1)
+				try
 				{
-					Response.GenericError("No marks are available for this class");
-					return;
+					classId = Convert.ToInt32(ddlClass.SelectedValue.ToString());
+					ExaminationId = Convert.ToInt32(ddlExamination.SelectedValue.ToString());
+					year = Convert.ToInt32(txtAcademicYear.Text);
+					ds = exam.GetClassResult(ExaminationId, classId, year);
+					if (ds.Tables.Count < 1)
+					{
+						Response.GenericError("No marks are available for this class");
+						return;
+					}
+					sf = new SaveFileDialog();
+					sf.Title = "Publish Result";
+					sf.DefaultExt = "pdf";
+					sf.Filter = "PDF (*.pdf)|*.pdf";
+					if (sf.ShowDialog() == DialogResult.OK && sf.FileName.Length > 0)
+					{
+						this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+						BackgroundWorker bWorker = new BackgroundWorker();
+						bWorker.DoWork += new DoWorkEventHandler(bWorker_DoWork);
+						bWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bWorker_RunWorkerCompleted);
+						bWorker.RunWorkerAsync();
+					}
 				}
-				sf = new SaveFileDialog();
-				sf.Title = "Publish Result";
-				sf.DefaultExt = "pdf";
-				sf.Filter = "PDF (*.pdf)|*.pdf";
-				if (sf.ShowDialog() == DialogResult.OK && sf.FileName.Length > 0)
+				catch (Exception ex)
 				{
-					this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-					BackgroundWorker bWorker = new BackgroundWorker();
-					bWorker.DoWork += new DoWorkEventHandler(bWorker_DoWork);
-					bWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bWorker_RunWorkerCompleted);
-					bWorker.RunWorkerAsync();
+					Response.GenericError(ex.Message);
 				}
 			}
 		}

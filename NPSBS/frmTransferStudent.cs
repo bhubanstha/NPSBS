@@ -125,6 +125,36 @@ namespace NPSBS
                 epAcademicYear.SetError(txtNewAcademicYear, "Academic Year is required.");
                 status = false;
             }
+
+
+            if (ddlOldClass.SelectedValue.ToString() == "0")
+            {
+                epPrevClass.SetError(ddlNewClass, "Previous Class Name is required.");
+                status = false;
+            }
+            if (txtOldAcademicYear.Text.Length < 4)
+            {
+                epPrevAcademicYear.SetError(txtNewAcademicYear, "Previous Academic Year is required.");
+                status = false;
+            }
+
+            int classId1, classId2, ay1, ay2;
+            Int32.TryParse(ddlOldClass.SelectedValue.ToString(), out classId1);
+            Int32.TryParse(ddlNewClass.SelectedValue.ToString(), out classId2);
+            Int32.TryParse(txtOldAcademicYear.Text.Trim(), out ay1);
+            Int32.TryParse(txtNewAcademicYear.Text.Trim(), out ay2);
+
+            if (classId2 < classId1)
+            {
+                epClass.SetError(ddlNewClass, "Student can't be demote to lower class.");
+                status = false;
+            }
+            if (ay2 <= ay1)
+            {
+                epAcademicYear.SetError(txtNewAcademicYear, "Student can't be transfer to previous year.");
+                status = false;
+            }
+
             return status;
         }
 

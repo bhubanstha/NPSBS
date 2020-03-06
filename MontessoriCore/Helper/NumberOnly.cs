@@ -55,6 +55,21 @@ namespace Montessori.Core
                 e.Handled = true;
             }
         }
+        public static void StringOnly(KryptonTextBox textbox, object sender, KeyPressEventArgs e, bool allowPlusSymbol)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space
+                || e.KeyChar == '(' || e.KeyChar == ')') || e.KeyChar == (char)Keys.Execute;
+            if ((e.KeyChar == '(') && ((sender as KryptonTextBox).Text.IndexOf('(') > -1))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == ')') && ((sender as KryptonTextBox).Text.IndexOf(')') > -1))
+            {
+                e.Handled = true;
+            }
+
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space || e.KeyChar == (char)Keys.Execute);
+        }
 
         public static void GradeOnly(object sender, KeyPressEventArgs e)
         {

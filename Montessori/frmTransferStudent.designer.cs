@@ -49,6 +49,8 @@
             this.ddlOldClass = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.epPrevClass = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epPrevAcademicYear = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.epClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epAcademicYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -71,6 +73,8 @@
             this.kryptonGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ddlOldClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epPrevClass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epPrevAcademicYear)).BeginInit();
             this.SuspendLayout();
             // 
             // epClass
@@ -280,6 +284,14 @@
             this.kryptonPanel2.Size = new System.Drawing.Size(928, 50);
             this.kryptonPanel2.TabIndex = 0;
             // 
+            // epPrevClass
+            // 
+            this.epPrevClass.ContainerControl = this;
+            // 
+            // epPrevAcademicYear
+            // 
+            this.epPrevAcademicYear.ContainerControl = this;
+            // 
             // frmTransferStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -316,6 +328,8 @@
             this.kryptonGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ddlOldClass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epPrevClass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epPrevAcademicYear)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,5 +354,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox3;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView gvTranferStudent;
+        private System.Windows.Forms.ErrorProvider epPrevClass;
+        private System.Windows.Forms.ErrorProvider epPrevAcademicYear;
     }
 }

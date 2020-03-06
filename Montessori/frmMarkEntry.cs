@@ -61,9 +61,9 @@ namespace Montessori
 			epYear.Clear();
 			epExam.Clear();
 			epClass.Clear();
-			if (lblYear.Text.Length != 4)
+			if (txtYear.Text.Length != 4)
 			{
-				epYear.SetError(lblYear, "Please provide 4 digit academic year.");
+				epYear.SetError(txtYear, "Please provide 4 digit academic year.");
 				status = false;
 			}
 			return status;
@@ -95,7 +95,7 @@ namespace Montessori
 		{
 			if (CheckAcademicYear())
 			{
-				GetExams(lblYear.Text);
+				GetExams(txtYear.Text);
 			}
 		}
 
@@ -137,21 +137,28 @@ namespace Montessori
 
 		private void btnSubmitMarks_Click(object sender, EventArgs e)
 		{
-			string examinationId = ddlExam.SelectedValue.ToString();
-			string classId = ddlClass.SelectedValue.ToString();
-			string subjectId = ddlSubject.SelectedValue.ToString();
-			string examYear = lblYear.Text.Trim();
-			foreach (DataGridViewRow row in dgvMarkEntry.Rows)
+			try
 			{
-				string rollNumber = row.Cells[1].Value.ToString();
-				string grade = row.Cells[3].Value.ToString();
-				grade = grade == "" ? "D" : grade.ToUpper();
-				string studentId = row.Cells[0].Value.ToString();
-				rows += exam.SubmitMark(classId, examinationId, subjectId, rollNumber, studentId, grade, examYear);
+				string examinationId = ddlExam.SelectedValue.ToString();
+				string classId = ddlClass.SelectedValue.ToString();
+				string subjectId = ddlSubject.SelectedValue.ToString();
+				string examYear = lblYear.Text.Trim();
+				foreach (DataGridViewRow row in dgvMarkEntry.Rows)
+				{
+					string rollNumber = row.Cells[1].Value.ToString();
+					string grade = row.Cells[3].Value.ToString();
+					grade = grade == "" ? "D" : grade.ToUpper();
+					string studentId = row.Cells[0].Value.ToString();
+					rows += exam.SubmitMark(classId, examinationId, subjectId, rollNumber, studentId, grade, examYear);
+				}
+				if (rows > 0)
+				{
+					Response.SaveMessage(rows);
+				}
 			}
-			if (rows > 0)
+			catch (Exception ex)
 			{
-				Response.SaveMessage(rows);
+				Response.GenericError(ex.Message.ToString());
 			}
 		}
 

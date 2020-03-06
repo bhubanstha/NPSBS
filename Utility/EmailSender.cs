@@ -7,18 +7,19 @@ using MimeKit;
 using MailKit.Net.Smtp;
 using System.Security.Authentication;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace Utility
 {
     public class EmailSender
     {
 
-        private string smtpEmail = "noreply.bhubanshrestha@gmail.com";
+        private static string smtpEmail = "noreply.bhubanshrestha@gmail.com";
 
-        public async Task SendEmailAsync(string AppName, string regKey, object schoolInfo)
+        public static async Task SendEmailAsync(string AppName, string regKey, object schoolInfo, string logoPath)
         {
             try
-            {
+            {                
                 string info = JsonConvert.SerializeObject(schoolInfo, Formatting.Indented);
                 string htmlMessage = String.Format("<b>{0}</b> - Registered with key:{1}{1} {2}{1}{1} School Info: {1} {3}", AppName, Environment.NewLine, regKey, info);
                 var mimeMessage = new MimeMessage();
@@ -29,10 +30,25 @@ namespace Utility
 
                 mimeMessage.Subject = AppName + " - Application Registered";
 
-                mimeMessage.Body = new TextPart("html")
+                var bodyMessage = new TextPart("html")
                 {
-                    Text = htmlMessage
+                    Text = htmlMessage                    
                 };
+
+
+                var att = new MimePart("image", "png")
+                {
+                    Content = new MimeContent(File.OpenRead(logoPath)),
+                    ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
+                    ContentTransferEncoding = ContentEncoding.Base64,
+                    FileName = Path.GetFileName(logoPath)
+                };
+
+                var multipart = new Multipart("mixed");
+                multipart.Add(att);
+                multipart.Add(bodyMessage);
+                mimeMessage.Body = multipart;
+
 
                 using (var client = new SmtpClient())
                 {

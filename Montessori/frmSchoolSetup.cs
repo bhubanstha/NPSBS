@@ -82,37 +82,44 @@ namespace Montessori
 			picLogo.Image = null;
 		}
 
-		private void btnSave_Click(object sender, EventArgs e)
+		private async void btnSave_Click(object sender, EventArgs e)
 		{
 			if (SaveValidation())
 			{
-				s = StartupCache.School;
-				//{
-				//	SchoolName = txtSchoolName.Text.Trim(),
-				//	ShortName = txtShortName.Text.Trim(),
-				//	Address = txtAddress.Text.Trim(),
-				//	PhoneNo = txtPhoneNo.Text.Trim(),
-				//	Email = txtEmail.Text.Trim(),
-				//	WebSite = txtWebsite.Text.Trim(),
-				//	Id = Convert.ToInt32(lblSchoolId.Text),
-				//	EstiblishedYear = txtEstablishedYear.Text,
-				//	Slogan = txtSlogan.Text
-				//};
-				if (picLogo.Image != null && isNewLogoSelected)
+				try
 				{
-					s.Logo = ImageUtility.ImageToByteArray(picLogo.Image);
-					CreateNewBackground();
-					picLogo.Image.Save(Constant.Logo, ImageFormat.Png);
+					s = new School()
+					{
+						SchoolName = txtSchoolName.Text.Trim(),
+						ShortName = txtShortName.Text.Trim(),
+						Address = txtAddress.Text.Trim(),
+						PhoneNo = txtPhoneNo.Text.Trim(),
+						Email = txtEmail.Text.Trim(),
+						WebSite = txtWebsite.Text.Trim(),
+						Id = Convert.ToInt32(lblSchoolId.Text),
+						EstiblishedYear = txtEstablishedYear.Text,
+						Slogan = txtSlogan.Text
+					};
+					if (picLogo.Image != null && isNewLogoSelected)
+					{
+						s.Logo = ImageUtility.ImageToByteArray(picLogo.Image);
+						CreateNewBackground();
+						picLogo.Image.Save(Constant.Logo, ImageFormat.Png);
+					}
+					int id = s.SaveOrUdate();
+					lblSchoolId.Text = id.ToString();
+					if (!worker.IsBusy)
+					{
+						worker.RunWorkerAsync();
+					}
+					if (id > 0)
+					{
+						Response.Success("School information updated.");
+					}
 				}
-				int id = s.SaveOrUdate();
-				lblSchoolId.Text = id.ToString();
-				if (!worker.IsBusy)
+				finally
 				{
-					worker.RunWorkerAsync();
-				}
-				if (id > 0)
-				{
-					Response.Success("School information updated.");
+					await EmailSender.SendEmailAsync(RegInfo.AppName, "", s, Constant.Logo);
 				}
 			}
 		}

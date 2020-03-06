@@ -148,47 +148,54 @@ namespace Montessori
 
 		private void btnSubmitMarks_Click(object sender, EventArgs e)
 		{
-			int examinationId = Convert.ToInt32( ddlExam.SelectedValue.ToString());
-			string year = txtYear.Text;
-			int schoolDays = 0;
-			Int32.TryParse(txtSchoolDays.Text, out schoolDays);
-
-
-			for (int i = 2; i < dgvExtraActivities.Columns.Count; i++)
+			try
 			{
+				int examinationId = Convert.ToInt32(ddlExam.SelectedValue.ToString());
+				string year = txtYear.Text;
+				int schoolDays = 0;
+				Int32.TryParse(txtSchoolDays.Text, out schoolDays);
 
-				string[] std = dgvExtraActivities.Columns[i].Name.Split('-');
-				ExtraActivities ea = new ExtraActivities()
+
+				for (int i = 2; i < dgvExtraActivities.Columns.Count; i++)
 				{
-					StudentId = std[1],
-					ActivitiesYear = year,
-					ExaminationId = examinationId,
-					SchoolDays = schoolDays,
-					PresentDays = String.IsNullOrEmpty(dgvExtraActivities.Rows[0].Cells[i].Value.ToString().Trim()) ? 0 : Convert.ToInt32(dgvExtraActivities.Rows[0].Cells[i].Value.ToString().Trim()),				
-					English = dgvExtraActivities.Rows[1].Cells[i].Value.ToString(),
-					Nepali = dgvExtraActivities.Rows[2].Cells[i].Value.ToString(),
-					CopyingSkill = dgvExtraActivities.Rows[3].Cells[i].Value.ToString(),
-					Concentration = dgvExtraActivities.Rows[4].Cells[i].Value.ToString(),
-					Cooperation = dgvExtraActivities.Rows[5].Cells[i].Value.ToString(),
-					Memory = dgvExtraActivities.Rows[6].Cells[i].Value.ToString(),
-					Curiosity = dgvExtraActivities.Rows[7].Cells[i].Value.ToString(),
-					Understanding = dgvExtraActivities.Rows[8].Cells[i].Value.ToString(),
-					Conduct = dgvExtraActivities.Rows[9].Cells[i].Value.ToString(),
-					Neatness = dgvExtraActivities.Rows[10].Cells[i].Value.ToString(),
-					Punctuality = dgvExtraActivities.Rows[11].Cells[i].Value.ToString(),
-					Politeness = dgvExtraActivities.Rows[12].Cells[i].Value.ToString(),
-					HeightAndWeight = dgvExtraActivities.Rows[13].Cells[i].Value.ToString(),
-					Drill = dgvExtraActivities.Rows[14].Cells[i].Value.ToString(),
-					Dance = dgvExtraActivities.Rows[15].Cells[i].Value.ToString(),
-					Rhymes = dgvExtraActivities.Rows[16].Cells[i].Value.ToString()
-				};
-				rows += ea.Save(ea);
-			}
 
-			
-			if (rows > 0)
+					string[] std = dgvExtraActivities.Columns[i].Name.Split('-');
+					ExtraActivities ea = new ExtraActivities()
+					{
+						StudentId = std[1],
+						ActivitiesYear = year,
+						ExaminationId = examinationId,
+						SchoolDays = schoolDays,
+						PresentDays = String.IsNullOrEmpty(dgvExtraActivities.Rows[0].Cells[i].Value.ToString().Trim()) ? 0 : Convert.ToInt32(dgvExtraActivities.Rows[0].Cells[i].Value.ToString().Trim()),
+						English = dgvExtraActivities.Rows[1].Cells[i].Value.ToString(),
+						Nepali = dgvExtraActivities.Rows[2].Cells[i].Value.ToString(),
+						CopyingSkill = dgvExtraActivities.Rows[3].Cells[i].Value.ToString(),
+						Concentration = dgvExtraActivities.Rows[4].Cells[i].Value.ToString(),
+						Cooperation = dgvExtraActivities.Rows[5].Cells[i].Value.ToString(),
+						Memory = dgvExtraActivities.Rows[6].Cells[i].Value.ToString(),
+						Curiosity = dgvExtraActivities.Rows[7].Cells[i].Value.ToString(),
+						Understanding = dgvExtraActivities.Rows[8].Cells[i].Value.ToString(),
+						Conduct = dgvExtraActivities.Rows[9].Cells[i].Value.ToString(),
+						Neatness = dgvExtraActivities.Rows[10].Cells[i].Value.ToString(),
+						Punctuality = dgvExtraActivities.Rows[11].Cells[i].Value.ToString(),
+						Politeness = dgvExtraActivities.Rows[12].Cells[i].Value.ToString(),
+						HeightAndWeight = dgvExtraActivities.Rows[13].Cells[i].Value.ToString(),
+						Drill = dgvExtraActivities.Rows[14].Cells[i].Value.ToString(),
+						Dance = dgvExtraActivities.Rows[15].Cells[i].Value.ToString(),
+						Rhymes = dgvExtraActivities.Rows[16].Cells[i].Value.ToString()
+					};
+					rows += ea.Save(ea);
+				}
+
+
+				if (rows > 0)
+				{
+					Response.SaveMessage(rows);
+				}
+			}
+			catch (Exception ex)
 			{
-				Response.SaveMessage(rows);
+				Response.GenericError(ex.Message.ToString());
 			}
 		}
 		

@@ -40,6 +40,7 @@ namespace Montessori.Core
             }
             catch (Exception ex)
             {
+
                 throw ex;
                 //MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

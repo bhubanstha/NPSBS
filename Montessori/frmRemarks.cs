@@ -23,23 +23,30 @@ namespace Montessori
 		{
 			if (Validate())
 			{
-				this.Cursor = Cursors.AppStarting;
-				var tbl = Remarks.GetRemark(ddlExam.SelectedValue.ToString(), ddlClass.SelectedValue.ToString(), txtYear.Text);
-				totalStudents = tbl.Rows.Count;
-				if (totalStudents > 0)
+				try
 				{
-					dgvRemarks.DataSource = tbl;
-					dgvRemarks.Columns[0].Visible = false;
-					dgvRemarks.Columns[1].Visible = false;
-					dgvRemarks.Columns[2].Width = 50;
-					dgvRemarks.Columns[3].Width = 300;
-					dgvRemarks.Columns[2].ReadOnly = true;
-					dgvRemarks.Columns[3].ReadOnly = true;
-					dgvRemarks.EditMode = DataGridViewEditMode.EditOnEnter;
+					this.Cursor = Cursors.AppStarting;
+					var tbl = Remarks.GetRemark(ddlExam.SelectedValue.ToString(), ddlClass.SelectedValue.ToString(), txtYear.Text);
+					totalStudents = tbl.Rows.Count;
+					if (totalStudents > 0)
+					{
+						dgvRemarks.DataSource = tbl;
+						dgvRemarks.Columns[0].Visible = false;
+						dgvRemarks.Columns[1].Visible = false;
+						dgvRemarks.Columns[2].Width = 50;
+						dgvRemarks.Columns[3].Width = 300;
+						dgvRemarks.Columns[2].ReadOnly = true;
+						dgvRemarks.Columns[3].ReadOnly = true;
+						dgvRemarks.EditMode = DataGridViewEditMode.EditOnEnter;
+					}
+					else
+					{
+						Response.GenericError("There are no student for remarks entry.");
+					}
 				}
-				else
+				catch (Exception ex)
 				{
-					Response.GenericError("There are no student for remarks entry.");
+					Response.GenericError(ex.Message);
 				}
 			}
 		}
@@ -124,11 +131,6 @@ namespace Montessori
             ddlClass.DataSource = tbl;
             ddlClass.DisplayMember = "Class Name";
             ddlClass.ValueMember = "ClassId";
-		}
-
-		private void txtYear_TextChanged(object sender, EventArgs e)
-		{
-
 		}
 
 		private void txtYear_Leave(object sender, EventArgs e)

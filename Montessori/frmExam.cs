@@ -20,29 +20,36 @@ namespace Montessori
 
         private void btnAction_Click(object sender, EventArgs e)
         {
-            if(SaveValidation())
+            try
             {
-                exam.ExamId = Convert.ToInt32(ddlExam.SelectedValue);
-                exam.ExamHeldYear = txtYear.Text;
-                exam.ResultPrintDate = Convert.ToDateTime(dpResultPrintDate.Value);
-                if (btnAction.Text.ToLower() == "save")
+                if (SaveValidation())
                 {
-                    rows = exam.Save(exam);
-                    Response.SaveMessage(rows);
+                    exam.ExamId = Convert.ToInt32(ddlExam.SelectedValue);
+                    exam.ExamHeldYear = txtYear.Text;
+                    exam.ResultPrintDate = Convert.ToDateTime(dpResultPrintDate.Value);
+                    if (btnAction.Text.ToLower() == "save")
+                    {
+                        rows = exam.Save(exam);
+                        Response.SaveMessage(rows);
+                    }
+                    else if (btnAction.Text.ToLower() == "update")
+                    {
+                        exam.ExaminationId = Convert.ToInt32(lblExaminationId.Text);
+                        rows = exam.Update(exam);
+                        btnAction.Text = "Save";
+                        lblExaminationId.Text = "0";
+                        Response.UpdateMessage(rows);
+                    }
+                    if (rows > 0)
+                    {
+                        Clear();
+                        GetExamination();
+                    }
                 }
-                else if (btnAction.Text.ToLower() == "update")
-                {
-                    exam.ExaminationId = Convert.ToInt32(lblExaminationId.Text);
-                    rows = exam.Update(exam);
-                    btnAction.Text = "Save";
-                    lblExaminationId.Text = "0";
-                    Response.UpdateMessage(rows);
-                }
-                if (rows > 0)
-                {
-                    Clear();
-                    GetExamination();
-                }
+            }
+            catch (Exception ex)
+            {
+                Response.GenericError(ex.Message.ToString());
             }
         }
 

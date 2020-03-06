@@ -29,29 +29,36 @@ namespace Montessori
         {
             if (SaveValidation())
             {
-                s.StudentName = txtStudentName.Text;
-                s.Gender = rdoMale.Checked ? 'M' : 'F';
-                s.ClassId = Convert.ToInt32(ddlClass.SelectedValue);
-                s.EnrolledYear = txtAcademicYear.Text;
-                s.RollNumber = txtRollNumber.Text;
+                try
+                {
+                    s.StudentName = txtStudentName.Text;
+                    s.Gender = rdoMale.Checked ? 'M' : 'F';
+                    s.ClassId = Convert.ToInt32(ddlClass.SelectedValue);
+                    s.EnrolledYear = txtAcademicYear.Text;
+                    s.RollNumber = txtRollNumber.Text;
 
-                if (btnAction.Text.ToLower() == "save")
-                {
-                    rows = s.Save(s);
-                    Response.SaveMessage(rows);
+                    if (btnAction.Text.ToLower() == "save")
+                    {
+                        rows = s.Save(s);
+                        Response.SaveMessage(rows);
+                    }
+                    else if (btnAction.Text.ToLower() == "update")
+                    {
+                        s.StudentId = Convert.ToInt32(lblStudentID.Text);
+                        rows = s.Update(s);
+                        lblStudentID.Text = "0";
+                        btnAction.Text = "Save";
+                        Response.UpdateMessage(rows);
+                    }
+                    if (rows > 0)
+                    {
+                        Clear();
+                        GetStudent();
+                    }
                 }
-                else if (btnAction.Text.ToLower() == "update")
+                catch (Exception ex)
                 {
-                    s.StudentId = Convert.ToInt32(lblStudentID.Text);
-                    rows = s.Update(s);
-                    lblStudentID.Text = "0";
-                    btnAction.Text = "Save";
-                    Response.UpdateMessage(rows);
-                }
-                if (rows > 0)
-                {
-                    Clear();
-                    GetStudent();
+                    Response.GenericError(ex.Message.ToString());
                 }
             }
         }

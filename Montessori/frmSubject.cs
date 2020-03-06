@@ -48,7 +48,7 @@ namespace Montessori
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Response.GenericError(ex.Message.ToSentenceCase());
                 }
                 
             }
@@ -135,7 +135,7 @@ namespace Montessori
         
         private void txtSubject_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.StringOnly(txtSubject, sender, e);
+            NumberOnly.StringOnly(txtSubject, sender, e, true);
         }
 
       

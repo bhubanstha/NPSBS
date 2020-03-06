@@ -225,7 +225,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtYear.StateCommon.Border.Rounding = 15;
             this.txtYear.TabIndex = 1;
-            this.txtYear.TextChanged += new System.EventHandler(this.txtYear_TextChanged);
             this.txtYear.Leave += new System.EventHandler(this.txtYear_Leave);
             // 
             // kryptonLabel1

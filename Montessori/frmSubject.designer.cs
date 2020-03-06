@@ -100,14 +100,14 @@
             // kryptonGroupBox2
             // 
             this.kryptonGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonGroupBox2.Location = new System.Drawing.Point(0, 160);
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(0, 127);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             // 
             // kryptonGroupBox2.Panel
             // 
             this.kryptonGroupBox2.Panel.Controls.Add(this.gvSubjects);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonPanel3);
-            this.kryptonGroupBox2.Size = new System.Drawing.Size(879, 348);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(879, 381);
             this.kryptonGroupBox2.TabIndex = 2;
             this.kryptonGroupBox2.Values.Heading = "Subject Information";
             // 
@@ -116,7 +116,7 @@
             this.gvSubjects.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvSubjects.Location = new System.Drawing.Point(0, 52);
             this.gvSubjects.Name = "gvSubjects";
-            this.gvSubjects.Size = new System.Drawing.Size(875, 272);
+            this.gvSubjects.Size = new System.Drawing.Size(875, 305);
             this.gvSubjects.TabIndex = 1;
             this.gvSubjects.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSubjects_CellContentClick);
             // 
@@ -167,7 +167,7 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtSubject);
             this.kryptonGroupBox1.Panel.Controls.Add(this.ddlClass);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(879, 110);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(879, 77);
             this.kryptonGroupBox1.TabIndex = 1;
             this.kryptonGroupBox1.Values.Heading = "Subject Entry";
             // 
@@ -191,7 +191,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(69, 45);
+            this.btnSave.Location = new System.Drawing.Point(756, 8);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(109, 35);
             this.btnSave.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -206,7 +206,7 @@
             // 
             this.txtSubject.Location = new System.Drawing.Point(359, 9);
             this.txtSubject.Name = "txtSubject";
-            this.txtSubject.Size = new System.Drawing.Size(440, 33);
+            this.txtSubject.Size = new System.Drawing.Size(377, 33);
             this.txtSubject.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));

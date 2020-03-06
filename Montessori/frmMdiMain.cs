@@ -185,7 +185,7 @@ namespace Montessori
 			}
 			tabManager.AddWindow(frmSubject);
 			tabManager.SetActiveWindow(frmSubject);
-			frmSchool.Invalidate();
+			frmSubject.Invalidate();
 		}
 
 		private void kryptonRibbonGroupButton3_Click(object sender, EventArgs e)
@@ -196,7 +196,7 @@ namespace Montessori
 			}
 			tabManager.AddWindow(frmExam);
 			tabManager.SetActiveWindow(frmExam);
-			frmSchool.Invalidate();
+			frmExam.Invalidate();
 		}
 
 		private void rbnAddStudent_Click(object sender, EventArgs e)
@@ -207,7 +207,7 @@ namespace Montessori
 			}
 			tabManager.AddWindow(frmStudent);
 			tabManager.SetActiveWindow(frmStudent);
-			frmSchool.Invalidate();
+			frmStudent.Invalidate();
 		}
 
 		private void rbnTransferStudent_Click(object sender, EventArgs e)
@@ -218,7 +218,7 @@ namespace Montessori
 			}
 			tabManager.AddWindow(frmTransfer);
 			tabManager.SetActiveWindow(frmTransfer);
-			frmSchool.Invalidate();
+			frmTransfer.Invalidate();
 		}
 
 		private void rbnMarkEntry_Click(object sender, EventArgs e)
@@ -229,7 +229,7 @@ namespace Montessori
 			}
 			tabManager.AddWindow(frmMarkEntry);
 			tabManager.SetActiveWindow(frmMarkEntry);
-			frmSchool.Invalidate();
+			frmMarkEntry.Invalidate();
 		}
 
 		private void rbnExtraActivity_Click(object sender, EventArgs e)
@@ -240,7 +240,7 @@ namespace Montessori
 			}
 			tabManager.AddWindow(frmExtraActivities);
 			tabManager.SetActiveWindow(frmExtraActivities);
-			frmSchool.Invalidate();
+			frmExtraActivities.Invalidate();
 		}
 
 		private void rbnAttendance_Click(object sender, EventArgs e)
@@ -252,7 +252,7 @@ namespace Montessori
 			}
 			tabManager.AddWindow(frmRemarks);
 			tabManager.SetActiveWindow(frmRemarks);
-			frmSchool.Invalidate();
+			frmRemarks.Invalidate();
 		}
 
 		private void rbnResult_Click(object sender, EventArgs e)
@@ -263,7 +263,7 @@ namespace Montessori
 			}
 			tabManager.AddWindow(frmResult);
 			tabManager.SetActiveWindow(frmResult);
-			frmSchool.Invalidate();
+			frmResult.Invalidate();
 		}
 
 		private void rbnBackup_Click(object sender, EventArgs e)
