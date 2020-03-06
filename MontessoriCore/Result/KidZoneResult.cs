@@ -5,6 +5,7 @@ using System.Text;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using Utility;
 
 namespace Montessori.Core
 {
@@ -17,12 +18,14 @@ namespace Montessori.Core
         //private static GradingSystem gs = new GradingSystem();
         static ColumnText ct = null;
         static Phrase phrase = null;
-        static iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(AppDomain.CurrentDomain.BaseDirectory + "\\kidszone.png");
+        static iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(Constant.MontessoriLogo);
+        private static School _schoo;
 
-        public static Document Publish(System.Data.DataSet result, string location, int examinationId, int classId)
+        public static Document Publish(System.Data.DataSet result, string location, int examinationId, int classId, School school)
         {
             try
             {
+                _schoo = school;
                 fs = new FileStream(location, FileMode.Create, FileAccess.Write, FileShare.None);
             }
             catch (Exception ex)
@@ -101,7 +104,7 @@ namespace Montessori.Core
             table.HorizontalAlignment = Element.ALIGN_LEFT;
 
             PdfPCell cell;
-            cell = new PdfPCell(new Phrase("NATIONAL PEACE KIDS ZONE", rf.SchoolName));
+            cell = new PdfPCell(new Phrase(_schoo.SchoolName, rf.SchoolName));
             cell.Colspan = 2;
             cell.HorizontalAlignment = Element.ALIGN_CENTER;
             cell.Border = Rectangle.NO_BORDER;
@@ -113,19 +116,19 @@ namespace Montessori.Core
             cell.Border = Rectangle.NO_BORDER;
             table.AddCell(cell);
 
-            cell = new PdfPCell(new Phrase("Gongabu, Kathmandu", rf.SchoolAddress));
+            cell = new PdfPCell(new Phrase(_schoo.Address, rf.SchoolAddress));
             cell.Colspan = 2;
             cell.HorizontalAlignment = Element.ALIGN_CENTER;
             cell.Border = Rectangle.NO_BORDER;
             table.AddCell(cell);
 
-            cell = new PdfPCell(new Phrase("Estd: 2006", rf.SchoolAddress));
+            cell = new PdfPCell(new Phrase("Estd: " + _schoo.EstiblishedYear, rf.SchoolAddress));
             cell.Colspan = 2;
             cell.HorizontalAlignment = Element.ALIGN_CENTER;
             cell.Border = Rectangle.NO_BORDER;
             table.AddCell(cell);
 
-            cell = new PdfPCell(new Phrase("Phone No. 4-366176", rf.SchoolPhone));
+            cell = new PdfPCell(new Phrase("Phone No.: " + _schoo.PhoneNo, rf.SchoolPhone));
             cell.Colspan = 2;
             cell.HorizontalAlignment = Element.ALIGN_CENTER;
             cell.Border = Rectangle.NO_BORDER;

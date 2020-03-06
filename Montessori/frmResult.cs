@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 using iTextSharp.text;
 using Montessori.Core;
 
 namespace Montessori
 {
-	public partial class frmResult : frmBase
+	public partial class frmResult : KryptonForm
 	{
 		Exam exam = new Exam();
 		SaveFileDialog sf = null;
@@ -73,7 +74,7 @@ namespace Montessori
 			Document doc = null;
 			try
 			{
-				doc = KidsZoneResult.Publish(ds, sf.FileName, ExaminationId, classId);
+				doc = KidsZoneResult.Publish(ds, sf.FileName, ExaminationId, classId, StartupCache.School); ;
 				e.Result = sf.FileName;
 				if (doc.IsOpen())
 				{

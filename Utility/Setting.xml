@@ -5,7 +5,7 @@
   <Database>
     <add key="DataSource" value="(localdb)\mssqllocaldb"/>
     <add key="Database_NPSBS" value="NPSBS"/>
-    <add key="Database_KidsZone" value="KidsZone"/>
+    <add key="Database_KidsZone" value="NPSBS"/>
     <add key="UserName" value="sa"/>
     <add key="Password" value="Bhuban@1"/>
   </Database>

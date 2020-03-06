@@ -17,7 +17,7 @@ namespace NPSBS
 			//link.LinkData = "http://www.bhubanshrestha.blogspot.com/";
 			//linkLabel1.Links.Add(link);
 			lblVersion.Text = "Version: " + Constant.AppVersion;
-			Image image = ImageUtility.GetImage(Constant.NPSBSLogo);
+			Image image = ImageUtility.GetImage(Constant.SchoolLogo);
 			picLogo.BackgroundImage = image;
 
 		}

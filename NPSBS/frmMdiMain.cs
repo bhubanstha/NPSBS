@@ -376,9 +376,9 @@ namespace NPSBS
 				{
 
 					Image image = ImageUtility.GetImage(Constant.MainBackground);
-					if (File.Exists(Constant.NPSBSBackground))
+					if (File.Exists(Constant.SchoolBackground))
 					{
-						image = new Bitmap(ImageUtility.GetImage(Constant.NPSBSBackground));
+						image = new Bitmap(ImageUtility.GetImage(Constant.SchoolBackground));
 					}
 					ctrl.BackgroundImage = image;
 					ctrl.BackgroundImageLayout = ImageLayout.Zoom;

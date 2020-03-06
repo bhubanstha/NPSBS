@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 using Montessori.Core;
 
 namespace Montessori
 {
-	public partial class frmExtraActivities : frmBase
+	public partial class frmExtraActivities : KryptonForm
 	{
 		Exam exam = new Exam();
 		int totalStudents = 0;

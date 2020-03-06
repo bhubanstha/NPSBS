@@ -45,7 +45,7 @@ namespace NPSBS
 			txtWebsite.Text = s.WebSite;
 			if (s.Logo != null && s.Logo.Length > 0)
 			{
-				Image image = ImageUtility.GetImage(Constant.NPSBSLogo).ResizeImage(200, 200);// ImageUtility.ByteToImage(school.Logo);
+				Image image = ImageUtility.GetImage(Constant.SchoolLogo).ResizeImage(200, 200);// ImageUtility.ByteToImage(school.Logo);
 				if (image != null)
 				{
 					picLogo.Image = image;
@@ -93,7 +93,7 @@ namespace NPSBS
 			{
 				s.Logo = ImageUtility.ImageToByteArray(picLogo.Image);
 				CreateNewBackground();
-				picLogo.Image.Save(Constant.NPSBSLogo, ImageFormat.Png);
+				picLogo.Image.Save(Constant.SchoolLogo, ImageFormat.Png);
 			}
 			int id = s.SaveOrUdate();
 			lblSchoolId.Text = id.ToString();
@@ -112,12 +112,12 @@ namespace NPSBS
 		{
 			Image bgImage = Image.FromFile(Constant.MainBackground);
 			Image newBg = ImageUtility.SetWaterMark(bgImage, picLogo.Image, 0.5f, StartupCache.About.DeveloperContactNo);
-			if (File.Exists(Constant.NPSBSBackground))
+			if (File.Exists(Constant.SchoolBackground))
 			{
-				File.Delete(Constant.NPSBSBackground);
+				File.Delete(Constant.SchoolBackground);
 			}
 			picLogo.Image = ImageUtility.RemoveTransparency(picLogo.Image);
-			newBg.Save(Constant.NPSBSBackground);
+			newBg.Save(Constant.SchoolBackground);
 			mdiForm.SetBackground();
 		}
 

@@ -12,7 +12,7 @@ namespace NPSBS.Core
     public class Header
     {
         static ResultFont rf = StartupCache.ResultFont;
-        static iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(Constant.NPSBSLogo);
+        static iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(Constant.SchoolLogo);
 
         static ColumnText ct = null;
         static Phrase phrase = null;

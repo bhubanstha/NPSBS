@@ -94,6 +94,7 @@
     <Compile Include="Entities\pdfExtension.cs" />
     <Compile Include="Entities\Remarks.cs" />
     <Compile Include="Entities\Result.cs" />
+    <Compile Include="Entities\School.cs" />
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\Subject.cs" />
     <Compile Include="Helper\AppRunner.cs" />

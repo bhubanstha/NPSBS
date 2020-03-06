@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 using Montessori.Core;
 
 namespace Montessori
 {
-	public partial class frmSubject : frmBase
+	public partial class frmSubject : KryptonForm
     {
         Subject s = new Subject();
         int rows = 0;

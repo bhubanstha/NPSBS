@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using System.Diagnostics;
+using Montessori.Core;
+using Utility;
 
 namespace Montessori
 {
@@ -15,17 +11,12 @@ namespace Montessori
     {
         public frmAbout()
         {
-            Bitmap bmp = new Bitmap(AppDomain.CurrentDomain.BaseDirectory + "\\Images\\close.png");           
-            Bitmap bmp1 = new Bitmap(AppDomain.CurrentDomain.BaseDirectory + "\\Images\\NPSBS.png");
-            Bitmap bmp2 = new Bitmap(AppDomain.CurrentDomain.BaseDirectory + "\\Images\\Me.jpg");
-           
+            
             InitializeComponent();
-            LinkLabel.Link link = new LinkLabel.Link();
-            link.LinkData = "http://www.bhubanshrestha.blogspot.com/";
-            linkLabel1.Links.Add(link);
-            pictureBox1.BackgroundImage = bmp;
-            pictureBox2.BackgroundImage = bmp1;
-            pictureBox3.BackgroundImage = bmp2;
+            lblVersion.Text = "Version: " + Constant.AppVersion;
+            Image image = ImageUtility.GetImage(Constant.SchoolLogo);
+            picLogo.BackgroundImage = image;
+
         }
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -49,20 +40,14 @@ namespace Montessori
         {
             this.Close();
         }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void frmAbout_Shown(object sender, EventArgs e)
         {
-
+            lblCopyRight.Text = StartupCache.About.SchoolSoftwareAbout;
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void frmAbout_Paint(object sender, PaintEventArgs e)
         {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start(e.Link.LinkData as string);
+            e.Graphics.DrawRectangle(new Pen(Color.Black, 3), this.DisplayRectangle);
         }
     }
 }

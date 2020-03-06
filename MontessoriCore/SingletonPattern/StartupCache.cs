@@ -7,7 +7,7 @@ using System.Xml;
 using System.Net.NetworkInformation;
 using System.IO;
 using System.Diagnostics;
-
+using Utility;
 
 namespace Montessori.Core
 {
@@ -25,6 +25,10 @@ namespace Montessori.Core
 		private static string MyFirstMac { get; set; }
 		public static bool IsComputerAuthorized { get; private set; }
 
+
+		public static School School { get; set; }
+		public static About About { get; set; }
+
 		StartupCache()
 		{
 		}
@@ -41,6 +45,7 @@ namespace Montessori.Core
 						Exam = GetExam();
 						GradingSystem = GetGrading();
 						SettingJson = GetUrlData();
+						School = new School();
 						ResultFont = new ResultFont();
 						instance = new StartupCache();
 					}
@@ -223,14 +228,14 @@ namespace Montessori.Core
 		{
 			get
 			{
-				return "NPSBS";
+				return "Montessori";
 			}
 		}
 		public static string AppKey
 		{
 			get
 			{
-				return "key";
+				return "Montessori_key";
 			}
 		}
 	}

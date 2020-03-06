@@ -59,15 +59,14 @@ namespace Utility
 
 		public static Image GetImage(string path)
 		{
-			using (Bitmap bitmap = new Bitmap(path))
+			if (File.Exists(path))
 			{
-				return new Bitmap(bitmap);
+				using (Bitmap bitmap = new Bitmap(path))
+				{
+					return new Bitmap(bitmap);
+				}
 			}
-			
-			//using (FileStream s = new FileStream(path, FileMode.Open))
-			//{
-			//	return Image.FromStream(s);
-			//}
+			return new Bitmap(Properties.Resources.no_image);
 		}
 
 		public static Image ResizeImage(Image image, int width, int height)

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMarkEntry));
             this.epYear = new System.Windows.Forms.ErrorProvider(this.components);
             this.epExam = new System.Windows.Forms.ErrorProvider(this.components);
             this.epClass = new System.Windows.Forms.ErrorProvider(this.components);
@@ -96,45 +97,47 @@
             // kryptonGroupBox2
             // 
             this.kryptonGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonGroupBox2.Location = new System.Drawing.Point(0, 182);
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(0, 188);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             // 
             // kryptonGroupBox2.Panel
             // 
             this.kryptonGroupBox2.Panel.Controls.Add(this.dgvMarkEntry);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonPanel3);
-            this.kryptonGroupBox2.Size = new System.Drawing.Size(812, 270);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(812, 264);
             this.kryptonGroupBox2.TabIndex = 2;
             this.kryptonGroupBox2.Values.Heading = "Student List";
             // 
             // dgvMarkEntry
             // 
+            this.dgvMarkEntry.AllowUserToAddRows = false;
+            this.dgvMarkEntry.AllowUserToDeleteRows = false;
             this.dgvMarkEntry.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMarkEntry.Location = new System.Drawing.Point(0, 0);
             this.dgvMarkEntry.Name = "dgvMarkEntry";
-            this.dgvMarkEntry.Size = new System.Drawing.Size(808, 213);
+            this.dgvMarkEntry.ReadOnly = true;
+            this.dgvMarkEntry.Size = new System.Drawing.Size(808, 192);
             this.dgvMarkEntry.TabIndex = 12;
             // 
             // kryptonPanel3
             // 
             this.kryptonPanel3.Controls.Add(this.btnSubmitMarks);
             this.kryptonPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanel3.Location = new System.Drawing.Point(0, 213);
+            this.kryptonPanel3.Location = new System.Drawing.Point(0, 192);
             this.kryptonPanel3.Name = "kryptonPanel3";
-            this.kryptonPanel3.Size = new System.Drawing.Size(808, 33);
+            this.kryptonPanel3.Size = new System.Drawing.Size(808, 48);
             this.kryptonPanel3.TabIndex = 0;
             // 
             // btnSubmitMarks
             // 
-            this.btnSubmitMarks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSubmitMarks.Location = new System.Drawing.Point(644, 3);
+            this.btnSubmitMarks.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnSubmitMarks.Location = new System.Drawing.Point(649, 4);
             this.btnSubmitMarks.Name = "btnSubmitMarks";
-            this.btnSubmitMarks.Size = new System.Drawing.Size(154, 26);
+            this.btnSubmitMarks.Size = new System.Drawing.Size(154, 35);
             this.btnSubmitMarks.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSubmitMarks.StateCommon.Border.Rounding = 8;
+            this.btnSubmitMarks.StateCommon.Border.Rounding = 15;
             this.btnSubmitMarks.TabIndex = 4;
             this.btnSubmitMarks.Values.Text = "Submit Marks";
             // 
@@ -155,12 +158,13 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.ddlExam);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtYear);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(812, 132);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(812, 138);
             this.kryptonGroupBox1.TabIndex = 1;
             this.kryptonGroupBox1.Values.Heading = "Exam Detail";
             // 
             // kryptonLabel4
             // 
+            this.kryptonLabel4.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel4.Location = new System.Drawing.Point(374, 41);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(51, 20);
@@ -182,6 +186,7 @@
             // 
             // lblYear
             // 
+            this.lblYear.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.lblYear.Location = new System.Drawing.Point(10, 36);
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(38, 20);
@@ -203,6 +208,7 @@
             // 
             // kryptonLabel2
             // 
+            this.kryptonLabel2.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel2.Location = new System.Drawing.Point(374, 8);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(39, 20);
@@ -213,11 +219,11 @@
             // 
             this.btnLoadStudent.Location = new System.Drawing.Point(97, 73);
             this.btnLoadStudent.Name = "btnLoadStudent";
-            this.btnLoadStudent.Size = new System.Drawing.Size(237, 31);
+            this.btnLoadStudent.Size = new System.Drawing.Size(237, 35);
             this.btnLoadStudent.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnLoadStudent.StateCommon.Border.Rounding = 8;
+            this.btnLoadStudent.StateCommon.Border.Rounding = 15;
             this.btnLoadStudent.TabIndex = 3;
             this.btnLoadStudent.Values.Text = "Load Students";
             this.btnLoadStudent.Click += new System.EventHandler(this.btnLoadStudent_Click);
@@ -238,7 +244,7 @@
             // 
             this.txtYear.Location = new System.Drawing.Point(97, 3);
             this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(237, 30);
+            this.txtYear.Size = new System.Drawing.Size(237, 33);
             this.txtYear.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -249,6 +255,7 @@
             // 
             // kryptonLabel1
             // 
+            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.NormalPanel;
             this.kryptonLabel1.Location = new System.Drawing.Point(10, 9);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(67, 20);
@@ -273,6 +280,7 @@
             this.Controls.Add(this.kryptonPanel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMarkEntry";

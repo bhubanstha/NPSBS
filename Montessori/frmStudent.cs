@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 using Montessori.Core;
 using OfficeOpenXml;
 
 
 namespace Montessori
 {
-	public partial class frmStudent : Form
+	public partial class frmStudent : KryptonForm
     {
         Student s = new Student();
         int rows;
