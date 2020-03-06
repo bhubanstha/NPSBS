@@ -52,7 +52,7 @@ namespace Montessori
 			txtWebsite.Text = s.WebSite;
 			if (s.Logo != null && s.Logo.Length > 0)
 			{
-				Image image = ImageUtility.GetImage(Constant.MontessoriLogo).ResizeImage(200, 200);// ImageUtility.ByteToImage(school.Logo);
+				Image image = ImageUtility.GetImage(Constant.Logo).ResizeImage(200, 200);// ImageUtility.ByteToImage(school.Logo);
 				if (image != null)
 				{
 					picLogo.Image = image;
@@ -100,7 +100,7 @@ namespace Montessori
 			{
 				s.Logo = ImageUtility.ImageToByteArray(picLogo.Image);
 				CreateNewBackground();
-				picLogo.Image.Save(Constant.SchoolLogo, ImageFormat.Png);
+				picLogo.Image.Save(Constant.Logo, ImageFormat.Png);
 			}
 			int id = s.SaveOrUdate();
 			lblSchoolId.Text = id.ToString();
@@ -119,12 +119,12 @@ namespace Montessori
 		{
 			Image bgImage = Image.FromFile(Constant.MainBackground);
 			Image newBg = ImageUtility.SetWaterMark(bgImage, picLogo.Image, 0.5f, StartupCache.About.DeveloperContactNo);
-			if (File.Exists(Constant.SchoolBackground))
+			if (File.Exists(Constant.Background))
 			{
-				File.Delete(Constant.SchoolBackground);
+				File.Delete(Constant.Background);
 			}
 			picLogo.Image = ImageUtility.RemoveTransparency(picLogo.Image);
-			newBg.Save(Constant.SchoolBackground);
+			newBg.Save(Constant.Background);
 			mdiForm.SetBackground();
 		}
 	}

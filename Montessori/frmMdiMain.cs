@@ -166,9 +166,9 @@ namespace Montessori
 				{
 
 					Image image = ImageUtility.GetImage(Constant.MainBackground);
-					if (File.Exists(Constant.SchoolBackground))
+					if (File.Exists(Constant.Background))
 					{
-						image = new Bitmap(ImageUtility.GetImage(Constant.MontessoriBackground));
+						image = new Bitmap(ImageUtility.GetImage(Constant.Background));
 					}
 					ctrl.BackgroundImage = image;
 					ctrl.BackgroundImageLayout = ImageLayout.Zoom;

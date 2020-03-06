@@ -18,7 +18,7 @@ namespace Montessori.Core
         //private static GradingSystem gs = new GradingSystem();
         static ColumnText ct = null;
         static Phrase phrase = null;
-        static iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(Constant.MontessoriLogo);
+        static iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(Constant.Logo);
         private static School _schoo;
 
         public static Document Publish(System.Data.DataSet result, string location, int examinationId, int classId, School school)

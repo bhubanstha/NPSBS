@@ -145,9 +145,9 @@ namespace Utility
 							imageGraphics.DrawImage(_watermark, x, y);
 							Font font = new Font("Arial", 30, FontStyle.Bold, GraphicsUnit.Pixel);
 							Color color = Color.Yellow;
-							Point pt = new Point(x - 200, mainImageFile.Height - 250);
+							Point pt = new Point(x - 210, mainImageFile.Height - 250);
 							SolidBrush brush = new SolidBrush(color);
-							string txt = string.Format("Developed by: {0}{1}Contact No.: {2}", "Bhuban Shrestha", Environment.NewLine, contactNo);
+							string txt = string.Format("\t   Developed by: {0}{1}Contact No.: {2}", "Bhuban Shrestha", Environment.NewLine, contactNo);
 							imageGraphics.DrawString(txt, font, brush, pt);
 							string path = "tempWaterMarked.jpeg";
 							mainImageFile.Save(path, System.Drawing.Imaging.ImageFormat.Png);

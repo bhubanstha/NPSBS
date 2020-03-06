@@ -6,15 +6,16 @@ namespace Utility
     {
         private static string path = AppDomain.CurrentDomain.BaseDirectory;
 
-        public static string MainBackground { get { return path + "mainbg.jpg"; } }
-        public static string SchoolLogo { get { return path + "schoolLogo.jpg"; } }
-        public static string MontessoriLogo { get { return path + "montessoriLogo.jpg"; } }
+        public static string MainBackground { get { return path + "mainbg.png"; } }
+        public static string Logo { get { return path + "Logo.png"; } }
 
-        public static string SchoolBackground { get { return path + "SchoolBackground.jpg"; } }
-        public static string MontessoriBackground { get { return path + "MontessoriBackground.jpg"; } }
+        public static string Background { get { return path + "Background.png"; } }
+
 
 
         public static string AppVersion { get { return "2.0.0"; } }
 
     }
 }
+
+

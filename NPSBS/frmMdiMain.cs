@@ -376,12 +376,12 @@ namespace NPSBS
 				{
 
 					Image image = ImageUtility.GetImage(Constant.MainBackground);
-					if (File.Exists(Constant.SchoolBackground))
+					if (File.Exists(Constant.Background))
 					{
-						image = new Bitmap(ImageUtility.GetImage(Constant.SchoolBackground));
+						image = new Bitmap(ImageUtility.GetImage(Constant.Background));
 					}
 					ctrl.BackgroundImage = image;
-					ctrl.BackgroundImageLayout = ImageLayout.Zoom;
+					ctrl.BackgroundImageLayout = ImageLayout.Stretch;
 					break;
 				}
 			}

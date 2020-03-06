@@ -14,7 +14,7 @@ namespace NPSBS
 		{
 			InitializeComponent();
 			lblVersion.Text = "Version: " + Constant.AppVersion;
-			Image image = ImageUtility.GetImage(Constant.SchoolLogo);
+			Image image = ImageUtility.GetImage(Constant.Logo);
 			picLogo.BackgroundImage = image;
 
 		}
