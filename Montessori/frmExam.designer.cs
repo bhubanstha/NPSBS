@@ -127,6 +127,7 @@
             this.kryptonButton1.StateCommon.Border.Rounding = 15;
             this.kryptonButton1.TabIndex = 8;
             this.kryptonButton1.Values.Text = "Search";
+            this.kryptonButton1.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtYearSearch
             // 

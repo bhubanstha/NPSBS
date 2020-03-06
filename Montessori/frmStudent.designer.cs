@@ -148,6 +148,7 @@
             this.kryptonButton1.StateCommon.Border.Rounding = 15;
             this.kryptonButton1.TabIndex = 14;
             this.kryptonButton1.Values.Text = "Browse...";
+            this.kryptonButton1.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // kryptonLabel6
             // 
@@ -169,6 +170,7 @@
             this.btnAction.StateCommon.Border.Rounding = 15;
             this.btnAction.TabIndex = 13;
             this.btnAction.Values.Text = "Save";
+            this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
             // 
             // kryptonGroupBox1
             // 
@@ -428,6 +430,7 @@
             this.btnSearch.StateCommon.Border.Rounding = 15;
             this.btnSearch.TabIndex = 18;
             this.btnSearch.Values.Text = "Search";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtAcademicYearSearch
             // 

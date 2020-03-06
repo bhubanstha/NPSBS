@@ -84,33 +84,36 @@ namespace Montessori
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
-			s = new School()
+			if (SaveValidation())
 			{
-				SchoolName = txtSchoolName.Text.Trim(),
-				ShortName = txtShortName.Text.Trim(),
-				Address = txtAddress.Text.Trim(),
-				PhoneNo = txtPhoneNo.Text.Trim(),
-				Email = txtEmail.Text.Trim(),
-				WebSite = txtWebsite.Text.Trim(),
-				Id = Convert.ToInt32(lblSchoolId.Text),
-				EstiblishedYear = txtEstablishedYear.Text,
-				Slogan = txtSlogan.Text
-			};
-			if (picLogo.Image != null && isNewLogoSelected)
-			{
-				s.Logo = ImageUtility.ImageToByteArray(picLogo.Image);
-				CreateNewBackground();
-				picLogo.Image.Save(Constant.Logo, ImageFormat.Png);
-			}
-			int id = s.SaveOrUdate();
-			lblSchoolId.Text = id.ToString();
-			if (!worker.IsBusy)
-			{
-				worker.RunWorkerAsync();
-			}
-			if (id > 0)
-			{
-				Response.Success("School information updated.");
+				s = StartupCache.School;
+				//{
+				//	SchoolName = txtSchoolName.Text.Trim(),
+				//	ShortName = txtShortName.Text.Trim(),
+				//	Address = txtAddress.Text.Trim(),
+				//	PhoneNo = txtPhoneNo.Text.Trim(),
+				//	Email = txtEmail.Text.Trim(),
+				//	WebSite = txtWebsite.Text.Trim(),
+				//	Id = Convert.ToInt32(lblSchoolId.Text),
+				//	EstiblishedYear = txtEstablishedYear.Text,
+				//	Slogan = txtSlogan.Text
+				//};
+				if (picLogo.Image != null && isNewLogoSelected)
+				{
+					s.Logo = ImageUtility.ImageToByteArray(picLogo.Image);
+					CreateNewBackground();
+					picLogo.Image.Save(Constant.Logo, ImageFormat.Png);
+				}
+				int id = s.SaveOrUdate();
+				lblSchoolId.Text = id.ToString();
+				if (!worker.IsBusy)
+				{
+					worker.RunWorkerAsync();
+				}
+				if (id > 0)
+				{
+					Response.Success("School information updated.");
+				}
 			}
 		}
 
@@ -126,6 +129,56 @@ namespace Montessori
 			picLogo.Image = ImageUtility.RemoveTransparency(picLogo.Image);
 			newBg.Save(Constant.Background);
 			mdiForm.SetBackground();
+		}
+
+		private bool SaveValidation()
+		{
+			bool status = true;
+			errorProvider1.Clear();
+			errorProvider2.Clear();
+			errorProvider3.Clear();
+			errorProvider4.Clear();
+			errorProvider5.Clear();
+			errorProvider6.Clear();
+			errorProvider7.Clear();
+
+			if (txtSchoolName.Text.Trim().Length == 0)
+			{
+				errorProvider1.SetError(txtSchoolName, "School name is required.");
+				status = false;
+			}
+			if (txtShortName.Text.Trim().Length == 0)
+			{
+				errorProvider2.SetError(txtShortName, "School short name is required.");
+				status = false;
+			}
+			if (txtAddress.Text.Trim().Length==0)
+			{
+				errorProvider3.SetError(txtShortName, "School address is required.");
+				status = false;
+			}
+			if (txtPhoneNo.Text.Trim().Length == 0)
+			{
+				errorProvider4.SetError(txtPhoneNo, "School phone number is required.");
+				status = false;
+			}
+			if (txtEstablishedYear.Text.Trim().Length == 0)
+			{
+				errorProvider5.SetError(txtEstablishedYear, "School established year is required.");
+				status = false;
+			}
+			if (txtSlogan.Text.Trim().Length == 0)
+			{
+				errorProvider6.SetError(txtSlogan, "School slogan is required.");
+				status = false;
+			}
+			if (picLogo.Image == null)
+			{
+				errorProvider7.SetError(picLogo, "School Logo is required.");
+				status = false;
+			}
+
+			return status;
 		}
 	}
 }
