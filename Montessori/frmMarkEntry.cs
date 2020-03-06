@@ -121,7 +121,7 @@ namespace Montessori
 
         void tb_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.GradeOnly(sender, e);
+            InputValidation.GradeOnly(sender, e);
         }
 
         private void ddlClass_SelectedIndexChanged(object sender, EventArgs e)
@@ -165,7 +165,7 @@ namespace Montessori
         
         private void txtYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.Yes(txtYear, sender, e);
+            InputValidation.Yes(txtYear, sender, e);
         }
 
         private void ddlSubject_SelectedIndexChanged(object sender, EventArgs e)
@@ -192,7 +192,7 @@ namespace Montessori
 
         private void CellControl_Editing(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.GradeOnlyGrid(sender as DataGridViewTextBoxEditingControl, e);
+            InputValidation.GradeOnlyGrid(sender as DataGridViewTextBoxEditingControl, e);
         }
 
         private void dgvMarkEntry_CellClick(object sender, DataGridViewCellEventArgs e)

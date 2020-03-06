@@ -4,7 +4,7 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace Montessori.Core
 {
-    public class NumberOnly
+    public class InputValidation
     {
         public static void Yes(KryptonTextBox textbox,  object sender, KeyPressEventArgs e)
         {

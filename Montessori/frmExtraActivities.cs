@@ -139,7 +139,7 @@ namespace Montessori
 
 		void tb_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			NumberOnly.GradeOnly(sender, e);
+			InputValidation.GradeOnly(sender, e);
 		}
 
 		void tb1_GotFocus(object sender, EventArgs e)
@@ -202,7 +202,7 @@ namespace Montessori
 		
 		private void txtSchoolDays_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			NumberOnly.Yes(txtSchoolDays, sender, e);
+			InputValidation.Yes(txtSchoolDays, sender, e);
 		}
 
 		private void kryptonPanel4_Paint(object sender, PaintEventArgs e)

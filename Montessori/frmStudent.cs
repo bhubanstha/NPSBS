@@ -225,27 +225,27 @@ namespace Montessori
        
         private void txtStudentName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.StringOnly(txtStudentName, sender, e);
+            InputValidation.StringOnly(txtStudentName, sender, e);
         }
 
         private void txtAcademicYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.Yes(txtAcademicYear, sender, e);
+            InputValidation.Yes(txtAcademicYear, sender, e);
         }
 
         private void txtRollNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.Yes(txtRollNumber, sender, e);
+            InputValidation.Yes(txtRollNumber, sender, e);
         }
 
         private void txtStudentNameSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.StringOnly(txtStudentNameSearch, sender, e);
+            InputValidation.StringOnly(txtStudentNameSearch, sender, e);
         }
 
         private void txtAcademicYearSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.Yes(txtAcademicYearSearch, sender, e);
+            InputValidation.Yes(txtAcademicYearSearch, sender, e);
         }
 
         private void kryptonLinkLabel1_LinkClicked(object sender, EventArgs e)

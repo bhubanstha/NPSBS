@@ -164,12 +164,12 @@ namespace Montessori
 
         private void txtOldAcademicYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.Yes(txtOldAcademicYear, sender, e);
+            InputValidation.Yes(txtOldAcademicYear, sender, e);
         }
 
         private void txtNewAcademicYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.Yes(txtNewAcademicYear, sender, e);
+            InputValidation.Yes(txtNewAcademicYear, sender, e);
         }
 
         private void gvTranferStudent_CellClick(object sender, DataGridViewCellEventArgs e)

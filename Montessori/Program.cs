@@ -23,9 +23,10 @@ namespace Montessori
 				Register register = Register.Instance;
 				register.SetSoftwareName(RegInfo.AppName);
 				register.SetKey(RegInfo.AppKey);
-				frmSplash splash = new frmSplash();
-				if (1==1 || register.IsSoftwareRegistered())
+				frmSplash splash;
+				if (register.IsSoftwareRegistered())
 				{
+					splash  = new frmSplash();
 					StartupCache sc = StartupCache.Instance;
 					Application.Run(splash);					
 					mutext.ReleaseMutex();
@@ -35,7 +36,8 @@ namespace Montessori
 					DialogResult result = MessageBox.Show("Software registration is expired. Do you want to enter new registration key.", "Registration", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 					if (result == DialogResult.Yes)
 					{
-						register.ShowRegistrationForm(RegInfo.AppName, RegInfo.AppKey, splash.Icon);
+						register.ShowRegistrationForm(RegInfo.AppName, RegInfo.AppKey, Properties.Resources.AppIcon);
+						Application.Restart();
 					}
 					else
 					{

@@ -172,7 +172,7 @@ namespace Montessori
 
 		private void txtAcademicYear_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			NumberOnly.Yes(txtAcademicYear, sender, e);
+			InputValidation.Yes(txtAcademicYear, sender, e);
 		}
 
 

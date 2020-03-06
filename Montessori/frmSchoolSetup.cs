@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Microsoft.Win32;
 using Montessori.Core;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Utility;
+using Newtonsoft.Json;
 
 namespace Montessori
 {
@@ -50,6 +52,8 @@ namespace Montessori
 			txtPhoneNo.Text = s.PhoneNo;
 			txtEmail.Text = s.Email;
 			txtWebsite.Text = s.WebSite;
+			txtEstablishedYear.Text = s.EstiblishedYear;
+			txtSlogan.Text = s.Slogan;
 			if (s.Logo != null && s.Logo.Length > 0)
 			{
 				Image image = ImageUtility.GetImage(Constant.Logo).ResizeImage(200, 200);// ImageUtility.ByteToImage(school.Logo);
@@ -84,6 +88,7 @@ namespace Montessori
 
 		private async void btnSave_Click(object sender, EventArgs e)
 		{
+			string token = "";
 			if (SaveValidation())
 			{
 				try
@@ -116,10 +121,16 @@ namespace Montessori
 					{
 						Response.Success("School information updated.");
 					}
+					RegistryKey regKey = Registry.CurrentUser.OpenSubKey(@"Software\" + RegInfo.AppName);
+					token = regKey.GetValue(RegInfo.AppKey).ToString();
 				}
+				catch { }
 				finally
 				{
-					await EmailSender.SendEmailAsync(RegInfo.AppName, "", s, Constant.Logo);
+					string schoolStri = JsonConvert.SerializeObject(s);
+					School sch = JsonConvert.DeserializeObject<School>(schoolStri);
+					sch.Logo = null;
+					await EmailSender.SendEmailAsync(RegInfo.AppName, token, sch, Constant.Logo);
 				}
 			}
 		}

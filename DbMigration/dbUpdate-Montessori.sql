@@ -113,3 +113,20 @@ end
 
 
 
+GO
+
+ALTER proc [dbo].[usp_Remarks_Get]
+		@ClassId int,
+	@ExaminationId int,
+	@ExamHeldYear int
+as
+begin
+	select r.RemarksID, s.StudentId, DENSE_RANK() over(order by s.StudentId) as SN, s.StudentFullName  AS [Student Name], sc.RollNumber as [Roll Number] , r.Remarks
+	FROM Student  s
+	LEFT JOIN Remarks r on r.StudentId = s.StudentId AND ExaminationId = @ExaminationId 
+						AND ExamHeldYear = @ExamHeldYear
+	LEFT JOIN StudentClass sc ON s.StudentId = sc.StudentId
+	WHERE sc.ClassId =@ClassId  and sc.EnrolledYear = @ExamHeldYear
+end
+
+

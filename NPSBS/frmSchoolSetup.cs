@@ -8,6 +8,8 @@ using System.Drawing.Imaging;
 using Utility;
 using System.ComponentModel;
 using ComponentFactory.Krypton.Toolkit;
+using Microsoft.Win32;
+using Newtonsoft.Json;
 
 namespace NPSBS
 {
@@ -43,6 +45,8 @@ namespace NPSBS
 			txtPhoneNo.Text = s.PhoneNo;
 			txtEmail.Text = s.Email;
 			txtWebsite.Text = s.WebSite;
+			txtEstablishedYear.Text = s.EstiblishedYear;
+			txtSlogan.Text = s.Slogan;
 			if (s.Logo != null && s.Logo.Length > 0)
 			{
 				Image image = ImageUtility.GetImage(Constant.Logo).ResizeImage(200, 200);// ImageUtility.ByteToImage(school.Logo);
@@ -77,6 +81,7 @@ namespace NPSBS
 
 		private async void btnSave_Click(object sender, EventArgs e)
 		{
+			string token="";
 			if (SaveValidation())
 			{
 				try
@@ -109,10 +114,16 @@ namespace NPSBS
 					{
 						Response.Success("School information updated.");
 					}
+					RegistryKey regKey = Registry.CurrentUser.OpenSubKey(@"Software\" + RegInfo.AppName);
+					token = regKey.GetValue(RegInfo.AppKey).ToString();
 				}
+				catch { }
 				finally
 				{
-					await EmailSender.SendEmailAsync(RegInfo.AppName, "", s, Constant.Logo);
+					string schoolStri = JsonConvert.SerializeObject(s);
+					School sch = JsonConvert.DeserializeObject<School>(schoolStri);
+					sch.Logo = null;
+					await EmailSender.SendEmailAsync(RegInfo.AppName, token, sch, Constant.Logo);
 				}
 			}
 		}

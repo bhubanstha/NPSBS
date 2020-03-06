@@ -184,12 +184,12 @@ namespace Montessori
 
         private void txtYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.Yes(txtYear, sender, e);
+            InputValidation.Yes(txtYear, sender, e);
         }
 
         private void txtYearSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            NumberOnly.Yes(txtYearSearch, sender, e);
+            InputValidation.Yes(txtYearSearch, sender, e);
         }
     }
 }

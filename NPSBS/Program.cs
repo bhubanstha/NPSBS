@@ -25,10 +25,11 @@ namespace NPSBS
 				register.SetSoftwareName(RegInfo.AppName);
 				register.SetKey(RegInfo.AppKey);
 
-				var splash = new frmSplash();
-				if (1==1 || register.IsSoftwareRegistered())
+				frmSplash splash;
+				if (register.IsSoftwareRegistered())
 				{
-                    Logger l = Logger.Instance;
+					splash  = new frmSplash();
+					Logger l = Logger.Instance;
 					Application.Run(splash);
 					mutext.ReleaseMutex();
 				}
@@ -37,7 +38,7 @@ namespace NPSBS
 					DialogResult result = MessageBox.Show("Software registration is expired. Do you want to enter new registration key.", "Registration", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 					if (result == DialogResult.Yes)
 					{
-						register.ShowRegistrationForm(RegInfo.AppName, RegInfo.AppKey, splash.Icon);
+						register.ShowRegistrationForm(RegInfo.AppName, RegInfo.AppKey, Properties.Resources.AppIcon);
 						Application.Restart();
 					}
 					else
