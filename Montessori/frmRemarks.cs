@@ -17,6 +17,7 @@ namespace Montessori
 			InitializeComponent();
 			AutoComplete();
 			GetClass();
+			GridViewEditDelete.FixView(dgvRemarks);
 		}
 
 		private void btnLoadStudent_Click(object sender, EventArgs e)
@@ -33,10 +34,13 @@ namespace Montessori
 						dgvRemarks.DataSource = tbl;
 						dgvRemarks.Columns[0].Visible = false;
 						dgvRemarks.Columns[1].Visible = false;
+
 						dgvRemarks.Columns[2].Width = 50;
 						dgvRemarks.Columns[3].Width = 300;
+						dgvRemarks.Columns[4].Width = 150;
 						dgvRemarks.Columns[2].ReadOnly = true;
 						dgvRemarks.Columns[3].ReadOnly = true;
+						dgvRemarks.Columns[4].ReadOnly = true;
 						dgvRemarks.EditMode = DataGridViewEditMode.EditOnEnter;
 					}
 					else
@@ -60,7 +64,7 @@ namespace Montessori
 			{
 
 				string studentId = row.Cells[1].Value.ToString();
-				string remarks = row.Cells[4].Value.ToString();
+				string remarks = row.Cells[5].Value.ToString();
 				int remarksId = row.Cells[0].Value == DBNull.Value ? 0 : Convert.ToInt32(row.Cells[0].Value.ToString());
 				Remarks rm = new Remarks()
 				{

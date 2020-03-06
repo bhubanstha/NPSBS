@@ -112,7 +112,6 @@
             this.dgvRemarks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRemarks.Location = new System.Drawing.Point(0, 0);
             this.dgvRemarks.Name = "dgvRemarks";
-            this.dgvRemarks.ReadOnly = true;
             this.dgvRemarks.Size = new System.Drawing.Size(823, 161);
             this.dgvRemarks.TabIndex = 1;
             // 

@@ -79,6 +79,7 @@ namespace Montessori.Core
             if ((e.KeyChar == '+') && ((sender as KryptonTextBox).Text.IndexOf('+') > -1))
             {
                 e.Handled = true;
+                return;
             }
 
             if (((sender as KryptonTextBox).Text.IndexOf('A') > -1) || ((sender as KryptonTextBox).Text.IndexOf('B') > -1) 
@@ -88,6 +89,26 @@ namespace Montessori.Core
             }
 
            
+        }
+
+        public static void GradeOnlyGrid(DataGridViewTextBoxEditingControl sender, KeyPressEventArgs e)
+        {
+            e.KeyChar = Convert.ToChar(e.KeyChar.ToString().ToUpper());
+
+            e.Handled = !(e.KeyChar == 'A' || e.KeyChar == 'B' || e.KeyChar == 'C' || e.KeyChar == 'D' || e.KeyChar == (char)Keys.Back);
+            if ((e.KeyChar == '+') && ((sender).Text.IndexOf('+') > -1))
+            {
+                e.Handled = true;
+                return;
+            }
+
+            if (((sender).Text.IndexOf('A') > -1) || ((sender).Text.IndexOf('B') > -1)
+                || ((sender).Text.IndexOf('C') > -1) || ((sender).Text.IndexOf('D') > -1))
+            {
+                e.Handled = !(e.KeyChar == '+' || e.KeyChar == (char)Keys.Back);
+            }
+
+
         }
     }
 }

@@ -136,6 +136,7 @@
             this.kryptonLinkLabel1.Size = new System.Drawing.Size(80, 20);
             this.kryptonLinkLabel1.TabIndex = 15;
             this.kryptonLinkLabel1.Values.Text = "View Sample";
+            this.kryptonLinkLabel1.LinkClicked += new System.EventHandler(this.kryptonLinkLabel1_LinkClicked);
             // 
             // kryptonButton1
             // 
@@ -255,6 +256,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtRollNumber.StateCommon.Border.Rounding = 15;
             this.txtRollNumber.TabIndex = 7;
+            this.txtRollNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRollNumber_KeyPress);
             // 
             // kryptonLabel4
             // 
@@ -275,6 +277,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtAcademicYear.StateCommon.Border.Rounding = 15;
             this.txtAcademicYear.TabIndex = 5;
+            this.txtAcademicYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcademicYear_KeyPress);
             // 
             // kryptonLabel3
             // 
@@ -304,6 +307,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtStudentName.StateCommon.Border.Rounding = 15;
             this.txtStudentName.TabIndex = 1;
+            this.txtStudentName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStudentName_KeyPress);
             // 
             // kryptonLabel1
             // 
@@ -340,6 +344,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtStudentNameSearch.StateCommon.Border.Rounding = 15;
             this.txtStudentNameSearch.TabIndex = 3;
+            this.txtStudentNameSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStudentNameSearch_KeyPress);
             // 
             // kryptonLabel8
             // 
@@ -413,11 +418,12 @@
             this.gvStudents.AllowUserToAddRows = false;
             this.gvStudents.AllowUserToDeleteRows = false;
             this.gvStudents.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gvStudents.Location = new System.Drawing.Point(0, 81);
+            this.gvStudents.Location = new System.Drawing.Point(0, 43);
             this.gvStudents.Name = "gvStudents";
             this.gvStudents.ReadOnly = true;
-            this.gvStudents.Size = new System.Drawing.Size(1113, 224);
+            this.gvStudents.Size = new System.Drawing.Size(1113, 262);
             this.gvStudents.TabIndex = 19;
+            this.gvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvStudents_CellClick);
             // 
             // btnSearch
             // 
@@ -442,6 +448,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtAcademicYearSearch.StateCommon.Border.Rounding = 15;
             this.txtAcademicYearSearch.TabIndex = 17;
+            this.txtAcademicYearSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcademicYearSearch_KeyPress);
             // 
             // kryptonLabel9
             // 

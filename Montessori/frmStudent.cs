@@ -222,14 +222,6 @@ namespace Montessori
                 }
             }
         }
-
-        private void lblExcelSample_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-           
-            var fileName =AppDomain.CurrentDomain.BaseDirectory +"\\Student.xlsx";
-            AppRunner.Run(fileName);
-        }
-
        
         private void txtStudentName_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -254,6 +246,12 @@ namespace Montessori
         private void txtAcademicYearSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             NumberOnly.Yes(txtAcademicYearSearch, sender, e);
+        }
+
+        private void kryptonLinkLabel1_LinkClicked(object sender, EventArgs e)
+        {
+            var fileName = AppDomain.CurrentDomain.BaseDirectory + "\\Student.xlsx";
+            AppRunner.Run(fileName);
         }
     }
 }

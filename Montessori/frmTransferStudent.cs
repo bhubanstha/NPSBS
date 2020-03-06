@@ -89,6 +89,11 @@ namespace Montessori
             var tbl = s.GetTransferStudent(classId, academicYear);
             gvTranferStudent.DataSource  = tbl;
             gvTranferStudent.Columns[0].Visible = false;
+            for (int i = 0; i < 7; i++)
+            {
+                gvTranferStudent.Columns[i].ReadOnly = true;
+            }
+            
             btnTransfer.Enabled = true;
 
         }
@@ -165,6 +170,14 @@ namespace Montessori
         private void txtNewAcademicYear_KeyPress(object sender, KeyPressEventArgs e)
         {
             NumberOnly.Yes(txtNewAcademicYear, sender, e);
+        }
+
+        private void gvTranferStudent_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex==7)
+            {
+                gvTranferStudent.BeginEdit(true);
+            }
         }
     }
 }

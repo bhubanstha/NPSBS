@@ -18,6 +18,7 @@ namespace Montessori
 			InitializeComponent();
 			GetClass();
 			AutoComplete();
+			GridViewEditDelete.FixView(dgvExtraActivities);
 		}
 		
 		private void AutoComplete()
@@ -202,6 +203,11 @@ namespace Montessori
 		private void txtSchoolDays_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			NumberOnly.Yes(txtSchoolDays, sender, e);
+		}
+
+		private void kryptonPanel4_Paint(object sender, PaintEventArgs e)
+		{
+
 		}
 	}
 }

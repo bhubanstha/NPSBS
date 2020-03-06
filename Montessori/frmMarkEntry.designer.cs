@@ -35,7 +35,6 @@
             this.epClass = new System.Windows.Forms.ErrorProvider(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.dgvMarkEntry = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.btnSubmitMarks = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
@@ -49,6 +48,7 @@
             this.txtYear = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.dgvMarkEntry = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.epYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epExam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epClass)).BeginInit();
@@ -58,7 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
             this.kryptonGroupBox2.Panel.SuspendLayout();
             this.kryptonGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMarkEntry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
             this.kryptonPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
@@ -69,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ddlClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlExam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarkEntry)).BeginInit();
             this.SuspendLayout();
             // 
             // epYear
@@ -107,17 +107,6 @@
             this.kryptonGroupBox2.Size = new System.Drawing.Size(1011, 301);
             this.kryptonGroupBox2.TabIndex = 2;
             this.kryptonGroupBox2.Values.Heading = "Student List";
-            // 
-            // dgvMarkEntry
-            // 
-            this.dgvMarkEntry.AllowUserToAddRows = false;
-            this.dgvMarkEntry.AllowUserToDeleteRows = false;
-            this.dgvMarkEntry.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvMarkEntry.Location = new System.Drawing.Point(0, 0);
-            this.dgvMarkEntry.Name = "dgvMarkEntry";
-            this.dgvMarkEntry.ReadOnly = true;
-            this.dgvMarkEntry.Size = new System.Drawing.Size(1007, 229);
-            this.dgvMarkEntry.TabIndex = 12;
             // 
             // kryptonPanel3
             // 
@@ -251,6 +240,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtYear.StateCommon.Border.Rounding = 15;
             this.txtYear.TabIndex = 1;
+            this.txtYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYear_KeyPress);
             this.txtYear.Leave += new System.EventHandler(this.txtYear_Leave);
             // 
             // kryptonLabel1
@@ -269,6 +259,18 @@
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.Size = new System.Drawing.Size(1011, 50);
             this.kryptonPanel2.TabIndex = 0;
+            // 
+            // dgvMarkEntry
+            // 
+            this.dgvMarkEntry.AllowUserToAddRows = false;
+            this.dgvMarkEntry.AllowUserToDeleteRows = false;
+            this.dgvMarkEntry.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMarkEntry.Location = new System.Drawing.Point(0, 0);
+            this.dgvMarkEntry.Name = "dgvMarkEntry";
+            this.dgvMarkEntry.Size = new System.Drawing.Size(1007, 229);
+            this.dgvMarkEntry.TabIndex = 20;
+            this.dgvMarkEntry.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarkEntry_CellClick);
+            this.dgvMarkEntry.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvMarkEntry_EditingControlShowing);
             // 
             // frmMarkEntry
             // 
@@ -296,7 +298,6 @@
             this.kryptonGroupBox2.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
             this.kryptonGroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMarkEntry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).EndInit();
             this.kryptonPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
@@ -308,6 +309,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ddlClass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlExam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarkEntry)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,8 +331,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgvMarkEntry;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSubmitMarks;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgvMarkEntry;
     }
 }

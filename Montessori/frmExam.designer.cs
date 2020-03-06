@@ -115,6 +115,7 @@
             this.dgvExam.ReadOnly = true;
             this.dgvExam.Size = new System.Drawing.Size(777, 237);
             this.dgvExam.TabIndex = 9;
+            this.dgvExam.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExam_CellClick);
             // 
             // kryptonButton1
             // 

@@ -116,9 +116,9 @@
             this.gvTranferStudent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvTranferStudent.Location = new System.Drawing.Point(0, 0);
             this.gvTranferStudent.Name = "gvTranferStudent";
-            this.gvTranferStudent.ReadOnly = true;
             this.gvTranferStudent.Size = new System.Drawing.Size(924, 309);
             this.gvTranferStudent.TabIndex = 0;
+            this.gvTranferStudent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvTranferStudent_CellClick);
             // 
             // kryptonPanel3
             // 
