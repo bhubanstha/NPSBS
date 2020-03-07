@@ -19,7 +19,7 @@ namespace NPSBS.Core
         static ColumnText ct = null;
         static Phrase phrase = null;
         private static School _school;
-        static iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(Constant.Logo);
+        static iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(Constant.NLogo);
         public static Document Publish(string location, System.Data.DataSet result, int examinationId, int classId, School school)
         {
             try

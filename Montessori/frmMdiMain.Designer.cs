@@ -114,8 +114,8 @@
             // 
             // rbnAttendance
             // 
-            this.rbnAttendance.ImageLarge = global::Montessori.Properties.Resources.attendance;
-            this.rbnAttendance.ImageSmall = global::Montessori.Properties.Resources.attendance;
+            this.rbnAttendance.ImageLarge = global::Montessori.Properties.Resources.remark;
+            this.rbnAttendance.ImageSmall = global::Montessori.Properties.Resources.remark;
             this.rbnAttendance.TextLine1 = "Remarks";
             this.rbnAttendance.Click += new System.EventHandler(this.rbnAttendance_Click);
             // 
@@ -230,7 +230,6 @@
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
-            this.ribbonMenu.SelectedContext = null;
             this.ribbonMenu.SelectedTab = this.kryptonRibbonTab1;
             this.ribbonMenu.Size = new System.Drawing.Size(1073, 115);
             this.ribbonMenu.TabIndex = 5;

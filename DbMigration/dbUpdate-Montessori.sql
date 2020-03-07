@@ -2,6 +2,67 @@ USE [KidsZone]
 GO
 /****** Object:  StoredProcedure [dbo].[usp_Examination_Select]    Script Date: 3/6/2020 8:36:31 PM ******/
 
+
+if not exists(select * from INFORMATION_SCHEMA.TABLES where TABLE_CATALOG = 'NPSBS' and TABLE_NAME = 'School')
+begin
+
+create table School
+(
+	ID int primary key identity(1,1),
+	SchoolName nvarchar(500),
+	ShortName nvarchar(10),
+	Address nvarchar(500),
+	Phone nvarchar(40),
+	Email nvarchar(100),
+	Website nvarchar(100),
+	Logo varbinary(max),
+	EstiblishedYear int,
+	Slogan nvarchar(1000)
+)
+
+end
+
+GO
+
+create proc SaveUpdateSchool
+@Id int,
+@SchoolName nvarchar(500),
+@ShortName nvarchar(10),
+@Address nvarchar(500),
+@PhoneNo nvarchar(40),
+@Email nvarchar(100),
+@WebSite nvarchar(100),
+@Logo varbinary(max),
+@EstiblishedYear int,
+@Slogan nvarchar(1000)
+as
+begin
+	if @Id>0
+	begin
+		update School set SchoolName = @SchoolName, ShortName = @ShortName, Address = @Address, Phone = @PhoneNo, Email = @Email, Website = @WebSite, Logo = @Logo, EstiblishedYear =@EstiblishedYear, Slogan = @Slogan
+		where ID = @Id
+		select @Id
+	end
+	else
+	begin
+		insert into School (SchoolName, ShortName, Address, Phone, Email, Website, Logo, EstiblishedYear,Slogan) values
+		(@SchoolName, @ShortName, @Address, @PhoneNo, @Email, @WebSite, @Logo,@EstiblishedYear,@Slogan)
+		select @@IDENTITY
+	end
+
+end
+
+GO
+
+create proc GetSchoolInfo
+as
+begin
+	select top 1 * from School
+
+end
+
+go
+
 ALTER proc [dbo].[usp_Examination_Select]
 as
 begin
@@ -129,4 +190,19 @@ begin
 	WHERE sc.ClassId =@ClassId  and sc.EnrolledYear = @ExamHeldYear
 end
 
+
+GO
+
+ALTER proc [dbo].[usp_Student_Select]
+as
+begin
+	select s.StudentId, ROW_NUMBER() over (order by sc.EnrolledYear desc, c.ClassID desc, CONVERT(INT, sc.RollNumber) asc ) as 'S.N', s.StudentFullName as 'Name', 
+	case 
+	when s.Gender = 'M' then 'Male'
+	else 'Female'
+	end as Gender, c.ClassName as 'Class', sc.EnrolledYear as 'Academic Year', sc.RollNumber from Student s
+	inner join StudentClass sc on s.StudentId = sc.StudentId
+	inner join Class c on sc.ClassId = c.ClassId
+	where sc.EnrolledYear = (select ISNULL(MAX(EnrolledYear),0) from StudentClass)
+end
 

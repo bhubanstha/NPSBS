@@ -166,9 +166,9 @@ namespace Montessori
 				{
 
 					Image image = ImageUtility.GetImage(Constant.MainBackground);
-					if (File.Exists(Constant.Background))
+					if (File.Exists(Constant.MBackground))
 					{
-						image = new Bitmap(ImageUtility.GetImage(Constant.Background));
+						image = new Bitmap(ImageUtility.GetImage(Constant.MBackground));
 					}
 					ctrl.BackgroundImage = image;
 					ctrl.BackgroundImageLayout = ImageLayout.Zoom;
@@ -283,11 +283,15 @@ namespace Montessori
 					cmd.CommandText = q;
 					DataAccess.ExecuteNonQuery(cmd);
 					Response.Success("Database backup successfully.");
-					this.Cursor = Cursors.Default;
+					
 				}
 				catch (Exception ex)
 				{
 					Response.GenericError(ex.Message.ToString());
+				}
+				finally
+				{
+					this.Cursor = Cursors.Default;
 				}
 			}
 		}

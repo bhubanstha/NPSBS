@@ -197,3 +197,19 @@ begin catch
 end catch
 end
 
+
+GO
+
+ALTER proc [dbo].[usp_Student_Select]
+as
+begin
+	select s.StudentId, ROW_NUMBER() over (order by sc.EnrolledYear desc, c.ClassID desc, CONVERT(INT, sc.RollNumber) asc ) as 'S.N', s.StudentFullName as 'Name', 
+	case 
+	when s.Gender = 'M' then 'Male'
+	else 'Female'
+	end as Gender, c.ClassName as 'Class', sc.EnrolledYear as 'Academic Year', sc.RollNumber as [Roll Number] from Student s
+	inner join StudentClass sc on s.StudentId = sc.StudentId
+	inner join Class c on sc.ClassId = c.ClassId
+	where sc.EnrolledYear = (select ISNULL(MAX(EnrolledYear),0) from StudentClass)
+end
+

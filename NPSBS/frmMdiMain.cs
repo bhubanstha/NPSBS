@@ -244,6 +244,10 @@ namespace NPSBS
 				{
 					Response.GenericError(ex.Message.ToString());
 				}
+				finally
+				{
+					this.Cursor = Cursors.Default;
+				}
 			}
 		}
 
@@ -376,9 +380,9 @@ namespace NPSBS
 				{
 
 					Image image = ImageUtility.GetImage(Constant.MainBackground);
-					if (File.Exists(Constant.Background))
+					if (File.Exists(Constant.NBackground))
 					{
-						image = new Bitmap(ImageUtility.GetImage(Constant.Background));
+						image = new Bitmap(ImageUtility.GetImage(Constant.NBackground));
 					}
 					ctrl.BackgroundImage = image;
 					ctrl.BackgroundImageLayout = ImageLayout.Stretch;

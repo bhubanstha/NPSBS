@@ -49,7 +49,7 @@ namespace NPSBS
 			txtSlogan.Text = s.Slogan;
 			if (s.Logo != null && s.Logo.Length > 0)
 			{
-				Image image = ImageUtility.GetImage(Constant.Logo).ResizeImage(200, 200);// ImageUtility.ByteToImage(school.Logo);
+				Image image = ImageUtility.GetImage(Constant.NLogo).ResizeImage(200, 200);// ImageUtility.ByteToImage(school.Logo);
 				if (image != null)
 				{
 					picLogo.Image = image;
@@ -102,7 +102,7 @@ namespace NPSBS
 					{
 						s.Logo = ImageUtility.ImageToByteArray(picLogo.Image);
 						CreateNewBackground();
-						picLogo.Image.Save(Constant.Logo, ImageFormat.Png);
+						picLogo.Image.Save(Constant.NLogo, ImageFormat.Png);
 					}
 					int id = s.SaveOrUdate();
 					lblSchoolId.Text = id.ToString();
@@ -123,7 +123,7 @@ namespace NPSBS
 					string schoolStri = JsonConvert.SerializeObject(s);
 					School sch = JsonConvert.DeserializeObject<School>(schoolStri);
 					sch.Logo = null;
-					await EmailSender.SendEmailAsync(RegInfo.AppName, token, sch, Constant.Logo);
+					await EmailSender.SendEmailAsync(RegInfo.AppName, token, sch, Constant.NLogo);
 				}
 			}
 		}
@@ -133,12 +133,12 @@ namespace NPSBS
 		{
 			Image bgImage = Image.FromFile(Constant.MainBackground);
 			Image newBg = ImageUtility.SetWaterMark(bgImage, picLogo.Image, 0.5f, StartupCache.About.DeveloperContactNo);
-			if (File.Exists(Constant.Background))
+			if (File.Exists(Constant.NBackground))
 			{
-				File.Delete(Constant.Background);
+				File.Delete(Constant.NBackground);
 			}
 			picLogo.Image = ImageUtility.RemoveTransparency(picLogo.Image);
-			newBg.Save(Constant.Background);
+			newBg.Save(Constant.NBackground);
 			mdiForm.SetBackground();
 		}
 

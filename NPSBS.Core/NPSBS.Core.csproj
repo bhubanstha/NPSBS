@@ -42,7 +42,7 @@
       <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="EPPlus">
-      <HintPath>..\packages\EPPlus.4.0.5\lib\net20\EPPlus.dll</HintPath>
+      <HintPath>..\packages\EPPlus.4.5.3.3\lib\net40\EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
       <HintPath>..\packages\iTextSharp.5.5.9\lib\itextsharp.dll</HintPath>

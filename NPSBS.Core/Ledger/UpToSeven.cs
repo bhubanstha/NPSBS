@@ -63,7 +63,7 @@ namespace NPSBS.Core
             doc.AddSubject("Exam Result");
             doc.AddCreator("iTextSharp");
             doc.AddAuthor("Bhuban Shrestha");
-            iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(Constant.Logo);
+            iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(Constant.NLogo);
             jpg.SetAbsolutePosition(190, 515);
             jpg.ScalePercent(32);
             doc.Add(jpg);

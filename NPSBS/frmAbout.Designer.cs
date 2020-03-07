@@ -31,13 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
             this.picMe = new System.Windows.Forms.PictureBox();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.picClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
             this.lblCopyRight = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picMe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
             // picMe
@@ -54,23 +52,12 @@
             // picLogo
             // 
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picLogo.Location = new System.Drawing.Point(626, 43);
+            this.picLogo.Location = new System.Drawing.Point(626, 35);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(125, 132);
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
             this.picLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            // 
-            // picClose
-            // 
-            this.picClose.BackgroundImage = global::NPSBS.Properties.Resources.close;
-            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picClose.Location = new System.Drawing.Point(720, 2);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(32, 32);
-            this.picClose.TabIndex = 0;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -117,29 +104,27 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.picMe);
             this.Controls.Add(this.picLogo);
-            this.Controls.Add(this.picClose);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAbout";
             this.Opacity = 0.9D;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAbout";
+            this.Text = "About";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Shown += new System.EventHandler(this.frmAbout_Shown);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmAbout_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.picMe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.PictureBox picMe;
         private System.Windows.Forms.Label label1;

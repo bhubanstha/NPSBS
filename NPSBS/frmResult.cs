@@ -55,6 +55,7 @@ namespace NPSBS
                     bWorker.DoWork += new DoWorkEventHandler(bWorker_DoWork);
                     bWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bWorker_RunWorkerCompleted);
                     bWorker.RunWorkerAsync();
+                    this.Cursor = Cursors.Default;
                 }
             }
         }

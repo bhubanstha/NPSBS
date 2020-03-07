@@ -65,6 +65,10 @@ namespace Montessori
 				{
 					Response.GenericError(ex.Message);
 				}
+				finally
+				{
+					this.Cursor = Cursors.Default;
+				}
 			}
 		}
 

@@ -35,9 +35,9 @@ namespace Montessori.Core
         public static void FixView(DataGridView gridView)
         {
             gridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            //gridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            //            | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-            
+            gridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+
             gridView.AllowUserToAddRows = false;
             gridView.AllowUserToResizeRows = false;
             gridView.AllowUserToResizeColumns = false;

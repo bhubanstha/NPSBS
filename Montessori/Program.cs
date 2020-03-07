@@ -27,7 +27,6 @@ namespace Montessori
 				if (register.IsSoftwareRegistered())
 				{
 					splash  = new frmSplash();
-					StartupCache sc = StartupCache.Instance;
 					Application.Run(splash);					
 					mutext.ReleaseMutex();
 				}

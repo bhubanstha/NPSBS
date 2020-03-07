@@ -12,13 +12,11 @@ namespace NPSBS
 		BackgroundWorker bWorker = new BackgroundWorker();
 		BackgroundWorker bWorker1 = new BackgroundWorker();
 		BackgroundWorker bWorker2 = new BackgroundWorker();
+		System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
 		public frmSplash()
 		{
 			InitializeComponent();
 			lblComponents.Text = "Checking Server Connection...";
-			bWorker.DoWork += new DoWorkEventHandler(CheckDatabaseConnection);
-			bWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(DatabaseCheckConnectionComplete);
-			bWorker.RunWorkerAsync(lblComponents);
 		}
 
 		void CheckDatabaseConnection(object sender, DoWorkEventArgs e)
@@ -75,5 +73,18 @@ namespace NPSBS
 			this.Hide();
 		}
 
+		private void frmSplash_Shown(object sender, EventArgs e)
+		{
+			t.Interval = 2000;
+			t.Tick += T_Tick;
+			t.Enabled = true;
+		}
+		private void T_Tick(object sender, EventArgs e)
+		{
+			t.Enabled = false;
+			bWorker.DoWork += new DoWorkEventHandler(CheckDatabaseConnection);
+			bWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(DatabaseCheckConnectionComplete);
+			bWorker.RunWorkerAsync(lblComponents);
+		}
 	}
 }

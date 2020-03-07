@@ -56,7 +56,7 @@ namespace Montessori
 			txtSlogan.Text = s.Slogan;
 			if (s.Logo != null && s.Logo.Length > 0)
 			{
-				Image image = ImageUtility.GetImage(Constant.Logo).ResizeImage(200, 200);// ImageUtility.ByteToImage(school.Logo);
+				Image image = ImageUtility.GetImage(Constant.MLogo).ResizeImage(200, 200);// ImageUtility.ByteToImage(school.Logo);
 				if (image != null)
 				{
 					picLogo.Image = image;
@@ -109,7 +109,7 @@ namespace Montessori
 					{
 						s.Logo = ImageUtility.ImageToByteArray(picLogo.Image);
 						CreateNewBackground();
-						picLogo.Image.Save(Constant.Logo, ImageFormat.Png);
+						picLogo.Image.Save(Constant.MLogo, ImageFormat.Png);
 					}
 					int id = s.SaveOrUdate();
 					lblSchoolId.Text = id.ToString();
@@ -130,7 +130,7 @@ namespace Montessori
 					string schoolStri = JsonConvert.SerializeObject(s);
 					School sch = JsonConvert.DeserializeObject<School>(schoolStri);
 					sch.Logo = null;
-					await EmailSender.SendEmailAsync(RegInfo.AppName, token, sch, Constant.Logo);
+					await EmailSender.SendEmailAsync(RegInfo.AppName, token, sch, Constant.MLogo);
 				}
 			}
 		}
@@ -140,12 +140,12 @@ namespace Montessori
 		{
 			Image bgImage = Image.FromFile(Constant.MainBackground);
 			Image newBg = ImageUtility.SetWaterMark(bgImage, picLogo.Image, 0.5f, StartupCache.About.DeveloperContactNo);
-			if (File.Exists(Constant.Background))
+			if (File.Exists(Constant.MBackground))
 			{
-				File.Delete(Constant.Background);
+				File.Delete(Constant.MBackground);
 			}
 			picLogo.Image = ImageUtility.RemoveTransparency(picLogo.Image);
-			newBg.Save(Constant.Background);
+			newBg.Save(Constant.MBackground);
 			mdiForm.SetBackground();
 		}
 

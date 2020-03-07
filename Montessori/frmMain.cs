@@ -171,11 +171,14 @@ namespace Montessori
 					cmd.CommandText = q;
 					DataAccess.ExecuteNonQuery(cmd);
 					Response.Success("Database backup successfully.");
-					this.Cursor = Cursors.Default;
 				}
 				catch (Exception ex)
 				{
 					Response.GenericError(ex.Message.ToString());
+				}
+				finally
+				{
+					this.Cursor = Cursors.Default;
 				}
 
 			}

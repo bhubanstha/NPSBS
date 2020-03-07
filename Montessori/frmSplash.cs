@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Drawing;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Montessori.Core;
 using Utility;
@@ -14,16 +15,13 @@ namespace Montessori
 		BackgroundWorker bWorker = new BackgroundWorker();
 		BackgroundWorker bWorker1 = new BackgroundWorker();
 		BackgroundWorker bWorker2 = new BackgroundWorker();
-
+		System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
 		public frmSplash()
 		{
-			InitializeComponent();
+			InitializeComponent();			
 			lblComponents.Text = "Checking Server Connection...";
-			bWorker.DoWork += new DoWorkEventHandler(CheckDatabaseConnection);
-			bWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(DatabaseCheckConnectionComplete);
-			bWorker.RunWorkerAsync(lblComponents);
+			
 		}
-
 		void bWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
 			var r = (bool)e.Result;
@@ -111,5 +109,18 @@ namespace Montessori
 			this.Hide();
 		}
 
+		private void frmSplash_Shown(object sender, EventArgs e)
+		{
+			t.Interval = 2000;
+			t.Tick += T_Tick;
+			t.Enabled = true;
+		}
+		private void T_Tick(object sender, EventArgs e)
+		{
+			t.Enabled = false;
+			bWorker.DoWork += new DoWorkEventHandler(CheckDatabaseConnection);
+			bWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(DatabaseCheckConnectionComplete);
+			bWorker.RunWorkerAsync(lblComponents);
+		}
 	}
 }

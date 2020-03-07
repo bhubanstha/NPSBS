@@ -7,9 +7,11 @@ namespace Utility
         private static string path = AppDomain.CurrentDomain.BaseDirectory;
 
         public static string MainBackground { get { return path + "mainbg.png"; } }
-        public static string Logo { get { return path + "Logo.png"; } }
+        public static string MLogo { get { return path + "MLogo.png"; } }
+        public static string NLogo { get { return path + "NLogo.png"; } }
 
-        public static string Background { get { return path + "Background.png"; } }
+        public static string MBackground { get { return path + "MBackground.png"; } }
+        public static string NBackground { get { return path + "NBackground.png"; } }
 
 
 
