@@ -106,9 +106,9 @@ namespace NPSBS
 			{
 				DataTable tbl = new Student().GetStudentByAcademicYearClass(ddlClass.SelectedValue.ToString(), txtYear.Text, ddlSubject.SelectedValue.ToString(), ddlExam.SelectedValue.ToString());
 				dgvMarkEntry.DataSource = tbl;
-				dgvMarkEntry.Columns[0].Visible = false;
-				dgvMarkEntry.Columns[1].Visible = false;
-				dgvMarkEntry.Columns[2].Visible = false;
+				//dgvMarkEntry.Columns[0].Visible = false;
+				//dgvMarkEntry.Columns[1].Visible = false;
+				//dgvMarkEntry.Columns[2].Visible = false;
 				dgvMarkEntry.Columns[3].MinimumWidth = 130;
 				dgvMarkEntry.Columns[4].MinimumWidth = 300;
 				dgvMarkEntry.Columns[3].ReadOnly = true;

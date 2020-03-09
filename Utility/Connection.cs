@@ -43,10 +43,10 @@ namespace Utility
             try
             {
                 xmlSetup.Load(setupFile);
-                for (int i = 0; i < xmlSetup["ComputerIdentification"].ChildNodes[1].ChildNodes.Count; i++)
+                for (int i = 0; i < xmlSetup["ComputerIdentification"].ChildNodes[0].ChildNodes.Count; i++)
                 {
-                    string name = xmlSetup["ComputerIdentification"].ChildNodes[1].ChildNodes[i].Attributes[0].Value;
-                    string value = xmlSetup["ComputerIdentification"].ChildNodes[1].ChildNodes[i].Attributes[1].Value;
+                    string name = xmlSetup["ComputerIdentification"].ChildNodes[0].ChildNodes[i].Attributes[0].Value;
+                    string value = xmlSetup["ComputerIdentification"].ChildNodes[0].ChildNodes[i].Attributes[1].Value;
                     DatabaseInformation.Add(name, value);
                 }
             }
