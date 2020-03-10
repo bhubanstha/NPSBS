@@ -14,6 +14,7 @@ namespace Montessori
             InitializeComponent();
             GetSubject();            
             GetClass();
+            GridViewEditDelete.FixView(gvSubjects);
         }
         private void frmSubject_Load(object sender, EventArgs e)
         {

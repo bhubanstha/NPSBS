@@ -15,7 +15,7 @@ namespace Montessori
             AutoComplete();
             GetExams();
             GetExamination();
-            Montessori.Core.GridViewEditDelete.AddActions(dgvExam);
+            GridViewEditDelete.AddActions(dgvExam);
         }
 
         private void btnAction_Click(object sender, EventArgs e)
@@ -55,13 +55,13 @@ namespace Montessori
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if(SearchValidation())
+            if (SearchValidation())
             {
                 dgvExam.DataSource = exam.GetExaminationByYear(txtYearSearch.Text);
             }
         }
 
-       
+
         private void dgvExam_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string action = dgvExam.CurrentCell.Value.ToString().ToLower();
@@ -115,7 +115,7 @@ namespace Montessori
 
         private void GetExams()
         {
-            var tbl  = exam.GetExams();
+            var tbl = exam.GetExams();
             ddlExam.DataSource = tbl;
             ddlExam.DisplayMember = "ExamName";
             ddlExam.ValueMember = "ExamId";
@@ -127,19 +127,19 @@ namespace Montessori
             epExam.Clear();
             epYear.Clear();
             epPrintDate.Clear();
-            if(ddlExam.SelectedValue.ToString()=="0")
+            if (ddlExam.SelectedValue.ToString() == "0")
             {
-                epExam.SetError(ddlExam,"Exam name is required.");
+                epExam.SetError(ddlExam, "Exam name is required.");
                 status = false;
             }
-            if(txtYear.Text.Length != 4)
+            if (txtYear.Text.Length != 4)
             {
-                epYear.SetError(txtYear,"Exam held year is required. Provide 4 digit year.");
+                epYear.SetError(txtYear, "Exam held year is required. Provide 4 digit year.");
                 status = false;
             }
-            if(Convert.ToDateTime(dpResultPrintDate.Value.ToShortDateString()) < Convert.ToDateTime(DateTime.Now.ToShortDateString()))
+            if (Convert.ToDateTime(dpResultPrintDate.Value.ToShortDateString()) < Convert.ToDateTime(DateTime.Now.ToShortDateString()))
             {
-                epPrintDate.SetError(dpResultPrintDate,"Result print date should not be less than today date.");
+                epPrintDate.SetError(dpResultPrintDate, "Result print date should not be less than today date.");
                 status = false;
             }
             return status;
@@ -151,9 +151,9 @@ namespace Montessori
             epExam.Clear();
             epYear.Clear();
             epPrintDate.Clear();
-            if(txtYearSearch.Text.Length ==0)
+            if (txtYearSearch.Text.Length == 0)
             {
-                epYear.SetError(txtYearSearch,"Exam held year is required.");
+                epYear.SetError(txtYearSearch, "Exam held year is required.");
                 status = false;
             }
             else if (txtYearSearch.Text.Length != 4)
@@ -161,7 +161,7 @@ namespace Montessori
                 epYear.SetError(txtYearSearch, "Exam held year should be 4 digit number.");
                 status = false;
             }
-             return status;
+            return status;
         }
 
         private void GetExamination()
@@ -176,8 +176,8 @@ namespace Montessori
             {
                 int year = Convert.ToInt32(txtYear.Text);
                 var addYear = year - DateTime.Now.Year;
-                dpResultPrintDate.MinDate = DateTime.Now.AddYears(addYear).AddMonths(-(DateTime.Now.Month-1));
-                dpResultPrintDate.MaxDate = DateTime.Now.AddYears(addYear + 1).AddMonths(12-DateTime.Now.Month);
+                dpResultPrintDate.MinDate = DateTime.Now.AddYears(addYear).AddMonths(-(DateTime.Now.Month - 1));
+                dpResultPrintDate.MaxDate = DateTime.Now.AddYears(addYear + 1).AddMonths(12 - DateTime.Now.Month);
                 dpResultPrintDate.Value = new DateTime(year, DateTime.Now.Month, DateTime.Now.Day);
             }
         }
