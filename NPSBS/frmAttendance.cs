@@ -15,6 +15,7 @@ namespace NPSBS
 			InitializeComponent();
 			AutoComplete();
 			GetClass();
+			GridViewEditDelete.FixView(dgvAttendance);
 		}
 
 		private void btnLoadStudent_Click(object sender, EventArgs e)
@@ -106,17 +107,17 @@ namespace NPSBS
 		{
 			if (LoadValidation())
 			{
-				DataTable tbl = new Student().GetStudentByAcademicYearClass(classId, examYear, examinationId);
-				dgvAttendance.DataSource = tbl;
-				dgvAttendance.Columns[0].Visible = false; //student id column
-				dgvAttendance.Columns[3].Visible = false; // school days column
-				dgvAttendance.Columns[1].Width = 200;
-				dgvAttendance.Columns[2].Width = 350;
-				dgvAttendance.Columns[1].ReadOnly = true;
-				dgvAttendance.Columns[2].ReadOnly = true;
+				DataTable tbl = new Student().GetStudentByAcademicYearClass(classId, examYear, examinationId);				
 				if (tbl.Rows.Count > 0)
 				{
-					txtSchoolDays.Text = tbl.Rows[0][3].ToString();
+					dgvAttendance.DataSource = tbl;
+					dgvAttendance.Columns[0].Visible = false; //student id column
+					dgvAttendance.Columns[1].Visible = false; //school days column
+					dgvAttendance.Columns[2].Width = 100;
+					dgvAttendance.Columns[2].ReadOnly = true;
+					dgvAttendance.Columns[3].Width = 350;
+					dgvAttendance.Columns[3].ReadOnly = true;
+					txtSchoolDays.Text = tbl.Rows[0][1].ToString();
 				}
 				dgvAttendance.EditMode = DataGridViewEditMode.EditOnEnter;
 			}
@@ -136,13 +137,20 @@ namespace NPSBS
 						ClassId = classId,
 						StudentId = Convert.ToInt32(row.Cells[0].Value.ToString()),
 						SchoolDays = Convert.ToInt32(txtSchoolDays.Text),
+						RollNumber = (row.Cells[2].Value.ToString()),
 						PresentDays = string.IsNullOrEmpty(row.Cells[4].Value.ToString()) ? 0 : Convert.ToInt32(row.Cells[4].Value.ToString())
 					};
+					if(att.PresentDays>att.SchoolDays)
+					{
+						Response.GenericError("Student can't present more than school days");
+						break;
+					}
 					rows += att.SaveAttendance(att);
 				}
 				catch (Exception ex)
 				{
 					Response.GenericError(ex.Message.ToString());
+					break;
 				}
 			}
 			if (rows > 0)
@@ -151,12 +159,6 @@ namespace NPSBS
 			}
 		}
 
-
-
-		void tb_GotFocus(object sender, EventArgs e)
-		{
-			this.AcceptButton = btnSubmitAttendance;
-		}
 
 		private void dgvAttendance_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
 		{
@@ -175,6 +177,14 @@ namespace NPSBS
 				}
 			}
 
+		}
+
+		private void dgvAttendance_CellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			if (e.ColumnIndex == 4)
+			{
+				dgvAttendance.BeginEdit(true);
+			}
 		}
 	}
 }

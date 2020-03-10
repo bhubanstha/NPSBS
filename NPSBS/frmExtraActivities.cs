@@ -16,6 +16,7 @@ namespace NPSBS
 		{
 			InitializeComponent();
 			AutoComplete();
+			GridViewEditDelete.FixView(dgvExtraActivity);
 		}
 
 		private void AutoComplete()
@@ -83,12 +84,14 @@ namespace NPSBS
 				if (tbl.Rows.Count > 0)
 				{
 					dgvExtraActivity.DataSource = tbl;
-					dgvExtraActivity.Columns[0].Visible = false;
-					dgvExtraActivity.Columns[1].Visible = false;
-					dgvExtraActivity.Columns[2].Width = 130;
-					dgvExtraActivity.Columns[3].Width = 300;
+					dgvExtraActivity.Columns[0].Visible = false; //Student Id
+					dgvExtraActivity.Columns[3].Visible = false; //School Days
+					dgvExtraActivity.Columns[1].Width = 100;
+					dgvExtraActivity.Columns[1].ReadOnly = true;
+					dgvExtraActivity.Columns[2].Width = 200;
 					dgvExtraActivity.Columns[2].ReadOnly = true;
-					dgvExtraActivity.Columns[3].ReadOnly = true;
+
+					txtSchoolDays.Text = tbl.Rows[0][3].ToString();
 					dgvExtraActivity.EditMode = DataGridViewEditMode.EditOnEnter;
 				}
 				else
@@ -130,7 +133,7 @@ namespace NPSBS
 					ExtraActivities ea = new ExtraActivities()
 					{
 						StudentId = Convert.ToInt32(row.Cells[0].Value.ToString()),
-						RollNumber = row.Cells[2].Value.ToString(),
+						RollNumber = row.Cells[1].Value.ToString(),
 						ActivitiesYear = year.ToString(),
 						ExaminationId = examinationId,
 						SchoolDays = schoolDays,

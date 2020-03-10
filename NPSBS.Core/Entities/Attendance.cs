@@ -81,6 +81,7 @@ namespace NPSBS.Core
             var cmd = DataAccess.CreateCommand();
             cmd.CommandText = "usp_SaveAttendance";
             cmd.Parameters.AddWithValue("@StudentId", attendance.StudentId);
+            cmd.Parameters.AddWithValue("@RollNumber", attendance.RollNumber);
             cmd.Parameters.AddWithValue("@ClassId", attendance.ClassId);
             cmd.Parameters.AddWithValue("@ExaminationId", attendance.ExaminationId);
             cmd.Parameters.AddWithValue("@ExamHeldYear", attendance.ExamYear);

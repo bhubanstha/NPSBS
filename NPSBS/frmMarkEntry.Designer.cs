@@ -162,10 +162,11 @@
             this.dgvMarkEntry.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMarkEntry.Location = new System.Drawing.Point(0, 0);
             this.dgvMarkEntry.Name = "dgvMarkEntry";
-            this.dgvMarkEntry.ReadOnly = true;
             this.dgvMarkEntry.Size = new System.Drawing.Size(941, 295);
             this.dgvMarkEntry.TabIndex = 0;
+            this.dgvMarkEntry.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarkEntry_CellClick);
             this.dgvMarkEntry.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvMarkEntry_CellValidating);
+            this.dgvMarkEntry.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvMarkEntry_EditingControlShowing);
             // 
             // kryptonGroupBox1
             // 

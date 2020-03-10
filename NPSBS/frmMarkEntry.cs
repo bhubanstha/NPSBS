@@ -15,6 +15,7 @@ namespace NPSBS
 		{
 			InitializeComponent();
 			AutoComplete();
+			GridViewEditDelete.FixView(dgvMarkEntry);
 		}
 
 
@@ -109,10 +110,16 @@ namespace NPSBS
 				//dgvMarkEntry.Columns[0].Visible = false;
 				//dgvMarkEntry.Columns[1].Visible = false;
 				//dgvMarkEntry.Columns[2].Visible = false;
-				dgvMarkEntry.Columns[3].MinimumWidth = 130;
-				dgvMarkEntry.Columns[4].MinimumWidth = 300;
-				dgvMarkEntry.Columns[3].ReadOnly = true;
-				dgvMarkEntry.Columns[4].ReadOnly = true;
+				dgvMarkEntry.Columns[0].Width = 100;
+				dgvMarkEntry.Columns[0].ReadOnly = true;
+				dgvMarkEntry.Columns[1].Width = 200;
+				dgvMarkEntry.Columns[1].ReadOnly = true;
+				//dgvMarkEntry.Columns[3].MinimumWidth = 130;
+				//dgvMarkEntry.Columns[4].MinimumWidth = 300;
+				dgvMarkEntry.Columns[4].Visible = false;//full marks theory
+				dgvMarkEntry.Columns[5].Visible = false;//full marks practical
+				dgvMarkEntry.Columns[6].Visible = false;//student id
+				
 				dgvMarkEntry.EditMode = DataGridViewEditMode.EditOnEnter;
 			}
 		}
@@ -191,14 +198,14 @@ namespace NPSBS
 
 			foreach (DataGridViewRow row in dgvMarkEntry.Rows)
 			{
-				decimal theory = string.IsNullOrEmpty(row.Cells[5].Value.ToString()) ? 0 : Convert.ToDecimal(row.Cells[5].Value.ToString());
-				decimal practical = string.IsNullOrEmpty(row.Cells[6].Value.ToString()) ? 0 : Convert.ToDecimal(row.Cells[6].Value.ToString());
-				int studentId = Convert.ToInt32(row.Cells[0].Value.ToString());
-				string rollNumber = row.Cells[3].Value.ToString();
+				decimal theory = string.IsNullOrEmpty(row.Cells[2].Value.ToString()) ? 0 : Convert.ToDecimal(row.Cells[2].Value.ToString());
+				decimal practical = string.IsNullOrEmpty(row.Cells[3].Value.ToString()) ? 0 : Convert.ToDecimal(row.Cells[3].Value.ToString());
+				int studentId = Convert.ToInt32(row.Cells[6].Value.ToString());
+				string rollNumber = row.Cells[0].Value.ToString();
 
 				if (IsMarksOk(theory,practical,subjectId, rollNumber))
 				{
-					rows = exam.SubmitMark(classId, examinationId, subjectId, studentId, theory, practical, examYear);
+					rows = exam.SubmitMark(classId, examinationId, subjectId, studentId, theory, practical, examYear, rollNumber);
 				}
 			}
 
@@ -237,9 +244,9 @@ namespace NPSBS
 
 		private void dgvMarkEntry_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
 		{
-			if(e.ColumnIndex==5) //validate theory
+			if(e.ColumnIndex==2) //validate theory
 			{
-				decimal fullMark = Convert.ToDecimal(dgvMarkEntry.Rows[e.RowIndex].Cells[1].Value.ToString());
+				decimal fullMark = Convert.ToDecimal(dgvMarkEntry.Rows[e.RowIndex].Cells[4].Value.ToString());
 				decimal obtained = 0;
 				decimal.TryParse(e.FormattedValue.ToString(), out obtained);
 				if(obtained>fullMark)
@@ -252,9 +259,9 @@ namespace NPSBS
 					dgvMarkEntry.Rows[e.RowIndex].ErrorText = "";
 				}
 			}
-			else if(e.ColumnIndex==6) //validate pratical
+			else if(e.ColumnIndex==3) //validate pratical
 			{
-				decimal fullMark = Convert.ToDecimal(dgvMarkEntry.Rows[e.RowIndex].Cells[2].Value.ToString());
+				decimal fullMark = Convert.ToDecimal(dgvMarkEntry.Rows[e.RowIndex].Cells[5].Value.ToString());
 				decimal obtained = 0;
 				decimal.TryParse(e.FormattedValue.ToString(), out obtained);
 				if (obtained > fullMark)
@@ -266,6 +273,29 @@ namespace NPSBS
 				{
 					dgvMarkEntry.Rows[e.RowIndex].ErrorText = "";
 				}
+			}
+		}
+
+		private void dgvMarkEntry_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+		{
+			e.Control.KeyPress -= CellControl_Editing;
+			int colIndex = ((KryptonDataGridView)sender).CurrentCell.ColumnIndex;
+			if (colIndex == 2 || colIndex == 3)
+			{
+				e.Control.KeyPress += CellControl_Editing;
+			}
+		}
+
+		private void CellControl_Editing(object sender, KeyPressEventArgs e)
+		{
+			ValidateInput.DecimalType((DataGridViewTextBoxEditingControl)sender, e);
+		}
+
+		private void dgvMarkEntry_CellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			if (e.ColumnIndex == 2 || e.ColumnIndex == 3)
+			{
+				dgvMarkEntry.BeginEdit(true);
 			}
 		}
 	}

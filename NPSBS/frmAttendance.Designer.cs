@@ -35,10 +35,8 @@
             this.epClass = new System.Windows.Forms.ErrorProvider(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.kryptonPanel4 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.btnSubmitAttendance = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.dgvAttendance = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.txtSchoolDays = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -51,6 +49,8 @@
             this.txtYear = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel5 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonPanel4 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.dgvAttendance = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.epYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epExam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epClass)).BeginInit();
@@ -60,11 +60,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
             this.kryptonGroupBox2.Panel.SuspendLayout();
             this.kryptonGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).BeginInit();
-            this.kryptonPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
             this.kryptonPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
@@ -74,6 +71,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ddlClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlExam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).BeginInit();
+            this.kryptonPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).BeginInit();
             this.SuspendLayout();
             // 
             // epYear
@@ -107,32 +107,22 @@
             // 
             // kryptonGroupBox2.Panel
             // 
-            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonPanel4);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonPanel3);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonPanel2);
             this.kryptonGroupBox2.Size = new System.Drawing.Size(847, 350);
             this.kryptonGroupBox2.TabIndex = 3;
             this.kryptonGroupBox2.Values.Heading = "Attendance";
             // 
-            // kryptonPanel4
-            // 
-            this.kryptonPanel4.Controls.Add(this.btnSubmitAttendance);
-            this.kryptonPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanel4.Location = new System.Drawing.Point(0, 287);
-            this.kryptonPanel4.Name = "kryptonPanel4";
-            this.kryptonPanel4.Size = new System.Drawing.Size(843, 39);
-            this.kryptonPanel4.TabIndex = 2;
-            // 
             // btnSubmitAttendance
             // 
             this.btnSubmitAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSubmitAttendance.Location = new System.Drawing.Point(642, 8);
+            this.btnSubmitAttendance.Location = new System.Drawing.Point(643, 6);
             this.btnSubmitAttendance.Name = "btnSubmitAttendance";
-            this.btnSubmitAttendance.Size = new System.Drawing.Size(190, 28);
+            this.btnSubmitAttendance.Size = new System.Drawing.Size(190, 35);
             this.btnSubmitAttendance.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSubmitAttendance.StateCommon.Border.Rounding = 8;
+            this.btnSubmitAttendance.StateCommon.Border.Rounding = 15;
             this.btnSubmitAttendance.TabIndex = 4;
             this.btnSubmitAttendance.Values.Text = "Submit Attendance";
             this.btnSubmitAttendance.Click += new System.EventHandler(this.btnSubmitAttendance_Click);
@@ -140,23 +130,12 @@
             // kryptonPanel3
             // 
             this.kryptonPanel3.Controls.Add(this.dgvAttendance);
+            this.kryptonPanel3.Controls.Add(this.kryptonPanel4);
             this.kryptonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel3.Location = new System.Drawing.Point(0, 46);
             this.kryptonPanel3.Name = "kryptonPanel3";
             this.kryptonPanel3.Size = new System.Drawing.Size(843, 280);
             this.kryptonPanel3.TabIndex = 1;
-            // 
-            // dgvAttendance
-            // 
-            this.dgvAttendance.AllowUserToAddRows = false;
-            this.dgvAttendance.AllowUserToDeleteRows = false;
-            this.dgvAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAttendance.Location = new System.Drawing.Point(0, 0);
-            this.dgvAttendance.Name = "dgvAttendance";
-            this.dgvAttendance.ReadOnly = true;
-            this.dgvAttendance.Size = new System.Drawing.Size(843, 280);
-            this.dgvAttendance.TabIndex = 0;
-            this.dgvAttendance.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvAttendance_CellValidating);
             // 
             // kryptonPanel2
             // 
@@ -293,6 +272,26 @@
             this.kryptonPanel5.Size = new System.Drawing.Size(847, 45);
             this.kryptonPanel5.TabIndex = 0;
             // 
+            // kryptonPanel4
+            // 
+            this.kryptonPanel4.Controls.Add(this.btnSubmitAttendance);
+            this.kryptonPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.kryptonPanel4.Location = new System.Drawing.Point(0, 234);
+            this.kryptonPanel4.Name = "kryptonPanel4";
+            this.kryptonPanel4.Size = new System.Drawing.Size(843, 46);
+            this.kryptonPanel4.TabIndex = 1;
+            // 
+            // dgvAttendance
+            // 
+            this.dgvAttendance.AllowUserToAddRows = false;
+            this.dgvAttendance.AllowUserToDeleteRows = false;
+            this.dgvAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvAttendance.Location = new System.Drawing.Point(0, 0);
+            this.dgvAttendance.Name = "dgvAttendance";
+            this.dgvAttendance.Size = new System.Drawing.Size(843, 234);
+            this.dgvAttendance.TabIndex = 2;
+            // 
             // frmAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -314,11 +313,8 @@
             this.kryptonGroupBox2.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
             this.kryptonGroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).EndInit();
-            this.kryptonPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).EndInit();
             this.kryptonPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
             this.kryptonPanel2.PerformLayout();
@@ -330,6 +326,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ddlClass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlExam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).EndInit();
+            this.kryptonPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAttendance)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,13 +347,13 @@
 		private ComponentFactory.Krypton.Toolkit.KryptonComboBox ddlClass;
 		private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
 		private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
-		private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel4;
 		private ComponentFactory.Krypton.Toolkit.KryptonButton btnSubmitAttendance;
 		private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel3;
-		private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgvAttendance;
 		private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
 		private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSchoolDays;
 		private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel5;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgvAttendance;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel4;
     }
 }

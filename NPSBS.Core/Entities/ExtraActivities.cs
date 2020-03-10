@@ -28,6 +28,7 @@
 			cmd.Parameters.AddWithValue("@Conduct", activities.Conduct);
 			cmd.Parameters.AddWithValue("@PersonalCleanliness", activities.PersonalClenliness);
 			cmd.Parameters.AddWithValue("@Cooperation", activities.Cooperation);
+			cmd.Parameters.AddWithValue("@RollNumber", activities.RollNumber);
 			int i = DataAccess.ExecuteNonQuery(cmd);
 			return i;
 		}

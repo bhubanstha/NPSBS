@@ -97,7 +97,7 @@ namespace NPSBS.Core
             return tbl;
         }
 
-        public int SubmitMark(int classId, int examinationId, int subjectId, int studentId, decimal theoryMark, decimal practicalMark, int examyear)
+        public int SubmitMark(int classId, int examinationId, int subjectId, int studentId, decimal theoryMark, decimal practicalMark, int examyear, string rollNumber)
         {
             var cmd = DataAccess.CreateCommand();
             cmd.CommandText = "usp_StudentExam_Save";
@@ -108,6 +108,7 @@ namespace NPSBS.Core
             cmd.Parameters.AddWithValue("@Theory", theoryMark);
             cmd.Parameters.AddWithValue("@Practical", practicalMark);
             cmd.Parameters.AddWithValue("@ExamYear", examyear);
+            cmd.Parameters.AddWithValue("@RollNumber", rollNumber);
             rowsAffected += DataAccess.ExecuteNonQuery(cmd);
             return rowsAffected;
         }

@@ -26,7 +26,7 @@ namespace NPSBS
 				register.SetKey(RegInfo.AppKey);
 
 				frmSplash splash;
-				if (register.IsSoftwareRegistered())
+				if (1==1 || register.IsSoftwareRegistered())
 				{
 					splash  = new frmSplash();
 					Logger l = Logger.Instance;

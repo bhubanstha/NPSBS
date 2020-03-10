@@ -150,7 +150,6 @@
             this.dgvExtraActivity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvExtraActivity.Location = new System.Drawing.Point(0, 0);
             this.dgvExtraActivity.Name = "dgvExtraActivity";
-            this.dgvExtraActivity.ReadOnly = true;
             this.dgvExtraActivity.Size = new System.Drawing.Size(832, 337);
             this.dgvExtraActivity.TabIndex = 0;
             this.dgvExtraActivity.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvExtraActivity_CellValidating);
