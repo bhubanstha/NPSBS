@@ -107,7 +107,8 @@
       <HintPath>..\packages\NLog.4.5.7\lib\net40-client\NLog.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="Registration">
+    <Reference Include="Registration, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Registration\Registration.dll</HintPath>
     </Reference>
     <Reference Include="System" />

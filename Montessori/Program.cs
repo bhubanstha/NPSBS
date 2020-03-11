@@ -21,10 +21,10 @@ namespace Montessori
 				Application.EnableVisualStyles();
 				Application.SetCompatibleTextRenderingDefault(false);
 				Register register = Register.Instance;
-				register.SetSoftwareName(RegInfo.AppName);
-				register.SetKey(RegInfo.AppKey);
+				//register.SetSoftwareName(RegInfo.AppName);
+				//register.SetKey(RegInfo.AppKey);
 				frmSplash splash;
-				if (register.IsSoftwareRegistered())
+				if (register.IsSoftwareRegistered(RegInfo.AppName, RegInfo.AppKey))
 				{
 					splash  = new frmSplash();
 					Application.Run(splash);					

@@ -22,11 +22,11 @@ namespace NPSBS
 				Application.EnableVisualStyles();
 				Application.SetCompatibleTextRenderingDefault(false);
 				Register register = Register.Instance;
-				register.SetSoftwareName(RegInfo.AppName);
-				register.SetKey(RegInfo.AppKey);
+				//register.SetSoftwareName(RegInfo.AppName);
+				//register.SetKey(RegInfo.AppKey);
 
 				frmSplash splash;
-				if (1==1 || register.IsSoftwareRegistered())
+				if ( register.IsSoftwareRegistered(RegInfo.AppKey, RegInfo.AppKey))
 				{
 					splash  = new frmSplash();
 					Logger l = Logger.Instance;
