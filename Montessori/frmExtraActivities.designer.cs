@@ -35,8 +35,10 @@
             this.epExam = new System.Windows.Forms.ErrorProvider(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.btnSubmitMarks = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel4 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.dgvExtraActivities = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.kryptonPanel5 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.btnSubmitMarks = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.txtSchoolDays = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -49,8 +51,6 @@
             this.ddlExam = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kryptonPanel5 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.dgvExtraActivities = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.epClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epExam)).BeginInit();
@@ -62,6 +62,9 @@
             this.kryptonGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).BeginInit();
             this.kryptonPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExtraActivities)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).BeginInit();
+            this.kryptonPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
             this.kryptonPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
@@ -71,9 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ddlClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlExam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).BeginInit();
-            this.kryptonPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExtraActivities)).BeginInit();
             this.SuspendLayout();
             // 
             // epClass
@@ -112,20 +112,6 @@
             this.kryptonGroupBox2.Size = new System.Drawing.Size(873, 420);
             this.kryptonGroupBox2.TabIndex = 2;
             // 
-            // btnSubmitMarks
-            // 
-            this.btnSubmitMarks.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnSubmitMarks.Location = new System.Drawing.Point(727, 3);
-            this.btnSubmitMarks.Name = "btnSubmitMarks";
-            this.btnSubmitMarks.Size = new System.Drawing.Size(139, 35);
-            this.btnSubmitMarks.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSubmitMarks.StateCommon.Border.Rounding = 15;
-            this.btnSubmitMarks.TabIndex = 4;
-            this.btnSubmitMarks.Values.Text = "Submit Marks";
-            this.btnSubmitMarks.Click += new System.EventHandler(this.btnSubmitMarks_Click);
-            // 
             // kryptonPanel4
             // 
             this.kryptonPanel4.Controls.Add(this.dgvExtraActivities);
@@ -136,6 +122,40 @@
             this.kryptonPanel4.Size = new System.Drawing.Size(869, 352);
             this.kryptonPanel4.TabIndex = 1;
             this.kryptonPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonPanel4_Paint);
+            // 
+            // dgvExtraActivities
+            // 
+            this.dgvExtraActivities.AllowUserToAddRows = false;
+            this.dgvExtraActivities.AllowUserToDeleteRows = false;
+            this.dgvExtraActivities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExtraActivities.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvExtraActivities.Location = new System.Drawing.Point(0, 0);
+            this.dgvExtraActivities.Name = "dgvExtraActivities";
+            this.dgvExtraActivities.Size = new System.Drawing.Size(869, 312);
+            this.dgvExtraActivities.TabIndex = 5;
+            // 
+            // kryptonPanel5
+            // 
+            this.kryptonPanel5.Controls.Add(this.btnSubmitMarks);
+            this.kryptonPanel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.kryptonPanel5.Location = new System.Drawing.Point(0, 312);
+            this.kryptonPanel5.Name = "kryptonPanel5";
+            this.kryptonPanel5.Size = new System.Drawing.Size(869, 40);
+            this.kryptonPanel5.TabIndex = 0;
+            // 
+            // btnSubmitMarks
+            // 
+            this.btnSubmitMarks.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnSubmitMarks.Location = new System.Drawing.Point(727, 3);
+            this.btnSubmitMarks.Name = "btnSubmitMarks";
+            this.btnSubmitMarks.Size = new System.Drawing.Size(139, 35);
+            this.btnSubmitMarks.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSubmitMarks.StateCommon.Border.Rounding = 15;
+            this.btnSubmitMarks.TabIndex = 6;
+            this.btnSubmitMarks.Values.Text = "Submit Marks";
+            this.btnSubmitMarks.Click += new System.EventHandler(this.btnSubmitMarks_Click);
             // 
             // kryptonPanel3
             // 
@@ -207,7 +227,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.ddlClass.StateCommon.ComboBox.Border.Rounding = 15;
-            this.ddlClass.TabIndex = 5;
+            this.ddlClass.TabIndex = 2;
             // 
             // kryptonLabel2
             // 
@@ -240,7 +260,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtYear.StateCommon.Border.Rounding = 15;
-            this.txtYear.TabIndex = 2;
+            this.txtYear.TabIndex = 0;
             this.txtYear.Leave += new System.EventHandler(this.txtYear_Leave);
             // 
             // ddlExam
@@ -272,26 +292,6 @@
             this.kryptonPanel2.Size = new System.Drawing.Size(873, 50);
             this.kryptonPanel2.TabIndex = 0;
             // 
-            // kryptonPanel5
-            // 
-            this.kryptonPanel5.Controls.Add(this.btnSubmitMarks);
-            this.kryptonPanel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanel5.Location = new System.Drawing.Point(0, 312);
-            this.kryptonPanel5.Name = "kryptonPanel5";
-            this.kryptonPanel5.Size = new System.Drawing.Size(869, 40);
-            this.kryptonPanel5.TabIndex = 0;
-            // 
-            // dgvExtraActivities
-            // 
-            this.dgvExtraActivities.AllowUserToAddRows = false;
-            this.dgvExtraActivities.AllowUserToDeleteRows = false;
-            this.dgvExtraActivities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvExtraActivities.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvExtraActivities.Location = new System.Drawing.Point(0, 0);
-            this.dgvExtraActivities.Name = "dgvExtraActivities";
-            this.dgvExtraActivities.Size = new System.Drawing.Size(869, 312);
-            this.dgvExtraActivities.TabIndex = 1;
-            // 
             // frmExtraActivities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -315,6 +315,9 @@
             this.kryptonGroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).EndInit();
             this.kryptonPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExtraActivities)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).EndInit();
+            this.kryptonPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).EndInit();
             this.kryptonPanel3.ResumeLayout(false);
             this.kryptonPanel3.PerformLayout();
@@ -326,9 +329,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ddlClass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlExam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).EndInit();
-            this.kryptonPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExtraActivities)).EndInit();
             this.ResumeLayout(false);
 
         }

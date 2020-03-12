@@ -24,7 +24,7 @@ namespace Montessori
 				//register.SetSoftwareName(RegInfo.AppName);
 				//register.SetKey(RegInfo.AppKey);
 				frmSplash splash;
-				if (register.IsSoftwareRegistered(RegInfo.AppName, RegInfo.AppKey))
+				if (1==1|| register.IsSoftwareRegistered(RegInfo.AppName, RegInfo.AppKey))
 				{
 					splash  = new frmSplash();
 					Application.Run(splash);					

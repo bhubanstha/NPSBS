@@ -165,7 +165,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnTransfer.StateCommon.Border.Rounding = 15;
-            this.btnTransfer.TabIndex = 8;
+            this.btnTransfer.TabIndex = 5;
             this.btnTransfer.Values.Text = "Transfer";
             this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
             // 
@@ -178,7 +178,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtNewAcademicYear.StateCommon.Border.Rounding = 15;
-            this.txtNewAcademicYear.TabIndex = 7;
+            this.txtNewAcademicYear.TabIndex = 4;
             this.txtNewAcademicYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNewAcademicYear_KeyPress);
             // 
             // ddlNewClass
@@ -192,7 +192,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.ddlNewClass.StateCommon.ComboBox.Border.Rounding = 15;
-            this.ddlNewClass.TabIndex = 6;
+            this.ddlNewClass.TabIndex = 3;
             // 
             // kryptonLabel4
             // 
@@ -238,7 +238,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnGetStudent.StateCommon.Border.Rounding = 15;
-            this.btnGetStudent.TabIndex = 3;
+            this.btnGetStudent.TabIndex = 2;
             this.btnGetStudent.Values.Text = "Get Student";
             this.btnGetStudent.Click += new System.EventHandler(this.btnGetStudent_Click);
             // 
@@ -251,7 +251,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtOldAcademicYear.StateCommon.Border.Rounding = 15;
-            this.txtOldAcademicYear.TabIndex = 2;
+            this.txtOldAcademicYear.TabIndex = 1;
             this.txtOldAcademicYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOldAcademicYear_KeyPress);
             // 
             // ddlOldClass
@@ -265,7 +265,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.ddlOldClass.StateCommon.ComboBox.Border.Rounding = 15;
-            this.ddlOldClass.TabIndex = 1;
+            this.ddlOldClass.TabIndex = 0;
             // 
             // kryptonLabel1
             // 

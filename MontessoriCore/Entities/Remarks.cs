@@ -19,9 +19,9 @@ namespace Montessori.Core
 			var cmd = DataAccess.CreateCommand();
 			cmd.CommandText = "usp_Remarks_Save";
 			cmd.Parameters.AddWithValue("@StudentId", remark.StudentId);
-			cmd.Parameters.AddWithValue("@ExaminationId", remark.ExaminationId);
-			cmd.Parameters.AddWithValue("@ExamHeldYear", remark.ExamHeldYear);
 			cmd.Parameters.AddWithValue("@ClassId", remark.ClassId);
+			cmd.Parameters.AddWithValue("@ExaminationId", remark.ExaminationId);
+			cmd.Parameters.AddWithValue("@ExamHeldYear", remark.ExamHeldYear);			
 			cmd.Parameters.AddWithValue("@Remark", remark.Remark);
 			cmd.Parameters.AddWithValue("@RemarkId", remark.RemarksId);
 			int i = DataAccess.ExecuteNonQuery(cmd);

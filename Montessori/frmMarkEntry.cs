@@ -107,6 +107,7 @@ namespace Montessori
                 DataTable tbl = new Student().GetStudentByAcademicYearClass(ddlClass.SelectedValue.ToString(), txtYear.Text, ddlSubject.SelectedValue.ToString(), ddlExam.SelectedValue.ToString());
                 dgvMarkEntry.DataSource = tbl;
                 dgvMarkEntry.Columns[0].Visible = false;
+                dgvMarkEntry.Columns[1].Width = 100;
                 dgvMarkEntry.Columns[1].ReadOnly = true;
                 dgvMarkEntry.Columns[2].Width = 350;
                 dgvMarkEntry.Columns[2].ReadOnly = true;
@@ -159,7 +160,7 @@ namespace Montessori
             }
             catch (Exception ex)
             {
-                Response.GenericError(ex.Message.ToString());
+                Response.GenericError(ex.Message.ToString());                
             }
         }
         

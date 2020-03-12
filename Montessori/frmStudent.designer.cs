@@ -135,6 +135,7 @@
             this.kryptonLinkLabel1.Name = "kryptonLinkLabel1";
             this.kryptonLinkLabel1.Size = new System.Drawing.Size(80, 20);
             this.kryptonLinkLabel1.TabIndex = 15;
+            this.kryptonLinkLabel1.TabStop = false;
             this.kryptonLinkLabel1.Values.Text = "View Sample";
             this.kryptonLinkLabel1.LinkClicked += new System.EventHandler(this.kryptonLinkLabel1_LinkClicked);
             // 
@@ -148,6 +149,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton1.StateCommon.Border.Rounding = 15;
             this.kryptonButton1.TabIndex = 14;
+            this.kryptonButton1.TabStop = false;
             this.kryptonButton1.Values.Text = "Browse...";
             this.kryptonButton1.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
@@ -169,7 +171,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnAction.StateCommon.Border.Rounding = 15;
-            this.btnAction.TabIndex = 13;
+            this.btnAction.TabIndex = 6;
             this.btnAction.Values.Text = "Save";
             this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
             // 
@@ -196,7 +198,7 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
             this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonGroupBox2);
             this.kryptonGroupBox1.Size = new System.Drawing.Size(1117, 150);
-            this.kryptonGroupBox1.TabIndex = 8;
+            this.kryptonGroupBox1.TabIndex = 0;
             this.kryptonGroupBox1.Values.Heading = "Manual Student Entry";
             // 
             // lblStudentID
@@ -213,7 +215,7 @@
             this.rdoFemale.Location = new System.Drawing.Point(516, 51);
             this.rdoFemale.Name = "rdoFemale";
             this.rdoFemale.Size = new System.Drawing.Size(61, 20);
-            this.rdoFemale.TabIndex = 11;
+            this.rdoFemale.TabIndex = 5;
             this.rdoFemale.Values.Text = "Female";
             // 
             // rdoMale
@@ -221,7 +223,7 @@
             this.rdoMale.Location = new System.Drawing.Point(461, 51);
             this.rdoMale.Name = "rdoMale";
             this.rdoMale.Size = new System.Drawing.Size(49, 20);
-            this.rdoMale.TabIndex = 10;
+            this.rdoMale.TabIndex = 4;
             this.rdoMale.Values.Text = "Male";
             // 
             // ddlClass
@@ -235,7 +237,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.ddlClass.StateCommon.ComboBox.Border.Rounding = 15;
-            this.ddlClass.TabIndex = 9;
+            this.ddlClass.TabIndex = 1;
             // 
             // kryptonLabel5
             // 
@@ -255,7 +257,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtRollNumber.StateCommon.Border.Rounding = 15;
-            this.txtRollNumber.TabIndex = 7;
+            this.txtRollNumber.TabIndex = 3;
             this.txtRollNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRollNumber_KeyPress);
             // 
             // kryptonLabel4
@@ -276,7 +278,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtAcademicYear.StateCommon.Border.Rounding = 15;
-            this.txtAcademicYear.TabIndex = 5;
+            this.txtAcademicYear.TabIndex = 2;
             this.txtAcademicYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcademicYear_KeyPress);
             // 
             // kryptonLabel3
@@ -306,7 +308,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtStudentName.StateCommon.Border.Rounding = 15;
-            this.txtStudentName.TabIndex = 1;
+            this.txtStudentName.TabIndex = 0;
             this.txtStudentName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStudentName_KeyPress);
             // 
             // kryptonLabel1
@@ -331,7 +333,7 @@
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonButton1);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel6);
             this.kryptonGroupBox2.Size = new System.Drawing.Size(169, 126);
-            this.kryptonGroupBox2.TabIndex = 9;
+            this.kryptonGroupBox2.TabIndex = 1;
             this.kryptonGroupBox2.Values.Heading = "Excel Importer";
             // 
             // txtStudentNameSearch
@@ -343,7 +345,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtStudentNameSearch.StateCommon.Border.Rounding = 15;
-            this.txtStudentNameSearch.TabIndex = 3;
+            this.txtStudentNameSearch.TabIndex = 7;
             this.txtStudentNameSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStudentNameSearch_KeyPress);
             // 
             // kryptonLabel8
@@ -391,7 +393,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.ddlClassSearch.StateCommon.ComboBox.Border.Rounding = 15;
-            this.ddlClassSearch.TabIndex = 15;
+            this.ddlClassSearch.TabIndex = 8;
             // 
             // kryptonGroupBox3
             // 
@@ -422,7 +424,7 @@
             this.gvStudents.Name = "gvStudents";
             this.gvStudents.ReadOnly = true;
             this.gvStudents.Size = new System.Drawing.Size(1113, 262);
-            this.gvStudents.TabIndex = 19;
+            this.gvStudents.TabIndex = 3;
             this.gvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvStudents_CellClick);
             // 
             // btnSearch
@@ -434,7 +436,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnSearch.StateCommon.Border.Rounding = 15;
-            this.btnSearch.TabIndex = 18;
+            this.btnSearch.TabIndex = 10;
             this.btnSearch.Values.Text = "Search";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -447,7 +449,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtAcademicYearSearch.StateCommon.Border.Rounding = 15;
-            this.txtAcademicYearSearch.TabIndex = 17;
+            this.txtAcademicYearSearch.TabIndex = 9;
             this.txtAcademicYearSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcademicYearSearch_KeyPress);
             // 
             // kryptonLabel9
