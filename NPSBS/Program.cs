@@ -22,14 +22,12 @@ namespace NPSBS
 				Application.EnableVisualStyles();
 				Application.SetCompatibleTextRenderingDefault(false);
 				Register register = Register.Instance;
-				//register.SetSoftwareName(RegInfo.AppName);
-				//register.SetKey(RegInfo.AppKey);
-
+				Application.ThreadException += Application_ThreadException;
 				frmSplash splash;
-				if ( register.IsSoftwareRegistered(RegInfo.AppKey, RegInfo.AppKey))
+				if ( register.IsSoftwareRegistered(RegInfo.AppKey, RegInfo.AppKey, false))
 				{
 					splash  = new frmSplash();
-					Logger l = Logger.Instance;
+					//Logger l = Logger.Instance;
 					Application.Run(splash);
 					mutext.ReleaseMutex();
 				}
@@ -38,8 +36,15 @@ namespace NPSBS
 					DialogResult result = MessageBox.Show("Software registration is expired. Do you want to enter new registration key.", "Registration", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
 					if (result == DialogResult.Yes)
 					{
-						register.ShowRegistrationForm(RegInfo.AppName, RegInfo.AppKey, Properties.Resources.AppIcon);
-						Application.Restart();
+						bool isKeyApplied = register.ShowRegistrationForm(RegInfo.AppName, RegInfo.AppKey, Properties.Resources.AppIcon);
+						if (isKeyApplied)
+						{
+							Application.Restart();
+						}
+						else
+						{
+							Application.Exit();
+						}
 					}
 					else
 					{
@@ -54,7 +59,13 @@ namespace NPSBS
 				 NativeMethods.WM_SHOWME,
 				 IntPtr.Zero,
 				 IntPtr.Zero);
+				MessageBox.Show("Another instance of application is already running. If you don't see application icon in taskbar, please close application from task manager.", RegInfo.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
+
+		}
+
+		private static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
+		{
 
 		}
 	}
