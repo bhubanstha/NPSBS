@@ -23,7 +23,7 @@ namespace Utility
             {
                 
                 string info = JsonConvert.SerializeObject(schoolInfo, Formatting.Indented);
-                string htmlMessage = String.Format("<div style='background-color: #ccc; padding: 5px;'> <p style='text-align: center;'><b>{0}</b> is installed in new computer.<br /><br /><strong>Registration Key Used</strong>:</p> <p style='text-align: center;'>{1}</p> <p style='text-align: center;'>&nbsp;</p> <p style='text-align: center;'><strong>School Information</strong>:</p> <p style='text-align: center;'>{2}</p> </div>", AppName, regKey, info);
+                string htmlMessage = String.Format("<div style='background-color: #ccc; padding: 5px;'> <p style='text-align: center;'><b>{0}</b> is installed in new computer.<br />{3}<br/><br/><br /><strong>Registration Key Used</strong>:</p> <p style='text-align: center;'>{1}</p> <p style='text-align: center;'>&nbsp;</p> <p style='text-align: center;'><strong>School Information</strong>:</p> <p style='text-align: center;'>{2}</p> </div>", AppName, regKey, info, new SystemInfo().ToString());
                 var mimeMessage = new MimeMessage();
 
                 mimeMessage.From.Add(new MailboxAddress("NPSBS Result Processing", smtpEmail));

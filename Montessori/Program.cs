@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using Montessori.Core;
 using Registration;
 
-
 namespace Montessori
 {
 	static class Program
