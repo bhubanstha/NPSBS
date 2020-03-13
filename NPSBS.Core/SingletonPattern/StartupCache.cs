@@ -15,7 +15,6 @@ namespace NPSBS.Core
 	{
 		private static StartupCache instance = null;
 		private static readonly object padlock = new object();
-		public static string SettingJson = string.Empty;
 		public static DataTable Class { get; private set; }
 		public static DataTable Exam { get; private set; }
 		public static List<GradingSystem> GradingSystem { get; private set; }
@@ -39,7 +38,6 @@ namespace NPSBS.Core
 						Class = GetClasses();
 						Exam = GetExam();
 						GradingSystem = GetGrading();
-						SettingJson = GetUrlData();
 						School = new School();
 						instance = new StartupCache();
 
@@ -171,63 +169,7 @@ namespace NPSBS.Core
 			return gradingSystem;
 		}
 
-		private static string GetUrlData()
-		{
-			return new WebTextReader().ReadData();
-		}
-
-		[Obsolete]
-		private static List<string> GetMac()
-		{
-			List<string> ma = new List<string>();
-			string setupFile = AppDomain.CurrentDomain.BaseDirectory.ToString() + "Setting.xml";
-			XmlDocument xmlSetup = new XmlDocument();
-			try
-			{
-				xmlSetup.Load(setupFile);
-				for (int i = 0; i < xmlSetup["ComputerIdentification"].ChildNodes.Count; i++)
-				{
-					string add = xmlSetup["ComputerIdentification"].ChildNodes[i].InnerText;
-					ma.Add(add);
-				}
-			}
-			catch (Exception ex)
-			{
-			}
-			return ma;
-		}
-
-		[Obsolete]
-		private static string GetMyFirstMacAddress()
-		{
-			string firstMac = string.Empty;
-			try
-			{
-				var macAddr = (
-													 from nic in NetworkInterface.GetAllNetworkInterfaces()
-														 //where nic.OperationalStatus == OperationalStatus.Up
-													 select nic.GetPhysicalAddress().ToString()
-											 ).First();
-
-				firstMac = macAddr;
-				firstMac = Encrypt.Hash(firstMac);
-				EventLog.WriteEntry("Result Processing", "Your Registered Mac Address is : " + Environment.NewLine + firstMac);
-
-			}
-			catch
-			{
-
-			}
-			return firstMac;
-		}
-
-		[Obsolete]
-		public static bool IsAuthenticateComputer(List<string> macs, string thisMac)
-		{
-			bool authenticate = true;
-			authenticate = macs.Contains(thisMac) ? true : false;
-			return authenticate;
-		}
+		
 	}
 
 	public class RegInfo
