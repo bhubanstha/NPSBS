@@ -52,7 +52,7 @@ namespace NPSBS
 		}
 		void DataLoadComplete(object sender, RunWorkerCompletedEventArgs e)
 		{
-			lblComponents.Text = string.Format("{0}{1}{2}", "Data Loaded", Environment.NewLine, "Downloading content from online.");
+			lblComponents.Text = string.Format("{0}{1}{2}", "Data Loading", Environment.NewLine, "Downloading content from online.");
 			bWorker2.DoWork += new DoWorkEventHandler(GetOnlineContent);
 			bWorker2.RunWorkerCompleted += new RunWorkerCompletedEventHandler(OnlineContentLoadComplete);
 			bWorker2.RunWorkerAsync(lblComponents);
