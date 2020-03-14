@@ -165,10 +165,14 @@ namespace Montessori
 				if (ctrl is MdiClient)
 				{
 
-					Image image = ImageUtility.GetImage(Constant.MainBackground);
+					Image image = null;
 					if (File.Exists(Constant.MBackground))
 					{
 						image = new Bitmap(ImageUtility.GetImage(Constant.MBackground));
+					}
+					else
+					{
+						image = ImageUtility.GetImage(Constant.MainBackground);
 					}
 					ctrl.BackgroundImage = image;
 					ctrl.BackgroundImageLayout = ImageLayout.Zoom;

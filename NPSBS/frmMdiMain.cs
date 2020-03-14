@@ -379,10 +379,14 @@ namespace NPSBS
 				if (ctrl is MdiClient)
 				{
 
-					Image image = ImageUtility.GetImage(Constant.MainBackground);
+					Image image = null;
 					if (File.Exists(Constant.NBackground))
 					{
 						image = new Bitmap(ImageUtility.GetImage(Constant.NBackground));
+					}
+					else
+					{
+						image = ImageUtility.GetImage(Constant.MainBackground);
 					}
 					ctrl.BackgroundImage = image;
 					ctrl.BackgroundImageLayout = ImageLayout.Stretch;

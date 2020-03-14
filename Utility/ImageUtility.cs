@@ -59,13 +59,17 @@ namespace Utility
 
 		public static Image GetImage(string path)
 		{
-			if (File.Exists(path))
+			try
 			{
-				using (Bitmap bitmap = new Bitmap(path))
+				if (File.Exists(path))
 				{
-					return new Bitmap(bitmap);
-				}
+					using (Bitmap bitmap = new Bitmap(path))
+					{
+						return new Bitmap(bitmap);
+					}
+				}				
 			}
+			catch{}
 			return new Bitmap(Properties.Resources.no_image);
 		}
 
