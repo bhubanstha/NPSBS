@@ -254,9 +254,6 @@
     <Content Include="NLogo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="NPSBSEnrypter.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="ResultProcessing64.ico" />
     <None Include="App.config" />
     <None Include="Fonts\ARBLI__.TTF">

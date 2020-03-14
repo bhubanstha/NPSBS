@@ -81,7 +81,10 @@
             // 
             this.rbnTransferStudent.ImageLarge = global::Montessori.Properties.Resources.transfer;
             this.rbnTransferStudent.ImageSmall = global::Montessori.Properties.Resources.transfer;
+            this.rbnTransferStudent.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
             this.rbnTransferStudent.TextLine1 = "Transfer";
+            this.rbnTransferStudent.ToolTipBody = "Promote existing student into new academic year class.\r\nCtrl+T";
+            this.rbnTransferStudent.ToolTipTitle = "Transfer Student";
             this.rbnTransferStudent.Click += new System.EventHandler(this.rbnTransferStudent_Click);
             // 
             // kryptonRibbonGroup3
@@ -102,21 +105,30 @@
             // 
             this.rbnMarkEntry.ImageLarge = global::Montessori.Properties.Resources.markentry;
             this.rbnMarkEntry.ImageSmall = global::Montessori.Properties.Resources.markentry;
+            this.rbnMarkEntry.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
             this.rbnMarkEntry.TextLine1 = "Mark Entry";
+            this.rbnMarkEntry.ToolTipBody = "Manage student\'s marks obtained in exam\r\nCtrl+M\r\n";
+            this.rbnMarkEntry.ToolTipTitle = "Mark Entry";
             this.rbnMarkEntry.Click += new System.EventHandler(this.rbnMarkEntry_Click);
             // 
             // rbnExtraActivity
             // 
             this.rbnExtraActivity.ImageLarge = global::Montessori.Properties.Resources.extraactivity;
             this.rbnExtraActivity.ImageSmall = global::Montessori.Properties.Resources.extraactivity;
+            this.rbnExtraActivity.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.rbnExtraActivity.TextLine1 = "Extra Activities";
+            this.rbnExtraActivity.ToolTipBody = "Manage student extra activities\r\nCtrl+X";
+            this.rbnExtraActivity.ToolTipTitle = "Extra Activities";
             this.rbnExtraActivity.Click += new System.EventHandler(this.rbnExtraActivity_Click);
             // 
             // rbnAttendance
             // 
             this.rbnAttendance.ImageLarge = global::Montessori.Properties.Resources.remark;
             this.rbnAttendance.ImageSmall = global::Montessori.Properties.Resources.remark;
+            this.rbnAttendance.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
             this.rbnAttendance.TextLine1 = "Remarks";
+            this.rbnAttendance.ToolTipBody = "Manage student exam remarks\r\nCtrl+R";
+            this.rbnAttendance.ToolTipTitle = "Remarks";
             this.rbnAttendance.Click += new System.EventHandler(this.rbnAttendance_Click);
             // 
             // kryptonRibbonGroup4
@@ -135,7 +147,10 @@
             // 
             this.rbnResult.ImageLarge = global::Montessori.Properties.Resources.result;
             this.rbnResult.ImageSmall = global::Montessori.Properties.Resources.result;
+            this.rbnResult.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.rbnResult.TextLine1 = "Result";
+            this.rbnResult.ToolTipBody = "Generate Pdf Report of Student Examination Result\r\nCtrl+P";
+            this.rbnResult.ToolTipTitle = "Print Result";
             this.rbnResult.Click += new System.EventHandler(this.rbnResult_Click);
             // 
             // kryptonRibbonTab3
@@ -163,7 +178,11 @@
             // 
             this.rbnBackup.ImageLarge = global::Montessori.Properties.Resources.database;
             this.rbnBackup.ImageSmall = global::Montessori.Properties.Resources.database;
+            this.rbnBackup.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
             this.rbnBackup.TextLine1 = "Backup Data";
+            this.rbnBackup.ToolTipBody = "Take backup of data upto now so that it can be \r\nrestored at any point if somethi" +
+    "ng goes wrong\r\nCtrl+B\r\n";
+            this.rbnBackup.ToolTipTitle = "Backup Data";
             this.rbnBackup.Click += new System.EventHandler(this.rbnBackup_Click);
             // 
             // rbnRegister
@@ -171,13 +190,18 @@
             this.rbnRegister.ImageLarge = global::Montessori.Properties.Resources.registration;
             this.rbnRegister.ImageSmall = global::Montessori.Properties.Resources.registration;
             this.rbnRegister.TextLine1 = "Register";
+            this.rbnRegister.ToolTipBody = "Register application to fully use\r\n";
+            this.rbnRegister.ToolTipTitle = "Registration";
             this.rbnRegister.Click += new System.EventHandler(this.rbnRegister_Click);
             // 
             // rbnAbout
             // 
             this.rbnAbout.ImageLarge = global::Montessori.Properties.Resources.info;
             this.rbnAbout.ImageSmall = global::Montessori.Properties.Resources.info;
+            this.rbnAbout.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.rbnAbout.TextLine1 = "About";
+            this.rbnAbout.ToolTipBody = "Know software license agreement\r\nF1";
+            this.rbnAbout.ToolTipTitle = "About";
             this.rbnAbout.Click += new System.EventHandler(this.rbnAbout_Click);
             // 
             // btnAppMenuInfo
@@ -214,7 +238,10 @@
             // 
             this.rbnAddStudent.ImageLarge = global::Montessori.Properties.Resources.student;
             this.rbnAddStudent.ImageSmall = global::Montessori.Properties.Resources.student;
+            this.rbnAddStudent.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.rbnAddStudent.TextLine1 = "Add";
+            this.rbnAddStudent.ToolTipBody = "Enroll new student in a academic year class.\r\nCtrl+A\r\n";
+            this.rbnAddStudent.ToolTipTitle = "Add Student";
             this.rbnAddStudent.Click += new System.EventHandler(this.rbnAddStudent_Click);
             // 
             // ribbonMenu
@@ -230,6 +257,7 @@
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
+            this.ribbonMenu.SelectedContext = null;
             this.ribbonMenu.SelectedTab = this.kryptonRibbonTab1;
             this.ribbonMenu.Size = new System.Drawing.Size(1073, 115);
             this.ribbonMenu.TabIndex = 5;
@@ -259,8 +287,10 @@
             // 
             this.btnSchoolSetup.ImageLarge = global::Montessori.Properties.Resources.school;
             this.btnSchoolSetup.ImageSmall = global::Montessori.Properties.Resources.school;
+            this.btnSchoolSetup.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
             this.btnSchoolSetup.TextLine1 = "School Setup";
-            this.btnSchoolSetup.ToolTipBody = "Setup school general information";
+            this.btnSchoolSetup.ToolTipBody = "Setup school general information\r\nCtrl+Shift+S";
             this.btnSchoolSetup.ToolTipTitle = "School Setup";
             this.btnSchoolSetup.Click += new System.EventHandler(this.btnSchoolSetup_Click);
             // 
@@ -268,14 +298,20 @@
             // 
             this.btnSubject.ImageLarge = global::Montessori.Properties.Resources.book;
             this.btnSubject.ImageSmall = global::Montessori.Properties.Resources.book;
+            this.btnSubject.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.btnSubject.TextLine1 = "Subject";
+            this.btnSubject.ToolTipBody = "Manage class wise subjects\r\nCtrl+S";
+            this.btnSubject.ToolTipTitle = "Subject Management";
             this.btnSubject.Click += new System.EventHandler(this.btnSubject_Click);
             // 
             // kryptonRibbonGroupButton3
             // 
             this.kryptonRibbonGroupButton3.ImageLarge = global::Montessori.Properties.Resources.exam;
             this.kryptonRibbonGroupButton3.ImageSmall = global::Montessori.Properties.Resources.exam;
+            this.kryptonRibbonGroupButton3.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.kryptonRibbonGroupButton3.TextLine1 = "Exam";
+            this.kryptonRibbonGroupButton3.ToolTipBody = "Academic year wise examination management\r\nCtrl+E";
+            this.kryptonRibbonGroupButton3.ToolTipTitle = "Exam Management";
             this.kryptonRibbonGroupButton3.Click += new System.EventHandler(this.kryptonRibbonGroupButton3_Click);
             // 
             // ribbonGTheme

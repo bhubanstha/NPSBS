@@ -24,32 +24,31 @@ namespace NPSBS
 				Register register = Register.Instance;
 				Application.ThreadException += Application_ThreadException;
 				frmSplash splash;
-				if ( register.IsSoftwareRegistered(RegInfo.AppKey, RegInfo.AppKey, false))
+				if (register.IsKeyApplied(RegInfo.AppName, RegInfo.AppKey))
 				{
-					splash  = new frmSplash();
-					//Logger l = Logger.Instance;
-					Application.Run(splash);
-					mutext.ReleaseMutex();
-				}
-				else
-				{
-					DialogResult result = MessageBox.Show("Software registration is expired. Do you want to enter new registration key.", "Registration", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-					if (result == DialogResult.Yes)
+					if (register.IsSoftwareRegistered(RegInfo.AppName, RegInfo.AppKey, false))
 					{
-						bool isKeyApplied = register.ShowRegistrationForm(RegInfo.AppName, RegInfo.AppKey, Properties.Resources.AppIcon);
-						if (isKeyApplied)
+						splash = new frmSplash();
+						//Logger l = Logger.Instance;
+						Application.Run(splash);
+						mutext.ReleaseMutex();
+					}
+					else
+					{
+						DialogResult result = MessageBox.Show("Software registration is expired. Do you want to enter new registration key.", "Registration", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+						if (result == DialogResult.Yes)
 						{
-							Application.Restart();
+							ShowRegistratinForm(ref register);
 						}
 						else
 						{
 							Application.Exit();
 						}
 					}
-					else
-					{
-						Application.Exit();
-					}
+				}
+				else
+				{
+					ShowRegistratinForm(ref register);
 				}
 			}
 			else
@@ -67,6 +66,19 @@ namespace NPSBS
 		private static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
 		{
 
+		}
+
+		private static void ShowRegistratinForm(ref Register register)
+		{
+			bool isKeyApplied = register.ShowRegistrationForm(RegInfo.AppName, RegInfo.AppKey, Properties.Resources.AppIcon);
+			if (isKeyApplied)
+			{
+				Application.Restart();
+			}
+			else
+			{
+				Application.Exit();
+			}
 		}
 	}
 }

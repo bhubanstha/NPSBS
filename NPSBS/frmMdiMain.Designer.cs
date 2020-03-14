@@ -120,6 +120,7 @@
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
+            this.ribbonMenu.SelectedContext = null;
             this.ribbonMenu.SelectedTab = this.kryptonRibbonTab1;
             this.ribbonMenu.Size = new System.Drawing.Size(1153, 115);
             this.ribbonMenu.TabIndex = 1;
@@ -149,8 +150,12 @@
             // 
             this.btnSchoolSetup.ImageLarge = global::NPSBS.Properties.Resources.school;
             this.btnSchoolSetup.ImageSmall = global::NPSBS.Properties.Resources.school;
+            this.btnSchoolSetup.KeyTip = "CTRL+SHIFT+S";
+            this.btnSchoolSetup.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.btnSchoolSetup.Tag = "Ctrl+Shift+S";
             this.btnSchoolSetup.TextLine1 = "School Setup";
-            this.btnSchoolSetup.ToolTipBody = "Setup school general information";
+            this.btnSchoolSetup.ToolTipBody = "Setup school general information\r\nCtrl+Shift+S";
             this.btnSchoolSetup.ToolTipTitle = "School Setup";
             this.btnSchoolSetup.Click += new System.EventHandler(this.btnSchoolSetup_Click);
             // 
@@ -158,14 +163,20 @@
             // 
             this.btnSubject.ImageLarge = global::NPSBS.Properties.Resources.book;
             this.btnSubject.ImageSmall = global::NPSBS.Properties.Resources.book;
+            this.btnSubject.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.btnSubject.TextLine1 = "Subject";
+            this.btnSubject.ToolTipBody = "Manage class wise subjects\r\nCtrl+S";
+            this.btnSubject.ToolTipTitle = "Subject Management";
             this.btnSubject.Click += new System.EventHandler(this.btnSubject_Click);
             // 
             // kryptonRibbonGroupButton3
             // 
             this.kryptonRibbonGroupButton3.ImageLarge = global::NPSBS.Properties.Resources.exam;
             this.kryptonRibbonGroupButton3.ImageSmall = global::NPSBS.Properties.Resources.exam;
+            this.kryptonRibbonGroupButton3.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.kryptonRibbonGroupButton3.TextLine1 = "Exam";
+            this.kryptonRibbonGroupButton3.ToolTipBody = "Academic year wise examination management\r\nCtrl+E";
+            this.kryptonRibbonGroupButton3.ToolTipTitle = "Exam Management";
             this.kryptonRibbonGroupButton3.Click += new System.EventHandler(this.kryptonRibbonGroupButton3_Click);
             // 
             // ribbonGTheme
@@ -274,14 +285,20 @@
             // 
             this.rbnAddStudent.ImageLarge = global::NPSBS.Properties.Resources.student;
             this.rbnAddStudent.ImageSmall = global::NPSBS.Properties.Resources.student;
+            this.rbnAddStudent.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.rbnAddStudent.TextLine1 = "Add";
+            this.rbnAddStudent.ToolTipBody = "Enroll new student in a academic year class.\r\nCtrl+A";
+            this.rbnAddStudent.ToolTipTitle = "Add Student";
             this.rbnAddStudent.Click += new System.EventHandler(this.kryptonRibbonGroupButton1_Click);
             // 
             // rbnTransferStudent
             // 
             this.rbnTransferStudent.ImageLarge = global::NPSBS.Properties.Resources.transfer;
             this.rbnTransferStudent.ImageSmall = global::NPSBS.Properties.Resources.transfer;
+            this.rbnTransferStudent.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
             this.rbnTransferStudent.TextLine1 = "Transfer";
+            this.rbnTransferStudent.ToolTipBody = "Promote existing student into new academic year class.\r\nCtrl+T";
+            this.rbnTransferStudent.ToolTipTitle = "Transfer Student";
             this.rbnTransferStudent.Click += new System.EventHandler(this.rbnTransferStudent_Click);
             // 
             // kryptonRibbonTab3
@@ -309,21 +326,31 @@
             // 
             this.rbnMarkEntry.ImageLarge = global::NPSBS.Properties.Resources.markentry;
             this.rbnMarkEntry.ImageSmall = global::NPSBS.Properties.Resources.markentry;
+            this.rbnMarkEntry.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
             this.rbnMarkEntry.TextLine1 = "Mark Entry";
+            this.rbnMarkEntry.ToolTipBody = "Manage student\'s marks obtained in exam\r\nCtrl+M";
+            this.rbnMarkEntry.ToolTipTitle = "Mark Entry";
             this.rbnMarkEntry.Click += new System.EventHandler(this.rbnMarkEntry_Click);
             // 
             // rbnExtraActivity
             // 
             this.rbnExtraActivity.ImageLarge = global::NPSBS.Properties.Resources.extraactivity;
             this.rbnExtraActivity.ImageSmall = global::NPSBS.Properties.Resources.extraactivity;
+            this.rbnExtraActivity.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.rbnExtraActivity.TextLine1 = "Extra Activities";
+            this.rbnExtraActivity.ToolTipBody = "Manage student extra activities\r\nCtrl+X";
+            this.rbnExtraActivity.ToolTipTitle = "Extra Activities";
             this.rbnExtraActivity.Click += new System.EventHandler(this.rbnExtraActivity_Click);
             // 
             // rbnAttendance
             // 
             this.rbnAttendance.ImageLarge = global::NPSBS.Properties.Resources.attendance;
             this.rbnAttendance.ImageSmall = global::NPSBS.Properties.Resources.attendance;
+            this.rbnAttendance.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.A)));
             this.rbnAttendance.TextLine1 = "Attendance";
+            this.rbnAttendance.ToolTipBody = "Manage student attendance in academic year exam wise\r\nCtrl+Shift+A";
+            this.rbnAttendance.ToolTipTitle = "Attendance";
             this.rbnAttendance.Click += new System.EventHandler(this.rbnAttendance_Click);
             // 
             // kryptonRibbonGroup4
@@ -343,14 +370,20 @@
             // 
             this.rbnResult.ImageLarge = global::NPSBS.Properties.Resources.result;
             this.rbnResult.ImageSmall = global::NPSBS.Properties.Resources.result;
+            this.rbnResult.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.rbnResult.TextLine1 = "Result";
+            this.rbnResult.ToolTipBody = "Generate Pdf Report of Student Examination Result\r\nCtrl+P";
+            this.rbnResult.ToolTipTitle = "Print Result";
             this.rbnResult.Click += new System.EventHandler(this.rbnResult_Click);
             // 
             // rbnLedger
             // 
             this.rbnLedger.ImageLarge = global::NPSBS.Properties.Resources.ledger;
             this.rbnLedger.ImageSmall = global::NPSBS.Properties.Resources.ledger;
+            this.rbnLedger.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
             this.rbnLedger.TextLine1 = "Ledger";
+            this.rbnLedger.ToolTipBody = "Generate Students Exam marks ledger in pdf file\r\nCtrl+L";
+            this.rbnLedger.ToolTipTitle = "Ledger";
             this.rbnLedger.Click += new System.EventHandler(this.rbnLedger_Click);
             // 
             // kryptonRibbonTab4
@@ -377,7 +410,11 @@
             // 
             this.rbnBackup.ImageLarge = global::NPSBS.Properties.Resources.database;
             this.rbnBackup.ImageSmall = global::NPSBS.Properties.Resources.database;
+            this.rbnBackup.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
             this.rbnBackup.TextLine1 = "Backup Data";
+            this.rbnBackup.ToolTipBody = "Take backup of data upto now so that it can be \r\nrestored at any point if somethi" +
+    "ng goes wrong\r\nCtrl+B";
+            this.rbnBackup.ToolTipTitle = "Backup Data";
             this.rbnBackup.Click += new System.EventHandler(this.rbnBackup_Click);
             // 
             // rbnRegister
@@ -385,13 +422,18 @@
             this.rbnRegister.ImageLarge = global::NPSBS.Properties.Resources.registration;
             this.rbnRegister.ImageSmall = global::NPSBS.Properties.Resources.registration;
             this.rbnRegister.TextLine1 = "Register";
+            this.rbnRegister.ToolTipBody = "Register application to fully use";
+            this.rbnRegister.ToolTipTitle = "Registration";
             this.rbnRegister.Click += new System.EventHandler(this.rbnRegister_Click);
             // 
             // rbnAbout
             // 
             this.rbnAbout.ImageLarge = global::NPSBS.Properties.Resources.info;
             this.rbnAbout.ImageSmall = global::NPSBS.Properties.Resources.info;
+            this.rbnAbout.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.rbnAbout.TextLine1 = "About";
+            this.rbnAbout.ToolTipBody = "Know software license agreement\r\nF1";
+            this.rbnAbout.ToolTipTitle = "About";
             this.rbnAbout.Click += new System.EventHandler(this.rbnAbout_Click);
             // 
             // btnAppMenuInfo
@@ -430,7 +472,7 @@
             this.IsMdiContainer = true;
             this.Name = "frmMdiMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "School Software";
+            this.Text = "National Peace SBS Result Processing";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMdiMain_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonMenu)).EndInit();
