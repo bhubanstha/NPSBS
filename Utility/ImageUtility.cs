@@ -57,7 +57,7 @@ namespace Utility
 			}
 		}
 
-		public static Image GetImage(string path)
+		public static Bitmap GetImage(string path)
 		{
 			try
 			{
@@ -221,6 +221,21 @@ namespace Utility
 			}
 			
 		}
+
+		public static bool IsTransparent(ref Bitmap bitmap)
+		{
+			for (int y = 0; y < bitmap.Height; ++y)
+			{
+				for (int x = 0; x < bitmap.Width; ++x)
+				{
+					if (bitmap.GetPixel(x, y).A != 255)
+					{
+						return true;
+					}
+				}
+			}
+			return false;
+		}
 	}
 
 	public static class ImageExtension
@@ -253,7 +268,7 @@ namespace Utility
 			}
 		}
 
-		public static Image ResizeImage(this Image image, int width, int height)
+		public static Bitmap ResizeImage(this Bitmap image, int width, int height)
 		{
 			var destRect = new Rectangle(0, 0, width, height);
 			var destImage = new Bitmap(width, height);
@@ -277,5 +292,6 @@ namespace Utility
 
 			return destImage;
 		}
+		
 	}
 }

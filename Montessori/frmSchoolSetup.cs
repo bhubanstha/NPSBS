@@ -68,13 +68,13 @@ namespace Montessori
 		private void btnLoadLogo_Click(object sender, EventArgs e)
 		{
 			OpenFileDialog ofd = new OpenFileDialog();
-			ofd.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+			//ofd.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
 			ofd.RestoreDirectory = true;
-			ofd.Filter = "Image File|*.jpg;*.jpeg;*.png";
+			ofd.Filter = "Image File|*.png";
 			if (ofd.ShowDialog() == DialogResult.OK)
 			{
 				imageFile = ofd.FileName;
-				Image image = ImageUtility.GetImage(ofd.FileName).ResizeImage(200, 200);
+				Bitmap image = ImageUtility.GetImage(ofd.FileName).ResizeImage(200, 200);
 				picLogo.Image = image;
 				isNewLogoSelected = true;
 			}
