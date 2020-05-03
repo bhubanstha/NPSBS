@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using iTextSharp.text;
 using NPSBS.Core;
+using Utility;
 
 namespace NPSBS
 {
@@ -16,6 +17,7 @@ namespace NPSBS
         DataSet ds = null;
         int classId = 0;
         int ExaminationId = 0;
+        private string fileName = "";
         public frmResult()
         {
             InitializeComponent();
@@ -50,6 +52,7 @@ namespace NPSBS
                 sf.Filter = "PDF (*.pdf)|*.pdf";
                 if (sf.ShowDialog() == DialogResult.OK && sf.FileName.Length > 0)
                 {
+                    fileName = sf.FileName;
                     this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
                     BackgroundWorker bWorker = new BackgroundWorker();
                     bWorker.DoWork += new DoWorkEventHandler(bWorker_DoWork);
@@ -64,7 +67,12 @@ namespace NPSBS
         {
             string fileName = (string)e.Result;
             this.Cursor = Cursors.Default;
-            if(fileName != null) AppRunner.Run(fileName);
+            
+            if (fileName != null)
+            {
+                AppRunner.Run(fileName);
+                PrintHelper.PrintResult(fileName);
+            }
 
         }
 

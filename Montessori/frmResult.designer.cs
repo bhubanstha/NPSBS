@@ -118,7 +118,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.ddlClass.StateCommon.ComboBox.Border.Rounding = 15;
-            this.ddlClass.TabIndex = 5;
+            this.ddlClass.TabIndex = 2;
             // 
             // kryptonLabel2
             // 
@@ -153,7 +153,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.ddlExamination.StateCommon.ComboBox.Border.Rounding = 15;
-            this.ddlExamination.TabIndex = 2;
+            this.ddlExamination.TabIndex = 1;
             this.ddlExamination.SelectedIndexChanged += new System.EventHandler(this.ddlExamination_SelectedIndexChanged);
             // 
             // txtAcademicYear
@@ -165,7 +165,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtAcademicYear.StateCommon.Border.Rounding = 15;
-            this.txtAcademicYear.TabIndex = 1;
+            this.txtAcademicYear.TabIndex = 0;
             this.txtAcademicYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcademicYear_KeyPress);
             this.txtAcademicYear.Leave += new System.EventHandler(this.txtAcademicYear_Leave);
             // 
@@ -184,7 +184,7 @@
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.Size = new System.Drawing.Size(828, 50);
-            this.kryptonPanel2.TabIndex = 0;
+            this.kryptonPanel2.TabIndex = 80;
             // 
             // frmResult
             // 

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using NPSBS.Core;
+using Utility;
 
 namespace NPSBS
 {
@@ -49,7 +50,12 @@ namespace NPSBS
 		void bWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
 			this.Cursor = System.Windows.Forms.Cursors.Default;
-			if (fileName != null) AppRunner.Run(fileName);
+
+			if (fileName != null)
+			{
+				AppRunner.Run(fileName);
+				PrintHelper.PrintResult(fileName);
+			}
 
 		}
 

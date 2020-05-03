@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Diagnostics;
+using Utility;
 
 namespace NPSBS.Core
 {
@@ -12,13 +13,17 @@ namespace NPSBS.Core
         {
             try
             {
-                var process = new Process();
-                process.StartInfo = new ProcessStartInfo()
+                bool isOpenAppEnabled = Connection.GetSettingValue<bool>(SettingEnum.OpenApp);
+                if (isOpenAppEnabled)
                 {
-                    UseShellExecute = true,
-                    FileName = fileName
-                };
-                process.Start();
+                    var process = new Process();
+                    process.StartInfo = new ProcessStartInfo()
+                    {
+                        UseShellExecute = true,
+                        FileName = fileName
+                    };
+                    process.Start();
+                }
             }
             catch (Exception ex)
             {

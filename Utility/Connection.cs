@@ -60,6 +60,35 @@ namespace Utility
             }
         }
 
+        public static T GetSettingValue<T>(SettingEnum settingKey)
+        {
+            Dictionary<string, string> settingInformation = new Dictionary<string, string>();
+            object settingValue=false;
+            string setupFile = AppDomain.CurrentDomain.BaseDirectory.ToString() + "Setting.xml";
+            XmlDocument xmlSetup = new XmlDocument();
+            try
+            {
+                xmlSetup.Load(setupFile);
+                for (int i = 0; i < xmlSetup["ComputerIdentification"].ChildNodes[1].ChildNodes.Count; i++)
+                {
+                    string name = xmlSetup["ComputerIdentification"].ChildNodes[1].ChildNodes[i].Attributes[0].Value;
+                    string value = xmlSetup["ComputerIdentification"].ChildNodes[1].ChildNodes[i].Attributes[1].Value;
+                    settingInformation.Add(name, value);
+                }
+                settingValue = settingInformation[settingKey.ToString()];
+            }
+            catch
+            {
+            }
+            finally
+            {
+                xmlSetup = null;
+                GC.Collect();
+            }
+
+            
+            return (T)Convert.ChangeType(settingValue, typeof(T));
+        }
         private static string ConnectionString(string dbName)
         {
             var connectionString = "";

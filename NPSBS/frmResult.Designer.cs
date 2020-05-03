@@ -88,7 +88,7 @@
             this.kryptonPanel3.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel3.Name = "kryptonPanel3";
             this.kryptonPanel3.Size = new System.Drawing.Size(834, 45);
-            this.kryptonPanel3.TabIndex = 4;
+            this.kryptonPanel3.TabIndex = 80;
             // 
             // kryptonGroupBox1
             // 
@@ -127,7 +127,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton1.StateCommon.Border.Rounding = 15;
-            this.kryptonButton1.TabIndex = 6;
+            this.kryptonButton1.TabIndex = 4;
             this.kryptonButton1.Values.Text = "Publish";
             this.kryptonButton1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -142,7 +142,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.ddlClass.StateCommon.ComboBox.Border.Rounding = 15;
-            this.ddlClass.TabIndex = 5;
+            this.ddlClass.TabIndex = 3;
             // 
             // kryptonLabel3
             // 
@@ -164,7 +164,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.ddlExamination.StateCommon.ComboBox.Border.Rounding = 15;
-            this.ddlExamination.TabIndex = 3;
+            this.ddlExamination.TabIndex = 1;
             this.ddlExamination.SelectedIndexChanged += new System.EventHandler(this.ddlExamination_SelectedIndexChanged);
             // 
             // kryptonLabel2
@@ -185,7 +185,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtAcademicYear.StateCommon.Border.Rounding = 15;
-            this.txtAcademicYear.TabIndex = 1;
+            this.txtAcademicYear.TabIndex = 0;
             this.txtAcademicYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcademicYear_KeyPress);
             this.txtAcademicYear.Leave += new System.EventHandler(this.txtAcademicYear_Leave);
             // 

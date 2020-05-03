@@ -109,7 +109,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.ddlClass.StateCommon.ComboBox.Border.Rounding = 15;
-            this.ddlClass.TabIndex = 6;
+            this.ddlClass.TabIndex = 2;
             // 
             // kryptonLabel3
             // 
@@ -129,7 +129,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnGetLedger.StateCommon.Border.Rounding = 15;
-            this.btnGetLedger.TabIndex = 4;
+            this.btnGetLedger.TabIndex = 3;
             this.btnGetLedger.Values.Text = "Get Ledger";
             this.btnGetLedger.Click += new System.EventHandler(this.btnLedger_Click);
             // 
@@ -144,7 +144,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.ddlExamination.StateCommon.ComboBox.Border.Rounding = 15;
-            this.ddlExamination.TabIndex = 3;
+            this.ddlExamination.TabIndex = 1;
             // 
             // kryptonLabel2
             // 
@@ -164,7 +164,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtAcademicYear.StateCommon.Border.Rounding = 15;
-            this.txtAcademicYear.TabIndex = 1;
+            this.txtAcademicYear.TabIndex = 0;
             this.txtAcademicYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcademicYear_KeyPress);
             this.txtAcademicYear.Leave += new System.EventHandler(this.txtAcademicYear_Leave);
             // 
@@ -183,7 +183,7 @@
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.Size = new System.Drawing.Size(825, 45);
-            this.kryptonPanel2.TabIndex = 0;
+            this.kryptonPanel2.TabIndex = 80;
             // 
             // frmLedger
             // 

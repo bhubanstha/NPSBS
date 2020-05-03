@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using iTextSharp.text;
 using Montessori.Core;
+using Utility;
 
 namespace Montessori
 {
@@ -76,7 +77,11 @@ namespace Montessori
 		{
 			string fileName = (string)e.Result;
 			this.Cursor = System.Windows.Forms.Cursors.Default;
-			if (fileName != null) AppRunner.Run(fileName);
+			if (fileName != null)
+			{
+				AppRunner.Run(fileName);
+				PrintHelper.PrintResult(fileName);
+			}
 
 		}
 
