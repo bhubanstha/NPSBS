@@ -67,7 +67,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(330, 306);
+            this.label4.Location = new System.Drawing.Point(553, 401);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(269, 20);
             this.label4.TabIndex = 6;
@@ -77,10 +77,11 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Montessori.Properties.Resources.man_chart;
-            this.pictureBox1.Location = new System.Drawing.Point(357, 43);
+            this.pictureBox1.BackgroundImage = global::Montessori.Properties.Resources.student1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(286, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(242, 262);
+            this.pictureBox1.Size = new System.Drawing.Size(536, 384);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -89,7 +90,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(12, 117);
+            this.label3.Location = new System.Drawing.Point(-6, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(348, 84);
             this.label3.TabIndex = 7;
@@ -138,7 +139,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::Montessori.Properties.Resources.splashBack;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(611, 350);
+            this.ClientSize = new System.Drawing.Size(834, 430);
             this.ControlBox = false;
             this.Controls.Add(this.circularProgressBar1);
             this.Controls.Add(this.label3);

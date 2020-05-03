@@ -372,6 +372,7 @@
     <Content Include="MLogo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\student1.png" />
     <None Include="Resources\remark.png" />
     <None Include="Resources\transfer.png" />
     <None Include="Resources\student.png" />

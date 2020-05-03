@@ -251,6 +251,7 @@
     <Content Include="NLogo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\student1.png" />
     <Content Include="ResultProcessing64.ico" />
     <None Include="App.config" />
     <None Include="Fonts\ARBLI__.TTF">
