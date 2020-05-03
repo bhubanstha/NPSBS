@@ -82,7 +82,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.cs" />
-    <Compile Include="CacheManager.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="Constant.cs" />
     <Compile Include="EmailSender.cs" />

@@ -96,10 +96,7 @@ namespace Montessori
 
 		void GetOnlineContent(object sender, DoWorkEventArgs e)
 		{
-			if (InternetConnection.InInternetConnected())
-			{
-				StartupCache.About = OnlineContent.GetAbout(StartupCache.School.ShortName, StartupCache.School.SchoolName, StartupCache.School.Address);
-			}
+			StartupCache.About = OnlineContent.GetAbout(StartupCache.School.ShortName, StartupCache.School.SchoolName, StartupCache.School.Address);
 		}
 
 		void OnlineContentLoadComplete(object sender, RunWorkerCompletedEventArgs e)
