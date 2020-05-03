@@ -54,7 +54,18 @@ namespace Montessori.Core
             DataGridViewCellStyle dgvCellStyle = new DataGridViewCellStyle();
             dgvCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             gridView.AlternatingRowsDefaultCellStyle = dgvCellStyle;
+            gridView.EditMode = DataGridViewEditMode.EditOnEnter;
+            gridView.CellEnter += GridView_CellEnter;
 
+        }
+
+        private static void GridView_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = (DataGridView)sender;
+            if (dataGridView.CurrentRow.Cells[e.ColumnIndex].ReadOnly)
+            {
+                SendKeys.Send("{tab}");
+            }
         }
     }
 }

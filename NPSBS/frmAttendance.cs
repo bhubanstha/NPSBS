@@ -111,12 +111,16 @@ namespace NPSBS
 				if (tbl.Rows.Count > 0)
 				{
 					dgvAttendance.DataSource = tbl;
+					tbl.Columns[4].ReadOnly = false;
 					dgvAttendance.Columns[0].Visible = false; //student id column
 					dgvAttendance.Columns[1].Visible = false; //school days column
 					dgvAttendance.Columns[2].Width = 100;
 					dgvAttendance.Columns[2].ReadOnly = true;
 					dgvAttendance.Columns[3].Width = 350;
 					dgvAttendance.Columns[3].ReadOnly = true;
+					dgvAttendance.Columns[4].ReadOnly = false;
+					
+
 					txtSchoolDays.Text = tbl.Rows[0][1].ToString();
 				}
 				dgvAttendance.EditMode = DataGridViewEditMode.EditOnEnter;

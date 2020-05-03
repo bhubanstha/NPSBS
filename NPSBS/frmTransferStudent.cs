@@ -87,8 +87,18 @@ namespace NPSBS
             string classId = ddlOldClass.SelectedValue.ToString();
             string academicYear = txtOldAcademicYear.Text.Trim();
             var tbl = s.GetTransferStudent(classId, academicYear);
-            gvTranferStudent.DataSource  = tbl;
+                gvTranferStudent.DataSource  = tbl;
+
+            gvTranferStudent.Columns[0].ReadOnly = true;
+            gvTranferStudent.Columns[1].ReadOnly = true;
+            gvTranferStudent.Columns[2].ReadOnly = true;
+            gvTranferStudent.Columns[3].ReadOnly = true;
+            gvTranferStudent.Columns[4].ReadOnly = true;
+            gvTranferStudent.Columns[5].ReadOnly = true;
+            gvTranferStudent.Columns[6].ReadOnly = true;
             gvTranferStudent.Columns[0].Visible = false;
+            gvTranferStudent.EditMode = DataGridViewEditMode.EditOnEnter;   
+                
             btnTransfer.Enabled = true;
 
         }

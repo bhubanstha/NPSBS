@@ -114,7 +114,6 @@
             this.gvTranferStudent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvTranferStudent.Location = new System.Drawing.Point(0, 0);
             this.gvTranferStudent.Name = "gvTranferStudent";
-            this.gvTranferStudent.ReadOnly = true;
             this.gvTranferStudent.Size = new System.Drawing.Size(945, 279);
             this.gvTranferStudent.TabIndex = 0;
             // 
