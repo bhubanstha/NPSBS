@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Utility
+﻿namespace Utility
 {
-    public enum SettingEnum
+    public enum SettingEnum:byte
     {
         Print,
         OpenApp
+    }
+
+    public enum App:byte
+    {
+        NPSBS,
+        KidsZone
     }
 }

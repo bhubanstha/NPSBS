@@ -409,6 +409,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Education.Core\Education.Common.csproj">
+      <Project>{5ddee97f-92e3-41a5-8d8c-8ac568a93594}</Project>
+      <Name>Education.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NPSBS.Core\NPSBS.Core.csproj">
       <Project>{D7C84CA3-8B28-4F44-8285-A14089DB1540}</Project>
       <Name>NPSBS.Core</Name>

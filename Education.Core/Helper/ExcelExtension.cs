@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using OfficeOpenXml;
 using System.Data;
 
-namespace NPSBS.Core
+namespace Education.Common
 {
     public static class ExcelExtension
     {

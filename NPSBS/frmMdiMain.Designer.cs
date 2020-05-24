@@ -105,7 +105,6 @@
             this.tabManager.TitleBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tabManager.TitleForeColor = System.Drawing.Color.Transparent;
             this.tabManager.WindowActivated += new System.EventHandler<MDIWindowManager.WrappedWindowEventArgs>(this.tabManager_WindowActivated);
-            this.tabManager.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.tabManager_ControlAdded);
             // 
             // ribbonMenu
             // 
@@ -120,8 +119,7 @@
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
-            this.ribbonMenu.SelectedContext = null;
-            this.ribbonMenu.SelectedTab = this.kryptonRibbonTab1;
+            this.ribbonMenu.SelectedTab = this.kryptonRibbonTab4;
             this.ribbonMenu.Size = new System.Drawing.Size(1153, 115);
             this.ribbonMenu.TabIndex = 1;
             // 

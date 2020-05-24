@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using Education.Common;
 using NPSBS.Core;
 using Registration;
 using Utility;
@@ -9,9 +10,11 @@ namespace NPSBS
 {
 	public partial class frmMain : Form
 	{
+		private DataAccess dataAccess;
 		public frmMain()
 		{
 			InitializeComponent();
+			dataAccess = new DataAccess(App.NPSBS);
 			SetBackground();            
 		}
 
@@ -38,7 +41,7 @@ namespace NPSBS
 			{
 				fexam.Show();
 			}
-			catch (Exception ex)
+			catch 
 			{
 				fexam = null;
 				fexam = new frmExam();
@@ -137,10 +140,10 @@ namespace NPSBS
 				{
 					this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
 					string q = "Backup database NPSBS to disk = '" + sf.FileName + "'";
-					var cmd = DataAccess.CreateCommand();
+					var cmd = dataAccess.CreateCommand();
 					cmd.CommandType = CommandType.Text;
 					cmd.CommandText = q;
-					DataAccess.ExecuteNonQuery(cmd);
+					dataAccess.ExecuteNonQuery(cmd);
 					Response.Success("Database backup successfully.");
 				}
 				catch (Exception ex)

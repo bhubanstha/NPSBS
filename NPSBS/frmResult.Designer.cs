@@ -235,7 +235,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource ResultBindingSource;
         private System.Windows.Forms.ErrorProvider epAcademicYear;
         private System.Windows.Forms.ErrorProvider epExamination;
         private System.Windows.Forms.ErrorProvider epClass;

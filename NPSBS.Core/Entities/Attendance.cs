@@ -1,17 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Education.Common;
+using Utility;
 
 namespace NPSBS.Core
 {
     public class Attendance
     {
+
+        #region Private Fields
         private int _studentId;
         private int _classId;
         private int _examinationid;
         private int _schoolDays;
         private int _presentDays;
+        private readonly DataAccess dataAccess;
+        #endregion
+
+        #region Properties
         public int StudentId {
             get { return _studentId; }
             set { 
@@ -74,11 +78,20 @@ namespace NPSBS.Core
 
         public string RollNumber { get; set; }
 
+        #endregion
 
+        #region Constructor
+
+        public Attendance()
+        {
+            dataAccess = new DataAccess(App.NPSBS);
+        }
+
+        #endregion
         public int SaveAttendance(Attendance attendance)
         {
             int i = 0;
-            var cmd = DataAccess.CreateCommand();
+            var cmd = dataAccess.CreateCommand();
             cmd.CommandText = "usp_SaveAttendance";
             cmd.Parameters.AddWithValue("@StudentId", attendance.StudentId);
             cmd.Parameters.AddWithValue("@RollNumber", attendance.RollNumber);
@@ -87,7 +100,7 @@ namespace NPSBS.Core
             cmd.Parameters.AddWithValue("@ExamHeldYear", attendance.ExamYear);
             cmd.Parameters.AddWithValue("@SchoolDays", attendance.SchoolDays);
             cmd.Parameters.AddWithValue("@PresentDays", attendance.PresentDays);
-            i = DataAccess.ExecuteNonQuery(cmd);
+            i = dataAccess.ExecuteNonQuery(cmd);
             return i;
         }
     }

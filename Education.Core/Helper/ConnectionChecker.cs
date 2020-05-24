@@ -1,23 +1,24 @@
 ﻿using Utility;
-
-namespace NPSBS.Core
+namespace Education.Common
 {
     public class ConnectionChecker
-    {
+    { 
+
         public ConnectionChecker()
         {
-            Connection con = Connection.Instance;
+            Setting con = Setting.Instance;
         }
 
         static ConnectionChecker()
         {
-            Connection con = Connection.Instance;
+            Setting con = Setting.Instance;
         }
 
-        public static bool CheckConnection()
+        public static bool CheckConnection(App app)
         {
             bool connection = true;
-            var cmd = DataAccess.CreateCommand();
+            DataAccess dataAccess = new DataAccess(app);
+            var cmd = dataAccess.CreateCommand();
             try
             {
                 cmd.Connection.Open();
@@ -34,11 +35,12 @@ namespace NPSBS.Core
                 
         }
 
-        public static string GetConnectionstring()
+        public static string GetConnectionstring(App app)
         {
-            return Connection.GetNPSBSConnection();
+
+            return app == App.KidsZone ?
+                    Setting.GetMontessoriConnection() :
+                    Setting.GetNPSBSConnection() ;
         }
-
-
     }
 }

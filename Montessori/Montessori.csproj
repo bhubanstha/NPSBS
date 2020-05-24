@@ -395,9 +395,13 @@
     <None Include="Resources\1906811_origina.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MontessoriCore\MontessoriCore.csproj">
+    <ProjectReference Include="..\Education.Core\Education.Common.csproj">
+      <Project>{5ddee97f-92e3-41a5-8d8c-8ac568a93594}</Project>
+      <Name>Education.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MontessoriCore\Montessori.Core.csproj">
       <Project>{b93b6f51-d1db-41da-862b-638dae8c7b7b}</Project>
-      <Name>MontessoriCore</Name>
+      <Name>Montessori.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utility\Utility.csproj">
       <Project>{a3fc6088-a07c-4d20-8748-91f1503d6d8b}</Project>

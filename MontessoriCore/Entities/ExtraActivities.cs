@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Education.Common;
+using System.Data;
+using Utility;
 
 namespace Montessori.Core
 {
@@ -34,10 +33,21 @@ namespace Montessori.Core
         public string Drill { get; set; }
         public string Dance { get; set; }
         public string Rhymes { get; set; }
-        
+
+        private DataAccess dataAccess;
+        private static DataAccess _dataAccess;
+
+        public ExtraActivities()
+        {
+            dataAccess = new DataAccess(App.KidsZone);
+        }
+        static ExtraActivities()
+        {
+            _dataAccess = new DataAccess(App.KidsZone);
+        }
         public int Save(ExtraActivities activities)
         {
-            var cmd = DataAccess.CreateCommand();
+            var cmd = dataAccess.CreateCommand();
             cmd.CommandText = "usp_StudentExtraActivities_Save";
             cmd.Parameters.AddWithValue("@StudentId", activities.StudentId);
             cmd.Parameters.AddWithValue("@ActivitiesYear", activities.ActivitiesYear.ToUpper());
@@ -65,29 +75,29 @@ namespace Montessori.Core
             cmd.Parameters.AddWithValue("@Drill", activities.Drill.ToUpper());
             cmd.Parameters.AddWithValue("@Dance", activities.Dance.ToUpper());
             cmd.Parameters.AddWithValue("@Rhymes", activities.Rhymes.ToUpper());
-            int i = DataAccess.ExecuteNonQuery(cmd);
+            int i = dataAccess.ExecuteNonQuery(cmd);
             return i;
         }
 
-        public static System.Data.DataTable GetExtraActivities(string year, string examinationId, string classId)
+        public static DataTable GetExtraActivities(string year, string examinationId, string classId)
         {
-            var cmd = DataAccess.CreateCommand();
+            var cmd = _dataAccess.CreateCommand();
             cmd.CommandText = "usp_StudentExtraActivities_Get";
             cmd.Parameters.AddWithValue("@Year", year);
             cmd.Parameters.AddWithValue("@Examination", examinationId);
             cmd.Parameters.AddWithValue("@ClassId", classId);
-            var tbl = DataAccess.ExecuteReaderCommand(cmd);
+            var tbl = _dataAccess.ExecuteReaderCommand(cmd);
             return tbl;
         }
 
 
-        public static System.Data.DataTable GetStudentActivities(int studentId, int examinationId)
+        public static DataTable GetStudentActivities(int studentId, int examinationId)
         {
-             var cmd = DataAccess.CreateCommand();
+             var cmd = _dataAccess.CreateCommand();
              cmd.CommandText = "Extra_Activities";
              cmd.Parameters.AddWithValue("@StudentId", studentId);
              cmd.Parameters.AddWithValue("@ExaminationId", examinationId);
-            var tbl = DataAccess.ExecuteReaderCommand(cmd);
+            var tbl = _dataAccess.ExecuteReaderCommand(cmd);
             return tbl;
         }
 

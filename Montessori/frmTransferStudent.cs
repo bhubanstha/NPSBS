@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Education.Common;
 using Montessori.Core;
 
 namespace Montessori
@@ -164,12 +165,12 @@ namespace Montessori
 
         private void txtOldAcademicYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            InputValidation.Yes(txtOldAcademicYear, sender, e);
+            ValidateInput.Yes(txtOldAcademicYear, sender, e);
         }
 
         private void txtNewAcademicYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            InputValidation.Yes(txtNewAcademicYear, sender, e);
+            ValidateInput.Yes(txtNewAcademicYear, sender, e);
         }
 
         private void gvTranferStudent_CellClick(object sender, DataGridViewCellEventArgs e)

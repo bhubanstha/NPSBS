@@ -2,16 +2,20 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using Education.Common;
 using Montessori.Core;
 using Registration;
+using Utility;
 
 namespace Montessori
 {
 	public partial class frmMain : Form
 	{
+		private DataAccess dataAccess;
 		public frmMain()
 		{
 			InitializeComponent();
+			dataAccess = new DataAccess(App.KidsZone);
 			SetBackground();
 		}
 
@@ -38,7 +42,7 @@ namespace Montessori
 			{
 				fexam.Show();
 			}
-			catch (Exception ex)
+			catch
 			{
 				fexam = null;
 				fexam = new frmExam();
@@ -166,10 +170,10 @@ namespace Montessori
 				{
 					this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
 					string q = "Backup database KidsZone to disk = '" + sf.FileName + "'";
-					var cmd = DataAccess.CreateCommand();
+					var cmd = dataAccess.CreateCommand();
 					cmd.CommandType = CommandType.Text;
 					cmd.CommandText = q;
-					DataAccess.ExecuteNonQuery(cmd);
+					dataAccess.ExecuteNonQuery(cmd);
 					Response.Success("Database backup successfully.");
 				}
 				catch (Exception ex)

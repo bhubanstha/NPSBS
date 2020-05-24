@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using MimeKit;
 using MailKit.Net.Smtp;
 using System.Security.Authentication;
 using Newtonsoft.Json;
 using System.IO;
-using Microsoft.Win32;
 
 namespace Utility
 {

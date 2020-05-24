@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using Education.Common.FontHelper;
 
 namespace NPSBS.Core
 {

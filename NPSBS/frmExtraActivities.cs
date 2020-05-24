@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Education.Common;
 using NPSBS.Core;
 
 namespace NPSBS
@@ -50,7 +51,7 @@ namespace NPSBS
 			return status;
 		}
 
-		private bool Validate()
+		private new bool Validate()
 		{
 			bool status = true;
 			status = CheckAcademicYear();

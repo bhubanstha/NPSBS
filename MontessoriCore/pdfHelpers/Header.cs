@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using Education.Common.FontHelper;
+
 namespace Montessori.Core
 {
     public class Header
@@ -14,12 +14,6 @@ namespace Montessori.Core
 
         static ColumnText ct = null;
         static Phrase phrase = null;
-
-        private static string School = "NATIONAL PEACE SECONDARY BOARDING SCHOOL";
-        private static string Address = "Gongabu, Kathmandu, Nepal (ESTD. -1996)";
-        private static string Phone = "Phone NO. :- 4-35-32-12";
-        private static string ExamName = "Annual Exam, 2072";
-        private static string GradeSheet = "GRADE-SHEET";
 
         private static List<GradingSystem> grades = new GradingSystem().GradingInfo();
 

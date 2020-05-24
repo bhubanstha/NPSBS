@@ -2,7 +2,7 @@
 {
 	public class Encrypt
 	{
-		private static string mySalt = "$2a$10$rBV2JDeWW3.vKyeWEM1fFO";
+		//private static string mySalt = "$2a$10$rBV2JDeWW3.vKyeWEM1fFO";
 
 		public static string Hash(string plainText)
 		{

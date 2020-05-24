@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Education.Common;
 using Montessori.Core;
 using Utility;
 
@@ -39,7 +40,7 @@ namespace Montessori
 			else
 			{
 				lblComponents.Text = "Problem connecting with server";
-				string a = ConnectionChecker.GetConnectionstring();
+				string a = ConnectionChecker.GetConnectionstring(App.KidsZone);
 				Response.GenericError(a);
 
 				this.Refresh();
@@ -53,13 +54,13 @@ namespace Montessori
 		{
 			var lbl = (Label)e.Argument;
 
-			e.Result = ConnectionChecker.CheckConnection();
+			e.Result = ConnectionChecker.CheckConnection(App.KidsZone);
 
 		}
 
 		void CheckDatabaseConnection(object sender, DoWorkEventArgs e)
 		{
-			bool result = ConnectionChecker.CheckConnection();
+			bool result = ConnectionChecker.CheckConnection(App.KidsZone);
 			e.Result = result;
 		}
 		void DatabaseCheckConnectionComplete(object sender, RunWorkerCompletedEventArgs e)

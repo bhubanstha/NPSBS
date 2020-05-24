@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Education.Common;
 using NPSBS.Core;
 
 namespace NPSBS

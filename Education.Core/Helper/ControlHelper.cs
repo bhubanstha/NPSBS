@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 
-namespace Montessori.Core
+namespace Education.Common
 {
     public class ControlHelper
     {

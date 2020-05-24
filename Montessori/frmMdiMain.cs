@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Ribbon;
 using ComponentFactory.Krypton.Toolkit;
+using Education.Common;
 using Montessori.Core;
 using Registration;
 using System;
@@ -28,12 +29,12 @@ namespace Montessori
 		private frmExtraActivities frmExtraActivities = null;
 		private frmRemarks frmRemarks = null;
 		private frmResult frmResult = null;
-
+		private DataAccess dataAccess;
 		private string path = AppDomain.CurrentDomain.BaseDirectory;
 		public frmMdiMain()
         {
             InitializeComponent();
-
+			dataAccess = new DataAccess(App.KidsZone);
 			this.ControlBox = true;
 			tabManager.Visible = false;
 			tabManager.AutoDetectMdiChildWindows = false;
@@ -281,11 +282,11 @@ namespace Montessori
 				try
 				{
 					this.Cursor = Cursors.WaitCursor;
-					string q = "Backup database KidsZone to disk = '" + sf.FileName + "'";
-					var cmd = DataAccess.CreateCommand();
+					string q = "Backup database " + Setting.KidsZoneDbName + " to disk = '" + sf.FileName + "'";
+					var cmd = dataAccess.CreateCommand();
 					cmd.CommandType = CommandType.Text;
 					cmd.CommandText = q;
-					DataAccess.ExecuteNonQuery(cmd);
+					dataAccess.ExecuteNonQuery(cmd);
 					Response.Success("Database backup successfully.");
 					
 				}

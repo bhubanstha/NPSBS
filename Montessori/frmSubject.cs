@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Education.Common;
 using Montessori.Core;
 
 namespace Montessori
@@ -68,7 +69,7 @@ namespace Montessori
             txtSubject.Focus();
         }
 
-        private bool Validate()
+        private new bool Validate()
         {
             bool status = true;
             epClass.Clear();
@@ -105,6 +106,7 @@ namespace Montessori
         {
             var tbl = s.Select();
             gvSubjects.DataSource = tbl;
+
         }
 
         private void gvSubjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -136,7 +138,7 @@ namespace Montessori
         
         private void txtSubject_KeyPress(object sender, KeyPressEventArgs e)
         {
-            InputValidation.StringOnly(txtSubject, sender, e, true);
+            ValidateInput.StringOnly(txtSubject, sender, e, true);
         }
 
       

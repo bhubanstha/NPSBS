@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using NPSBS.Core;
 using Utility;
 using System;
+using Education.Common;
+
 namespace NPSBS
 {
 	public partial class frmSplash : Form
@@ -21,7 +23,7 @@ namespace NPSBS
 
 		void CheckDatabaseConnection(object sender, DoWorkEventArgs e)
 		{
-			bool result = ConnectionChecker.CheckConnection();
+			bool result = ConnectionChecker.CheckConnection(App.NPSBS);
 			e.Result =  result;
 		}
 

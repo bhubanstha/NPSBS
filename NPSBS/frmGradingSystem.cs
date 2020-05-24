@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
+using Education.Common;
 using NPSBS.Core;
 
 namespace NPSBS
@@ -58,7 +59,7 @@ namespace NPSBS
             DataTable tbl = gs.Select();
             gvGradingSystem.DataSource = tbl;
         }
-        private bool Validate()
+        private new bool Validate()
         {
             epGrade.Clear();
             epMarksFrom.Clear();

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Utility
@@ -15,7 +10,7 @@ namespace Utility
         {
             try
             {
-                bool isPrintEnabled =  Connection.GetSettingValue<bool>(SettingEnum.Print);
+                bool isPrintEnabled = Setting.GetSettingValue<bool>(SettingEnum.Print);
                 if (isPrintEnabled)
                 {
                     using (PrintDialog Dialog = new PrintDialog())

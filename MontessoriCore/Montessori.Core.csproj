@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D7C84CA3-8B28-4F44-8285-A14089DB1540}</ProjectGuid>
+    <ProjectGuid>{B93B6F51-D1DB-41DA-862B-638DAE8C7B7B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NPSBS.Core</RootNamespace>
-    <AssemblyName>NPSBS.Core</AssemblyName>
+    <RootNamespace>Montessori.Core</RootNamespace>
+    <AssemblyName>Montessori.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -52,30 +51,47 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Design">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
       <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
-    <Reference Include="DevOne.Security.Cryptography.BCrypt">
-      <HintPath>..\packages\BCrypt.1.0.0.0\lib\DevOne.Security.Cryptography.BCrypt.dll</HintPath>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>..\packages\KryptonToolkit\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="EPPlus">
       <HintPath>..\packages\EPPlus.4.5.3.3\lib\net40\EPPlus.dll</HintPath>
     </Reference>
-    <Reference Include="itextsharp">
+    <Reference Include="itextsharp, Version=5.5.9.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="itextsharp.pdfa">
+    <Reference Include="itextsharp.pdfa, Version=5.5.9.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\itextsharp.pdfa.5.5.13.1\lib\itextsharp.pdfa.dll</HintPath>
     </Reference>
-    <Reference Include="itextsharp.xtra">
+    <Reference Include="itextsharp.xtra, Version=5.5.9.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\itextsharp.xtra.5.5.13.1\lib\itextsharp.xtra.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.7\lib\net40-client\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
@@ -86,7 +102,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Attendance.cs" />
     <Compile Include="Entities\Classes.cs" />
     <Compile Include="Entities\Encrypt.cs" />
     <Compile Include="Entities\Exam.cs" />
@@ -94,26 +109,21 @@
     <Compile Include="Entities\GradingSystem.cs" />
     <Compile Include="Entities\MacAddress.cs" />
     <Compile Include="Entities\pdfExtension.cs" />
+    <Compile Include="Entities\Remarks.cs" />
     <Compile Include="Entities\Result.cs" />
     <Compile Include="Entities\School.cs" />
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\Subject.cs" />
     <Compile Include="Interface\ICrud.cs" />
-    <Compile Include="Ledger\ClassEightLedger.cs" />
-    <Compile Include="Ledger\Footer.cs" />
-    <Compile Include="Ledger\UpToSeven.cs" />
-    <Compile Include="PdfHelpers\GradingSystemAdder.cs" />
-    <Compile Include="PdfHelpers\Header.cs" />
+    <Compile Include="pdfHelpers\GradingSystemAdder.cs" />
+    <Compile Include="pdfHelpers\Header.cs" />
+    <Compile Include="pdfHelpers\StringExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Result\ClassEight.cs" />
-    <Compile Include="Result\ClassNineTen.cs" />
-    <Compile Include="Result\Nursery.cs" />
+    <Compile Include="Result\KidZoneResult.cs" />
     <Compile Include="SingletonPattern\StartupCache.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Education.Core\Education.Common.csproj">

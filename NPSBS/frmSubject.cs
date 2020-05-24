@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using NPSBS.Core;
 using ComponentFactory.Krypton.Toolkit;
+using Education.Common;
 
 namespace NPSBS
 {
@@ -79,7 +80,7 @@ namespace NPSBS
 			txtSubject.Focus();
 		}
 
-		private bool Validate()
+		private new bool Validate()
 		{
 			bool status = true;
 			epClass.Clear();

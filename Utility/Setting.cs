@@ -1,25 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Globalization;
 using System.Windows.Forms;
 using System.Xml;
 
 namespace Utility
 {
-    public class Connection
+    public class Setting
     {
-        private static Connection instance = null;
+        private static Setting instance = null;
         private static readonly object padlock = new object();
         private static string NPSBSConnection = "";
         private static string MontessoriConnection = "";
         private static Dictionary<string, string> DatabaseInformation;
+        public static string NpsbsDbName { get; private set; }
+        public static string KidsZoneDbName { get; private set; }
 
-        Connection()
+        Setting()
         {
         }
 
-        public static Connection Instance
+        public static Setting Instance
         {
             get
             {
@@ -29,7 +30,7 @@ namespace Utility
                     {
                         DatabaseInformation = new Dictionary<string, string>();
                         GetDatabaseInformation();
-                        instance = new Connection();
+                        instance = new Setting();
                     }
                     return instance;
                 }
@@ -89,16 +90,17 @@ namespace Utility
             
             return (T)Convert.ChangeType(settingValue, typeof(T));
         }
-        private static string ConnectionString(string dbName)
+        private static string ConnectionString(string dbName, out string databaseName)
         {
             var connectionString = "";
+            databaseName = "";
             try
             {
                 string source = DatabaseInformation["DataSource"];// ConfigurationManager.AppSettings["DataSource"];
                 string user = DatabaseInformation["UserName"]; //  ConfigurationManager.AppSettings["UserName"];
-                string db = DatabaseInformation[dbName]; //ConfigurationManager.AppSettings[dbName];
+                databaseName = DatabaseInformation[dbName]; //ConfigurationManager.AppSettings[dbName];
                 string pwd = DatabaseInformation["Password"]; //ConfigurationManager.AppSettings["Password"];
-                connectionString = "data source = " + source + "; database=" + db + "; user id=" + user + "; password=" + pwd;
+                connectionString = "data source = " + source + "; database=" + databaseName + "; user id=" + user + "; password=" + pwd;
             }
             catch (Exception ex)
             {
@@ -113,7 +115,9 @@ namespace Utility
         {
             if (string.IsNullOrEmpty(NPSBSConnection))
             {
-                NPSBSConnection = ConnectionString("Database_NPSBS");
+                string DbName;
+                NPSBSConnection = ConnectionString("Database_NPSBS", out DbName);
+                NpsbsDbName = DbName;
             }
             return NPSBSConnection;
         }
@@ -122,7 +126,9 @@ namespace Utility
         {
             if (string.IsNullOrEmpty(MontessoriConnection))
             {
-                MontessoriConnection = ConnectionString("Database_KidsZone");
+                string DbName;
+                MontessoriConnection = ConnectionString("Database_KidsZone", out DbName);
+                KidsZoneDbName = DbName;
             }
             return MontessoriConnection;
         }

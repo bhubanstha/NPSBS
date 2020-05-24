@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
 using Utility;
+using Education.Common.FontHelper;
 
 namespace Montessori.Core
 {
@@ -51,8 +50,7 @@ namespace Montessori.Core
             for (int i = 0; i < result.Tables.Count; i++)
             {
                 int sid = 0;
-                int schoolDays = 0;
-                int presentDay = 0;
+              
                 jpg.SetAbsolutePosition(18, 705);
                 //jpg.SetAbsolutePosition(300, 300);
                 jpg.ScalePercent(35);

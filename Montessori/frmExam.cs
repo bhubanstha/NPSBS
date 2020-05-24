@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Education.Common;
 using Montessori.Core;
 namespace Montessori
 {
@@ -184,12 +185,12 @@ namespace Montessori
 
         private void txtYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            InputValidation.Yes(txtYear, sender, e);
+            ValidateInput.Yes(txtYear, sender, e);
         }
 
         private void txtYearSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            InputValidation.Yes(txtYearSearch, sender, e);
+            ValidateInput.Yes(txtYearSearch, sender, e);
         }
     }
 }

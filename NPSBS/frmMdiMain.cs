@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using Utility;
+using Education.Common;
 
 namespace NPSBS
 {
@@ -26,12 +27,13 @@ namespace NPSBS
 		private frmAttendance frmAttendance = null;
 		private frmResult frmResult = null;
 		private frmLedger frmLedger = null;
-		
+		private DataAccess dataAccess;
 		private string path = AppDomain.CurrentDomain.BaseDirectory;
 
 		public frmMdiMain()
 		{
 			InitializeComponent();
+			dataAccess = new DataAccess(App.NPSBS);
 			this.ControlBox = true;
 			tabManager.Visible = false;
 			tabManager.AutoDetectMdiChildWindows = false;
@@ -231,12 +233,13 @@ namespace NPSBS
 			{
 				try
 				{
+					
 					this.Cursor = Cursors.WaitCursor;
-					string q = "Backup database NPSBS to disk = '" + sf.FileName + "'";
-					var cmd = DataAccess.CreateCommand();
+					string q = "Backup database " + Setting.NpsbsDbName + " to disk = '" + sf.FileName + "'";
+					var cmd = dataAccess.CreateCommand();
 					cmd.CommandType = CommandType.Text;
 					cmd.CommandText = q;
-					DataAccess.ExecuteNonQuery(cmd);
+					dataAccess.ExecuteNonQuery(cmd);
 					Response.Success("Database backup successfully.");
 					this.Cursor = Cursors.Default;
 				}
@@ -360,11 +363,6 @@ namespace NPSBS
 					btn10Blue.Checked = true;
 					break;
 			}
-		}
-
-		private void tabManager_ControlAdded(object sender, ControlEventArgs e)
-		{
-			int i = 1;
 		}
 
 		private void tabManager_WindowActivated(object sender, MDIWindowManager.WrappedWindowEventArgs e)

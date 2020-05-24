@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Education.Common;
 using iTextSharp.text;
 using Montessori.Core;
 using Utility;
@@ -156,7 +157,7 @@ namespace Montessori
 			return status;
 		}
 
-		private bool Validate()
+		private new bool Validate()
 		{
 			bool status = true;
 			epAcademicYear.Clear();
@@ -181,7 +182,7 @@ namespace Montessori
 
 		private void txtAcademicYear_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			InputValidation.Yes(txtAcademicYear, sender, e);
+			ValidateInput.Yes(txtAcademicYear, sender, e);
 		}
 
 

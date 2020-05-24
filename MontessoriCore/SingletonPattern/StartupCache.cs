@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Data;
-using System.Xml;
 using System.Net.NetworkInformation;
-using System.IO;
-using System.Diagnostics;
 using Utility;
+using Education.Common;
+using Education.Common.FontHelper;
 
 namespace Montessori.Core
 {
@@ -16,6 +14,7 @@ namespace Montessori.Core
 
 		private static StartupCache instance = null;
 		private static readonly object padlock = new object();
+		private static DataAccess dataAccess;
 		public static DataTable Class { get; private set; }
 		public static DataTable Exam { get; private set; }
 		public static List<GradingSystem> GradingSystem { get; private set; }
@@ -32,6 +31,11 @@ namespace Montessori.Core
 		{
 		}
 
+		static StartupCache()
+		{
+			dataAccess = new DataAccess(App.KidsZone);
+		}
+
 		public static StartupCache Instance
 		{
 			get
@@ -40,11 +44,11 @@ namespace Montessori.Core
 				{
 					if (instance == null)
 					{
-						Class = GetClasses();
-						Exam = GetExam();
+						Class = GetClasses(dataAccess);
+						Exam = GetExam(dataAccess);
 						GradingSystem = GetGrading();
 						School = new School();
-						ResultFont = new ResultFont();
+						ResultFont = new ResultFont(App.KidsZone);
 						instance = new StartupCache();
 					}
 					return instance;
@@ -52,11 +56,11 @@ namespace Montessori.Core
 			}
 		}
 
-		private static DataTable GetClasses()
+		private static DataTable GetClasses(DataAccess dataAccess)
 		{
-			var cmd = DataAccess.CreateCommand();
+			var cmd = dataAccess.CreateCommand();
 			cmd.CommandText = "usp_Class_Select";
-			DataTable tbl = DataAccess.ExecuteReaderCommand(cmd);
+			DataTable tbl = dataAccess.ExecuteReaderCommand(cmd);
 			DataRow dr = tbl.NewRow();
 			dr[0] = "0";
 			dr[1] = "0";
@@ -65,11 +69,11 @@ namespace Montessori.Core
 			return tbl;
 		}
 
-		private static DataTable GetExam()
+		private static DataTable GetExam(DataAccess dataAccess)
 		{
-			var cmd = DataAccess.CreateCommand();
+			var cmd = dataAccess.CreateCommand();
 			cmd.CommandText = "usp_Exam_Select";
-			var tbl = DataAccess.ExecuteReaderCommand(cmd);
+			var tbl = dataAccess.ExecuteReaderCommand(cmd);
 			return tbl;
 		}
 

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Xml;
 using Utility;
-using System.IO;
-using System.Drawing;
+using Education.Common;
+using Education.Common.FontHelper;
 
 namespace NPSBS.Core
 {
@@ -15,6 +10,8 @@ namespace NPSBS.Core
 	{
 		private static StartupCache instance = null;
 		private static readonly object padlock = new object();
+		private DataAccess dataAccess;
+		private static DataAccess _dataAccess;
 		public static DataTable Class { get; private set; }
 		public static DataTable Exam { get; private set; }
 		public static List<GradingSystem> GradingSystem { get; private set; }
@@ -24,9 +21,13 @@ namespace NPSBS.Core
 
 		StartupCache()
 		{
-			ResultFont = new ResultFont();
+			dataAccess = new DataAccess(App.NPSBS);
+			ResultFont = new ResultFont(App.NPSBS);
 		}
-
+		static StartupCache()
+		{
+			_dataAccess = new DataAccess(App.NPSBS);
+		}
 		public static StartupCache Instance
 		{
 			get
@@ -35,8 +36,8 @@ namespace NPSBS.Core
 				{
 					if (instance == null)
 					{
-						Class = GetClasses();
-						Exam = GetExam();
+						Class = GetClasses(_dataAccess);
+						Exam = GetExam(_dataAccess);
 						GradingSystem = GetGrading();
 						School = new School();
 						instance = new StartupCache();
@@ -47,11 +48,11 @@ namespace NPSBS.Core
 			}
 		}
 
-		private static DataTable GetClasses()
+		private static DataTable GetClasses(DataAccess dataAccess)
 		{
-			var cmd = DataAccess.CreateCommand();
+			var cmd = dataAccess.CreateCommand();
 			cmd.CommandText = "usp_Class_Select";
-			DataTable tbl = DataAccess.ExecuteReaderCommand(cmd);
+			DataTable tbl = dataAccess.ExecuteReaderCommand(cmd);
 			DataRow dr = tbl.NewRow();
 			dr[0] = "0";
 			dr[1] = "0";
@@ -60,11 +61,11 @@ namespace NPSBS.Core
 			return tbl;
 		}
 
-		private static DataTable GetExam()
+		private static DataTable GetExam(DataAccess dataAccess)
 		{
-			var cmd = DataAccess.CreateCommand();
+			var cmd = dataAccess.CreateCommand();
 			cmd.CommandText = "usp_Exam_Select";
-			var tbl = DataAccess.ExecuteReaderCommand(cmd);
+			var tbl = dataAccess.ExecuteReaderCommand(cmd);
 			return tbl;
 		}
 

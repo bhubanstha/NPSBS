@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace NPSBS.Core
+﻿namespace NPSBS.Core
 {
     public class MacAddress
     {

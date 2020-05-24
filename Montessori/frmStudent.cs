@@ -4,6 +4,7 @@ using System.Data;
 using System.IO;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Education.Common;
 using Montessori.Core;
 using OfficeOpenXml;
 
@@ -225,27 +226,27 @@ namespace Montessori
        
         private void txtStudentName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            InputValidation.StringOnly(txtStudentName, sender, e);
+            ValidateInput.StringOnly(txtStudentName, sender, e);
         }
 
         private void txtAcademicYear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            InputValidation.Yes(txtAcademicYear, sender, e);
+            ValidateInput.Yes(txtAcademicYear, sender, e);
         }
 
         private void txtRollNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            InputValidation.Yes(txtRollNumber, sender, e);
+            ValidateInput.Yes(txtRollNumber, sender, e);
         }
 
         private void txtStudentNameSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            InputValidation.StringOnly(txtStudentNameSearch, sender, e);
+            ValidateInput.StringOnly(txtStudentNameSearch, sender, e);
         }
 
         private void txtAcademicYearSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            InputValidation.Yes(txtAcademicYearSearch, sender, e);
+            ValidateInput.Yes(txtAcademicYearSearch, sender, e);
         }
 
         private void kryptonLinkLabel1_LinkClicked(object sender, EventArgs e)

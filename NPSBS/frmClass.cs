@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Education.Common;
 using NPSBS.Core;
 
 namespace NPSBS
@@ -92,7 +93,7 @@ namespace NPSBS
             
         }
 
-        private bool Validate()
+        private new bool Validate()
         {
             if (txtClassName.Text.Length == 0)
             {

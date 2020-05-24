@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Education.Common;
 using Montessori.Core;
 
 namespace Montessori
@@ -58,7 +59,7 @@ namespace Montessori
 			return status;
 		}
 
-		private bool Validate()
+		private new bool Validate()
 		{
 			bool status = true;
 			status = CheckAcademicYear();
@@ -139,7 +140,7 @@ namespace Montessori
 
 		void tb_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			InputValidation.GradeOnly(sender, e);
+			ValidateInput.GradeOnly(sender, e);
 		}
 
 		void tb1_GotFocus(object sender, EventArgs e)
@@ -202,7 +203,7 @@ namespace Montessori
 		
 		private void txtSchoolDays_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			InputValidation.Yes(txtSchoolDays, sender, e);
+			ValidateInput.Yes(txtSchoolDays, sender, e);
 		}
 
 		private void kryptonPanel4_Paint(object sender, PaintEventArgs e)

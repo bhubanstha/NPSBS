@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Data;
-using System.Text.RegularExpressions;
+using Education.Common;
+using Utility;
 
 namespace NPSBS.Core
 {
@@ -19,46 +18,51 @@ namespace NPSBS.Core
         public string EquivalentMarks { get; set; }
         public string Remarks { get; set; }
         private int rowsAffected = 0;
+        private DataAccess dataAccess;
 
+        public GradingSystem()
+        {
+            dataAccess = new DataAccess(App.NPSBS);
+        }
         public int Save(GradingSystem obj)
         {
-            var cmd = DataAccess.CreateCommand();
+            var cmd = dataAccess.CreateCommand();
             cmd.CommandText = "usp_GradingSystem_Save";
             cmd.Parameters.AddWithValue("@MarksFrom", obj.MarksFrom);
             cmd.Parameters.AddWithValue("@MarksTo", obj.MarksTo);
             cmd.Parameters.AddWithValue("@Grade", obj.Grade);
             cmd.Parameters.AddWithValue("@Remarks", obj.Remarks);
-            rowsAffected = DataAccess.ExecuteNonQuery(cmd);
+            rowsAffected = dataAccess.ExecuteNonQuery(cmd);
             return rowsAffected;
         }
 
         public int Update(GradingSystem obj)
         {
-            var cmd = DataAccess.CreateCommand();
+            var cmd = dataAccess.CreateCommand();
             cmd.CommandText = "usp_GradingSystem_Update";
             cmd.Parameters.AddWithValue("@MarksFrom", obj.MarksFrom);
             cmd.Parameters.AddWithValue("@MarksTo", obj.MarksTo);
             cmd.Parameters.AddWithValue("@Grade", obj.Grade);
             cmd.Parameters.AddWithValue("@Remarks", obj.Remarks);
             cmd.Parameters.AddWithValue("@GradingId", obj.GradingSystemId);
-            rowsAffected = DataAccess.ExecuteNonQuery(cmd);
+            rowsAffected = dataAccess.ExecuteNonQuery(cmd);
             return rowsAffected;
         }
 
         public int Delete(int Id)
         {
-            var cmd = DataAccess.CreateCommand();
+            var cmd = dataAccess.CreateCommand();
             cmd.CommandText = "usp_GradingSystem_Delete";
             cmd.Parameters.AddWithValue("@GradingId", Id);
-            rowsAffected = DataAccess.ExecuteNonQuery(cmd);
+            rowsAffected = dataAccess.ExecuteNonQuery(cmd);
             return rowsAffected;
         }
 
         public DataTable Select()
         {
-            var cmd = DataAccess.CreateCommand();
+            var cmd = dataAccess.CreateCommand();
             cmd.CommandText = "usp_GradingSystem_Select";
-            var tbl = DataAccess.ExecuteReaderCommand(cmd);
+            var tbl = dataAccess.ExecuteReaderCommand(cmd);
             return tbl;
         }
 

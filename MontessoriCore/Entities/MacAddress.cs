@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Montessori.Core
+﻿namespace Montessori.Core
 {
     public class MacAddress
     {

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Education.Common;
 using iTextSharp.text;
 using NPSBS.Core;
 using Utility;
@@ -159,7 +160,7 @@ namespace NPSBS
             return status;
         }
 
-        private bool Validate()
+        private new bool Validate()
         {
             bool status = true;
             epAcademicYear.Clear();

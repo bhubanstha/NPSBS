@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Education.Common;
 using Montessori.Core;
 
 namespace Montessori
@@ -83,7 +84,7 @@ namespace Montessori
 			}
 		}
 
-		private bool Validate()
+		private new bool Validate()
 		{
 			bool status = true;
 			status = CheckAcademicYear();

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.IO;
+using Education.Common;
+using Education.Common.FontHelper;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Utility;
@@ -20,24 +22,28 @@ namespace NPSBS.Core
 		string examName = "";
 		string year = "";
 		string className = "";
+		private DataAccess dataAccess;
+
+
 
 		public ClassEightLedger(int ClassId, int ExaminationId, string ClassName, string ExamName, string Year)
 		{
+			dataAccess = new DataAccess(App.NPSBS);
 			StartupCache sc = StartupCache.Instance;
 			this.examName = ExamName;
 			this.year = Year;
 			this.className = ClassName;
 			font = StartupCache.ResultFont;
-			var cmd = DataAccess.CreateCommand();
+			var cmd = dataAccess.CreateCommand();
 			cmd.CommandText = "usp_LedgerEight";
 			cmd.Parameters.AddWithValue("@ClassId", ClassId);
 			cmd.Parameters.AddWithValue("@ExaminationId", ExaminationId);
-			_result = DataAccess.ExecuteDataSet(cmd);
+			_result = dataAccess.ExecuteDataSet(cmd);
 
 			cmd.Parameters.Clear();
 			cmd.CommandText = "usp_Subject_ByClass";
 			cmd.Parameters.AddWithValue("@ClassId", ClassId);
-			_subject = DataAccess.ExecuteReaderCommand(cmd);
+			_subject = dataAccess.ExecuteReaderCommand(cmd);
 		}
 
 		public void GetLeadger(string location, School school)

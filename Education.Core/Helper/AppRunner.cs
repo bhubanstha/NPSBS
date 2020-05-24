@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Diagnostics;
 using Utility;
 
-namespace Montessori.Core
+namespace Education.Common
 {
     public class AppRunner
     {
@@ -13,14 +10,16 @@ namespace Montessori.Core
         {
             try
             {
-                bool isOpenAppEnabled = Connection.GetSettingValue<bool>(SettingEnum.OpenApp);
+                bool isOpenAppEnabled = Setting.GetSettingValue<bool>(SettingEnum.OpenApp);
                 if (isOpenAppEnabled)
                 {
-                    var process = new Process();
-                    process.StartInfo = new ProcessStartInfo()
+                    var process = new Process
                     {
-                        UseShellExecute = true,
-                        FileName = fileName
+                        StartInfo = new ProcessStartInfo()
+                        {
+                            UseShellExecute = true,
+                            FileName = fileName
+                        }
                     };
                     process.Start();
                 }

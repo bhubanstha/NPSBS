@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Education.Common;
+using System;
 using System.Data;
+using Utility;
 
 namespace Montessori.Core
 {
@@ -26,13 +28,15 @@ namespace Montessori.Core
         public string  EstiblishedYear { get { return _establishedYear; } set { _establishedYear = value; } }
         public string Slogan { get { return _slogan; } set { _slogan = value; } }
         public byte[] Logo { get; set; }
+        private DataAccess dataAccess;
 
 
         public School()
         {
-            var cmd = DataAccess.CreateCommand();
+            dataAccess = new DataAccess(App.KidsZone);
+            var cmd = dataAccess.CreateCommand();
             cmd.CommandText = "GetSchoolInfo";
-            DataTable tbl = DataAccess.ExecuteReaderCommand(cmd);
+            DataTable tbl = dataAccess.ExecuteReaderCommand(cmd);
             if (tbl.Rows.Count > 0)
             {
                 this._id = Convert.ToInt32(tbl.Rows[0][0]);
@@ -50,7 +54,7 @@ namespace Montessori.Core
 
         public int SaveOrUdate()
         {
-            var cmd = DataAccess.CreateCommand();
+            var cmd = dataAccess.CreateCommand();
             cmd.CommandText = "SaveUpdateSchool";
             cmd.Parameters.AddWithValue("@Id", this.Id);
             cmd.Parameters.AddWithValue("@SchoolName", this.SchoolName);
@@ -62,7 +66,7 @@ namespace Montessori.Core
             cmd.Parameters.AddWithValue("@Logo", this.Logo);
             cmd.Parameters.AddWithValue("@EstiblishedYear", this.EstiblishedYear);
             cmd.Parameters.AddWithValue("@Slogan", this.Slogan);
-            return Convert.ToInt32(DataAccess.ExecuteScalarCommand(cmd));
+            return Convert.ToInt32(dataAccess.ExecuteScalarCommand(cmd));
         }
 
 

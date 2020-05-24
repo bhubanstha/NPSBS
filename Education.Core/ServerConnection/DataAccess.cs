@@ -3,42 +3,46 @@ using System.Data;
 using System.Data.SqlClient;
 using Utility;
 
-namespace NPSBS.Core
+namespace Education.Common
 {
+
     public class DataAccess
     {
-        public DataAccess()
+        private readonly App _app;
+        public DataAccess(App app)
         {
-            Connection con = Connection.Instance;
-        }
-        static DataAccess()
-        {
-            Connection con = Connection.Instance;
+            _app = app;
+            Setting con = Setting.Instance;
         }
 
-        public static SqlCommand CreateCommand()
+
+        public SqlCommand CreateCommand()
         {
-            var con = new SqlConnection { ConnectionString = Connection.GetNPSBSConnection() };
+            var con = new SqlConnection {
+                ConnectionString = _app == App.NPSBS ?
+                        Setting.GetNPSBSConnection() :
+                        Setting.GetMontessoriConnection()
+            };
             var cmd = con.CreateCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             return cmd;
         }
 
-        public static DataTable ExecuteReaderCommand(SqlCommand cmd)
+        public DataTable ExecuteReaderCommand(SqlCommand cmd)
         {
             DataTable tbl = new DataTable();
-            SqlDataReader rdr =null;
+            SqlDataReader rdr = null;
             try
             {
                 cmd.Connection.Open();
                 rdr = cmd.ExecuteReader();
                 tbl = new DataTable();
                 tbl.Load(rdr);
-                
+
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                //throw ex;
                 //MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
@@ -49,7 +53,7 @@ namespace NPSBS.Core
             return tbl;
         }
 
-        public static int ExecuteNonQuery(SqlCommand cmd)
+        public int ExecuteNonQuery(SqlCommand cmd)
         {
             var i = -1;
             try
@@ -57,21 +61,21 @@ namespace NPSBS.Core
                 cmd.Connection.Open();
                 i = cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                //throw ex;
                 //MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 cmd.Connection.Close();
             }
-            
-            
+
+
             return i;
         }
 
-        public static DataSet ExecuteDataSet(SqlCommand cmd)
+        public DataSet ExecuteDataSet(SqlCommand cmd)
         {
             DataSet ds = null;
             SqlDataAdapter adap = null;
@@ -83,10 +87,10 @@ namespace NPSBS.Core
                 adap.Fill(ds);
 
             }
-            catch (Exception ex)
+            catch 
             {
-                
-                throw ex;
+
+                //throw ex;
             }
             finally
             {
@@ -95,7 +99,7 @@ namespace NPSBS.Core
             return ds;
         }
 
-        public static string ExecuteScalarCommand(SqlCommand cmd)
+        public string ExecuteScalarCommand(SqlCommand cmd)
         {
             var data = "";
             try
@@ -103,16 +107,16 @@ namespace NPSBS.Core
                 cmd.Connection.Open();
                 data = cmd.ExecuteScalar().ToString();
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                // throw ex;
                 //MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 cmd.Connection.Close();
             }
-            
+
             return data;
         }
 
@@ -125,8 +129,3 @@ namespace NPSBS.Core
     }
 
 }
-
-
-    
-    
-
