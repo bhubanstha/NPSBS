@@ -104,6 +104,7 @@
             this.tabManager.TabRenderMode = MDIWindowManager.TabsProvider.Standard;
             this.tabManager.TitleBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tabManager.TitleForeColor = System.Drawing.Color.Transparent;
+            this.tabManager.WindowPoppingOut += new System.EventHandler<MDIWindowManager.WrappedWindowCancelEventArgs>(this.tabManager_WindowPoppingOut);
             this.tabManager.WindowActivated += new System.EventHandler<MDIWindowManager.WrappedWindowEventArgs>(this.tabManager_WindowActivated);
             // 
             // ribbonMenu
@@ -119,6 +120,7 @@
             this.kryptonRibbonTab2,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4});
+            this.ribbonMenu.SelectedContext = null;
             this.ribbonMenu.SelectedTab = this.kryptonRibbonTab4;
             this.ribbonMenu.Size = new System.Drawing.Size(1153, 115);
             this.ribbonMenu.TabIndex = 1;

@@ -442,6 +442,7 @@
             this.tabManager.TabRenderMode = MDIWindowManager.TabsProvider.Standard;
             this.tabManager.TitleBackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tabManager.TitleForeColor = System.Drawing.Color.Transparent;
+            this.tabManager.WindowPoppingOut += new System.EventHandler<MDIWindowManager.WrappedWindowCancelEventArgs>(this.tabManager_WindowPoppingOut);
             // 
             // frmMdiMain
             // 
