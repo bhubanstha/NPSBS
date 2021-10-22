@@ -60,9 +60,9 @@ namespace NPSBS
 			bWorker2.RunWorkerAsync(lblComponents);
 		}
 
-		void GetOnlineContent(object sender, DoWorkEventArgs e)
+		async void GetOnlineContent(object sender, DoWorkEventArgs e)
 		{
-			StartupCache.About = OnlineContent.GetAbout(StartupCache.School.ShortName, StartupCache.School.SchoolName, StartupCache.School.Address);
+			StartupCache.About = await OnlineContent.GetAbout(StartupCache.School.ShortName, StartupCache.School.SchoolName, StartupCache.School.Address);
 		}
 
 		void OnlineContentLoadComplete(object sender, RunWorkerCompletedEventArgs e)

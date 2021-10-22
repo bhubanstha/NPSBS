@@ -60,7 +60,7 @@ namespace NPSBS
             }
             catch (DivideByZeroException ex)
             {
-                Logger.Log.Error(ex, "Zero division");
+                //Logger.Log.Error(ex, "Zero division");
             }
         }
 
@@ -368,6 +368,11 @@ namespace NPSBS
 		private void tabManager_WindowActivated(object sender, MDIWindowManager.WrappedWindowEventArgs e)
 		{
 			e.WrappedWindow.Window.Invalidate();
+		}
+
+		private void tabManager_WindowPoppingOut(object sender, MDIWindowManager.WrappedWindowCancelEventArgs e)
+		{
+			e.Cancel = true;
 		}
 
 		public void SetBackground()

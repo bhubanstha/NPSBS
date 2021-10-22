@@ -8,7 +8,7 @@
     <add key="Password" value="Bhuban"/>
   </Database>
   <Result>
-    <add key="Print" value="true"/>
-    <add key="OpenApp" value="false"/>
+    <add key="Print" value="false"/>
+    <add key="OpenApp" value="true"/>
   </Result>
 </ComputerIdentification>

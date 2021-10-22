@@ -326,6 +326,16 @@ namespace Montessori
 			button.Checked = true;
 		}
 
+		private void tabManager_WindowPoppingOut(object sender, MDIWindowManager.WrappedWindowCancelEventArgs e)
+		{
+			e.Cancel = true;
+		}
+
+		private void tabManager_WindowPoppingIn(object sender, MDIWindowManager.WrappedWindowCancelEventArgs e)
+		{
+
+		}
+
 		private void btnSchoolSetup_Click(object sender, EventArgs e)
 		{
 			if (frmSchool == null || frmSchool.IsDisposed || frmSchool.Disposing)

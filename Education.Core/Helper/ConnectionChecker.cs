@@ -19,6 +19,7 @@ namespace Education.Common
             bool connection = true;
             DataAccess dataAccess = new DataAccess(app);
             var cmd = dataAccess.CreateCommand();
+            cmd.CommandTimeout = 2;
             try
             {
                 cmd.Connection.Open();
