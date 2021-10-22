@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Education.Common", "Education.Core\Education.Common.csproj", "{5DDEE97F-92E3-41A5-8D8C-8AC568A93594}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{174A75C9-2337-432E-ACEC-BDB9D7CE6B92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.UI", "WPF\School.UI\School.UI.csproj", "{8CF10D04-5DBF-4118-AD67-8623B41DE328}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
@@ -130,9 +134,30 @@ Global
 		{5DDEE97F-92E3-41A5-8D8C-8AC568A93594}.Release|x64.Build.0 = Release|Any CPU
 		{5DDEE97F-92E3-41A5-8D8C-8AC568A93594}.Release|x86.ActiveCfg = Release|Any CPU
 		{5DDEE97F-92E3-41A5-8D8C-8AC568A93594}.Release|x86.Build.0 = Release|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.All|Any CPU.Build.0 = Release|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.All|x64.ActiveCfg = Release|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.All|x64.Build.0 = Release|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.All|x86.ActiveCfg = Release|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.All|x86.Build.0 = Release|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.Debug|x64.Build.0 = Debug|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.Debug|x86.Build.0 = Debug|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.Release|x64.ActiveCfg = Release|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.Release|x64.Build.0 = Release|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.Release|x86.ActiveCfg = Release|Any CPU
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8CF10D04-5DBF-4118-AD67-8623B41DE328} = {174A75C9-2337-432E-ACEC-BDB9D7CE6B92}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A878152F-224D-45D0-A8FD-BF22CD491C4E}

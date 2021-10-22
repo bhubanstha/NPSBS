@@ -40,9 +40,9 @@ namespace Education.Common
                 tbl.Load(rdr);
 
             }
-            catch
+            catch (Exception ex)
             {
-                //throw ex;
+                throw ex;
                 //MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally

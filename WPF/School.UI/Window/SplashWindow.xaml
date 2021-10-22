@@ -1,0 +1,30 @@
+﻿<mah:MetroWindow x:Class="Schoo.UI.Window.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Schoo.UI.Window"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="Splash Window" 
+                 Height="450" 
+                 Width="800"
+                 WindowStartupLocation="CenterScreen"
+                 WindowStyle="None"
+                 ShowTitleBar="False"
+                 ShowCloseButton="False"
+                 AllowsTransparency="True"
+                 ResizeMode="NoResize"
+                 >
+    <Grid>
+        
+        <Image Source="/Images/_BHU3689.JPG" Stretch="UniformToFill"></Image>
+        <ProgressBar IsIndeterminate="True" 
+                     VerticalAlignment="Bottom"
+                     Height="25"/>
+        <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   FontSize="18"
+                   Foreground="Red">Loading...</TextBlock>
+    </Grid>
+</mah:MetroWindow>
